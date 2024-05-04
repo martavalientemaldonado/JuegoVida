@@ -4,22 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ae59f5ab-3a2c-4635-b2d5-df0317d0df49" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Bienvenida.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/BienvenidaControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Utilities/Paths.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/bienvenida.fxml" afterDir="false" />
+    <list default="true" id="ae59f5ab-3a2c-4635-b2d5-df0317d0df49" name="Changes" comment="B">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/PantallaInicio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/ParamIndiv/ParametrosIndividuo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/PantallaInicioControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/ParametrosIndividuoControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/javafx/scene/image/botonamarillo.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/javafx/scene/image/botonamarillo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/parametrosIndiv.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Bienvenida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Bienvenida.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/BienvenidaControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/BienvenidaControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Utilities/Paths.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Utilities/Paths.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/bienvenida.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/bienvenida.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,17 +28,20 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/BienvenidaControl.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2fpLFegKaAAymipXcGCa8y2UoTd" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -51,9 +53,56 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master"
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/UAH/JuegoVida/src/main/resources/Res",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.3862069"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\UAH\JuegoVida\src\main\resources" />
+      <recent name="C:\Users\UAH\JuegoVida\src\main\resources\Res" />
+      <recent name="C:\Users\UAH\JuegoVida\src\main\java\com\example\juegovida\javafx\scene\image" />
+      <recent name="C:\Users\UAH\JuegoVida\src\main\java\com\example\juegovida\Utilities" />
+      <recent name="C:\Users\UAH\JuegoVida\src\main\resources\com\example\juegovida" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Bienvenida">
+    <configuration name="Bienvenida" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.juegovida.App.Bienvenida" />
+      <module name="JuegoVida" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.juegovida.App.ParamIndiv.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PantallaInicio" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.juegovida.App.PantallaInicio" />
+      <module name="JuegoVida" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.juegovida.App.ParamIndiv.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Bienvenida" />
+        <item itemvalue="Application.PantallaInicio" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -63,6 +112,19 @@
       <option name="presentableId" value="Default" />
       <updated>1714492974562</updated>
     </task>
+    <task id="LOCAL-00001" summary="B">
+      <option name="closed" value="true" />
+      <created>1714496408400</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1714496408400</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="B" />
+    <option name="LAST_COMMIT_MESSAGE" value="B" />
   </component>
 </project>
