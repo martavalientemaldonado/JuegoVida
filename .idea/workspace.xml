@@ -4,21 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ae59f5ab-3a2c-4635-b2d5-df0317d0df49" name="Changes" comment="B">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/PantallaInicio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/ParamIndiv/ParametrosIndividuo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/PantallaInicioControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/ParametrosIndividuoControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/javafx/scene/image/botonamarillo.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/javafx/scene/image/botonamarillo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/parametrosIndiv.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="ae59f5ab-3a2c-4635-b2d5-df0317d0df49" name="Changes" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Bienvenida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Bienvenida.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/BienvenidaControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/BienvenidaControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Utilities/Paths.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Utilities/Paths.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/bienvenida.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/bienvenida.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +21,19 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/BienvenidaControl.java" root0="FORCE_HIGHLIGHTING" />
@@ -53,7 +52,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "e4dd6fee",
     "last_opened_file_path": "C:/Users/UAH/JuegoVida/src/main/resources/Res",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.0",
@@ -120,11 +119,48 @@
       <option name="project" value="LOCAL" />
       <updated>1714496408400</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="PantallaInicio Bienvenida">
+      <option name="closed" value="true" />
+      <created>1714809808931</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1714809808931</updated>
+    </task>
+    <task id="LOCAL-00003" summary="PantallaInicio Bienvenida">
+      <option name="closed" value="true" />
+      <created>1714809876349</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1714809876349</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1714811478605</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1714811478605</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="B" />
-    <option name="LAST_COMMIT_MESSAGE" value="B" />
+    <MESSAGE value="PantallaInicio Bienvenida" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
   </component>
 </project>
