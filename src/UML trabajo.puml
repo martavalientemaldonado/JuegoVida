@@ -1,0 +1,106 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+IndividuoBasico --|> Individuo
+IndividuoNormal --|> Individuo
+IndividuoAvanzado --|> Individuo
+Agua --|> Entorno
+Comida --|> Entorno
+Montaña --|> Entorno
+Tesoro --|> Entorno
+Biblioteca --|> Entorno
+Pozo --|> Entorno
+Individuo --|> Entorno
+
+class Individuo{
+NumIdentificacion
+Generacion
+TurnosVida
+ProbReproduccion
+ProbClonacion
+ProbMuerte
+TipoIndividuo
+Reproduccion()
+}
+class IndividuoBasico{
+rutaaleatoria()
+}
+class IndividuoNormal{
+recursoaleatorio():recurso
+rutalinearecta()
+}
+class IndividuoAvanzado{
+seleccionrrecurso():recurso
+recursocercano():recurso
+rutarecurso()
+}
+
+interface TableroDeJuego {
+Filas
+Columnas
+Casillas
+()
+}
+class Entorno{
+recursos
+numrrecursos
+probnuevorecurrso
+getNumrrecursos():Integer
+setNumrrecursos()
+nuevorrecurso()
+getprobnuevorecurrso():Integer
+setprobnuevorecurrso()
+
+
+}
+
+
+class Agua {
+probabilidad
+vidaproporcionada
+getvidaproporcionada():Integer
+setvidaproporcionada(Integer vida)
+setProbabilidad(Integer probabilidad)
+getProbabilidad():Integer
+}
+class Comida {
+probabilidad
+vidaproporcionada
+getvidaproporcionada():Integer
+setvidaproporcionada(Integer vida)
+setProbabilidad(Integer probabilidad)
+getProbabilidad():Integer
+}
+class Montaña {
+probabilidad
+vidaproporcionada
+getvidaproporcionada():Integer
+setvidaproporcionada(Integer vida)
+setProbabilidad(Integer probabilidad)
+getProbabilidad():Integer
+}
+class Tesoro {
+probabilidad
+reproduccionproporcionada
+setProbabilidad()
+getProbabilidad():Integer
+getreproduccionproporcionada():Integer
+setreproduccionproporcionada(Integer reproduccion)
+}
+class Biblioteca {
+probclonproporcionada
+probabilidad
+setProbabilidad()
+getProbabilidad():Integer
+getprobclonproporcionada():Integer
+setprobclonproporcionada(Integer clonacion)
+setTipoIndividuo(**)
+}
+class Pozo {
+probabilidad
+setProbabilidad()
+getProbabilidad():Integer
+eliminarindividuo()
+}
+@enduml

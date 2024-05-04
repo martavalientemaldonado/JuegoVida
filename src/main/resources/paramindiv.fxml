@@ -1,18 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.juegovida.Controllers.ParamRecursosControl">
+<AnchorPane prefHeight="383.0" prefWidth="709.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.juegovida.Controllers.ParamRecursosControl">
    <children>
-      <Button fx:id="lnlbutton" layoutX="355.0" layoutY="174.0" mnemonicParsing="false" onAction="#click" text="Button" />
-      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="probnuevorecurso" fitHeight="417.0" fitWidth="719.0" layoutX="-10.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="" />
+            <Image url="@../../../../../Downloads/bosque.jpg" />
          </image>
       </ImageView>
+      <Label layoutX="215.0" prefHeight="77.0" prefWidth="296.0" text="RECURSOS" textAlignment="CENTER" textFill="#658f4b">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="61.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="330.0" fitWidth="136.0" layoutX="26.0" layoutY="77.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Downloads/verde-bosque.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="77.0" fitWidth="124.0" layoutX="32.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Downloads/titulo verde-bosque.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="321.0" fitWidth="516.0" layoutX="182.0" layoutY="77.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Downloads/fondo transparente verde-bosque.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="32.0" layoutY="90.0" prefHeight="66.0" prefWidth="136.0" text="Probabilidad de &#10; aparición de nuevo &#10;recurso" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <ImageView fitHeight="218.0" fitWidth="66.0" layoutX="62.0" layoutY="172.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Downloads/slider verde-bosque.jpg" />
+         </image>
+      </ImageView>
+      <Slider id="Prob.aparicion.recurso" layoutX="71.0" layoutY="176.0" majorTickUnit="100.0" minorTickCount="0" orientation="VERTICAL" prefHeight="209.0" prefWidth="46.0" showTickLabels="true" />
+      <ImageView fitHeight="66.0" fitWidth="452.0" layoutX="187.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Downloads/titulos verde-bosque.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="66.0" fitWidth="136.0" layoutX="579.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Downloads/titulo verde-bosque.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="194.0" layoutY="100.0" prefHeight="50.0" prefWidth="75.0" text="Probabilidad&#10;de aparición &#10;de Agua" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="218.0" fitWidth="348.0" layoutX="199.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Downloads/fondo transparente verde-bosque.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="240.0" fitWidth="348.0" layoutX="345.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Downloads/fondo transparente verde-bosque.jpg" />
+         </image>
+      </ImageView>
+      <Slider layoutX="225.0" layoutY="176.0" orientation="VERTICAL" prefHeight="209.0" prefWidth="14.0" showTickLabels="true" />
+      <Label layoutX="275.0" layoutY="100.0" text="Probabilidad&#10;de aparición&#10;de la Comida" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Label>
+      <Slider layoutX="313.0" layoutY="177.0" orientation="VERTICAL" prefHeight="209.0" prefWidth="14.0" showTickLabels="true" />
+      <Label layoutX="363.0" layoutY="100.0" text="Probabilidad&#10;de aparición &#10;de Montaña" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Label>
+      <Slider layoutX="394.0" layoutY="177.0" orientation="VERTICAL" prefHeight="209.0" prefWidth="14.0" showTickLabels="true" />
+      <Label layoutX="450.0" layoutY="100.0" text="Probabilidad&#10;de aparición &#10;de Tesoro" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Label>
+      <Slider layoutX="475.0" layoutY="177.0" orientation="VERTICAL" prefHeight="209.0" prefWidth="26.0" showTickLabels="true" />
+      <Label layoutX="534.0" layoutY="100.0" text="Probabilidad&#10;de aparición &#10;de Biblioteca" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Label>
+      <Slider layoutX="565.0" layoutY="175.0" orientation="VERTICAL" prefHeight="209.0" prefWidth="14.0" showTickLabels="true" />
+      <Label layoutX="620.0" layoutY="101.0" text="Probabilidad&#10;de aparición &#10;de Pozo&#10;" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Label>
+      <Slider layoutX="651.0" layoutY="177.0" orientation="VERTICAL" prefHeight="209.0" prefWidth="14.0" showTickLabels="true" />
    </children>
 </AnchorPane>

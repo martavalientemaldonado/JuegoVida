@@ -5,10 +5,9 @@ import com.example.juegovida.Utilities.Paths;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
+import java.net.URL;
 import java.io.File;
 import java.net.MalformedURLException;
-import java.net.URL;
 
 import static javafx.application.Application.launch;
 
