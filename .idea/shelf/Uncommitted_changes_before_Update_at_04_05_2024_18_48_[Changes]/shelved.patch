@@ -1,0 +1,318 @@
+Index: src/main/java/com/example/juegovida/Controllers/ParamRecursosControl.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.juegovida.Controllers;\r\nimport java.net.URL;\r\nimport java.util.ResourceBundle;\r\nimport javafx.event.ActionEvent;\r\nimport javafx.fxml.FXML;\r\nimport javafx.scene.control.Button;\r\n\r\npublic class ParamRecursosControl {\r\n    @FXML\r\n    private ResourceBundle resources;\r\n\r\n    @FXML\r\n    private URL location;\r\n\r\n    @FXML\r\n    private Button lnlbutton;\r\n\r\n    @FXML\r\n    void click(ActionEvent event) {\r\n\r\n    }\r\n\r\n    @FXML\r\n    void initialize() {\r\n        assert lnlbutton != null : \"fx:id=\\\"lnlbutton\\\" was not injected: check your FXML file 'paramindiv.fxml'.\";\r\n\r\n    }\r\n\r\n}\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/juegovida/Controllers/ParamRecursosControl.java b/src/main/java/com/example/juegovida/Controllers/ParamRecursosControl.java
+--- a/src/main/java/com/example/juegovida/Controllers/ParamRecursosControl.java	(revision 68cbee66268b3b3640c06ab819d6a8ce5532a564)
++++ b/src/main/java/com/example/juegovida/Controllers/ParamRecursosControl.java	(date 1714841303939)
+@@ -3,9 +3,11 @@
+ import java.util.ResourceBundle;
+ import javafx.event.ActionEvent;
+ import javafx.fxml.FXML;
+-import javafx.scene.control.Button;
++import javafx.scene.control.Slider;
++import javafx.scene.image.ImageView;
+ 
+ public class ParamRecursosControl {
++
+     @FXML
+     private ResourceBundle resources;
+ 
+@@ -13,18 +15,49 @@
+     private URL location;
+ 
+     @FXML
+-    private Button lnlbutton;
++    private ImageView probnuevorecurso;
++
++    @FXML
++    private Slider ProbabilidadNuevoRe;
++
++    @FXML
++    private Slider ProbabilidadAgua;
++
++    @FXML
++    private Slider ProbabilidadComida;
++
++    @FXML
++    private Slider ProbabilidadMontaña;
++
++    @FXML
++    private Slider ProbabilidadTesoro;
++
++    @FXML
++    private Slider ProbabilidadBiblioteca;
++
++    @FXML
++    private Slider ProbabilidadPozo;
+ 
+     @FXML
+-    void click(ActionEvent event) {
++    void clickAceptar(ActionEvent event) {
++
++    }
++
++    @FXML
++    void clickRestablecer(ActionEvent event) {
+ 
+     }
+ 
+     @FXML
+     void initialize() {
+-        assert lnlbutton != null : "fx:id=\"lnlbutton\" was not injected: check your FXML file 'paramindiv.fxml'.";
+-
+-    }
++        assert probnuevorecurso != null : "fx:id=\"probnuevorecurso\" was not injected: check your FXML file 'paramindiv.fxml'.";
++        assert ProbabilidadNuevoRe != null : "fx:id=\"ProbabilidadNuevoRe\" was not injected: check your FXML file 'paramindiv.fxml'.";
++        assert ProbabilidadAgua != null : "fx:id=\"ProbabilidadAgua\" was not injected: check your FXML file 'paramindiv.fxml'.";
++        assert ProbabilidadComida != null : "fx:id=\"ProbabilidadComida\" was not injected: check your FXML file 'paramindiv.fxml'.";
++        assert ProbabilidadMontaña != null : "fx:id=\"ProbabilidadMontaña\" was not injected: check your FXML file 'paramindiv.fxml'.";
++        assert ProbabilidadTesoro != null : "fx:id=\"ProbabilidadTesoro\" was not injected: check your FXML file 'paramindiv.fxml'.";
++        assert ProbabilidadBiblioteca != null : "fx:id=\"ProbabilidadBiblioteca\" was not injected: check your FXML file 'paramindiv.fxml'.";
++        assert ProbabilidadPozo != null : "fx:id=\"ProbabilidadPozo\" was not injected: check your FXML file 'paramindiv.fxml'.";
+ 
+-}
+-
++    }
++}
+\ No newline at end of file
+Index: src/main/resources/paramindiv.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<?import javafx.geometry.Insets?>\r\n<?import javafx.scene.control.Label?>\r\n<?import javafx.scene.control.Slider?>\r\n<?import javafx.scene.image.Image?>\r\n<?import javafx.scene.image.ImageView?>\r\n<?import javafx.scene.layout.AnchorPane?>\r\n<?import javafx.scene.text.Font?>\r\n\r\n<AnchorPane prefHeight=\"383.0\" prefWidth=\"709.0\" xmlns=\"http://javafx.com/javafx/8.0.171\" xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"com.example.juegovida.Controllers.ParamRecursosControl\">\r\n   <children>\r\n      <ImageView fx:id=\"probnuevorecurso\" fitHeight=\"417.0\" fitWidth=\"719.0\" layoutX=\"-10.0\" layoutY=\"-1.0\" pickOnBounds=\"true\" preserveRatio=\"true\">\r\n         <image>\r\n            <Image url=\"@../../../../../Downloads/bosque.jpg\" />\r\n         </image>\r\n      </ImageView>\r\n      <Label layoutX=\"215.0\" prefHeight=\"77.0\" prefWidth=\"296.0\" text=\"RECURSOS\" textAlignment=\"CENTER\" textFill=\"#658f4b\">\r\n         <font>\r\n            <Font name=\"Berlin Sans FB Demi Bold\" size=\"61.0\" />\r\n         </font>\r\n      </Label>\r\n      <ImageView fitHeight=\"330.0\" fitWidth=\"136.0\" layoutX=\"26.0\" layoutY=\"77.0\" opacity=\"0.6\" pickOnBounds=\"true\" preserveRatio=\"true\">\r\n         <image>\r\n            <Image url=\"@../../../../../Downloads/verde-bosque.jpg\" />\r\n         </image>\r\n      </ImageView>\r\n      <ImageView fitHeight=\"77.0\" fitWidth=\"124.0\" layoutX=\"32.0\" layoutY=\"88.0\" pickOnBounds=\"true\" preserveRatio=\"true\">\r\n         <image>\r\n            <Image url=\"@../../../../../Downloads/titulo verde-bosque.jpg\" />\r\n         </image>\r\n      </ImageView>\r\n      <ImageView fitHeight=\"321.0\" fitWidth=\"516.0\" layoutX=\"182.0\" layoutY=\"77.0\" opacity=\"0.6\" pickOnBounds=\"true\" preserveRatio=\"true\">\r\n         <image>\r\n            <Image url=\"@../../../../../Downloads/fondo transparente verde-bosque.jpg\" />\r\n         </image>\r\n      </ImageView>\r\n      <Label layoutX=\"32.0\" layoutY=\"90.0\" prefHeight=\"66.0\" prefWidth=\"136.0\" text=\"Probabilidad de &#10; aparición de nuevo &#10;recurso\" textAlignment=\"CENTER\" textFill=\"WHITE\">\r\n         <font>\r\n            <Font name=\"Arial Bold\" size=\"13.0\" />\r\n         </font>\r\n         <opaqueInsets>\r\n            <Insets />\r\n         </opaqueInsets>\r\n      </Label>\r\n      <ImageView fitHeight=\"218.0\" fitWidth=\"66.0\" layoutX=\"62.0\" layoutY=\"172.0\" pickOnBounds=\"true\" preserveRatio=\"true\">\r\n         <image>\r\n            <Image url=\"@../../../../../Downloads/slider verde-bosque.jpg\" />\r\n         </image>\r\n      </ImageView>\r\n      <Slider id=\"Prob.aparicion.recurso\" layoutX=\"71.0\" layoutY=\"176.0\" majorTickUnit=\"100.0\" minorTickCount=\"0\" orientation=\"VERTICAL\" prefHeight=\"209.0\" prefWidth=\"46.0\" showTickLabels=\"true\" />\r\n      <ImageView fitHeight=\"66.0\" fitWidth=\"452.0\" layoutX=\"187.0\" layoutY=\"90.0\" pickOnBounds=\"true\" preserveRatio=\"true\">\r\n         <image>\r\n            <Image url=\"@../../../../../Downloads/titulos verde-bosque.jpg\" />\r\n         </image>\r\n      </ImageView>\r\n      <ImageView fitHeight=\"66.0\" fitWidth=\"136.0\" layoutX=\"579.0\" layoutY=\"90.0\" pickOnBounds=\"true\" preserveRatio=\"true\">\r\n         <image>\r\n            <Image url=\"@../../../../../Downloads/titulo verde-bosque.jpg\" />\r\n         </image>\r\n      </ImageView>\r\n      <Label layoutX=\"194.0\" layoutY=\"100.0\" prefHeight=\"50.0\" prefWidth=\"75.0\" text=\"Probabilidad&#10;de aparición &#10;de Agua\" textAlignment=\"CENTER\" textFill=\"WHITE\">\r\n         <font>\r\n            <Font name=\"Arial Bold\" size=\"12.0\" />\r\n         </font>\r\n      </Label>\r\n      <ImageView fitHeight=\"218.0\" fitWidth=\"348.0\" layoutX=\"199.0\" layoutY=\"175.0\" pickOnBounds=\"true\" preserveRatio=\"true\">\r\n         <image>\r\n            <Image url=\"@../../../../../Downloads/fondo transparente verde-bosque.jpg\" />\r\n         </image>\r\n      </ImageView>\r\n      <ImageView fitHeight=\"240.0\" fitWidth=\"348.0\" layoutX=\"345.0\" layoutY=\"175.0\" pickOnBounds=\"true\" preserveRatio=\"true\">\r\n         <image>\r\n            <Image url=\"@../../../../../Downloads/fondo transparente verde-bosque.jpg\" />\r\n         </image>\r\n      </ImageView>\r\n      <Slider layoutX=\"225.0\" layoutY=\"176.0\" orientation=\"VERTICAL\" prefHeight=\"209.0\" prefWidth=\"14.0\" showTickLabels=\"true\" />\r\n      <Label layoutX=\"275.0\" layoutY=\"100.0\" text=\"Probabilidad&#10;de aparición&#10;de la Comida\" textAlignment=\"CENTER\" textFill=\"WHITE\">\r\n         <font>\r\n            <Font name=\"Arial Bold\" size=\"12.0\" />\r\n         </font>\r\n      </Label>\r\n      <Slider layoutX=\"313.0\" layoutY=\"177.0\" orientation=\"VERTICAL\" prefHeight=\"209.0\" prefWidth=\"14.0\" showTickLabels=\"true\" />\r\n      <Label layoutX=\"363.0\" layoutY=\"100.0\" text=\"Probabilidad&#10;de aparición &#10;de Montaña\" textAlignment=\"CENTER\" textFill=\"WHITE\">\r\n         <font>\r\n            <Font name=\"Arial Bold\" size=\"12.0\" />\r\n         </font>\r\n      </Label>\r\n      <Slider layoutX=\"394.0\" layoutY=\"177.0\" orientation=\"VERTICAL\" prefHeight=\"209.0\" prefWidth=\"14.0\" showTickLabels=\"true\" />\r\n      <Label layoutX=\"450.0\" layoutY=\"100.0\" text=\"Probabilidad&#10;de aparición &#10;de Tesoro\" textAlignment=\"CENTER\" textFill=\"WHITE\">\r\n         <font>\r\n            <Font name=\"Arial Bold\" size=\"12.0\" />\r\n         </font>\r\n      </Label>\r\n      <Slider layoutX=\"475.0\" layoutY=\"177.0\" orientation=\"VERTICAL\" prefHeight=\"209.0\" prefWidth=\"26.0\" showTickLabels=\"true\" />\r\n      <Label layoutX=\"534.0\" layoutY=\"100.0\" text=\"Probabilidad&#10;de aparición &#10;de Biblioteca\" textAlignment=\"CENTER\" textFill=\"WHITE\">\r\n         <font>\r\n            <Font name=\"Arial Bold\" size=\"12.0\" />\r\n         </font>\r\n      </Label>\r\n      <Slider layoutX=\"565.0\" layoutY=\"175.0\" orientation=\"VERTICAL\" prefHeight=\"209.0\" prefWidth=\"14.0\" showTickLabels=\"true\" />\r\n      <Label layoutX=\"620.0\" layoutY=\"101.0\" text=\"Probabilidad&#10;de aparición &#10;de Pozo&#10;\" textAlignment=\"CENTER\" textFill=\"WHITE\">\r\n         <font>\r\n            <Font name=\"Arial Bold\" size=\"12.0\" />\r\n         </font>\r\n      </Label>\r\n      <Slider layoutX=\"651.0\" layoutY=\"177.0\" orientation=\"VERTICAL\" prefHeight=\"209.0\" prefWidth=\"14.0\" showTickLabels=\"true\" />\r\n   </children>\r\n</AnchorPane>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/paramindiv.fxml b/src/main/resources/paramindiv.fxml
+--- a/src/main/resources/paramindiv.fxml	(revision 68cbee66268b3b3640c06ab819d6a8ce5532a564)
++++ b/src/main/resources/paramindiv.fxml	(date 1714841247650)
+@@ -1,6 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ 
+ <?import javafx.geometry.Insets?>
++<?import javafx.scene.control.Button?>
+ <?import javafx.scene.control.Label?>
+ <?import javafx.scene.control.Slider?>
+ <?import javafx.scene.image.Image?>
+@@ -15,9 +16,9 @@
+             <Image url="@../../../../../Downloads/bosque.jpg" />
+          </image>
+       </ImageView>
+-      <Label layoutX="215.0" prefHeight="77.0" prefWidth="296.0" text="RECURSOS" textAlignment="CENTER" textFill="#658f4b">
++      <Label layoutX="26.0" layoutY="-1.0" prefHeight="78.0" prefWidth="359.0" text="RECURSOS" textAlignment="CENTER" textFill="#9fc387">
+          <font>
+-            <Font name="Berlin Sans FB Demi Bold" size="61.0" />
++            <Font name="Colonna MT" size="66.0" />
+          </font>
+       </Label>
+       <ImageView fitHeight="330.0" fitWidth="136.0" layoutX="26.0" layoutY="77.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+@@ -25,85 +26,107 @@
+             <Image url="@../../../../../Downloads/verde-bosque.jpg" />
+          </image>
+       </ImageView>
+-      <ImageView fitHeight="77.0" fitWidth="124.0" layoutX="32.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
++      <ImageView fitHeight="77.0" fitWidth="124.0" layoutX="32.0" layoutY="88.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+          <image>
+-            <Image url="@../../../../../Downloads/titulo verde-bosque.jpg" />
++            <Image url="@tituloverde-bosque.jpg" />
+          </image>
+       </ImageView>
+       <ImageView fitHeight="321.0" fitWidth="516.0" layoutX="182.0" layoutY="77.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+          <image>
+-            <Image url="@../../../../../Downloads/fondo transparente verde-bosque.jpg" />
++            <Image url="@fondotransparenteverde-bosque.jpg" />
+          </image>
+       </ImageView>
+       <Label layoutX="32.0" layoutY="90.0" prefHeight="66.0" prefWidth="136.0" text="Probabilidad de &#10; aparición de nuevo &#10;recurso" textAlignment="CENTER" textFill="WHITE">
+          <font>
+-            <Font name="Arial Bold" size="13.0" />
++            <Font name="Book Antiqua" size="13.0" />
+          </font>
+          <opaqueInsets>
+             <Insets />
+          </opaqueInsets>
+       </Label>
+-      <ImageView fitHeight="218.0" fitWidth="66.0" layoutX="62.0" layoutY="172.0" pickOnBounds="true" preserveRatio="true">
++      <ImageView fitHeight="218.0" fitWidth="66.0" layoutX="62.0" layoutY="172.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+          <image>
+-            <Image url="@../../../../../Downloads/slider verde-bosque.jpg" />
++            <Image url="@sliderverde-bosque.jpg" />
+          </image>
+       </ImageView>
+-      <Slider id="Prob.aparicion.recurso" layoutX="71.0" layoutY="176.0" majorTickUnit="100.0" minorTickCount="0" orientation="VERTICAL" prefHeight="209.0" prefWidth="46.0" showTickLabels="true" />
+-      <ImageView fitHeight="66.0" fitWidth="452.0" layoutX="187.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
++      <Slider id="Prob.aparicion.recurso" fx:id="ProbabilidadNuevoRe" layoutX="71.0" layoutY="176.0" orientation="VERTICAL" prefHeight="209.0" prefWidth="46.0" showTickLabels="true" />
++      <ImageView fitHeight="66.0" fitWidth="452.0" layoutX="187.0" layoutY="90.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+          <image>
+-            <Image url="@../../../../../Downloads/titulos verde-bosque.jpg" />
++            <Image url="@titulosverde-bosque.jpg" />
+          </image>
+       </ImageView>
+-      <ImageView fitHeight="66.0" fitWidth="136.0" layoutX="579.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
++      <ImageView fitHeight="66.0" fitWidth="136.0" layoutX="579.0" layoutY="90.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+          <image>
+-            <Image url="@../../../../../Downloads/titulo verde-bosque.jpg" />
++            <Image url="@tituloverde-bosque.jpg" />
+          </image>
+       </ImageView>
+       <Label layoutX="194.0" layoutY="100.0" prefHeight="50.0" prefWidth="75.0" text="Probabilidad&#10;de aparición &#10;de Agua" textAlignment="CENTER" textFill="WHITE">
+          <font>
+-            <Font name="Arial Bold" size="12.0" />
++            <Font name="Book Antiqua" size="12.0" />
+          </font>
+       </Label>
+-      <ImageView fitHeight="218.0" fitWidth="348.0" layoutX="199.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true">
++      <ImageView fitHeight="218.0" fitWidth="150.0" layoutX="540.0" layoutY="175.0" nodeOrientation="INHERIT" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+          <image>
+-            <Image url="@../../../../../Downloads/fondo transparente verde-bosque.jpg" />
++            <Image url="@../../../../../Downloads/2verde-bosque.jpg" />
+          </image>
+       </ImageView>
+-      <ImageView fitHeight="240.0" fitWidth="348.0" layoutX="345.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true">
++      <ImageView fitHeight="218.0" fitWidth="348.0" layoutX="194.0" layoutY="175.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+          <image>
+-            <Image url="@../../../../../Downloads/fondo transparente verde-bosque.jpg" />
++            <Image url="@fondotransparenteverde-bosque.jpg" />
+          </image>
+       </ImageView>
+-      <Slider layoutX="225.0" layoutY="176.0" orientation="VERTICAL" prefHeight="209.0" prefWidth="14.0" showTickLabels="true" />
+-      <Label layoutX="275.0" layoutY="100.0" text="Probabilidad&#10;de aparición&#10;de la Comida" textAlignment="CENTER" textFill="WHITE">
++      <Slider id="ProbabilidadAgua" fx:id="ProbabilidadAgua" layoutX="225.0" layoutY="176.0" minorTickCount="0" orientation="VERTICAL" prefHeight="209.0" prefWidth="14.0" showTickLabels="true" />
++      <Label layoutX="276.0" layoutY="100.0" prefHeight="50.0" prefWidth="75.0" text="Probabilidad&#10;de aparición &#10;de Comida" textAlignment="CENTER" textFill="WHITE">
++         <font>
++            <Font name="Book Antiqua" size="12.0" />
++         </font>
++      </Label>
++      <Slider id="ProbabilidadComida" fx:id="ProbabilidadComida" layoutX="313.0" layoutY="177.0" orientation="VERTICAL" prefHeight="209.0" prefWidth="14.0" showTickLabels="true" />
++      <Label layoutX="364.0" layoutY="100.0" prefHeight="50.0" prefWidth="75.0" text="Probabilidad&#10;de aparición &#10;de Montaña" textAlignment="CENTER" textFill="WHITE">
++         <font>
++            <Font name="Book Antiqua" size="12.0" />
++         </font>
++      </Label>
++      <Slider id="ProbabilidadMontaña" fx:id="ProbabilidadMontaña" layoutX="394.0" layoutY="177.0" orientation="VERTICAL" prefHeight="209.0" prefWidth="14.0" showTickLabels="true" />
++      <Label layoutX="451.0" layoutY="100.0" prefHeight="50.0" prefWidth="75.0" text="Probabilidad&#10;de aparición &#10;de Tesoro" textAlignment="CENTER" textFill="WHITE">
+          <font>
+-            <Font name="Arial Bold" size="12.0" />
++            <Font name="Book Antiqua" size="12.0" />
+          </font>
+       </Label>
+-      <Slider layoutX="313.0" layoutY="177.0" orientation="VERTICAL" prefHeight="209.0" prefWidth="14.0" showTickLabels="true" />
+-      <Label layoutX="363.0" layoutY="100.0" text="Probabilidad&#10;de aparición &#10;de Montaña" textAlignment="CENTER" textFill="WHITE">
++      <Slider id="ProbabilidadTesoro" fx:id="ProbabilidadTesoro" layoutX="475.0" layoutY="177.0" orientation="VERTICAL" prefHeight="209.0" prefWidth="26.0" showTickLabels="true" />
++      <Label layoutX="535.0" layoutY="100.0" prefHeight="50.0" prefWidth="75.0" text="Probabilidad&#10;de aparición &#10;de Biblioteca&#10;" textAlignment="CENTER" textFill="WHITE">
+          <font>
+-            <Font name="Arial Bold" size="12.0" />
++            <Font name="Book Antiqua" size="12.0" />
+          </font>
+       </Label>
+-      <Slider layoutX="394.0" layoutY="177.0" orientation="VERTICAL" prefHeight="209.0" prefWidth="14.0" showTickLabels="true" />
+-      <Label layoutX="450.0" layoutY="100.0" text="Probabilidad&#10;de aparición &#10;de Tesoro" textAlignment="CENTER" textFill="WHITE">
++      <Slider id="ProbabilidadBiblioteca" fx:id="ProbabilidadBiblioteca" layoutX="565.0" layoutY="175.0" orientation="VERTICAL" prefHeight="209.0" prefWidth="14.0" showTickLabels="true" />
++      <Label layoutX="614.0" layoutY="98.0" prefHeight="50.0" prefWidth="75.0" text="Probabilidad&#10;de aparición &#10;de Pozo&#10;" textAlignment="CENTER" textFill="WHITE">
+          <font>
+-            <Font name="Arial Bold" size="12.0" />
++            <Font name="Book Antiqua" size="12.0" />
+          </font>
+       </Label>
+-      <Slider layoutX="475.0" layoutY="177.0" orientation="VERTICAL" prefHeight="209.0" prefWidth="26.0" showTickLabels="true" />
+-      <Label layoutX="534.0" layoutY="100.0" text="Probabilidad&#10;de aparición &#10;de Biblioteca" textAlignment="CENTER" textFill="WHITE">
++      <Slider id="ProbabilidadPozo" fx:id="ProbabilidadPozo" layoutX="651.0" layoutY="177.0" orientation="VERTICAL" prefHeight="209.0" prefWidth="14.0" showTickLabels="true" />
++      <ImageView fitHeight="39.0" fitWidth="75.0" layoutX="505.0" layoutY="27.0" opacity="0.9" pickOnBounds="true" preserveRatio="true">
++         <image>
++            <Image url="@../../../../../Downloads/buttonverde-bosque.jpg" />
++         </image>
++      </ImageView>
++      <Label layoutX="506.0" layoutY="30.0" prefHeight="25.0" prefWidth="75.0" text=" Restablecer" textAlignment="JUSTIFY" textFill="WHITE">
+          <font>
+-            <Font name="Arial Bold" size="12.0" />
++            <Font name="Book Antiqua" size="13.0" />
+          </font>
+       </Label>
+-      <Slider layoutX="565.0" layoutY="175.0" orientation="VERTICAL" prefHeight="209.0" prefWidth="14.0" showTickLabels="true" />
+-      <Label layoutX="620.0" layoutY="101.0" text="Probabilidad&#10;de aparición &#10;de Pozo&#10;" textAlignment="CENTER" textFill="WHITE">
++      <Button layoutX="505.0" layoutY="27.0" mnemonicParsing="false" onAction="#clickRestablecer" opacity="0.0" prefHeight="31.0" prefWidth="75.0" text="Restablecer" textAlignment="CENTER" />
++      <ImageView fitHeight="31.0" fitWidth="75.0" layoutX="599.0" layoutY="27.0" opacity="0.9" pickOnBounds="true" preserveRatio="true">
++         <image>
++            <Image url="@../../../../../Downloads/buttonverde-bosque.jpg" />
++         </image>
++      </ImageView>
++      <Label layoutX="610.0" layoutY="30.0" prefHeight="25.0" prefWidth="53.0" text="Aceptar" textAlignment="CENTER" textFill="WHITE">
+          <font>
+-            <Font name="Arial Bold" size="12.0" />
++            <Font name="Book Antiqua" size="13.0" />
+          </font>
+       </Label>
+-      <Slider layoutX="651.0" layoutY="177.0" orientation="VERTICAL" prefHeight="209.0" prefWidth="14.0" showTickLabels="true" />
++      <Button layoutX="599.0" layoutY="27.0" mnemonicParsing="false" onAction="#clickAceptar" opacity="0.0" prefHeight="31.0" prefWidth="75.0" text="Aceptar" />
+    </children>
+ </AnchorPane>
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"ae59f5ab-3a2c-4635-b2d5-df0317d0df49\" name=\"Changes\" comment=\"hhh\">\r\n      <change afterPath=\"$PROJECT_DIR$/src/UML trabajo.puml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/PantallasRecursos.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/resources/bosque.jpg\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/resources/titulos verde-bosque.jpg\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/resources/tituloverde-bosque.jpg\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/main/resources/verde-bosque.jpg\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_05_2024_10_09__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_05_2024_10_09__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/example/juegovida/App/PantallaInicio.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/example/juegovida/App/PantallaInicio.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/example/juegovida/Utilities/Paths.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/example/juegovida/Utilities/Paths.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/resources/paramindiv.fxml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/resources/paramindiv.fxml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n        <option value=\"FxmlFile\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"PUSH_TAGS\">\r\n      <GitPushTagMode>\r\n        <option name=\"argument\" value=\"--tags\" />\r\n        <option name=\"title\" value=\"All\" />\r\n      </GitPushTagMode>\r\n    </option>\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"a0d6e16ecbd6482dd989a99649749b741bc148d3\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n    <option name=\"RESET_MODE\" value=\"MIXED\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;martavalientemaldonado&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">\r\n    <option name=\"selectedUrlAndAccountId\">\r\n      <UrlAndAccount>\r\n        <option name=\"accountId\" value=\"fea4ed96-ddfe-48cf-b4cd-214a8e0cd98a\" />\r\n        <option name=\"url\" value=\"https://github.com/martavalientemaldonado/JuegoVida.git\" />\r\n      </UrlAndAccount>\r\n    </option>\r\n  </component>\r\n  <component name=\"HighlightingSettingsPerFile\">\r\n    <setting file=\"file://$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/BienvenidaControl.java\" root0=\"FORCE_HIGHLIGHTING\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 8\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2fpLFegKaAAymipXcGCa8y2UoTd\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"Application.Bienvenida.executor\": \"Run\",\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"git-widget-placeholder\": \"master\",\r\n    \"kotlin-language-version-configured\": \"true\",\r\n    \"last_opened_file_path\": \"C:/Users/PC/IdeaProjects/JuegoVida/src/main/resources\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"nodejs_package_manager_path\": \"npm\",\r\n    \"project.structure.last.edited\": \"Libraries\",\r\n    \"project.structure.proportion\": \"0.0\",\r\n    \"project.structure.side.proportion\": \"0.3862069\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\PC\\IdeaProjects\\JuegoVida\\src\\main\\resources\" />\r\n      <recent name=\"C:\\Users\\PC\\IdeaProjects\\JuegoVida\\src\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\PC\\IdeaProjects\\JuegoVida\\src\\main\\resources\" />\r\n      <recent name=\"C:\\Users\\PC\\IdeaProjects\\JuegoVida\\src\\main\\java\\com\\example\\juegovida\\javafx\\scene\\image\" />\r\n      <recent name=\"C:\\Users\\UAH\\JuegoVida\\src\\main\\resources\" />\r\n      <recent name=\"C:\\Users\\UAH\\JuegoVida\\src\\main\\resources\\Res\" />\r\n      <recent name=\"C:\\Users\\UAH\\JuegoVida\\src\\main\\java\\com\\example\\juegovida\\javafx\\scene\\image\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Application.Bienvenida\">\r\n    <configuration name=\"Bienvenida\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.example.juegovida.App.Bienvenida\" />\r\n      <module name=\"JuegoVida\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.example.juegovida.App.ParamIndiv.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"PantallaInicio\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.example.juegovida.App.PantallaInicio\" />\r\n      <module name=\"JuegoVida\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.example.juegovida.App.ParamIndiv.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.Bienvenida\" />\r\n        <item itemvalue=\"Application.PantallaInicio\" />\r\n        <item itemvalue=\"Application.Bienvenida\" />\r\n        <item itemvalue=\"Application.PantallaInicio\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"ae59f5ab-3a2c-4635-b2d5-df0317d0df49\" name=\"Changes\" comment=\"\" />\r\n      <created>1714492974562</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1714492974562</updated>\r\n      <workItem from=\"1714837085418\" duration=\"316000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"B\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1714496408400</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1714496408400</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"PantallaInicio Bienvenida\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1714809808931</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1714809808931</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"PantallaInicio Bienvenida\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1714809876349</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1714809876349</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1714811478605</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1714811478605</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1714813814115</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1714813814115</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1714814204460</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1714814204460</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"hhh\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1714814532253</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1714814532253</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"hhh\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1714815387666</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1714815387666</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"hhh\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1714815448627</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1714815448627</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"hhh\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1714815565110</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1714815565110</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"hhh\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1714815743514</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1714815743514</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"12\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"origin/master\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"B\" />\r\n    <MESSAGE value=\"PantallaInicio Bienvenida\" />\r\n    <MESSAGE value=\"Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml\" />\r\n    <MESSAGE value=\"hhh\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"hhh\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 68cbee66268b3b3640c06ab819d6a8ce5532a564)
++++ b/.idea/workspace.xml	(date 1714841303980)
+@@ -4,17 +4,10 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="ae59f5ab-3a2c-4635-b2d5-df0317d0df49" name="Changes" comment="hhh">
+-      <change afterPath="$PROJECT_DIR$/src/UML trabajo.puml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/PantallasRecursos.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/resources/bosque.jpg" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/resources/titulos verde-bosque.jpg" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/resources/tituloverde-bosque.jpg" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/main/resources/verde-bosque.jpg" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_05_2024_10_09__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_05_2024_10_09__Changes_.xml" afterDir="false" />
++    <list default="true" id="ae59f5ab-3a2c-4635-b2d5-df0317d0df49" name="Changes" comment="recursos">
++      <change afterPath="$PROJECT_DIR$/src/main/resources/2verde-bosque.jpg" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/PantallaInicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/PantallaInicio.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Utilities/Paths.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Utilities/Paths.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/ParamRecursosControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/ParamRecursosControl.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/resources/paramindiv.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/paramindiv.fxml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+@@ -155,7 +148,7 @@
+       <option name="number" value="Default" />
+       <option name="presentableId" value="Default" />
+       <updated>1714492974562</updated>
+-      <workItem from="1714837085418" duration="316000" />
++      <workItem from="1714837085418" duration="2813000" />
+     </task>
+     <task id="LOCAL-00001" summary="B">
+       <option name="closed" value="true" />
+@@ -245,7 +238,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1714815743514</updated>
+     </task>
+-    <option name="localTasksCounter" value="12" />
++    <task id="LOCAL-00012" summary="recursos">
++      <option name="closed" value="true" />
++      <created>1714837735821</created>
++      <option name="number" value="00012" />
++      <option name="presentableId" value="LOCAL-00012" />
++      <option name="project" value="LOCAL" />
++      <updated>1714837735821</updated>
++    </task>
++    <option name="localTasksCounter" value="13" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -279,6 +280,7 @@
+     <MESSAGE value="PantallaInicio Bienvenida" />
+     <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+     <MESSAGE value="hhh" />
+-    <option name="LAST_COMMIT_MESSAGE" value="hhh" />
++    <MESSAGE value="recursos" />
++    <option name="LAST_COMMIT_MESSAGE" value="recursos" />
+   </component>
+ </project>
+\ No newline at end of file

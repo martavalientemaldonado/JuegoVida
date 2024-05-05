@@ -2,9 +2,9 @@
 'https://plantuml.com/class-diagram
 
 
-IndividuoBasico --|> Individuo
-IndividuoNormal --|> Individuo
-IndividuoAvanzado --|> Individuo
+IndividuoBasico --|> Individuo:extends
+IndividuoNormal --|> Individuo:extends
+IndividuoAvanzado --|> Individuo:extends
 Agua --|> Entorno
 Comida --|> Entorno
 Montaña --|> Entorno
@@ -13,27 +13,33 @@ Biblioteca --|> Entorno
 Pozo --|> Entorno
 Individuo --|> Entorno
 
-class Individuo{
+abstract class Individuo{
 NumIdentificacion
 Generacion
-TurnosVida
-ProbReproduccion
-ProbClonacion
-ProbMuerte
-TipoIndividuo
-Reproduccion()
+abstract Reproduccion()
+abstract Clonación()
+abstract Muerte()
 }
 class IndividuoBasico{
 rutaaleatoria()
+Reproduccion()
+Clonación()
+Muerte()
 }
 class IndividuoNormal{
 recursoaleatorio():recurso
-rutalinearecta()
+-rutalinearecta()
+Reproduccion()
+Clonación()
+Muerte()
 }
 class IndividuoAvanzado{
-seleccionrrecurso():recurso
-recursocercano():recurso
+seleccionRrecurso():recurso
+-recursocercano():recurso
 rutarecurso()
+Reproduccion()
+Clonación()
+Muerte()
 }
 
 interface TableroDeJuego {
@@ -43,9 +49,13 @@ Casillas
 ()
 }
 class Entorno{
-recursos
 numrrecursos
 probnuevorecurrso
+TurnosVidaRecursos
+TurnosVidaIndividuo
+ProbReproduccionInd
+ProbClonacionInd
+ProbMuerteInd
 getNumrrecursos():Integer
 setNumrrecursos()
 nuevorrecurso()
