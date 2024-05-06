@@ -1,4 +1,4 @@
-package com.example.juegovida.Clases.Individuos;
+package com.example.juegovida.App.Clases.Individuos;
 
 public class IndividuoNormal extends Individuo{
     public IndividuoNormal() {
