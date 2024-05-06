@@ -24,7 +24,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 
 public class BienvenidaControl implements Initializable {
@@ -39,9 +40,12 @@ public class BienvenidaControl implements Initializable {
 
     @FXML
     private Label lblcomienzajuego;
+    private static final Logger log = LogManager.getLogger(BienvenidaControl.class);
 
     @FXML
     void click(ActionEvent event) throws IOException {
+        log.info("Inicio del método de arranque de la aplicación para mostrar un grid de forma programática");
+
         Stage stage = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader();
         File fichero = new File(Paths.PANTALLAINICIO);
@@ -57,7 +61,12 @@ public class BienvenidaControl implements Initializable {
         PantallaInicioControl p= fxmlLoader.getController();
         p.setStage(stage);
         stage.show();
-
+        log.trace("Enviando una traza de ejecución");
+        log.debug("Enviado un debug");
+        log.info("Enviando un info");
+        log.warn("Enviando un aviso");
+        log.error("Enviando un error");
+        log.fatal("Enviando una explosión fatal");
     }
 
 
