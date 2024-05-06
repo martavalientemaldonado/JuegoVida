@@ -13,7 +13,7 @@
    <children>
       <ImageView fx:id="probnuevorecurso" fitHeight="417.0" fitWidth="719.0" layoutX="-10.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../Downloads/bosque.jpg" />
+            <Image url="@Imagenes/bosque.jpg" />
          </image>
       </ImageView>
       <Label layoutX="26.0" layoutY="-1.0" prefHeight="78.0" prefWidth="359.0" text="RECURSOS" textAlignment="CENTER" textFill="#9fc387">
@@ -23,7 +23,7 @@
       </Label>
       <ImageView fitHeight="330.0" fitWidth="136.0" layoutX="26.0" layoutY="77.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../Downloads/verde-bosque.jpg" />
+            <Image url="@Imagenes/verde-bosque.jpg" />
          </image>
       </ImageView>
       <ImageView fitHeight="77.0" fitWidth="124.0" layoutX="32.0" layoutY="88.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
@@ -67,7 +67,7 @@
       </Label>
       <ImageView fitHeight="218.0" fitWidth="150.0" layoutX="540.0" layoutY="175.0" nodeOrientation="INHERIT" opacity="0.8" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../Downloads/2verde-bosque.jpg" />
+            <Image url="@Imagenes/2verde-bosque.jpg" />
          </image>
       </ImageView>
       <ImageView fitHeight="218.0" fitWidth="348.0" layoutX="194.0" layoutY="175.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
@@ -108,7 +108,7 @@
       <Slider id="ProbabilidadPozo" fx:id="ProbabilidadPozo" layoutX="651.0" layoutY="177.0" orientation="VERTICAL" prefHeight="209.0" prefWidth="14.0" showTickLabels="true" />
       <ImageView fitHeight="39.0" fitWidth="75.0" layoutX="505.0" layoutY="27.0" opacity="0.9" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../Downloads/buttonverde-bosque.jpg" />
+            <Image url="@Imagenes/buttonverde-bosque.jpg" />
          </image>
       </ImageView>
       <Label layoutX="506.0" layoutY="30.0" prefHeight="25.0" prefWidth="75.0" text=" Restablecer" textAlignment="JUSTIFY" textFill="WHITE">
@@ -119,7 +119,7 @@
       <Button layoutX="505.0" layoutY="27.0" mnemonicParsing="false" onAction="#clickRestablecer" opacity="0.0" prefHeight="31.0" prefWidth="75.0" text="Restablecer" textAlignment="CENTER" />
       <ImageView fitHeight="31.0" fitWidth="75.0" layoutX="599.0" layoutY="27.0" opacity="0.9" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../Downloads/buttonverde-bosque.jpg" />
+            <Image url="@Imagenes/buttonverde-bosque.jpg" />
          </image>
       </ImageView>
       <Label layoutX="610.0" layoutY="30.0" prefHeight="25.0" prefWidth="53.0" text="Aceptar" textAlignment="CENTER" textFill="WHITE">
