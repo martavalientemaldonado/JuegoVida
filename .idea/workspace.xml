@@ -4,8 +4,49 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ae59f5ab-3a2c-4635-b2d5-df0317d0df49" name="Changes" comment="hhh">
+    <list default="true" id="ae59f5ab-3a2c-4635-b2d5-df0317d0df49" name="Changes" comment="recursos">
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_05_2024_21_26__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Imagenes/piedra-ov.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Imagenes/piedra.jpg1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Imagenes/piedra.jpg2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Imagenes/piedra.jpgrect.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Imagenes/portada.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Imagenes/rectangulo blanco.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases/Individuos/Individuo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases/Individuos/Individuo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases/Individuos/IndividuoAvanzado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases/Individuos/IndividuoAvanzado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases/Individuos/IndividuoBasico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases/Individuos/IndividuoBasico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases/Individuos/IndividuoNormal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases/Individuos/IndividuoNormal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases/Recursos/Agua.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases/Recursos/Agua.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases/Recursos/Biblioteca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases/Recursos/Biblioteca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases/Recursos/Comida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases/Recursos/Comida.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases/Recursos/Montaña.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases/Recursos/Montaña.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases/Recursos/Pozo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases/Recursos/Pozo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases/Recursos/Tesoro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases/Recursos/Tesoro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Clases/Individuos/IndividuoAvanzado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Clases/Individuos/IndividuoAvanzado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Clases/Recursos/Biblioteca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Clases/Recursos/Biblioteca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Clases/Recursos/Comida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Clases/Recursos/Comida.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/ParametrosIndividuo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/ParametrosIndividuo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/ParametrosIndividuoControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/ParametrosIndividuoControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/1C5631.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Imagenes/1C5631.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/1e2ca0fe-41db-4048-8258-67e5a128be91.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Imagenes/1e2ca0fe-41db-4048-8258-67e5a128be91.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/2verde-bosque.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Imagenes/2verde-bosque.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Captura.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Imagenes/Captura.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/PantallaInicio.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/PantallaInicio.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/TurnosPropRe.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/TurnosPropRe.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/bienvenida.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/bienvenida.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/bosque.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Imagenes/bosque.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/botonamarillo.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Imagenes/botonamarillo.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/buttonverde-bosque.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Imagenes/buttonverde-bosque.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/cartulinaamarilla.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Imagenes/cartulinaamarilla.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fondotransparenteverde-bosque.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Imagenes/fondotransparenteverde-bosque.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/parametrosIndiv.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/parametrosIndiv.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/paramindiv.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/paramindiv.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sliderverde-bosque.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Imagenes/sliderverde-bosque.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/titulosverde-bosque.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Imagenes/titulosverde-bosque.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/tituloverde-bosque.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Imagenes/tituloverde-bosque.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/verde-bosque.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Imagenes/verde-bosque.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +56,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -33,7 +74,8 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RESET_MODE" value="MIXED" />
+    <option name="RESET_MODE" value="SOFT" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -52,6 +94,9 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/BienvenidaControl.java" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -64,14 +109,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Bienvenida.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "Merging master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/PC/IdeaProjects/JuegoVida/src/main/resources",
     "node.js.detected.package.eslint": "true",
@@ -91,14 +132,11 @@
       <recent name="C:\Users\PC\IdeaProjects\JuegoVida\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\UAH\JuegoVida\src\main\resources\Imagenes" />
       <recent name="C:\Users\PC\IdeaProjects\JuegoVida\src\main\resources" />
       <recent name="C:\Users\PC\IdeaProjects\JuegoVida\src\main\java\com\example\juegovida\javafx\scene\image" />
       <recent name="C:\Users\UAH\JuegoVida\src\main\resources" />
       <recent name="C:\Users\UAH\JuegoVida\src\main\resources\Res" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.example.juegovida" />
+      <recent name="C:\Users\UAH\JuegoVida\src\main\java\com\example\juegovida\javafx\scene\image" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="" />
@@ -110,7 +148,7 @@
       <module name="JuegoVida" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.juegovida.App.ParamIndiv.*" />
+          <option name="PATTERN" value="com.example.juegovida.App.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -123,7 +161,7 @@
       <module name="JuegoVida" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.juegovida.App.ParamIndiv.*" />
+          <option name="PATTERN" value="com.example.juegovida.App.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -156,6 +194,8 @@
       <option name="presentableId" value="Default" />
       <updated>1714492974562</updated>
       <workItem from="1714837085418" duration="316000" />
+      <workItem from="1714982426680" duration="535000" />
+      <workItem from="1714983574307" duration="1146000" />
     </task>
     <task id="LOCAL-00001" summary="B">
       <option name="closed" value="true" />
@@ -261,37 +301,36 @@
       <option name="project" value="LOCAL" />
       <updated>1714842046702</updated>
     </task>
-    <task id="LOCAL-00014" summary="hhh">
+    <task id="LOCAL-00014" summary="recursos e individuos">
       <option name="closed" value="true" />
-      <created>1714937232122</created>
+      <created>1714845675363</created>
       <option name="number" value="00014" />
       <option name="presentableId" value="LOCAL-00014" />
       <option name="project" value="LOCAL" />
-      <updated>1714937232122</updated>
+      <updated>1714845675363</updated>
     </task>
-    <task id="LOCAL-00015" summary="hhh">
-      <option name="closed" value="true" />
-      <created>1714986451831</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1714986451831</updated>
-    </task>
-    <task id="LOCAL-00016" summary="hhh">
-      <option name="closed" value="true" />
-      <created>1714988284356</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1714988284356</updated>
-    </task>
-    <option name="localTasksCounter" value="17" />
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/master" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -318,8 +357,9 @@
     <MESSAGE value="B" />
     <MESSAGE value="PantallaInicio Bienvenida" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
-    <MESSAGE value="recursos" />
     <MESSAGE value="hhh" />
-    <option name="LAST_COMMIT_MESSAGE" value="hhh" />
+    <MESSAGE value="recursos e individuos" />
+    <MESSAGE value="recursos" />
+    <option name="LAST_COMMIT_MESSAGE" value="recursos" />
   </component>
 </project>
