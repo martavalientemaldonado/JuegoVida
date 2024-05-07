@@ -7,7 +7,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="430.0" prefWidth="586.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.juegovida.Controllers.ParametrosIndividuoControl">
+<AnchorPane prefHeight="430.0" prefWidth="586.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.juegovida.Controllers.ParametrosIndividuoControl">
    <children>
       <ImageView fx:id="fondo" fitHeight="484.0" fitWidth="774.0" layoutX="-3.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -35,9 +35,9 @@
             <Image url="@Imagenes/piedra.jpg1.jpg" />
          </image>
       </ImageView>
-      <Slider fx:id="slclon" layoutX="483.0" layoutY="269.0" orientation="VERTICAL" />
-      <Slider fx:id="slrep" layoutX="305.0" layoutY="269.0" orientation="VERTICAL" />
-      <Slider fx:id="slmuerte" layoutX="91.0" layoutY="269.0" orientation="VERTICAL" />
+      <Slider id="ProbClonacion" fx:id="ProbClonacion" layoutX="483.0" layoutY="269.0" orientation="VERTICAL" />
+      <Slider id="ProbReproduccion" fx:id="ProbReproduccion" layoutX="305.0" layoutY="269.0" orientation="VERTICAL" />
+      <Slider id="ProbMuerte" fx:id="ProbMuerte" layoutX="91.0" layoutY="269.0" minorTickCount="0" orientation="VERTICAL" />
       <ImageView fx:id="immuerte" fitHeight="45.0" fitWidth="146.0" layoutX="33.0" layoutY="161.0" opacity="0.88" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Imagenes/piedra.jpg2.jpg" />

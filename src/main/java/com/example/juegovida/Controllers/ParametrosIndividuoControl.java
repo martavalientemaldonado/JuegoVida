@@ -16,9 +16,14 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import java.util.ResourceBundle;
+
 public class ParametrosIndividuoControl {
     @FXML
-    private Button buttonguardar;
+    private ResourceBundle resources;
+
+    @FXML
+    private URL location;
 
     @FXML
     private ImageView fondo;
@@ -27,19 +32,7 @@ public class ParametrosIndividuoControl {
     private ImageView fondoselecc;
 
     @FXML
-    private ImageView imclon;
-
-    @FXML
-    private ImageView imguardar;
-
-    @FXML
-    private ImageView immuerte;
-
-    @FXML
-    private ImageView imrep;
-
-    @FXML
-    private ImageView imslclon;
+    private Label lblselecc;
 
     @FXML
     private ImageView imslmuerte;
@@ -48,10 +41,25 @@ public class ParametrosIndividuoControl {
     private ImageView imslrep;
 
     @FXML
-    private Label lblclonacion;
+    private ImageView imslclon;
 
     @FXML
-    private Label lblguardar;
+    private Slider ProbClonacion;
+
+    @FXML
+    private Slider ProbReproduccion;
+
+    @FXML
+    private Slider ProbMuerte;
+
+    @FXML
+    private ImageView immuerte;
+
+    @FXML
+    private ImageView imclon;
+
+    @FXML
+    private ImageView imrep;
 
     @FXML
     private Label lblmuerte;
@@ -60,16 +68,16 @@ public class ParametrosIndividuoControl {
     private Label lblreprod;
 
     @FXML
-    private Label lblselecc;
+    private Label lblclonacion;
 
     @FXML
-    private Slider slclon;
+    private ImageView imguardar;
 
     @FXML
-    private Slider slmuerte;
+    private Label lblguardar;
 
     @FXML
-    private Slider slrep;
+    private Button buttonguardar;
 
     @FXML
     void click(ActionEvent event) throws IOException {
@@ -90,7 +98,27 @@ public class ParametrosIndividuoControl {
         stage.show();
 
     }
-
+    @FXML
+    void initialize() {
+        assert fondo != null : "fx:id=\"fondo\" was not injected: check your FXML file 'parametrosIndiv.fxml'.";
+        assert fondoselecc != null : "fx:id=\"fondoselecc\" was not injected: check your FXML file 'parametrosIndiv.fxml'.";
+        assert lblselecc != null : "fx:id=\"lblselecc\" was not injected: check your FXML file 'parametrosIndiv.fxml'.";
+        assert imslmuerte != null : "fx:id=\"imslmuerte\" was not injected: check your FXML file 'parametrosIndiv.fxml'.";
+        assert imslrep != null : "fx:id=\"imslrep\" was not injected: check your FXML file 'parametrosIndiv.fxml'.";
+        assert imslclon != null : "fx:id=\"imslclon\" was not injected: check your FXML file 'parametrosIndiv.fxml'.";
+        assert ProbClonacion != null : "fx:id=\"ProbClonacion\" was not injected: check your FXML file 'parametrosIndiv.fxml'.";
+        assert ProbReproduccion != null : "fx:id=\"ProbReproduccion\" was not injected: check your FXML file 'parametrosIndiv.fxml'.";
+        assert ProbMuerte != null : "fx:id=\"ProbMuerte\" was not injected: check your FXML file 'parametrosIndiv.fxml'.";
+        assert immuerte != null : "fx:id=\"immuerte\" was not injected: check your FXML file 'parametrosIndiv.fxml'.";
+        assert imclon != null : "fx:id=\"imclon\" was not injected: check your FXML file 'parametrosIndiv.fxml'.";
+        assert imrep != null : "fx:id=\"imrep\" was not injected: check your FXML file 'parametrosIndiv.fxml'.";
+        assert lblmuerte != null : "fx:id=\"lblmuerte\" was not injected: check your FXML file 'parametrosIndiv.fxml'.";
+        assert lblreprod != null : "fx:id=\"lblreprod\" was not injected: check your FXML file 'parametrosIndiv.fxml'.";
+        assert lblclonacion != null : "fx:id=\"lblclonacion\" was not injected: check your FXML file 'parametrosIndiv.fxml'.";
+        assert imguardar != null : "fx:id=\"imguardar\" was not injected: check your FXML file 'parametrosIndiv.fxml'.";
+        assert lblguardar != null : "fx:id=\"lblguardar\" was not injected: check your FXML file 'parametrosIndiv.fxml'.";
+        assert buttonguardar != null : "fx:id=\"buttonguardar\" was not injected: check your FXML file 'parametrosIndiv.fxml'.";
 
     }
+}
 
