@@ -1,7 +1,8 @@
 package com.example.juegovida.Clases.Recursos;
 
 public class Pozo {
-    double ProbAparicion;
+    public static double ProbAparicion;
+    public static double ProbMuerteProp;
     public Pozo() {
     }
 
@@ -9,7 +10,7 @@ public class Pozo {
         return ProbAparicion;
     }
 
-    public void setProbAparicion(double probAparicion) {
-        this.ProbAparicion = probAparicion;
+    public static double getProbMuerteProp() {
+        return ProbMuerteProp;
     }
 }

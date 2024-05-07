@@ -1,6 +1,8 @@
 package com.example.juegovida.Controllers;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import com.example.juegovida.Clases.Recursos.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Slider;
@@ -36,12 +38,22 @@ public class TurnosPropRecursosControl {
 
     @FXML
     void clickAceptar(ActionEvent event) {
-
+        Comida.TurnosProporciona = Turnosomida.getValue();
+        Montaña.TurnosProporciona = TurnosMontaña.getValue();
+        Agua.TurnosProporciona = TurnosAgua.getValue();
+        Tesoro.ProbReproduccionPropo = TurnosTesoro.getValue();
+        Biblioteca.ProbClonacionProp = TurnosBiblioteca.getValue();
+        Pozo.ProbMuerteProp = TurnosPozo.getValue();
     }
 
     @FXML
     void clickRestablecer(ActionEvent event) {
-
+        Turnosomida.setValue(Comida.TurnosProporciona);
+        TurnosMontaña.setValue(Montaña.TurnosProporciona);
+        TurnosAgua.setValue(Agua.TurnosProporciona);
+        Tesoro.ProbReproduccionPropo = TurnosTesoro.getValue();
+        TurnosBiblioteca.setValue(Tesoro.ProbReproduccionPropo);
+        TurnosPozo.setValue(Pozo.ProbMuerteProp);
     }
 
     @FXML

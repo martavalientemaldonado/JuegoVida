@@ -9,7 +9,6 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Box;
 import javafx.stage.Stage;
-
 import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -40,11 +39,10 @@ public class BienvenidaControl implements Initializable {
 
     @FXML
     private Label lblcomienzajuego;
-    private static final Logger log = LogManager.getLogger(BienvenidaControl.class);
 
     @FXML
     void click(ActionEvent event) throws IOException {
-        log.info("Inicio del método de arranque de la aplicación para mostrar un grid de forma programática");
+
 
         Stage stage = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader();

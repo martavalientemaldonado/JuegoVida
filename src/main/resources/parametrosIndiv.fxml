@@ -16,7 +16,7 @@
       </ImageView>
       <ImageView fx:id="fondoselecc" fitHeight="119.0" fitWidth="228.0" layoutX="192.0" layoutY="14.0" opacity="0.82" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Imagenes/rectangulo%20blanco.png" />
+            <Image url="@Imagenes/rectangulo blanco.png" />
          </image>
       </ImageView>
       <Label fx:id="lblselecc" layoutX="205.0" layoutY="44.0" text="Seleccione las probabilidades &#10;deseadas para cada característica &#10;del individuo" />

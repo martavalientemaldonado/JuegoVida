@@ -1,8 +1,8 @@
 package com.example.juegovida.Clases.Recursos;
 
 public class Comida {
-    double ProbAparicion;
-    Integer TurnosProporciona;
+    public static double ProbAparicion;
+    public static double TurnosProporciona;
 
     public Comida() {
     }
@@ -11,15 +11,7 @@ public class Comida {
         return ProbAparicion;
     }
 
-    public void setProbAparicion(double probAparicion) {
-        this.ProbAparicion = probAparicion;
-    }
-
-    public Integer getTurnosProporciona() {
+    public double getTurnosProporciona() {
         return TurnosProporciona;
-    }
-
-    public void setTurnosProporciona(Integer turnosProporciona) {
-        this.TurnosProporciona = turnosProporciona;
     }
 }
