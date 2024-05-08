@@ -1,12 +1,19 @@
 package com.example.juegovida.Controllers;
+import java.io.File;
+import java.io.IOException;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import com.example.juegovida.Clases.Recursos.*;
+import com.example.juegovida.Utilities.Paths;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Slider;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 
 public class ParamRecursosControl {
 
@@ -41,7 +48,7 @@ public class ParamRecursosControl {
     private Slider ProbabilidadPozo;
 
     @FXML
-    void clickAceptar(ActionEvent event) {
+    void clickAceptar(ActionEvent event) throws IOException {
         Comida.ProbAparicion = ProbabilidadComida.getValue();
         Montaña.ProbAparicion = ProbabilidadMontaña.getValue();
         Tesoro.ProbAparicion = ProbabilidadTesoro.getValue();
@@ -49,6 +56,21 @@ public class ParamRecursosControl {
         Pozo.ProbAparicion = ProbabilidadPozo.getValue();
         Agua.ProbAparicion = ProbabilidadAgua.getValue();
         Recurso.ProbabilidadNuevoRE = ProbabilidadNuevoRe.getValue();
+        Stage stage = new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        File fichero = new File(Paths.PARAMRECURSOS);
+        URL url = null;
+        try {
+            url = fichero.toURL();
+        } catch (MalformedURLException ex) {
+            throw new RuntimeException(ex);
+        }
+        fxmlLoader.setLocation(url); // Para encontrar donde esta
+        Scene scene = new Scene(fxmlLoader.load(),700,500); //vCarga escena
+        stage.setScene(scene);
+        ParamRecursosControl p= fxmlLoader.getController();
+        p.setStage(stage);
+        stage.show();
     }
 
     @FXML
@@ -73,5 +95,8 @@ public class ParamRecursosControl {
         assert ProbabilidadBiblioteca != null : "fx:id=\"ProbabilidadBiblioteca\" was not injected: check your FXML file 'paramindiv.fxml'.";
         assert ProbabilidadPozo != null : "fx:id=\"ProbabilidadPozo\" was not injected: check your FXML file 'paramindiv.fxml'.";
 
+    }
+
+    public void setStage(Stage stage) {
     }
 }

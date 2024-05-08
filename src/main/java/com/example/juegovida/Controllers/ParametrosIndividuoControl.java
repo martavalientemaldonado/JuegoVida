@@ -94,7 +94,7 @@ public class ParametrosIndividuoControl {
         fxmlLoader.setLocation(url); // Para encontrar donde esta
         Scene scene = new Scene(fxmlLoader.load(),700,500); //vCarga escena
         stage.setScene(scene);
-        PantallaInicioControl p= fxmlLoader.getController();
+        ParamRecursosControl p= fxmlLoader.getController();
         p.setStage(stage);
         stage.show();
     }
@@ -119,6 +119,9 @@ public class ParametrosIndividuoControl {
         assert lblguardar != null : "fx:id=\"lblguardar\" was not injected: check your FXML file 'parametrosIndiv.fxml'.";
         assert buttonguardar != null : "fx:id=\"buttonguardar\" was not injected: check your FXML file 'parametrosIndiv.fxml'.";
 
+    }
+
+    public void setStage(Stage stage) {
     }
 }
 

@@ -28,7 +28,7 @@ public class Bienvenida extends Application {
             throw new RuntimeException(ex);
         }
         fxmlLoader.setLocation(url); // Para encontrar donde esta
-        Scene scene = new Scene(fxmlLoader.load(),700,500); //vCarga escena
+        Scene scene = new Scene(fxmlLoader.load(),600,400); //vCarga escena
         stage.setScene(scene);
         BienvenidaControl p= fxmlLoader.getController(); // Le pasas tu escena
         p.setStage(stage);

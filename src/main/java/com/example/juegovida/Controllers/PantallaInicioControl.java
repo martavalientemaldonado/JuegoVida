@@ -5,7 +5,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 
-
 import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -23,18 +22,11 @@ import javafx.scene.image.ImageView;
 
 
 public class PantallaInicioControl implements Initializable {
-    private Stage stage;
     @FXML
     private ResourceBundle resources;
 
     @FXML
     private URL location;
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        
-    }
-
 
     @FXML
     private Button botoncargarp;
@@ -56,8 +48,14 @@ public class PantallaInicioControl implements Initializable {
 
     @FXML
     private Label lblnuevapart;
+
     @FXML
-    void click(ActionEvent event) throws IOException {
+    void clickcargar(ActionEvent event) {
+
+    }
+
+    @FXML
+    void clicknueva(ActionEvent event) throws IOException {
         Stage stage = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader();
         File fichero = new File(Paths.PARAMINDIV);
@@ -70,19 +68,14 @@ public class PantallaInicioControl implements Initializable {
         fxmlLoader.setLocation(url); // Para encontrar donde esta
         Scene scene = new Scene(fxmlLoader.load(),700,500); //vCarga escena
         stage.setScene(scene);
-        PantallaInicioControl p= fxmlLoader.getController();
+        ParametrosIndividuoControl p= fxmlLoader.getController();
         p.setStage(stage);
         stage.show();
 
     }
 
-
-
-    @FXML
-    void onclick(ActionEvent event) {
-
+    void setStage(Stage stage) {
     }
-
 
     @FXML
     void initialize() {
@@ -96,7 +89,9 @@ public class PantallaInicioControl implements Initializable {
 
     }
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
 
-    public void setStage(Stage stage) {
     }
 }
+

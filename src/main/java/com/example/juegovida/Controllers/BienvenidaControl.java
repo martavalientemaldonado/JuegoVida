@@ -35,7 +35,7 @@ public class BienvenidaControl implements Initializable {
     private static final Logger log = LogManager.getLogger(BienvenidaControl.class);
 
     @FXML
-    void click(ActionEvent event) throws IOException {
+    void click() throws IOException {
         Stage stage = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader();
         File fichero = new File(Paths.PANTALLAINICIO);
@@ -57,12 +57,7 @@ public class BienvenidaControl implements Initializable {
         Stage stageactual = (Stage) sourece.getScene().getWindow();
         stageactual.close();
 
-        log.trace("Enviando una traza de ejecución");
-        log.debug("Enviado un debug");
-        log.info("Enviando un info");
-        log.warn("Enviando un aviso");
-        log.error("Enviando un error");
-        log.fatal("Enviando una explosión fatal");
+
     }
 
 
