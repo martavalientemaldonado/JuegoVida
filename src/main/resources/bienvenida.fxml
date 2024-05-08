@@ -24,7 +24,7 @@
             <Font name="Berlin Sans FB" size="18.0" />
          </font>
       </Label>
-      <Button fx:id="butcomienza" layoutX="327.0" layoutY="323.0" mnemonicParsing="false" onAction="#click" opacity="0.0" prefHeight="65.0" prefWidth="182.0" text="Button">
+      <Button fx:id="butcomienza" layoutX="327.0" layoutY="323.0" mnemonicParsing="false" onAction="#clicknueva" opacity="0.0" prefHeight="65.0" prefWidth="182.0" text="Button">
          <font>
             <Font name="Bank Gothic Medium BT" size="12.0" />
          </font></Button>

@@ -4,7 +4,6 @@ import com.example.juegovida.Controllers.BienvenidaControl;
 import com.example.juegovida.Utilities.Paths;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
@@ -29,7 +28,7 @@ public class Bienvenida extends Application {
             throw new RuntimeException(ex);
         }
         fxmlLoader.setLocation(url); // Para encontrar donde esta
-        Scene scene = new Scene(fxmlLoader.<Parent>load(),700,500); //vCarga escena
+        Scene scene = new Scene(fxmlLoader.load(),700,500); //vCarga escena
         stage.setScene(scene);
         BienvenidaControl p= fxmlLoader.getController(); // Le pasas tu escena
         p.setStage(stage);
