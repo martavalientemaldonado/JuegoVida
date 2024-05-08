@@ -4,21 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ae59f5ab-3a2c-4635-b2d5-df0317d0df49" name="Changes" comment="Recursos:aceptar y restablecer">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Clases/Casilla.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Clases/ListaEnlazada.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Clases/Matriz.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/DatosCompartidos.java" afterDir="false" />
+    <list default="true" id="ae59f5ab-3a2c-4635-b2d5-df0317d0df49" name="Changes" comment="Datos comunes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Bienvenida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Bienvenida.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/ParamIndiv/ParametrosIndividuo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/ParametrosIndividuo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Clases/Individuos/Individuo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Clases/Individuos/Individuo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/BienvenidaControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/BienvenidaControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/PantallasRecursos.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/ParametrosIndividuoControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/ParametrosIndividuoControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/TurnosPropRecursosControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/TurnosPropRecursosControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/TurnosPropRe.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/TurnosPropRe.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/bienvenida.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/bienvenida.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +166,8 @@
       <workItem from="1715095440708" duration="678000" />
       <workItem from="1715106067589" duration="3865000" />
       <workItem from="1715148823067" duration="4407000" />
-      <workItem from="1715186900660" duration="439000" />
+      <workItem from="1715186900660" duration="10267000" />
+      <workItem from="1715202455895" duration="773000" />
     </task>
     <task id="LOCAL-00001" summary="B">
       <option name="closed" value="true" />
@@ -332,7 +321,23 @@
       <option name="project" value="LOCAL" />
       <updated>1715087838950</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Recursos:aceptar y restablecer">
+      <option name="closed" value="true" />
+      <created>1715188933336</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1715188933336</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Datos comunes">
+      <option name="closed" value="true" />
+      <created>1715196812721</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1715196812721</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -385,6 +390,18 @@
     <MESSAGE value="recursos" />
     <MESSAGE value="Dimension y vida" />
     <MESSAGE value="Recursos:aceptar y restablecer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Recursos:aceptar y restablecer" />
+    <MESSAGE value="Datos comunes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Datos comunes" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Bienvenida.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
