@@ -95,7 +95,7 @@
             <Font name="Book Antiqua" size="13.0" />
          </font>
       </Label>
-      <Slider id="TurnosPozo" fx:id="TurnosPozo" layoutX="651.0" layoutY="177.0" minorTickCount="0" orientation="VERTICAL" prefHeight="209.0" prefWidth="14.0" showTickLabels="true" />
+      <Slider id="TurnosPozo" fx:id="TurnosPozo" layoutX="651.0" layoutY="177.0" min="50.0" minorTickCount="0" orientation="VERTICAL" prefHeight="209.0" prefWidth="14.0" showTickLabels="true" />
       <ImageView fitHeight="39.0" fitWidth="75.0" layoutX="505.0" layoutY="27.0" opacity="0.9" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Imagenes/buttonverde-bosque.jpg" />

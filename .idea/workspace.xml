@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ae59f5ab-3a2c-4635-b2d5-df0317d0df49" name="Changes" comment="Recursos:aceptar y restablecer" />
+    <list default="true" id="ae59f5ab-3a2c-4635-b2d5-df0317d0df49" name="Changes" comment="Recursos:aceptar y restablecer">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Clases/Casilla.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Clases/ListaEnlazada.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Clases/Matriz.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/DatosCompartidos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Bienvenida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Bienvenida.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/ParamIndiv/ParametrosIndividuo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/ParametrosIndividuo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Clases/Individuos/Individuo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Clases/Individuos/Individuo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/BienvenidaControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/BienvenidaControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/PantallasRecursos.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/ParametrosIndividuoControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/ParametrosIndividuoControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/TurnosPropRecursosControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/TurnosPropRecursosControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/TurnosPropRe.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/TurnosPropRe.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,8 +28,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -62,30 +77,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Bienvenida.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "true",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "true",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/PC/IdeaProjects/JuegoVidaFin/src/main/resources/Imagenes",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.3862069",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Bienvenida.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/PC/IdeaProjects/JuegoVidaFin/src/main/resources/Imagenes&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.3862069&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\PC\IdeaProjects\JuegoVidaFin\src\main\resources\Imagenes" />
@@ -100,6 +115,7 @@
       <recent name="C:\Users\UAH\JuegoVida\src\main\resources\Res" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.juegovida.Clases" />
       <recent name="" />
     </key>
   </component>
@@ -158,7 +174,11 @@
       <workItem from="1714982426680" duration="535000" />
       <workItem from="1714983574307" duration="1146000" />
       <workItem from="1714992560726" duration="1035000" />
-      <workItem from="1715069222781" duration="6745000" />
+      <workItem from="1715069222781" duration="7082000" />
+      <workItem from="1715095440708" duration="678000" />
+      <workItem from="1715106067589" duration="3865000" />
+      <workItem from="1715148823067" duration="4407000" />
+      <workItem from="1715186900660" duration="439000" />
     </task>
     <task id="LOCAL-00001" summary="B">
       <option name="closed" value="true" />
@@ -304,7 +324,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715087496141</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Recursos:aceptar y restablecer">
+      <option name="closed" value="true" />
+      <created>1715087838950</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1715087838950</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

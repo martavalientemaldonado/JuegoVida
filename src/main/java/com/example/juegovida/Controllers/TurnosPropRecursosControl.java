@@ -51,8 +51,8 @@ public class TurnosPropRecursosControl {
         Turnosomida.setValue(Comida.TurnosProporciona);
         TurnosMontaña.setValue(Montaña.TurnosProporciona);
         TurnosAgua.setValue(Agua.TurnosProporciona);
-        Tesoro.ProbReproduccionPropo = TurnosTesoro.getValue();
-        TurnosBiblioteca.setValue(Tesoro.ProbReproduccionPropo);
+        TurnosTesoro.setValue(Tesoro.ProbReproduccionPropo);
+        TurnosBiblioteca.setValue(Biblioteca.ProbClonacionProp);
         TurnosPozo.setValue(Pozo.ProbMuerteProp);
     }
 

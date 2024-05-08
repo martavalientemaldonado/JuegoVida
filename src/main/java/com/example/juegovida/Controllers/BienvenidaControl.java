@@ -6,22 +6,15 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.shape.Box;
 import javafx.stage.Stage;
 import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.scene.Node;
 
-
-import java.net.URL;
-import java.net.URL;
-import java.util.ResourceBundle;
-import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -39,11 +32,10 @@ public class BienvenidaControl implements Initializable {
 
     @FXML
     private Label lblcomienzajuego;
+    private static final Logger log = LogManager.getLogger(BienvenidaControl.class);
 
     @FXML
     void click(ActionEvent event) throws IOException {
-
-
         Stage stage = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader();
         File fichero = new File(Paths.PANTALLAINICIO);
@@ -59,6 +51,12 @@ public class BienvenidaControl implements Initializable {
         PantallaInicioControl p= fxmlLoader.getController();
         p.setStage(stage);
         stage.show();
+
+        //Cerrar ventana
+        Node sourece = (Node) event.getSource();
+        Stage stageactual = (Stage) sourece.getScene().getWindow();
+        stageactual.close();
+
         log.trace("Enviando una traza de ejecución");
         log.debug("Enviado un debug");
         log.info("Enviando un info");

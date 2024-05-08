@@ -81,6 +81,7 @@ public class ParametrosIndividuoControl {
 
     @FXML
     void click(ActionEvent event) throws IOException {
+
         Stage stage = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader();
         File fichero = new File(Paths.PARAMRECURSOS);
@@ -96,7 +97,6 @@ public class ParametrosIndividuoControl {
         PantallaInicioControl p= fxmlLoader.getController();
         p.setStage(stage);
         stage.show();
-
     }
     @FXML
     void initialize() {

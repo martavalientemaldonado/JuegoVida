@@ -1,4 +1,4 @@
-package com.example.juegovida.App.ParamIndiv;
+package com.example.juegovida.App;
 import com.example.juegovida.Controllers.BienvenidaControl;
 import com.example.juegovida.Utilities.Paths;
 import javafx.application.Application;

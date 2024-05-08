@@ -33,6 +33,5 @@ public class Bienvenida extends Application {
         BienvenidaControl p= fxmlLoader.getController(); // Le pasas tu escena
         p.setStage(stage);
         stage.show();
-
     }
 }

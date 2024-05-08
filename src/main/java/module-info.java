@@ -8,7 +8,5 @@ module com.example.juegovida {
     exports com.example.juegovida.Controllers;
     opens com.example.juegovida.App to javafx.fxml;
     exports com.example.juegovida.App;
-    exports com.example.juegovida.App.ParamIndiv;
-    opens com.example.juegovida.App.ParamIndiv to javafx.fxml;
 
 }
