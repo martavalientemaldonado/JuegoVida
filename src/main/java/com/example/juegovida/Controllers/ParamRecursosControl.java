@@ -58,7 +58,7 @@ public class ParamRecursosControl {
         Recurso.ProbabilidadNuevoRE = ProbabilidadNuevoRe.getValue();
         Stage stage = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader();
-        File fichero = new File(Paths.PARAMRECURSOS);
+        File fichero = new File(Paths.TURNOSPROBREC);
         URL url = null;
         try {
             url = fichero.toURL();

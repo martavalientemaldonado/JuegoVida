@@ -1,12 +1,19 @@
 package com.example.juegovida.Controllers;
+import java.io.File;
+import java.io.IOException;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import com.example.juegovida.Clases.Recursos.*;
+import com.example.juegovida.Utilities.Paths;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Slider;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 
 public class TurnosPropRecursosControl {
     @FXML
@@ -37,13 +44,28 @@ public class TurnosPropRecursosControl {
     private Slider TurnosPozo;
 
     @FXML
-    void clickAceptar(ActionEvent event) {
+    void clickAceptar(ActionEvent event) throws IOException {
         Comida.TurnosProporciona = Turnosomida.getValue();
         Montaña.TurnosProporciona = TurnosMontaña.getValue();
         Agua.TurnosProporciona = TurnosAgua.getValue();
         Tesoro.ProbReproduccionPropo = TurnosTesoro.getValue();
         Biblioteca.ProbClonacionProp = TurnosBiblioteca.getValue();
         Pozo.ProbMuerteProp = TurnosPozo.getValue();
+        Stage stage = new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        File fichero = new File(Paths.DIMTURNOSVIDA);
+        URL url = null;
+        try {
+            url = fichero.toURL();
+        } catch (MalformedURLException ex) {
+            throw new RuntimeException(ex);
+        }
+        fxmlLoader.setLocation(url); // Para encontrar donde esta
+        Scene scene = new Scene(fxmlLoader.load(),700,500); //vCarga escena
+        stage.setScene(scene);
+        PantallaInicioControl p= fxmlLoader.getController();
+        p.setStage(stage);
+        stage.show();
     }
 
     @FXML

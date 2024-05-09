@@ -65,7 +65,7 @@ public class PantallaInicioControl implements Initializable {
         } catch (MalformedURLException ex) {
             throw new RuntimeException(ex);
         }
-        fxmlLoader.setLocation(url); // Para encontrar donde esta
+        fxmlLoader.setLocation(ur); // Para encontrar donde esta
         Scene scene = new Scene(fxmlLoader.load(),700,500); //vCarga escena
         stage.setScene(scene);
         ParametrosIndividuoControl p= fxmlLoader.getController();

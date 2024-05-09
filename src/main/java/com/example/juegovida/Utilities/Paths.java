@@ -7,4 +7,7 @@ public class Paths {
     public static final String PANTALLAINICIO="src/main/resources/PantallaInicio.fxml";
     public static final String PARAMINDIV="src/main/resources/parametrosIndiv.fxml";
     public static final String PARAMRECURSOS = "src/main/resources/paramindiv.fxml";
+    public static final String DIMTURNOSVIDA = "src/main/resources/DimyTurnosVida.fxml";
+    public static final String TURNOSPROBREC = "src/main/resources/TurnosPropRe.fxml";
+
 }

@@ -12,6 +12,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class Bienvenida extends Application {
+
     public static void main(String[] args) {
         launch(args); //LLama a start
 
@@ -21,17 +22,19 @@ public class Bienvenida extends Application {
 
         FXMLLoader fxmlLoader = new FXMLLoader();
         File fichero = new File(Paths.BIENVENIDA);//Carga scene en stage
-        URL url = null;
+
+        URL url;
         try {
             url = fichero.toURL();
         } catch (MalformedURLException ex) {
             throw new RuntimeException(ex);
         }
         fxmlLoader.setLocation(url); // Para encontrar donde esta
-        Scene scene = new Scene(fxmlLoader.load(),600,400); //vCarga escena
+        Scene scene = new Scene(fxmlLoader.load(),700,500); //vCarga escena
         stage.setScene(scene);
         BienvenidaControl p= fxmlLoader.getController(); // Le pasas tu escena
         p.setStage(stage);
         stage.show();
+
     }
 }

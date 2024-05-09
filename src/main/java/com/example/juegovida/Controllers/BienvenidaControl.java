@@ -1,6 +1,6 @@
 package com.example.juegovida.Controllers;
 import com.example.juegovida.Utilities.Paths;
-import javafx.event.ActionEvent;
+import javafx.collections.transformation.TransformationList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -15,7 +15,6 @@ import java.util.ResourceBundle;
 import javafx.scene.Node;
 
 import javafx.scene.control.Button;
-import javafx.scene.input.MouseEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -51,11 +50,7 @@ public class BienvenidaControl implements Initializable {
         PantallaInicioControl p= fxmlLoader.getController();
         p.setStage(stage);
         stage.show();
-
-        //Cerrar ventana
-        Node sourece = (Node) event.getSource();
-        Stage stageactual = (Stage) sourece.getScene().getWindow();
-        stageactual.close();
+        
 
 
     }
