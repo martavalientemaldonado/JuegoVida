@@ -2,11 +2,13 @@ package com.example.juegovida.Controllers;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import com.example.juegovida.DatosCompartidos;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Slider;
 import javafx.scene.image.ImageView;
-public class DimyTurnosControl {
+public class DimyTurnosControl<T> {
     @FXML
     private ResourceBundle resources;
 
@@ -27,15 +29,16 @@ public class DimyTurnosControl {
 
     @FXML
     private Slider TurnosVidaRecursos;
+    private DatosCompartidos<T> d;
 
     @FXML
     void clickAceptar(ActionEvent event) {
-
+        d.commitDimyVida();
     }
 
     @FXML
     void clickRestablecer(ActionEvent event) {
-
+        d.rollbackDimyVida();
     }
 
     @FXML
