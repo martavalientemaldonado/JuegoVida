@@ -1,6 +1,6 @@
 package com.example.juegovida.Clases;
 
-public abstract class Individuo {
+public class Individuo {
     private Integer NumIdentificacion;
     private Integer Generacion;
     private static double TurnosVidaInd;

@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ae59f5ab-3a2c-4635-b2d5-df0317d0df49" name="Changes" comment="Datos comunes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tablero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/BienvenidaControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/BienvenidaControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/Tablero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Clases/Individuo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Clases/Individuo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +114,7 @@
       <module name="JuegoVida" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.juegovida.App.*" />
+          <option name="PATTERN" value="com.example.juegovida.App.Tab.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -127,7 +127,7 @@
       <module name="JuegoVida" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.juegovida.App.*" />
+          <option name="PATTERN" value="com.example.juegovida.App.Tab.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -370,7 +370,23 @@
       <option name="project" value="LOCAL" />
       <updated>1715322765748</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Datos comunes">
+      <option name="closed" value="true" />
+      <created>1715324552864</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1715324552864</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Datos comunes">
+      <option name="closed" value="true" />
+      <created>1715324942075</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1715324942075</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
