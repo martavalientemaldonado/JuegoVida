@@ -34,11 +34,21 @@ public class Tablero {
         for (int i=0;i<filas;i++){
             for (int j=0; j<columnas;j++){
                 GridPane second= new GridPane();
-                Label l= new Label("");
+                Label lBib= new Label();
+                lBib.setPrefSize(32,32);
+                Label lPozo= new Label();
+                lPozo.setPrefSize(32,32);
+                Label lTesoro= new Label();
+                lTesoro.setPrefSize(32,32);
+                Label lAgua= new Label();
+                lAgua.setPrefSize(32,32);
+                Label lMont= new Label();
+                lMont.setPrefSize(32,32);
+
                 Label l2= new Label("");
                 Label l3= new Label("");
                 Label l4= new Label("");
-                second.add(l,0,0);
+                second.add(lBib,0,0);
                 second.add(l2,0,1);
                 second.add(l3,1,0);
                 second.add(l4,1,1);

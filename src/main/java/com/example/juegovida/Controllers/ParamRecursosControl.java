@@ -52,13 +52,7 @@ public class ParamRecursosControl<T> {
     @FXML
     void clickAceptar(ActionEvent event) throws IOException {
         d.commitProbAparicionRecursos();
-        Comida.ProbAparicion = ProbabilidadComida.getValue();
-        Montaña.ProbAparicion = ProbabilidadMontaña.getValue();
-        Tesoro.ProbAparicion = ProbabilidadTesoro.getValue();
-        Biblioteca.ProbAparicion = ProbabilidadBiblioteca.getValue();
-        Pozo.ProbAparicion = ProbabilidadPozo.getValue();
-        Agua.ProbAparicion = ProbabilidadAgua.getValue();
-        Recurso.ProbabilidadNuevoRE = ProbabilidadNuevoRe.getValue();
+
         Stage stage = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader();
         File fichero = new File(Paths.TURNOSPROBREC);
@@ -79,13 +73,6 @@ public class ParamRecursosControl<T> {
     @FXML
     void clickRestablecer(ActionEvent event) {
         d.rollbackProbAparicionRecursos();
-        ProbabilidadAgua.setValue(Agua.ProbAparicion);
-        ProbabilidadComida.setValue(Comida.ProbAparicion);
-        ProbabilidadMontaña.setValue(Montaña.ProbAparicion);
-        ProbabilidadTesoro.setValue(Tesoro.ProbAparicion);
-        ProbabilidadBiblioteca.setValue(Biblioteca.ProbAparicion);
-        ProbabilidadPozo.setValue(Pozo.ProbAparicion);
-        ProbabilidadNuevoRe.setValue(Recurso.ProbabilidadNuevoRE);
     }
 
     @FXML

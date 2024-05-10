@@ -6,6 +6,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import com.example.juegovida.Clases.Recursos.*;
+import com.example.juegovida.DatosCompartidos;
 import com.example.juegovida.Utilities.Paths;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -15,7 +16,7 @@ import javafx.scene.control.Slider;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
-public class TurnosPropRecursosControl {
+public class TurnosPropRecursosControl<T> {
     @FXML
     private ResourceBundle resources;
 
@@ -42,15 +43,11 @@ public class TurnosPropRecursosControl {
 
     @FXML
     private Slider TurnosPozo;
+    private DatosCompartidos<T> d;
 
     @FXML
     void clickAceptar(ActionEvent event) throws IOException {
-        Comida.TurnosProporciona = Turnosomida.getValue();
-        Montaña.TurnosProporciona = TurnosMontaña.getValue();
-        Agua.TurnosProporciona = TurnosAgua.getValue();
-        Tesoro.ProbReproduccionPropo = TurnosTesoro.getValue();
-        Biblioteca.ProbClonacionProp = TurnosBiblioteca.getValue();
-        Pozo.ProbMuerteProp = TurnosPozo.getValue();
+        d.commitProporcionaRecursos();
         Stage stage = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader();
         File fichero = new File(Paths.DIMTURNOSVIDA);
@@ -70,12 +67,7 @@ public class TurnosPropRecursosControl {
 
     @FXML
     void clickRestablecer(ActionEvent event) {
-        Turnosomida.setValue(Comida.TurnosProporciona);
-        TurnosMontaña.setValue(Montaña.TurnosProporciona);
-        TurnosAgua.setValue(Agua.TurnosProporciona);
-        TurnosTesoro.setValue(Tesoro.ProbReproduccionPropo);
-        TurnosBiblioteca.setValue(Biblioteca.ProbClonacionProp);
-        TurnosPozo.setValue(Pozo.ProbMuerteProp);
+        d.rollbackProporcionaRecursos();
     }
 
     @FXML
