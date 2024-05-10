@@ -1,5 +1,6 @@
 package com.example.juegovida.Controllers;
 
+import com.example.juegovida.DatosCompartidos;
 import com.example.juegovida.Utilities.Paths;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -18,7 +19,7 @@ import java.net.URL;
 
 import java.util.ResourceBundle;
 
-public class ParametrosIndividuoControl {
+public class ParametrosIndividuoControl<T> {
     @FXML
     private ResourceBundle resources;
 
@@ -78,10 +79,11 @@ public class ParametrosIndividuoControl {
 
     @FXML
     private Button buttonguardar;
+    private DatosCompartidos<T> d;
 
     @FXML
     void click(ActionEvent event) throws IOException {
-
+        d.commitProbIndividuos();
         Stage stage = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader();
         File fichero = new File(Paths.PARAMRECURSOS);

@@ -34,7 +34,7 @@ public class BienvenidaControl implements Initializable {
     private static final Logger log = LogManager.getLogger(BienvenidaControl.class);
 
     @FXML
-    void click() throws IOException {
+    void click(ActionEvent event) throws IOException {
         Stage stage = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader();
         File fichero = new File(Paths.PANTALLAINICIO);

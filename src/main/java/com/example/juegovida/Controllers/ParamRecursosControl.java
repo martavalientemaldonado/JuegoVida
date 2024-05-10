@@ -6,6 +6,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import com.example.juegovida.Clases.Recursos.*;
+import com.example.juegovida.DatosCompartidos;
 import com.example.juegovida.Utilities.Paths;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -15,7 +16,7 @@ import javafx.scene.control.Slider;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
-public class ParamRecursosControl {
+public class ParamRecursosControl<T> {
 
     @FXML
     private ResourceBundle resources;
@@ -46,9 +47,11 @@ public class ParamRecursosControl {
 
     @FXML
     private Slider ProbabilidadPozo;
+    private DatosCompartidos<T> d;
 
     @FXML
     void clickAceptar(ActionEvent event) throws IOException {
+        d.commitProbAparicionRecursos();
         Comida.ProbAparicion = ProbabilidadComida.getValue();
         Montaña.ProbAparicion = ProbabilidadMontaña.getValue();
         Tesoro.ProbAparicion = ProbabilidadTesoro.getValue();
@@ -75,6 +78,7 @@ public class ParamRecursosControl {
 
     @FXML
     void clickRestablecer(ActionEvent event) {
+        d.rollbackProbAparicionRecursos();
         ProbabilidadAgua.setValue(Agua.ProbAparicion);
         ProbabilidadComida.setValue(Comida.ProbAparicion);
         ProbabilidadMontaña.setValue(Montaña.ProbAparicion);
