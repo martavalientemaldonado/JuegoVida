@@ -1,17 +1,10 @@
 package com.example.juegovida.App;
-import com.example.juegovida.Controllers.BienvenidaControl;
 
-import com.example.juegovida.Utilities.Paths;
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import com.example.juegovida.App.Tablero.*;
-import java.io.File;
-import java.net.MalformedURLException;
-import java.net.URL;
 
-import static com.example.juegovida.App.Tablero.setTab;
+import static com.example.juegovida.App.Tab.Tablero.setTab;
 
 public class Bienvenida extends Application {
 

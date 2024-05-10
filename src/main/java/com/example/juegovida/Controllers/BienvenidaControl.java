@@ -1,6 +1,7 @@
 package com.example.juegovida.Controllers;
 import com.example.juegovida.Utilities.Paths;
 import javafx.collections.transformation.TransformationList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;

@@ -1,28 +1,37 @@
-package com.example.juegovida.App;
+package com.example.juegovida.App.Tab;
 
-import com.example.juegovida.Controllers.BienvenidaControl;
-import com.example.juegovida.Utilities.Paths;
-import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
-import javafx.stage.Stage;
-
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.net.MalformedURLException;
-import java.net.URL;
 
 public class Tablero {
+    private static double NunColumnas;
+    private static double NunFilas;
+
+    public static double getNunColumnas() {
+        return NunColumnas;
+    }
+
+    public static void setNunColumnas(double nunColumnas) {
+        NunColumnas = nunColumnas;
+    }
+
+    public static void setNunFilas(double nunFilas) {
+        NunFilas = nunFilas;
+    }
+
+    public static double getNunFilas() {
+        return NunFilas;
+    }
+
     public static Parent setTab(int filas, int columnas) throws FileNotFoundException {
+
+
         Pane prueb= new Pane();
 
         GridPane mainGrid= new GridPane(); //Crear grid
@@ -45,13 +54,11 @@ public class Tablero {
                 Label lMont= new Label();
                 lMont.setPrefSize(32,32);
 
-                Label l2= new Label("");
-                Label l3= new Label("");
-                Label l4= new Label("");
+
                 second.add(lBib,0,0);
-                second.add(l2,0,1);
-                second.add(l3,1,0);
-                second.add(l4,1,1);
+                second.add(lPozo,0,1);
+                second.add(lTesoro,1,0);
+                second.add(lAgua,1,1);
                 mainGrid.add(second,i,j);
             }
         }
