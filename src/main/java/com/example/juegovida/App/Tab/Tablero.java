@@ -29,7 +29,7 @@ public class Tablero {
         return NunFilas;
     }
 
-    public static Parent setTab(int filas, int columnas) throws FileNotFoundException {
+    public static Parent setTab(NunColumnas, NunFilas;) throws FileNotFoundException {
 
 
         Pane prueb= new Pane();
