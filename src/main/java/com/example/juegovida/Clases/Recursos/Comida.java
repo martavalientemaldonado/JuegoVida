@@ -6,6 +6,10 @@ public class Comida extends Recurso{
 
     public Comida() {
     }
+    public Comida(double ProApari, double TurnProp){
+        ProbAparicion = ProApari;
+        TurnosProporciona = TurnProp;
+    }
 
     public double getProbAparicion() {
         return ProbAparicion;

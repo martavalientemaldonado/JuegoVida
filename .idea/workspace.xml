@@ -4,10 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ae59f5ab-3a2c-4635-b2d5-df0317d0df49" name="Changes" comment="Datos comunes">
+    <list default="true" id="ae59f5ab-3a2c-4635-b2d5-df0317d0df49" name="Changes" comment="act">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_05_2024_21_53__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_05_2024_21_53__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_05_2024_23_23__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_05_2024_23_23__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_05_2024_8_48__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_05_2024_8_48__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tablero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Clases/Individuo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Clases/Individuo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Clases/Recursos/Agua.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Clases/Recursos/Agua.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Clases/Recursos/Biblioteca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Clases/Recursos/Biblioteca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Clases/Recursos/Comida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Clases/Recursos/Comida.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Clases/Recursos/Montaña.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Clases/Recursos/Montaña.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Clases/Recursos/Pozo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Clases/Recursos/Pozo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Clases/Recursos/Recurso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Clases/Recursos/Recurso.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Clases/Recursos/Tesoro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Clases/Recursos/Tesoro.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/BienvenidaControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/BienvenidaControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/DatosCompartidos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/DatosCompartidos.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +179,9 @@
       <workItem from="1715106067589" duration="3865000" />
       <workItem from="1715148823067" duration="4407000" />
       <workItem from="1715186900660" duration="10267000" />
-      <workItem from="1715202455895" duration="773000" />
+      <workItem from="1715202455895" duration="2095000" />
+      <workItem from="1715249631409" duration="396000" />
+      <workItem from="1715321212269" duration="3229000" />
     </task>
     <task id="LOCAL-00001" summary="B">
       <option name="closed" value="true" />
@@ -340,35 +353,35 @@
     </task>
     <task id="LOCAL-00022" summary="Datos comunes">
       <option name="closed" value="true" />
-      <created>1715250295719</created>
+      <created>1715203300200</created>
       <option name="number" value="00022" />
       <option name="presentableId" value="LOCAL-00022" />
       <option name="project" value="LOCAL" />
-      <updated>1715250295719</updated>
+      <updated>1715203300200</updated>
     </task>
-    <task id="LOCAL-00023" summary="Datos comunes">
+    <task id="LOCAL-00023" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;src/main/resources/bienvenida.fxml">
       <option name="closed" value="true" />
-      <created>1715250399204</created>
+      <created>1715203366751</created>
       <option name="number" value="00023" />
       <option name="presentableId" value="LOCAL-00023" />
       <option name="project" value="LOCAL" />
-      <updated>1715250399204</updated>
+      <updated>1715203366751</updated>
     </task>
-    <task id="LOCAL-00024" summary="Datos comunes">
+    <task id="LOCAL-00024" summary="error">
       <option name="closed" value="true" />
-      <created>1715321425899</created>
+      <created>1715204534520</created>
       <option name="number" value="00024" />
       <option name="presentableId" value="LOCAL-00024" />
       <option name="project" value="LOCAL" />
-      <updated>1715321425899</updated>
+      <updated>1715204534520</updated>
     </task>
-    <task id="LOCAL-00025" summary="Datos comunes">
+    <task id="LOCAL-00025" summary="act">
       <option name="closed" value="true" />
-      <created>1715322765748</created>
+      <created>1715249981780</created>
       <option name="number" value="00025" />
       <option name="presentableId" value="LOCAL-00025" />
       <option name="project" value="LOCAL" />
-      <updated>1715322765748</updated>
+      <updated>1715249981780</updated>
     </task>
     <option name="localTasksCounter" value="26" />
     <servers />
@@ -424,6 +437,9 @@
     <MESSAGE value="Dimension y vida" />
     <MESSAGE value="Recursos:aceptar y restablecer" />
     <MESSAGE value="Datos comunes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Datos comunes" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;src/main/resources/bienvenida.fxml" />
+    <MESSAGE value="error" />
+    <MESSAGE value="act" />
+    <option name="LAST_COMMIT_MESSAGE" value="act" />
   </component>
 </project>

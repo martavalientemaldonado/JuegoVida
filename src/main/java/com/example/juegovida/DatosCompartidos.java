@@ -1,9 +1,11 @@
 package com.example.juegovida;
 
+import com.example.juegovida.App.Tab.Tablero;
 import com.example.juegovida.Clases.Individuo;
 import com.example.juegovida.Clases.Matriz;
 import com.example.juegovida.Clases.Recursos.*;
 import javafx.beans.property.*;
+import javafx.scene.control.Tab;
 
 public class DatosCompartidos<T> {
     protected Agua Agua;
@@ -13,7 +15,7 @@ public class DatosCompartidos<T> {
     protected Tesoro Tesoro;
     protected Montaña Montaña;
     protected Individuo Individuo;
-    protected Matriz<T> Matriz;
+    protected Tablero Matriz;
     protected Recurso Recurso;
     private DoubleProperty TurnosPropCom = new SimpleDoubleProperty();
     private DoubleProperty TurnosPropMont = new SimpleDoubleProperty();
@@ -147,15 +149,15 @@ public class DatosCompartidos<T> {
 
     /// DIMENSIONES Y TURNOS DE VIDA DE RECURSOS Y INDIVIDUOS
     public void commitDimyVida(){
-        Matriz.setColumnas(NumColumnas.get());
-        Matriz.setFilas(NumFilas.get());
+        Matriz.setNunColumnas(NumColumnas.get());
+        Matriz.setNunFilas(NumFilas.get());
         Individuo.setTurnosVidaInd(TrunosVidaIndiv.get());
         Recurso.setTurnosVidaRecursos(TurnosVidaRecursos.get());
     }
 
     public void rollbackDimyVida(){
-        NumColumnas.set(Matriz.getColumnas());
-        NumFilas.set(Matriz.getFilas());
+        NumColumnas.set(Matriz.getNunColumnas());
+        NumFilas.set(Matriz.getNunFilas());
         TrunosVidaIndiv.set(Individuo.getTurnosVidaInd());
         TurnosVidaRecursos.set(Recurso.getTurnosVidaRecursos());
     }
@@ -193,7 +195,7 @@ public class DatosCompartidos<T> {
     public Montaña getMontaña(){return Montaña;}
     public Individuo getIndividuo(){return Individuo;}
     public Recurso getRecurso(){return Recurso;}
-    public Matriz<T> getMatriz(){return Matriz; }
+    public Tablero getMatriz(){return Matriz; }
     public void setAgua(Agua agua){
         this.Agua = agua;
         ProbAparicionAgua.set(Agua.getProbAparicion());
@@ -233,10 +235,10 @@ public class DatosCompartidos<T> {
         ProbNuevoRecurso.set(Recurso.getProbabilidadNuevoRE());
         TurnosVidaRecursos.set(Recurso.getTurnosVidaRecursos());
     }
-    public void setMatriz(Matriz<T> matriz){
+    public void setMatriz(Tablero matriz){
         this.Matriz = matriz;
-        NumColumnas.set(Matriz.getColumnas());
-        NumFilas.set(Matriz.getFilas());
+        NumColumnas.set(Matriz.getNunColumnas());
+        NumFilas.set(Matriz.getNunFilas());
     }
     public DatosCompartidos(Agua a, Comida c, Biblioteca b, Tesoro t, Montaña m, Pozo p){
         setAgua(a);
@@ -256,7 +258,7 @@ public class DatosCompartidos<T> {
         setRecurso(r);
     }
     public DatosCompartidos(Individuo i){setIndividuo(i);}
-    public DatosCompartidos(Matriz m, Individuo i, Recurso r){
+    public DatosCompartidos(Tablero m, Individuo i, Recurso r){
         setMatriz(m);
         setIndividuo(i);
         setRecurso(r);
