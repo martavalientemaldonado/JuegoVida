@@ -5,7 +5,7 @@ public class ListaSimple<T> {
     protected Integer Max = 3;
 
     public ListaSimple() {
-        this.list = T[Max];
+        //this.list = T[Max];
     }
 
     public boolean IsVacia() {

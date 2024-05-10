@@ -64,7 +64,7 @@ public class ParamRecursosControl {
         Stage stage = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader();
         File fichero = new File(Paths.TURNOSPROBREC);
-        URL url = null;
+        URL url;
         try {
             url = fichero.toURL();
         } catch (MalformedURLException ex) {
