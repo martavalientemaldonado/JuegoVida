@@ -13,6 +13,7 @@ import com.example.juegovida.Utilities.Paths;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Slider;
 import javafx.scene.image.ImageView;
@@ -69,6 +70,12 @@ public class TurnosPropRecursosControl{
         p.loadUserDataDimyNumTurn(new DatosCompartidos(t,in,re));
         p.setStage(stage);
         stage.show();
+
+
+        //Cerrar pantalla
+        Node source = (Node) event.getSource();
+        Stage stage1 = (Stage) source.getScene().getWindow();
+        stage1.close();
     }
 
     @FXML

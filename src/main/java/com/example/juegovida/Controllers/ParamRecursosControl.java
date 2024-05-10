@@ -11,6 +11,7 @@ import com.example.juegovida.Utilities.Paths;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Slider;
 import javafx.scene.image.ImageView;
@@ -76,6 +77,11 @@ public class ParamRecursosControl {
         p.loadUserDataTurnosPropRe(new DatosCompartidos(a,c,b,t,m,po));
         p.setStage(stage);
         stage.show();
+
+        //Cerrar pantalla
+        Node source = (Node) event.getSource();
+        Stage stage1 = (Stage) source.getScene().getWindow();
+        stage1.close();
     }
 
     @FXML

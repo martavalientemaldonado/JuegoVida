@@ -1,4 +1,4 @@
-package com.example.juegovida.Clases;
+package com.example.juegovida.App.Tab;
 
 public class Casilla<TipodeDato> {
     TipodeDato dato;

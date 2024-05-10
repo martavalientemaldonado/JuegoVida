@@ -1,5 +1,7 @@
 package com.example.juegovida.Clases;
 
+import com.example.juegovida.App.Tab.ListaEnlazada;
+
 public class Matriz<TipodeDato> {
     private static double Columnas;
     private static double Filas;

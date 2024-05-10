@@ -1,4 +1,6 @@
-package com.example.juegovida.Clases;
+package com.example.juegovida.App.Tab;
+
+import com.example.juegovida.App.Tab.Casilla;
 
 public class ListaEnlazada<TipoDelDato> {
     private Casilla<TipoDelDato> primero;

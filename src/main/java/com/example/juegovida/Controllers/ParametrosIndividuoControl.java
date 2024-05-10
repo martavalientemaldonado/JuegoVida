@@ -6,6 +6,7 @@ import com.example.juegovida.Utilities.Paths;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -109,6 +110,12 @@ public class ParametrosIndividuoControl {
         p.loadUserDataPramRE(new DatosCompartidos(a,c,b,t,m,po,r));
         p.setStage(stage);
         stage.show();
+
+
+        //Cerrar Ventana
+        Node source = (Node) event.getSource();
+        Stage stage1 = (Stage) source.getScene().getWindow();
+        stage1.close();
     }
     @FXML
     void initialize() {

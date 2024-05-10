@@ -21,6 +21,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
+import javafx.scene.Node;
 
 
 public class PantallaInicioControl implements Initializable {
@@ -76,6 +77,10 @@ public class PantallaInicioControl implements Initializable {
         p.setStage(stage);
         stage.show();
 
+        //Cerrar pantalla
+        Node source = (Node) event.getSource();
+        Stage stage1 = (Stage) source.getScene().getWindow();
+        stage1.close();
     }
 
     void setStage(Stage stage) {
