@@ -1,6 +1,6 @@
 package com.example.juegovida.Clases;
 
-public abstract class Individuo {
+public class Individuo {
     private Integer NumIdentificacion;
     private Integer Generacion;
     private static double TurnosVidaInd;
@@ -93,7 +93,7 @@ public abstract class Individuo {
     }
 
     //Avanzado
-    //public ParamRecursosRecurso seleccionarRrecursoTAvanzado(){
+    // public ParamRecursosRecurso seleccionarRrecursoTAvanzado(){
     // }
     // private Recurso recursoCercanoTAvanzado(){}
     public void rutarecursoTAvanzado(){

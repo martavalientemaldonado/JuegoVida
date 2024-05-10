@@ -7,7 +7,7 @@ import com.example.juegovida.Clases.Recursos.*;
 import javafx.beans.property.*;
 import javafx.scene.control.Tab;
 
-public class DatosCompartidos<T> {
+public class DatosCompartidos {
     protected Agua Agua;
     protected Biblioteca Biblioteca;
     protected Comida Comida;

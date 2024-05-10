@@ -5,6 +5,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import com.example.juegovida.App.Tab.Tablero;
+import com.example.juegovida.Clases.Individuo;
 import com.example.juegovida.Clases.Recursos.*;
 import com.example.juegovida.DatosCompartidos;
 import com.example.juegovida.Utilities.Paths;
@@ -16,7 +18,7 @@ import javafx.scene.control.Slider;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
-public class TurnosPropRecursosControl<T> {
+public class TurnosPropRecursosControl{
     @FXML
     private ResourceBundle resources;
 
@@ -43,8 +45,11 @@ public class TurnosPropRecursosControl<T> {
 
     @FXML
     private Slider TurnosPozo;
-    private DatosCompartidos<T> d;
-
+    private DatosCompartidos d;
+    private Stage scene;
+    private Tablero t  = new Tablero();
+    private Individuo in = new Individuo();
+    private Recurso re = new Recurso();
     @FXML
     void clickAceptar(ActionEvent event) throws IOException {
         d.commitProporcionaRecursos();
@@ -60,7 +65,8 @@ public class TurnosPropRecursosControl<T> {
         fxmlLoader.setLocation(url); // Para encontrar donde esta
         Scene scene = new Scene(fxmlLoader.load(),700,500); //vCarga escena
         stage.setScene(scene);
-        PantallaInicioControl p= fxmlLoader.getController();
+        DimyTurnosControl p= fxmlLoader.getController();
+        p.loadUserDataDimyNumTurn(new DatosCompartidos(t,in,re));
         p.setStage(stage);
         stage.show();
     }
@@ -79,6 +85,22 @@ public class TurnosPropRecursosControl<T> {
         assert TurnosTesoro != null : "fx:id=\"TurnosTesoro\" was not injected: check your FXML file 'TurnosPropRe.fxml'.";
         assert TurnosBiblioteca != null : "fx:id=\"TurnosBiblioteca\" was not injected: check your FXML file 'TurnosPropRe.fxml'.";
         assert TurnosPozo != null : "fx:id=\"TurnosPozo\" was not injected: check your FXML file 'TurnosPropRe.fxml'.";
+    }
+    protected void updateGUIwithModelTurnosPropRe() {
+        TurnosAgua.valueProperty().bindBidirectional(d.TurnosPropAguaProperty());
+        TurnosMontaña.valueProperty().bindBidirectional(d.TurnosPropMontProperty());
+        TurnosBiblioteca.valueProperty().bindBidirectional(d.ProbClonacPropBibliProperty());
+        TurnosPozo.valueProperty().bindBidirectional(d.ProbMuertePropPozoProperty());
+        TurnosTesoro.valueProperty().bindBidirectional(d.ProbReproPropTesoroProperty());
+        Turnosomida.valueProperty().bindBidirectional(d.TurnosPropComProperty());
+    }
+    public void loadUserDataTurnosPropRe(DatosCompartidos parametrosData) {
+        this.d = parametrosData;
+        this.updateGUIwithModelTurnosPropRe();
+    }
 
+    public void setStage(Stage s){
+        this.scene = s;
     }
 }
+

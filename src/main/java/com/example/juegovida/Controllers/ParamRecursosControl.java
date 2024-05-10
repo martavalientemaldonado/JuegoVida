@@ -16,7 +16,7 @@ import javafx.scene.control.Slider;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
-public class ParamRecursosControl<T> {
+public class ParamRecursosControl {
 
     @FXML
     private ResourceBundle resources;
@@ -47,7 +47,14 @@ public class ParamRecursosControl<T> {
 
     @FXML
     private Slider ProbabilidadPozo;
-    private DatosCompartidos<T> d;
+    private DatosCompartidos d;
+    private Stage scene;
+    private Tesoro t = new Tesoro();
+    private Pozo po = new Pozo();
+    private Biblioteca b = new Biblioteca();
+    private Agua a = new Agua();
+    private Comida c = new Comida();
+    private Montaña m =  new Montaña();
 
     @FXML
     void clickAceptar(ActionEvent event) throws IOException {
@@ -65,7 +72,8 @@ public class ParamRecursosControl<T> {
         fxmlLoader.setLocation(url); // Para encontrar donde esta
         Scene scene = new Scene(fxmlLoader.load(),700,500); //vCarga escena
         stage.setScene(scene);
-        ParamRecursosControl p= fxmlLoader.getController();
+        TurnosPropRecursosControl p= fxmlLoader.getController();
+        p.loadUserDataTurnosPropRe(new DatosCompartidos(a,c,b,t,m,po));
         p.setStage(stage);
         stage.show();
     }
@@ -87,7 +95,21 @@ public class ParamRecursosControl<T> {
         assert ProbabilidadPozo != null : "fx:id=\"ProbabilidadPozo\" was not injected: check your FXML file 'paramindiv.fxml'.";
 
     }
+    protected void updateGUIwithModelPramRE() {
+        ProbabilidadNuevoRe.valueProperty().bindBidirectional(d.ProbNuevoRecursoProperty());
+        ProbabilidadAgua.valueProperty().bindBidirectional(d.ProbAparicionAguaProperty());
+        ProbabilidadMontaña.valueProperty().bindBidirectional(d.ProbAparicionMontañaProperty());
+        ProbabilidadPozo.valueProperty().bindBidirectional(d.ProbAparicionPozoProperty());
+        ProbabilidadTesoro.valueProperty().bindBidirectional(d.ProbAparicionTesoroProperty());
+        ProbabilidadBiblioteca.valueProperty().bindBidirectional(d.ProbAparicionBibliotecaProperty());
+        ProbabilidadComida.valueProperty().bindBidirectional(d.ProbAparicionComidaProperty());
+    }
+    public void loadUserDataPramRE(DatosCompartidos parametrosData) {
+        this.d = parametrosData;
+        this.updateGUIwithModelPramRE();
+    }
 
-    public void setStage(Stage stage) {
+    public void setStage(Stage s){
+        this.scene = s;
     }
 }
