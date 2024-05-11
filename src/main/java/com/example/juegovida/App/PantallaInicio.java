@@ -1,6 +1,10 @@
 package com.example.juegovida.App;
 
+import com.example.juegovida.Clases.Individuo;
 import com.example.juegovida.Controllers.BienvenidaControl;
+import com.example.juegovida.Controllers.PantallaInicioControl;
+import com.example.juegovida.Controllers.ParametrosIndividuoControl;
+import com.example.juegovida.DatosCompartidos;
 import com.example.juegovida.Utilities.Paths;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -17,6 +21,7 @@ public class PantallaInicio {
         launch();
 
     }
+    private Individuo in = new Individuo();
     public void start(Stage stage) throws Exception {
 
         FXMLLoader fxmlLoader = new FXMLLoader();
@@ -30,7 +35,8 @@ public class PantallaInicio {
         fxmlLoader.setLocation(url); // Para encontrar donde esta
         Scene scene = new Scene(fxmlLoader.load(),700,500); //vCarga escena
         stage.setScene(scene);
-        BienvenidaControl p= fxmlLoader.getController(); // Le pasas tu escena
+        ParametrosIndividuoControl p= fxmlLoader.getController(); // Le pasas tu escena
+        p.loadUserDataParamInd(new DatosCompartidos(this.in));
         p.setStage(stage);
         stage.show();
 

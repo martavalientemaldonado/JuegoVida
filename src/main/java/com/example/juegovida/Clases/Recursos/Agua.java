@@ -6,6 +6,10 @@ public class Agua extends Recurso{
 
     public Agua() {
     }
+    public Agua(double ProApari, double TurnProp){
+        ProbAparicion = ProApari;
+        TurnosProporciona = TurnProp;
+    }
     public double getProbAparicion() {
         return ProbAparicion;
     }

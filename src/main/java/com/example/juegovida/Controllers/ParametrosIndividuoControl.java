@@ -1,10 +1,12 @@
 package com.example.juegovida.Controllers;
 
+import com.example.juegovida.Clases.Recursos.*;
 import com.example.juegovida.DatosCompartidos;
 import com.example.juegovida.Utilities.Paths;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -19,7 +21,7 @@ import java.net.URL;
 
 import java.util.ResourceBundle;
 
-public class ParametrosIndividuoControl<T> {
+public class ParametrosIndividuoControl {
     @FXML
     private ResourceBundle resources;
 
@@ -79,8 +81,16 @@ public class ParametrosIndividuoControl<T> {
 
     @FXML
     private Button buttonguardar;
-    private DatosCompartidos<T> d;
-
+    private DatosCompartidos d;
+    private Stage scene;
+    private Tesoro t = new Tesoro();
+    private Pozo po = new Pozo();
+    private Recurso r = new Recurso();
+    private Biblioteca b = new Biblioteca();
+    private Agua a = new Agua();
+    private Comida c = new Comida();
+    private Montaña m =  new Montaña();
+    private
     @FXML
     void click(ActionEvent event) throws IOException {
         d.commitProbIndividuos();
@@ -97,8 +107,15 @@ public class ParametrosIndividuoControl<T> {
         Scene scene = new Scene(fxmlLoader.load(),700,500); //vCarga escena
         stage.setScene(scene);
         ParamRecursosControl p= fxmlLoader.getController();
+        p.loadUserDataPramRE(new DatosCompartidos(a,c,b,t,m,po,r));
         p.setStage(stage);
         stage.show();
+
+
+        //Cerrar Ventana
+        Node source = (Node) event.getSource();
+        Stage stage1 = (Stage) source.getScene().getWindow();
+        stage1.close();
     }
     @FXML
     void initialize() {
@@ -122,8 +139,18 @@ public class ParametrosIndividuoControl<T> {
         assert buttonguardar != null : "fx:id=\"buttonguardar\" was not injected: check your FXML file 'parametrosIndiv.fxml'.";
 
     }
+    protected void updateGUIwithModelParamInd() {
+        ProbClonacion.valueProperty().bindBidirectional(d.ProbClonacionIndivProperty());
+        ProbMuerte.valueProperty().bindBidirectional(d.ProbMuerteIndivProperty());
+        ProbReproduccion.valueProperty().bindBidirectional(d.ProbReproduccionIndivProperty());
+    }
+    public void loadUserDataParamInd(DatosCompartidos parametrosData) {
+        this.d = parametrosData;
+        this.updateGUIwithModelParamInd();
+    }
 
-    public void setStage(Stage stage) {
+    public void setStage(Stage s){
+        this.scene = s;
     }
 }
 

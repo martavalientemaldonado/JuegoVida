@@ -6,6 +6,10 @@ public class Tesoro extends Recurso {
 
     public Tesoro() {
     }
+    public Tesoro(double ProbA, double ProbRe) {
+        ProbAparicion = ProbA;
+        ProbReproduccionPropo = ProbRe;
+    }
 
     public double getProbAparicion() {
         return ProbAparicion;

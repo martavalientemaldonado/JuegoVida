@@ -5,6 +5,10 @@ public class Pozo extends Recurso{
     public static double ProbMuerteProp;
     public Pozo() {
     }
+    public Pozo(double ProApari, double ProbMuerte){
+        ProbAparicion = ProApari;
+        ProbMuerteProp = ProbMuerte;
+    }
 
     public double getProbAparicion() {
         return ProbAparicion;

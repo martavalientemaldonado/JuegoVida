@@ -53,7 +53,9 @@ public class BienvenidaControl implements Initializable {
         stage.show();
         
 
-
+        Node source = (Node) event.getSource();
+        Stage stage1 = (Stage) source.getScene().getWindow();
+        stage1.close();
     }
 
 

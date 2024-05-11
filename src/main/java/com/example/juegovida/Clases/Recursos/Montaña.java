@@ -6,6 +6,10 @@ public class Montaña extends Recurso{
 
     public Montaña() {
     }
+    public Montaña(double ProApari, double TurnProp){
+        ProbAparicion = ProApari;
+        TurnosProporciona = TurnProp;
+    }
 
     public double getProbAparicion() {
         return ProbAparicion;

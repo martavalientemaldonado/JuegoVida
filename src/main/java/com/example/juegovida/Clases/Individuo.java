@@ -9,8 +9,15 @@ public class Individuo {
     double ProbMuerte;
     //0 Basico, 1 Normal, 2 Avanzado
     protected int Tipo;
+    public Individuo(){
 
-    public Individuo() {
+    }
+
+    public Individuo(double TurnosVida, double Probclonacion, double ProbRe, double Probmuerte) {
+        TurnosVidaInd = TurnosVida;
+        ProbClonacion = Probclonacion;
+        ProbReproduccion = ProbRe;
+        ProbMuerte = Probmuerte;
     }
     public Individuo(Integer NumIdentificacion, Integer Generacion){
         this.NumIdentificacion = NumIdentificacion;
@@ -86,7 +93,7 @@ public class Individuo {
     }
 
     //Avanzado
-    //public ParamRecursosRecurso seleccionarRrecursoTAvanzado(){
+    // public ParamRecursosRecurso seleccionarRrecursoTAvanzado(){
     // }
     // private Recurso recursoCercanoTAvanzado(){}
     public void rutarecursoTAvanzado(){

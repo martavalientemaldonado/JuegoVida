@@ -1,5 +1,7 @@
 package com.example.juegovida.Controllers;
 
+import com.example.juegovida.Clases.Individuo;
+import com.example.juegovida.DatosCompartidos;
 import com.example.juegovida.Utilities.Paths;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -19,6 +21,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
+import javafx.scene.Node;
 
 
 public class PantallaInicioControl implements Initializable {
@@ -53,6 +56,7 @@ public class PantallaInicioControl implements Initializable {
     void clickcargar(ActionEvent event) {
 
     }
+    private Individuo in = new Individuo();
 
     @FXML
     void clicknueva(ActionEvent event) throws IOException {
@@ -69,12 +73,18 @@ public class PantallaInicioControl implements Initializable {
         Scene scene = new Scene(fxmlLoader.load(),700,500); //vCarga escena
         stage.setScene(scene);
         ParametrosIndividuoControl p= fxmlLoader.getController();
+        p.loadUserDataParamInd(new DatosCompartidos(this.in));
         p.setStage(stage);
         stage.show();
 
+        //Cerrar pantalla
+        Node source = (Node) event.getSource();
+        Stage stage1 = (Stage) source.getScene().getWindow();
+        stage1.close();
     }
 
     void setStage(Stage stage) {
+
     }
 
     @FXML

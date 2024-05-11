@@ -4,6 +4,13 @@ public class Recurso {
     public static double ProbabilidadNuevoRE;
     public static double TurnosVidaRecursos;
 
+    public Recurso() {
+    }
+    public Recurso(double ProbNuevo, double TurnVida) {
+        ProbabilidadNuevoRE = ProbNuevo;
+        TurnosVidaRecursos = TurnVida;
+    }
+
     public static double getProbabilidadNuevoRE() {
         return ProbabilidadNuevoRE;
     }

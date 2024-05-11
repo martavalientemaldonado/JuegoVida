@@ -6,6 +6,10 @@ public class Biblioteca extends Recurso{
 
     public Biblioteca() {
     }
+    public Biblioteca(double ProApari, double ProbClon){
+        ProbAparicion = ProApari;
+        ProbClonacionProp = ProbClon;
+    }
 
     public double getProbAparicion() {
         return ProbAparicion;
