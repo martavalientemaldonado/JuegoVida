@@ -16,6 +16,7 @@ public class ListaSimple<T> {
         return false;
     }
 
+
     public void vaciar() {
         int contador = 0;
         if (getNumElementos() == 0) {
@@ -28,7 +29,7 @@ public class ListaSimple<T> {
         }
     }
 
-    private int add(T el) {
+    protected int add(T el) {
         if (getNumElementos() < Max) {
             list[getNumElementos()] = el;
         } else {

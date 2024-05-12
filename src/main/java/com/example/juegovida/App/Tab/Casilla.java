@@ -1,27 +1,49 @@
 package com.example.juegovida.App.Tab;
 
-public class Casilla<TipodeDato> {
-    TipodeDato dato;
-    Casilla<TipodeDato> siguiente;
+import com.example.juegovida.Clases.Individuo;
+import com.example.juegovida.Clases.Recursos.Recurso;
 
-    public Casilla(Casilla<TipodeDato> siguiente, TipodeDato dato) {
-        this.siguiente = siguiente;
-        this.dato = dato;
+public class Casilla<TipodeDato>{
+    private ListaSimple<Individuo> lIndiv;
+    private ListaSimple<Recurso> lRec;
+
+    public Casilla() {
+        ListaSimple<Individuo> lIndiv= new ListaSimple<>();
+        ListaSimple<Recurso> lRec= new ListaSimple<>();
+        this.lIndiv=lIndiv;
+        this.lRec=lRec;
+
     }
 
-    public TipodeDato getDato() {
-        return dato;
+
+    public Casilla(ListaSimple<Individuo> lIndiv, ListaSimple<Recurso> lRec) {
+        this.lIndiv = lIndiv;
+        this.lRec = lRec;
     }
 
-    public void setDato(TipodeDato dato) {
-        this.dato = dato;
+    public ListaSimple<Individuo> getlIndiv() {
+        return lIndiv;
     }
 
-    public Casilla<TipodeDato> getSiguiente() {
-        return siguiente;
+    public ListaSimple<Recurso> getlRec() {
+        return lRec;
     }
 
-    public void setSiguiente(Casilla<TipodeDato> siguiente) {
-        this.siguiente = siguiente;
+    public void setlIndiv(ListaSimple<Individuo> lIndiv) {
+        this.lIndiv = lIndiv;
+    }
+
+    public void setlRec(ListaSimple<Recurso> lRec) {
+        this.lRec = lRec;
+    }
+    public void addIndiv(Individuo indiv){
+        lIndiv.add(indiv);
+        if(lIndiv.getNumElementos()>3){
+            int c1=0;
+            int c2=0;
+            while (c2<lIndiv.getNumElementos()){
+                int elemento=lIndiv.getElemento(c2).getData().getTurnosQuedan
+            }
+        }
     }
 }
