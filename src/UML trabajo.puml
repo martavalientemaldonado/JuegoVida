@@ -19,7 +19,7 @@ ProbMuerte:double
 ProbReproduccion:double
 Tipo:int
 Individuo()
-Individuo(TurnosVidaInd:double, ProbClonacion:double, ProbReproduccion:double, ProbMuerte:double)
+Individuo(TurnosVidaInd:double, ProbClonacion:double, ProbReproduccion:double)
 Individuo(NumIdentificacion:Integer, Generacion:Integer)
 getNumIdentificacion():Integer
 getGeneracion():Integer

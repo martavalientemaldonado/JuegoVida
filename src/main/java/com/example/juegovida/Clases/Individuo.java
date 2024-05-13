@@ -13,11 +13,10 @@ public class Individuo {
 
     }
 
-    public Individuo(double TurnosVida, double Probclonacion, double ProbRe, double Probmuerte) {
+    public Individuo(double TurnosVida, double Probclonacion, double ProbRe) {
         TurnosVidaInd = TurnosVida;
         ProbClonacion = Probclonacion;
         ProbReproduccion = ProbRe;
-        ProbMuerte = Probmuerte;
     }
     public Individuo(Integer NumIdentificacion, Integer Generacion){
         this.NumIdentificacion = NumIdentificacion;

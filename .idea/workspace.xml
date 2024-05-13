@@ -4,21 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ae59f5ab-3a2c-4635-b2d5-df0317d0df49" name="Changes" comment="conexiones">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/ElementoLS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_05_2024_10_09_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_05_2024_10_09__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_05_2024_11_42_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_05_2024_11_42__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_05_2024_12_25_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_05_2024_12_25__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_05_2024_10_23__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_05_2024_10_23__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_05_2024_8_33__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_05_2024_8_33__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_05_2024_9_02__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_05_2024_9_02__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/Casilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/Casilla.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/ListaEnlazada.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/ListaSimple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/ListaSimple.java" afterDir="false" />
+    <list default="true" id="ae59f5ab-3a2c-4635-b2d5-df0317d0df49" name="Changes" comment="Cambios en ventanas">
+      <change beforePath="$PROJECT_DIR$/src/UML trabajo.puml" beforeDir="false" afterPath="$PROJECT_DIR$/src/UML trabajo.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Clases/Individuo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Clases/Individuo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,36 +65,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Bienvenida.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/PC/IdeaProjects/JuegoVidaFin/src/main/resources&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.3862069&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Bienvenida.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "true",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/PC/IdeaProjects/JuegoVida/src/main/java/com/example/juegovida/App/Tab",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.3862069",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\PC\IdeaProjects\JuegoVida\src\main\java\com\example\juegovida\App\Tab" />
+      <recent name="C:\Users\PC\IdeaProjects\JuegoVida\src\main\java\com\example\juegovida" />
       <recent name="C:\Users\PC\IdeaProjects\JuegoVidaFin\src\main\resources" />
       <recent name="C:\Users\PC\IdeaProjects\JuegoVidaFin\src\main\resources\Imagenes" />
       <recent name="C:\Users\PC\IdeaProjects\JuegoVida\src\main\resources" />
-      <recent name="C:\Users\PC\IdeaProjects\JuegoVida\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\PC\IdeaProjects\JuegoVidaFin\src\main\resources" />
@@ -116,6 +105,7 @@
       <recent name="C:\Users\UAH\JuegoVida\src\main\resources\Res" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.juegovida.App.Tab.GrafoRecursos" />
       <recent name="com.example.juegovida.App.Tab" />
       <recent name="com.example.juegovida.Clases" />
       <recent name="" />
@@ -184,6 +174,7 @@
       <workItem from="1715202455895" duration="2095000" />
       <workItem from="1715249631409" duration="396000" />
       <workItem from="1715321212269" duration="13161000" />
+      <workItem from="1715622743576" duration="6547000" />
     </task>
     <task id="LOCAL-00001" summary="B">
       <option name="closed" value="true" />
@@ -417,7 +408,31 @@
       <option name="project" value="LOCAL" />
       <updated>1715331042875</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Arbol">
+      <option name="closed" value="true" />
+      <created>1715624149642</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1715624149642</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Grafo y arreglo de casilla">
+      <option name="closed" value="true" />
+      <created>1715627249471</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1715627249471</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Cambios en ventanas">
+      <option name="closed" value="true" />
+      <created>1715629322978</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1715629322978</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -475,6 +490,9 @@
     <MESSAGE value="error" />
     <MESSAGE value="act" />
     <MESSAGE value="conexiones" />
-    <option name="LAST_COMMIT_MESSAGE" value="conexiones" />
+    <MESSAGE value="Arbol" />
+    <MESSAGE value="Grafo y arreglo de casilla" />
+    <MESSAGE value="Cambios en ventanas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambios en ventanas" />
   </component>
 </project>
