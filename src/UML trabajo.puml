@@ -1,46 +1,49 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-
-IndividuoBasico --|> Individuo:extends
-IndividuoNormal --|> Individuo:extends
-IndividuoAvanzado --|> Individuo:extends
-Agua --|> Entorno
-Comida --|> Entorno
-Montaña --|> Entorno
-Tesoro --|> Entorno
-Biblioteca --|> Entorno
-Pozo --|> Entorno
+Agua --|> Recurso:extends
+Comida --|> Recurso:extends
+Montaña --|> Recurso:extends
+Tesoro --|> Recurso:extends
+Biblioteca --|> Recurso:extends
+Pozo --|> Recurso:extends
 Individuo --|> Entorno
+Recurso --|> Entorno
 
-abstract class Individuo{
-NumIdentificacion
-Generacion
-abstract Reproduccion()
-abstract Clonación()
-abstract Muerte()
-}
-class IndividuoBasico{
-rutaaleatoria()
+class Individuo{
+-NumIdentificacion:Integer
+-Generacion:Integer
+-TurnosVidaInd: static double
+ProbClonacion:double
+ProbMuerte:double
+ProbReproduccion:double
+Tipo:int
+Individuo()
+Individuo(TurnosVidaInd:double, ProbClonacion:double, ProbReproduccion:double, ProbMuerte:double)
+Individuo(NumIdentificacion:Integer, Generacion:Integer)
+getNumIdentificacion():Integer
+getGeneracion():Integer
+getTurnosVidaInd(): static double
+setTurnosVidaInd(TurnosVidaInd:double)
+getProbClonacion():double
+setProbClonacion(probClonacion:double)
+getProbReproduccion():double
+setProbReproduccion(probReproduccion:double)
+getProbMuerte():double
+setProbMuerte(probMuerte:double)
+getTipo():int
+setTipo(tipo:int)
 Reproduccion()
 Clonación()
 Muerte()
+rutaAleatoriaTBasico()
+seleccionarRrecursoTAvanzado():Recurso
+recursoCercanoTAvanzado():Recurso
+rutarecursoTAvanzado()
+recursoaleatorioTNormal()
+rutalinearectaTNormal()
 }
-class IndividuoNormal{
-recursoaleatorio():recurso
--rutalinearecta()
-Reproduccion()
-Clonación()
-Muerte()
-}
-class IndividuoAvanzado{
-seleccionRrecurso():recurso
--recursocercano():recurso
-rutarecurso()
-Reproduccion()
-Clonación()
-Muerte()
-}
+
 
 interface TableroDeJuego {
 Filas
@@ -61,8 +64,16 @@ setNumrrecursos()
 nuevorrecurso()
 getprobnuevorecurrso():Integer
 setprobnuevorecurrso()
-
-
+}
+class Recurso{
+ProbabilidadNuevoRE:static double
+TurnosVidaRecursos:static double
+Recurso()
+Recurso(ProbNuevo:double, TurnVida:double)
+getProbabilidadNuevoRE():static double
+setProbabilidadNuevoRE(probabilidadNuevoRE:double)
+getTurnosVidaRecursos():static double
+setTurnosVidaRecursos(turnosVidaRecursos:double)
 }
 
 

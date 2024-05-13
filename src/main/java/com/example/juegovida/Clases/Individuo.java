@@ -3,7 +3,7 @@ package com.example.juegovida.Clases;
 public class Individuo {
     private Integer NumIdentificacion;
     private Integer Generacion;
-    private static double TurnosVidaInd;
+    private double TurnosVidaInd;
     double ProbClonacion;
     double ProbReproduccion;
     double ProbMuerte;
@@ -40,10 +40,10 @@ public class Individuo {
         Generacion = generacion;
     }
 
-    public static void setTurnosVidaInd(double turnosVidaInd) {
+    public void setTurnosVidaInd(double turnosVidaInd) {
         TurnosVidaInd = turnosVidaInd;
     }
-    public static double getTurnosVidaInd() {
+    public double getTurnosVidaInd() {
         return TurnosVidaInd;
     }
     public double getProbClonacion() {
