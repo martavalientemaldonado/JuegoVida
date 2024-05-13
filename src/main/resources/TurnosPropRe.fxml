@@ -30,7 +30,7 @@
             <Image url="@Imagenes/verde-bosque.jpg" />
          </image>
       </ImageView>
-      <Label layoutX="33.0" layoutY="90.0" prefHeight="287.0" prefWidth="116.0" text="Elija el número &#10;de turnos que &#10;proporcionan el &#10;Agua y la Comida,&#10;los turnos que &#10;resta la Montaña, &#10;el porcentaje &#10;de reproducción &#10;que aumentara el &#10;Tesoro, el &#10;porcentaje de &#10;clonación que &#10;aumentara la &#10;Biblioteca y el &#10;porcentaje de &#10;muerte que &#10;aumentara el Pozo. " textAlignment="CENTER" textFill="WHITE">
+      <Label layoutX="36.0" layoutY="114.0" prefHeight="247.0" prefWidth="116.0" text="Elija el número &#10;de turnos que &#10;proporcionan el &#10;Agua y la Comida,&#10;los turnos que &#10;resta la Montaña, &#10;el porcentaje &#10;de reproducción &#10;que aumentara el &#10;Tesoro y  el &#10;porcentaje de &#10;clonación que &#10;aumentara la &#10;Biblioteca. " textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Book Antiqua" size="13.0" />
          </font>
@@ -66,36 +66,30 @@
          </image>
       </ImageView>
       <Slider id="TurnosAgua" fx:id="TurnosAgua" layoutX="225.0" layoutY="176.0" majorTickUnit="1.0" max="10.0" minorTickCount="0" orientation="VERTICAL" prefHeight="209.0" prefWidth="14.0" showTickLabels="true" />
-      <Label layoutX="287.0" layoutY="110.0" prefHeight="31.0" prefWidth="53.0" text="Comida" textAlignment="CENTER" textFill="WHITE">
+      <Label layoutX="301.0" layoutY="110.0" prefHeight="31.0" prefWidth="53.0" text="Comida" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Book Antiqua" size="13.0" />
          </font>
       </Label>
-      <Slider id="TurnosComida" fx:id="Turnosomida" layoutX="313.0" layoutY="177.0" majorTickUnit="1.0" max="10.0" minorTickCount="0" orientation="VERTICAL" prefHeight="209.0" prefWidth="14.0" showTickLabels="true" />
-      <Label layoutX="375.0" layoutY="116.0" prefHeight="19.0" prefWidth="53.0" text="Montaña" textAlignment="CENTER" textFill="WHITE">
+      <Slider id="TurnosComida" fx:id="Turnosomida" layoutX="321.0" layoutY="177.0" majorTickUnit="1.0" max="10.0" minorTickCount="0" orientation="VERTICAL" prefHeight="209.0" prefWidth="14.0" showTickLabels="true" />
+      <Label layoutX="401.0" layoutY="116.0" prefHeight="19.0" prefWidth="53.0" text="Montaña" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Book Antiqua" size="13.0" />
          </font>
       </Label>
-      <Slider id="TurnosMontaña" fx:id="TurnosMontaña" layoutX="394.0" layoutY="177.0" majorTickUnit="1.0" max="0.0" min="-10.0" minorTickCount="0" orientation="VERTICAL" prefHeight="209.0" prefWidth="14.0" showTickLabels="true" />
-      <Label layoutX="467.0" layoutY="113.0" prefHeight="25.0" prefWidth="43.0" text="Tesoro" textAlignment="CENTER" textFill="WHITE">
+      <Slider id="TurnosMontaña" fx:id="TurnosMontaña" layoutX="421.0" layoutY="176.0" majorTickUnit="1.0" max="0.0" min="-10.0" minorTickCount="0" orientation="VERTICAL" prefHeight="209.0" prefWidth="14.0" showTickLabels="true" />
+      <Label layoutX="497.0" layoutY="111.0" prefHeight="25.0" prefWidth="43.0" text="Tesoro" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Book Antiqua" size="13.0" />
          </font>
       </Label>
-      <Slider id="TurnosTesoro" fx:id="TurnosTesoro" layoutX="475.0" layoutY="177.0" minorTickCount="0" orientation="VERTICAL" prefHeight="209.0" prefWidth="26.0" showTickLabels="true" />
-      <Label layoutX="543.0" layoutY="113.0" prefHeight="25.0" prefWidth="59.0" text="Biblioteca&#10;" textAlignment="CENTER" textFill="WHITE">
+      <Slider id="TurnosTesoro" fx:id="TurnosTesoro" layoutX="506.0" layoutY="180.0" minorTickCount="0" orientation="VERTICAL" prefHeight="209.0" prefWidth="26.0" showTickLabels="true" />
+      <Label layoutX="581.0" layoutY="111.0" prefHeight="25.0" prefWidth="59.0" text="Biblioteca&#10;" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Book Antiqua" size="13.0" />
          </font>
       </Label>
-      <Slider id="TurnosBiblioteca" fx:id="TurnosBiblioteca" layoutX="565.0" layoutY="175.0" minorTickCount="0" orientation="VERTICAL" prefHeight="209.0" prefWidth="14.0" showTickLabels="true" />
-      <Label layoutX="633.0" layoutY="113.0" prefHeight="25.0" prefWidth="36.0" text="Pozo&#10;" textAlignment="CENTER" textFill="WHITE">
-         <font>
-            <Font name="Book Antiqua" size="13.0" />
-         </font>
-      </Label>
-      <Slider id="TurnosPozo" fx:id="TurnosPozo" layoutX="651.0" layoutY="177.0" min="50.0" minorTickCount="0" orientation="VERTICAL" prefHeight="209.0" prefWidth="14.0" showTickLabels="true" />
+      <Slider id="TurnosBiblioteca" fx:id="TurnosBiblioteca" layoutX="604.0" layoutY="177.0" minorTickCount="0" orientation="VERTICAL" prefHeight="209.0" prefWidth="14.0" showTickLabels="true" />
       <ImageView fitHeight="39.0" fitWidth="75.0" layoutX="505.0" layoutY="27.0" opacity="0.9" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Imagenes/buttonverde-bosque.jpg" />

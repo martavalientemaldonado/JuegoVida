@@ -3,7 +3,7 @@ package com.example.juegovida.App.Tab;
 import com.example.juegovida.Clases.Individuo;
 import com.example.juegovida.Clases.Recursos.Recurso;
 
-public class Casilla<TipodeDato>{
+public class Casilla{
     private ListaSimple<Individuo> lIndiv;
     private ListaSimple<Recurso> lRec;
 

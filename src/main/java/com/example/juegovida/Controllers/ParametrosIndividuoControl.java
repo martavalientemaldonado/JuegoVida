@@ -23,12 +23,6 @@ import java.util.ResourceBundle;
 
 public class ParametrosIndividuoControl {
     @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
-
-    @FXML
     private ImageView fondo;
 
     @FXML
@@ -53,19 +47,10 @@ public class ParametrosIndividuoControl {
     private Slider ProbReproduccion;
 
     @FXML
-    private Slider ProbMuerte;
-
-    @FXML
-    private ImageView immuerte;
-
-    @FXML
     private ImageView imclon;
 
     @FXML
     private ImageView imrep;
-
-    @FXML
-    private Label lblmuerte;
 
     @FXML
     private Label lblreprod;
@@ -127,11 +112,8 @@ public class ParametrosIndividuoControl {
         assert imslclon != null : "fx:id=\"imslclon\" was not injected: check your FXML file 'parametrosIndiv.fxml'.";
         assert ProbClonacion != null : "fx:id=\"ProbClonacion\" was not injected: check your FXML file 'parametrosIndiv.fxml'.";
         assert ProbReproduccion != null : "fx:id=\"ProbReproduccion\" was not injected: check your FXML file 'parametrosIndiv.fxml'.";
-        assert ProbMuerte != null : "fx:id=\"ProbMuerte\" was not injected: check your FXML file 'parametrosIndiv.fxml'.";
-        assert immuerte != null : "fx:id=\"immuerte\" was not injected: check your FXML file 'parametrosIndiv.fxml'.";
         assert imclon != null : "fx:id=\"imclon\" was not injected: check your FXML file 'parametrosIndiv.fxml'.";
         assert imrep != null : "fx:id=\"imrep\" was not injected: check your FXML file 'parametrosIndiv.fxml'.";
-        assert lblmuerte != null : "fx:id=\"lblmuerte\" was not injected: check your FXML file 'parametrosIndiv.fxml'.";
         assert lblreprod != null : "fx:id=\"lblreprod\" was not injected: check your FXML file 'parametrosIndiv.fxml'.";
         assert lblclonacion != null : "fx:id=\"lblclonacion\" was not injected: check your FXML file 'parametrosIndiv.fxml'.";
         assert imguardar != null : "fx:id=\"imguardar\" was not injected: check your FXML file 'parametrosIndiv.fxml'.";
@@ -141,7 +123,6 @@ public class ParametrosIndividuoControl {
     }
     protected void updateGUIwithModelParamInd() {
         ProbClonacion.valueProperty().bindBidirectional(d.ProbClonacionIndivProperty());
-        ProbMuerte.valueProperty().bindBidirectional(d.ProbMuerteIndivProperty());
         ProbReproduccion.valueProperty().bindBidirectional(d.ProbReproduccionIndivProperty());
     }
     public void loadUserDataParamInd(DatosCompartidos parametrosData) {

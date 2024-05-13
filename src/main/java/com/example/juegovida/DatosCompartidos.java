@@ -2,7 +2,6 @@ package com.example.juegovida;
 
 import com.example.juegovida.App.Tab.Tablero;
 import com.example.juegovida.Clases.Individuo;
-import com.example.juegovida.Clases.Matriz;
 import com.example.juegovida.Clases.Recursos.*;
 import javafx.beans.property.*;
 import javafx.scene.control.Tab;
@@ -22,7 +21,6 @@ public class DatosCompartidos {
     private DoubleProperty TurnosPropAgua = new SimpleDoubleProperty();
     private DoubleProperty ProbReproPropTesoro = new SimpleDoubleProperty();
     private DoubleProperty ProbClonacPropBibli = new SimpleDoubleProperty();
-    private DoubleProperty ProbMuertePropPozo = new SimpleDoubleProperty();
     private DoubleProperty ProbAparicionAgua = new SimpleDoubleProperty();
     private DoubleProperty ProbAparicionComida = new SimpleDoubleProperty();
     private DoubleProperty ProbAparicionMontaña = new SimpleDoubleProperty();
@@ -30,7 +28,6 @@ public class DatosCompartidos {
     private DoubleProperty ProbAparicionBiblioteca = new SimpleDoubleProperty();
     private DoubleProperty ProbAparicionPozo = new SimpleDoubleProperty();
     private DoubleProperty ProbNuevoRecurso = new SimpleDoubleProperty();
-    private DoubleProperty ProbMuerteIndiv = new SimpleDoubleProperty();
     private DoubleProperty ProbReproduccionIndiv = new SimpleDoubleProperty();
     private DoubleProperty ProbClonacionIndiv = new SimpleDoubleProperty();
     private DoubleProperty NumColumnas = new SimpleDoubleProperty();
@@ -45,7 +42,6 @@ public class DatosCompartidos {
         Agua.setTurnosProporciona(TurnosPropAgua.get());
         Tesoro.setProbReproduccionPropo(ProbReproPropTesoro.get());
         Biblioteca.setProbClonacionProp(ProbClonacPropBibli.get());
-        Pozo.setProbMuerteProp(ProbMuertePropPozo.get());
     }
 
     public void rollbackProporcionaRecursos(){
@@ -54,7 +50,6 @@ public class DatosCompartidos {
         TurnosPropAgua.set(Agua.getTurnosProporciona());
         ProbReproPropTesoro.set(Tesoro.getProbReproduccionPropo());
         ProbClonacPropBibli.set(Biblioteca.getProbClonacionProp());
-        ProbMuertePropPozo.set(Pozo.getProbMuerteProp());
     }
     public Property<Number> TurnosPropComProperty() {
         return TurnosPropCom;
@@ -70,9 +65,6 @@ public class DatosCompartidos {
     }
     public Property<Number> ProbClonacPropBibliProperty() {
         return ProbClonacPropBibli;
-    }
-    public Property<Number> ProbMuertePropPozoProperty() {
-        return ProbMuertePropPozo;
     }
 
 
@@ -125,13 +117,11 @@ public class DatosCompartidos {
     public void commitProbIndividuos(){
         Individuo.setProbClonacion(ProbClonacionIndiv.get());
         Individuo.setProbReproduccion(ProbReproduccionIndiv.get());
-        Individuo.setProbMuerte(ProbMuerteIndiv.get());
     }
 
     public void rollbackProbIndividuos(){
         ProbClonacionIndiv.set(Individuo.getProbClonacion());
         ProbReproduccionIndiv.set(Individuo.getProbReproduccion());
-        ProbMuerteIndiv.set(Individuo.getProbMuerte());
     }
 
     public Property<Number> ProbClonacionIndivProperty() {
@@ -142,9 +132,6 @@ public class DatosCompartidos {
         return ProbReproduccionIndiv;
     }
 
-    public Property<Number> ProbMuerteIndivProperty() {
-        return ProbMuerteIndiv;
-    }
 
 
     /// DIMENSIONES Y TURNOS DE VIDA DE RECURSOS Y INDIVIDUOS
@@ -213,8 +200,6 @@ public class DatosCompartidos {
     }
     public void setPozo(Pozo pozo){
         this.Pozo = pozo;
-        ProbMuertePropPozo.set(Pozo.getProbMuerteProp());
-        ProbAparicionPozo.set(Pozo.getProbAparicion());
     }
     public void setTesoro(Tesoro tesoro){
         this.Tesoro = tesoro;

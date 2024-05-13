@@ -6,7 +6,7 @@ public class Individuo {
     private double TurnosVidaInd;
     double ProbClonacion;
     double ProbReproduccion;
-    double ProbMuerte;
+    double ProbMuerte = 1-ProbReproduccion;
     //0 Basico, 1 Normal, 2 Avanzado
     protected int Tipo;
     public Individuo(){

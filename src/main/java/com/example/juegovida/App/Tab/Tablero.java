@@ -12,6 +12,7 @@ import java.io.FileNotFoundException;
 public class Tablero {
     private static double NunColumnas;
     private static double NunFilas;
+    ListaEnlazadaTablero<ListaEnlazadaTablero<Casilla>> Matriz;
 
     public static double getNunColumnas() {
         return NunColumnas;

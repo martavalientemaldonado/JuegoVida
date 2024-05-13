@@ -44,8 +44,6 @@ public class TurnosPropRecursosControl{
     @FXML
     private Slider TurnosBiblioteca;
 
-    @FXML
-    private Slider TurnosPozo;
     private DatosCompartidos d;
     private Stage scene;
     private Tablero t  = new Tablero();
@@ -91,13 +89,11 @@ public class TurnosPropRecursosControl{
         assert TurnosMontaña != null : "fx:id=\"TurnosMontaña\" was not injected: check your FXML file 'TurnosPropRe.fxml'.";
         assert TurnosTesoro != null : "fx:id=\"TurnosTesoro\" was not injected: check your FXML file 'TurnosPropRe.fxml'.";
         assert TurnosBiblioteca != null : "fx:id=\"TurnosBiblioteca\" was not injected: check your FXML file 'TurnosPropRe.fxml'.";
-        assert TurnosPozo != null : "fx:id=\"TurnosPozo\" was not injected: check your FXML file 'TurnosPropRe.fxml'.";
     }
     protected void updateGUIwithModelTurnosPropRe() {
         TurnosAgua.valueProperty().bindBidirectional(d.TurnosPropAguaProperty());
         TurnosMontaña.valueProperty().bindBidirectional(d.TurnosPropMontProperty());
         TurnosBiblioteca.valueProperty().bindBidirectional(d.ProbClonacPropBibliProperty());
-        TurnosPozo.valueProperty().bindBidirectional(d.ProbMuertePropPozoProperty());
         TurnosTesoro.valueProperty().bindBidirectional(d.ProbReproPropTesoroProperty());
         Turnosomida.valueProperty().bindBidirectional(d.TurnosPropComProperty());
     }
