@@ -42,7 +42,7 @@ public class Casilla<TipodeDato>{
             int c1=0;
             int c2=0;
             while (c2<lIndiv.getNumElementos()){
-                int elemento=lIndiv.getElemento(c2).getData().getTurnosQuedan
+                int elemento=lIndiv.getElemento(c2).getData().getTurnosQuedan();
             }
         }
     }
