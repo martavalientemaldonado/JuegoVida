@@ -1,7 +1,7 @@
 package com.example.juegovida.App.Tab.GrafoRecursos;
 
 public class AristasGrafo<TipodelDato> {
-    NodoGrafo destino;
+    NodoGrafo<TipodelDato> destino;
     double peso;
     NodoGrafo<TipodelDato> inicio;
     AristasGrafo<TipodelDato> siguiente;

@@ -110,7 +110,7 @@ public class ListaAdyacencia<TipodelDato> {
     public AristasGrafo<TipodelDato> getArista(NodoGrafo<TipodelDato> des){
         if(des!= null) {
             AristasGrafo<TipodelDato> ar = primero;
-            while (ar != ultimo) {
+            while (ar != ultimo && ar.destino!= des) {
                 ar = ar.siguiente;
             }
             if(ar.destino == des) return ar;
