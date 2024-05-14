@@ -33,18 +33,6 @@ public class ListaEnlazada<TipodeDato>{
         ElementoLE<TipodeDato> nuevoPrimero = new ElementoLE<TipodeDato>(this.primero, s);
         add(nuevoPrimero);
     }
-
-    public void insert(TipodeDato s, int posicion) {
-        if (posicion == 0) {
-            this.add(s);
-        } else {
-            ElementoLE<TipodeDato> e2= new ElementoLE<TipodeDato>(this.getElemento(posicion),s);
-            this.getElemento(posicion - 1).siguiente = e2;
-
-
-        }
-
-    }
     public void del(int posicion){
         ElementoLE<TipodeDato> el = this.primero;
         int contador=0;
@@ -58,8 +46,6 @@ public class ListaEnlazada<TipodeDato>{
         if(el!= null && el.getSiguiente()!=null) {
             el.siguiente=el.siguiente.siguiente;
         }
-
-
     }
 
     public int getNumeroElementos(){
@@ -95,13 +81,6 @@ public class ListaEnlazada<TipodeDato>{
             contador++;
         }
         return e;
-    }
-    public void imprimir() {
-        int c = 0;
-        while (c < this.getNumeroElementos()) {
-            System.out.println(this.getElemento(c));
-            c++;
-        }
     }
     public ListaEnlazada<TipodeDato> reverse(ListaEnlazada<TipodeDato> lis){
         ListaEnlazada<TipodeDato> l = new ListaEnlazada<TipodeDato>();

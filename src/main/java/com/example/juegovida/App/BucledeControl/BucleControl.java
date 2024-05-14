@@ -16,5 +16,4 @@ public class BucleControl {
           //if (lIndiv.getPrimero()=Agua
       //}
     //}
-
 }

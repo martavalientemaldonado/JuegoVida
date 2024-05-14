@@ -11,6 +11,11 @@ public class ElementoLE<TipoDelDato> { // Para introducir valor de cualquier tip
         this.data = data;
     }
 
+    public void setSiguiente(ElementoLE<TipoDelDato> siguiente) {
+        this.siguiente = siguiente;
+    }
+
+
     protected ElementoLE<TipoDelDato> getSiguiente() {
         return siguiente;
     }

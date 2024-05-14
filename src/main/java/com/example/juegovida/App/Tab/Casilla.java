@@ -6,13 +6,16 @@ import com.example.juegovida.Clases.Recursos.Recurso;
 public class Casilla<TipodeDato>{
     private ListaSimple<Individuo> lIndiv;
     private ListaSimple<Recurso> lRec;
+    int fila;
+    int columna;
 
-    public Casilla() {
+    public Casilla(int i, int j) {
         ListaSimple<Individuo> lIndiv= new ListaSimple<>();
         ListaSimple<Recurso> lRec= new ListaSimple<>();
         this.lIndiv=lIndiv;
         this.lRec=lRec;
-
+        this.fila = i;
+        this.columna = j;
     }
 
 

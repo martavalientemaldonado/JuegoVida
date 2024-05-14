@@ -31,10 +31,7 @@ public class Tablero {
     }
 
     public static Parent setTab() throws FileNotFoundException {
-
-
         Pane prueb = new Pane();
-
         GridPane mainGrid = new GridPane(); //Crear grid
         mainGrid.setHgap(0);
         mainGrid.setVgap(0);
