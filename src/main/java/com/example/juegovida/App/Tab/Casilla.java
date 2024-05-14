@@ -3,7 +3,7 @@ package com.example.juegovida.App.Tab;
 import com.example.juegovida.Clases.Individuo;
 import com.example.juegovida.Clases.Recursos.Recurso;
 
-public class Casilla{
+public class Casilla<TipodeDato>{
     private ListaSimple<Individuo> lIndiv;
     private ListaSimple<Recurso> lRec;
 
@@ -42,8 +42,28 @@ public class Casilla{
             int c1=0;
             int c2=0;
             while (c2<lIndiv.getNumElementos()){
-                double elemento=lIndiv.getElemento(c2).getTurnosVidaInd();
+                int elemento=lIndiv.getElemento(c2).getTurnosQuedan();
+                if (elemento<lIndiv.getElemento(c1).getTurnosQuedan()){
+                    c1=c2;
+                }
+                c2 ++;
             }
+            lIndiv.del(c1);
+        }
+    }
+    public void addRec(Recurso rec){
+        lRec.add(rec);
+        if(lRec.getNumElementos()>3){
+            int c1=0;
+            int c2=0;
+            while (c2<lRec.getNumElementos()){
+                int elemento=lRec.getElemento(c2).getData().getTurnosQuedan();
+                if (elemento<lRec.getElemento(c1).getData.getTurnosQuedan()){
+                    c1=c2;
+                }
+                c2 ++;
+            }
+            lRec.del(c1);
         }
     }
 }
