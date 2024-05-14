@@ -7,11 +7,11 @@ import com.example.juegovida.Clases.Recursos.Recurso;
 
 public class BucleControl {
     private ListaSimple<Individuo> lIndiv;
-    public int TurnosQuedan(){
-      if (lIndiv!=null){
-          if (lIndiv.getPrimero()=Agua
-      }
-    }
+    //public int TurnosQuedan(){
+      //if (lIndiv!=null){
+          //if (lIndiv.getPrimero()=Agua
+      //}
+    //}
 
 
 }

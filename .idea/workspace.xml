@@ -4,17 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ae59f5ab-3a2c-4635-b2d5-df0317d0df49" name="Changes" comment="conexiones">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/BucledeControl/BucleControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_05_2024_21_26__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2024_12_21_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_05_2024_12_28_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_05_2024_10_23__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_05_2024_10_23__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_05_2024_8_33__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_05_2024_8_33__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_05_2024_9_02__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_05_2024_9_02__Changes_.xml" afterDir="false" />
+    <list default="true" id="ae59f5ab-3a2c-4635-b2d5-df0317d0df49" name="Changes" comment="Cambio PantallaInicio">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/ColaInd/ColaEventosIndividuo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/ColaInd/ElementoCola.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/juegovida/App/Tab/ColaInd/ColaEventosIndividuoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/juegovida/App/Tab/ColaInd/ElementoColaTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/BucledeControl/BucleControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/BucledeControl/BucleControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/Casilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/Casilla.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/ElementoLS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/ElementoLS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +24,7 @@
       <list>
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -73,30 +72,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Bienvenida.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/PC/IdeaProjects/JuegoVidaFin/src/main/resources&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.3862069&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Bienvenida.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "true",
+    "JUnit.ColaEventosIndividuoTest.desencolar.executor": "Coverage",
+    "JUnit.ColaEventosIndividuoTest.executor": "Coverage",
+    "JUnit.ColaEventosIndividuoTest.getElemento.executor": "Coverage",
+    "JUnit.ElementoColaTest.executor": "Coverage",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "true",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/PC/IdeaProjects/JuegoVidaFin/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.3862069",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\PC\IdeaProjects\JuegoVidaFin\src\main\resources" />
@@ -111,45 +116,102 @@
       <recent name="C:\Users\UAH\JuegoVida\src\main\resources" />
       <recent name="C:\Users\UAH\JuegoVida\src\main\resources\Res" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.example.juegovida.App.Tab.ColaInd" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example.juegovida.App.Tab" />
       <recent name="com.example.juegovida.Clases" />
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Bienvenida">
-    <configuration name="Bienvenida" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.juegovida.App.Bienvenida" />
+  <component name="RunManager" selected="JUnit.com.example.juegovida.App.Tab.ColaInd in JuegoVida">
+    <configuration name="ColaEventosIndividuoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JuegoVida" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.juegovida.App.*" />
+          <option name="PATTERN" value="com.example.juegovida.App.Tab.ColaInd.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.example.juegovida.App.Tab.ColaInd" />
+      <option name="MAIN_CLASS_NAME" value="com.example.juegovida.App.Tab.ColaInd.ColaEventosIndividuoTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PantallaInicio" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.juegovida.App.PantallaInicio" />
+    <configuration name="ColaEventosIndividuoTest.desencolar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JuegoVida" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.juegovida.App.*" />
+          <option name="PATTERN" value="com.example.juegovida.App.Tab.ColaInd.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.example.juegovida.App.Tab.ColaInd" />
+      <option name="MAIN_CLASS_NAME" value="com.example.juegovida.App.Tab.ColaInd.ColaEventosIndividuoTest" />
+      <option name="METHOD_NAME" value="desencolar" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ColaEventosIndividuoTest.getElemento" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JuegoVida" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.juegovida.App.Tab.ColaInd.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.juegovida.App.Tab.ColaInd" />
+      <option name="MAIN_CLASS_NAME" value="com.example.juegovida.App.Tab.ColaInd.ColaEventosIndividuoTest" />
+      <option name="METHOD_NAME" value="getElemento" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ElementoColaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JuegoVida" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.juegovida.App.Tab.ColaInd.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.juegovida.App.Tab.ColaInd" />
+      <option name="MAIN_CLASS_NAME" value="com.example.juegovida.App.Tab.ColaInd.ElementoColaTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.example.juegovida.App.Tab.ColaInd in JuegoVida" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JuegoVida" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.juegovida.App.Tab.ColaInd.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.juegovida.App.Tab.ColaInd" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Bienvenida" />
-        <item itemvalue="Application.PantallaInicio" />
-        <item itemvalue="Application.Bienvenida" />
-        <item itemvalue="Application.PantallaInicio" />
+        <item itemvalue="JUnit.com.example.juegovida.App.Tab.ColaInd in JuegoVida" />
+        <item itemvalue="JUnit.ColaEventosIndividuoTest.desencolar" />
+        <item itemvalue="JUnit.ColaEventosIndividuoTest" />
+        <item itemvalue="JUnit.ElementoColaTest" />
+        <item itemvalue="JUnit.ColaEventosIndividuoTest.getElemento" />
       </list>
     </recent_temporary>
   </component>
@@ -421,7 +483,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715545318433</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Cambio PantallaInicio">
+      <option name="closed" value="true" />
+      <created>1715701128246</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1715701128246</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -479,6 +549,18 @@
     <MESSAGE value="error" />
     <MESSAGE value="act" />
     <MESSAGE value="conexiones" />
-    <option name="LAST_COMMIT_MESSAGE" value="conexiones" />
+    <MESSAGE value="Cambio PantallaInicio" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambio PantallaInicio" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/JuegoVida$ColaEventosIndividuoTest.ic" NAME="ColaEventosIndividuoTest Coverage Results" MODIFIED="1715705811737" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.juegovida.App.Tab.ColaInd.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/JuegoVida$ElementoColaTest.ic" NAME="ElementoColaTest Coverage Results" MODIFIED="1715705800421" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.juegovida.App.Tab.ColaInd.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/JuegoVida$ColaEventosIndividuoTest_getElemento.ic" NAME="ColaEventosIndividuoTest.getElemento Coverage Results" MODIFIED="1715705765298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.juegovida.App.Tab.ColaInd.*</FILTER>
+    </SUITE>
   </component>
 </project>

@@ -42,28 +42,28 @@ public class Casilla<TipodeDato>{
             int c1=0;
             int c2=0;
             while (c2<lIndiv.getNumElementos()){
-                int elemento=lIndiv.getElemento(c2).getTurnosQuedan();
-                if (elemento<lIndiv.getElemento(c1).getTurnosQuedan()){
-                    c1=c2;
+                //int elemento=lIndiv.getElemento(c2).getTurnosQuedan();
+                //if (elemento<lIndiv.getElemento(c1).getTurnosQuedan()){
+                    //c1=c2;
                 }
                 c2 ++;
             }
-            lIndiv.del(c1);
+            //lIndiv.del(c1);
         }
-    }
+    //}
     public void addRec(Recurso rec){
         lRec.add(rec);
         if(lRec.getNumElementos()>3){
             int c1=0;
             int c2=0;
             while (c2<lRec.getNumElementos()){
-                int elemento=lRec.getElemento(c2).getData().getTurnosQuedan();
-                if (elemento<lRec.getElemento(c1).getData.getTurnosQuedan()){
+                //int elemento=lRec.getElemento(c2).getData().getTurnosQuedan();
+                //if (elemento<lRec.getElemento(c1).getData.getTurnosQuedan()){
                     c1=c2;
                 }
                 c2 ++;
             }
-            lRec.del(c1);
+            //lRec.del(c1);
         }
-    }
+    //}
 }
