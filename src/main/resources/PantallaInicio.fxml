@@ -6,26 +6,26 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.juegovida.Controllers.PantallaInicioControl">
+<AnchorPane prefHeight="349.0" prefWidth="676.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.juegovida.Controllers.PantallaInicioControl">
    <children>
-      <ImageView fx:id="imfondo" fitHeight="489.0" fitWidth="882.0" layoutX="-19.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imfondo" fitHeight="510.0" fitWidth="695.0" layoutX="-19.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Imagenes/bosquetroncog.GIF" />
          </image>
       </ImageView>
-      <ImageView fx:id="imbotonnuevap" fitHeight="137.0" fitWidth="43.0" layoutX="389.0" layoutY="108.0" opacity="0.72" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+      <ImageView fx:id="imbotonnuevap" fitHeight="137.0" fitWidth="43.0" layoutX="317.0" layoutY="86.0" opacity="0.72" pickOnBounds="true" preserveRatio="true" rotate="90.0">
          <image>
             <Image url="@Imagenes/piedra.jpgrect.jpg" />
          </image>
       </ImageView>
-      <ImageView fx:id="imbotcargarp" fitHeight="125.0" fitWidth="44.0" layoutX="389.0" layoutY="182.0" opacity="0.8" pickOnBounds="true" preserveRatio="true" rotate="270.0">
+      <ImageView fx:id="imbotcargarp" fitHeight="134.0" fitWidth="43.0" layoutX="317.0" layoutY="184.0" opacity="0.8" pickOnBounds="true" preserveRatio="true" rotate="270.0">
          <image>
             <Image url="@Imagenes/piedra.jpgrect.jpg" />
          </image>
       </ImageView>
-      <Label fx:id="lblnuevapart" layoutX="364.0" layoutY="160.0" prefHeight="17.0" prefWidth="90.0" text="NUEVA PARTIDA" />
-      <Button fx:id="botonnuevap" layoutX="351.0" layoutY="147.0" mnemonicParsing="false" onAction="#clicknueva" opacity="0.0" prefHeight="44.0" prefWidth="120.0" text="Button" />
-      <Label fx:id="lblcargarpart" layoutX="363.0" layoutY="235.0" text="CARGAR PARTIDA" />
-      <Button fx:id="botoncargarp" layoutX="350.0" layoutY="222.0" mnemonicParsing="false" onAction="#clickcargar" opacity="0.0" prefHeight="43.0" prefWidth="123.0" text="Button" />
+      <Label fx:id="lblnuevapart" layoutX="293.0" layoutY="138.0" prefHeight="17.0" prefWidth="90.0" text="NUEVA PARTIDA" />
+      <Button fx:id="botonnuevap" layoutX="278.0" layoutY="124.0" mnemonicParsing="false" onAction="#clicknueva" opacity="0.0" prefHeight="44.0" prefWidth="120.0" text="Button" />
+      <Label fx:id="lblcargarpart" layoutX="290.0" layoutY="235.0" text="CARGAR PARTIDA" />
+      <Button fx:id="botoncargarp" layoutX="277.0" layoutY="222.0" mnemonicParsing="false" onAction="#clickcargar" opacity="0.0" prefHeight="43.0" prefWidth="123.0" text="Button" />
    </children>
 </AnchorPane>
