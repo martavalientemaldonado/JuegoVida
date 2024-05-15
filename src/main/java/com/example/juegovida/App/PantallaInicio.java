@@ -6,6 +6,7 @@ import com.example.juegovida.Controllers.PantallaInicioControl;
 import com.example.juegovida.Controllers.ParametrosIndividuoControl;
 import com.example.juegovida.DatosCompartidos;
 import com.example.juegovida.Utilities.Paths;
+import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -15,7 +16,7 @@ import java.net.MalformedURLException;
 
 import static javafx.application.Application.launch;
 
-public class PantallaInicio {
+public class PantallaInicio extends Application {
 
     public static void main(String[] args) {
         launch();

@@ -4,7 +4,7 @@ import com.example.juegovida.Clases.Individuo;
 import com.example.juegovida.Clases.Recursos.Recurso;
 import com.example.juegovida.Errores.Mas3Indiv;
 
-public class Casilla<TipodeDato>{
+public class Casilla{
     public ListaSimple<Individuo> lIndiv;
     public ListaSimple<Recurso> lRec;
     private double fila;

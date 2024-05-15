@@ -4,19 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ae59f5ab-3a2c-4635-b2d5-df0317d0df49" name="Changes" comment="test">
+    <list default="true" id="ae59f5ab-3a2c-4635-b2d5-df0317d0df49" name="Changes" comment="ParamCasilla">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/ParamCasilla.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/TabParamTablero.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/ParamCasillaControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/TabParamTableroControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Imagenes/3verde-bosque.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Imagenes/bosque2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Imagenes/fotoparam.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ParamCasilla.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/TabDeTablero.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_15_05_2024_13_12__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_15_05_2024_13_12__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/DimensionesyTurnosVida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/DimensionesyTurnosVida.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/ListaSimple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/ListaSimple.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/TabApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/TabApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/PantallaInicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/PantallaInicio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/Casilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/Casilla.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/Tablero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/DimyTurnosControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/DimyTurnosControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/ParamRecursosControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/ParamRecursosControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/ParametrosIndividuoControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/ParametrosIndividuoControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/TableroControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/TableroControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/TurnosPropRecursosControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/TurnosPropRecursosControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Utilities/Paths.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Utilities/Paths.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Tablero.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,54 +80,57 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Bienvenida.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
-    &quot;JUnit.AristasGrafoTest.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.ColaEventosIndividuoTest.desencolar.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.ColaEventosIndividuoTest.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.ColaEventosIndividuoTest.getElemento.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.ElementoColaTest.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.GrafoTest.existeVertice.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.GrafoTest.grafoVacio.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.ListaAdyacenciaTest.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.ListaAdyacenciaTest.getArista.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ListaAdyacenciaTest.nuevaAdyacencia.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.NodoGrafoTest.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.com.example.juegovida.App.Tab.ColaInd in JuegoVida.executor&quot;: &quot;Coverage&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/PC/IdeaProjects/JuegoVidaFin/src/main/resources&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.3862069&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Bienvenida.executor": "Run",
+    "Application.ParamCasilla.executor": "Run",
+    "Application.TabApp.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "true",
+    "JUnit.AristasGrafoTest.executor": "Coverage",
+    "JUnit.ColaEventosIndividuoTest.desencolar.executor": "Coverage",
+    "JUnit.ColaEventosIndividuoTest.executor": "Coverage",
+    "JUnit.ColaEventosIndividuoTest.getElemento.executor": "Coverage",
+    "JUnit.ElementoColaTest.executor": "Coverage",
+    "JUnit.GrafoTest.existeVertice.executor": "Coverage",
+    "JUnit.GrafoTest.grafoVacio.executor": "Coverage",
+    "JUnit.ListaAdyacenciaTest.executor": "Coverage",
+    "JUnit.ListaAdyacenciaTest.getArista.executor": "Run",
+    "JUnit.ListaAdyacenciaTest.nuevaAdyacencia.executor": "Coverage",
+    "JUnit.NodoGrafoTest.executor": "Coverage",
+    "JUnit.com.example.juegovida.App.Tab.ColaInd in JuegoVida.executor": "Coverage",
+    "Repository.Attach.Annotations": "true",
+    "Repository.Attach.JavaDocs": "true",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/PC/IdeaProjects/JuegoVida/src/main/resources/Imagenes",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.3862069",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\PC\IdeaProjects\JuegoVida\src\main\resources\Imagenes" />
       <recent name="C:\Users\PC\IdeaProjects\JuegoVidaFin\src\main\resources" />
       <recent name="C:\Users\PC\IdeaProjects\JuegoVidaFin\src\main\resources\Imagenes" />
       <recent name="C:\Users\PC\IdeaProjects\JuegoVida\src\main\resources" />
       <recent name="C:\Users\PC\IdeaProjects\JuegoVida\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\PC\IdeaProjects\JuegoVidaFin\src\main\resources" />
       <recent name="C:\Users\PC\IdeaProjects\JuegoVida\src\main\resources" />
+      <recent name="C:\Users\PC\IdeaProjects\JuegoVidaFin\src\main\resources" />
       <recent name="C:\Users\PC\IdeaProjects\JuegoVida\src\main\java\com\example\juegovida\javafx\scene\image" />
       <recent name="C:\Users\UAH\JuegoVida\src\main\resources" />
       <recent name="C:\Users\UAH\JuegoVida\src\main\resources\Res" />
@@ -141,7 +148,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Bienvenida">
+  <component name="RunManager" selected="Application.ParamCasilla">
     <configuration name="Bienvenida" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.juegovida.App.Bienvenida" />
       <module name="JuegoVida" />
@@ -155,8 +162,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DimensionesyTurnosVida" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.juegovida.App.DimensionesyTurnosVida" />
+    <configuration name="ParamCasilla" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.juegovida.App.ParamCasilla" />
       <module name="JuegoVida" />
       <extension name="coverage">
         <pattern>
@@ -214,9 +221,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ParamCasilla" />
         <item itemvalue="Application.Bienvenida" />
         <item itemvalue="Application.TabApp" />
-        <item itemvalue="Application.DimensionesyTurnosVida" />
         <item itemvalue="JUnit.ListaAdyacenciaTest.getArista" />
         <item itemvalue="JUnit.ListaAdyacenciaTest" />
       </list>
@@ -515,23 +522,7 @@
       <option name="project" value="LOCAL" />
       <updated>1715770231071</updated>
     </task>
-    <task id="LOCAL-00034" summary="test">
-      <option name="closed" value="true" />
-      <created>1715794843718</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1715794843718</updated>
-    </task>
-    <task id="LOCAL-00035" summary="test">
-      <option name="closed" value="true" />
-      <created>1715794863440</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1715794863440</updated>
-    </task>
-    <option name="localTasksCounter" value="36" />
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -592,15 +583,8 @@
     <MESSAGE value="Cambio PantallaInicio" />
     <MESSAGE value="Cola" />
     <MESSAGE value="uml" />
-    <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
-  </component>
-  <component name="XDebuggerManager">
-    <pin-to-top-manager>
-      <pinned-members>
-        <PinnedItemInfo parentTag="com.example.juegovida.App.Tab.TabApp" memberName="casilla" />
-      </pinned-members>
-    </pin-to-top-manager>
+    <MESSAGE value="ParamCasilla" />
+    <option name="LAST_COMMIT_MESSAGE" value="ParamCasilla" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/JuegoVida$ListaAdyacenciaTest_getArista.ic" NAME="ListaAdyacenciaTest.getArista Coverage Results" MODIFIED="1715709099550" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
