@@ -1,12 +1,18 @@
 package com.example.juegovida.Controllers;
 
+import java.io.File;
+import java.io.IOException;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import com.example.juegovida.DatosCompartidos;
+import com.example.juegovida.Utilities.Paths;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Slider;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
@@ -36,8 +42,9 @@ public class DimyTurnosControl{
     private Stage scene;
 
     @FXML
-    void clickAceptar(ActionEvent event) {
-        d.commitDimyVida();
+    void clickAceptar(ActionEvent event) throws IOException {
+        //d.commitDimyVida();
+
 
 
         //Cerrar pantalla

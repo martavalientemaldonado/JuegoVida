@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Slider?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="430.0" prefWidth="586.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.juegovida.Controllers.ParametrosIndividuoControl">
+<AnchorPane prefHeight="430.0" prefWidth="586.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.juegovida.Controllers.ParametrosIndividuoControl">
    <children>
       <ImageView fx:id="fondo" fitHeight="484.0" fitWidth="774.0" layoutX="-3.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -31,7 +28,7 @@
          </image>
       </ImageView>
       <Slider id="ProbClonacion" fx:id="ProbClonacion" layoutX="400.0" layoutY="234.0" minorTickCount="0" orientation="VERTICAL" prefHeight="210.0" prefWidth="13.0" showTickLabels="true" />
-      <Slider id="ProbReproduccion" fx:id="ProbReproduccion" layoutX="161.0" layoutY="239.0" minorTickCount="0" orientation="VERTICAL" prefHeight="200.0" prefWidth="28.0" showTickLabels="true" />
+      <Slider id="ProbReproduccion" fx:id="ProbReproduccion" layoutX="161.0" layoutY="239.0" minorTickCount="25" orientation="VERTICAL" prefHeight="200.0" prefWidth="28.0" showTickLabels="true" />
       <ImageView fx:id="imclon" fitHeight="45.0" fitWidth="146.0" layoutX="342.0" layoutY="161.0" opacity="0.88" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Imagenes/piedra.jpg2.jpg" />

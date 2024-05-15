@@ -5,17 +5,19 @@ import com.example.juegovida.Clases.Recursos.Recurso;
 import com.example.juegovida.Errores.Mas3Indiv;
 
 public class Casilla<TipodeDato>{
-    private ListaSimple<Individuo> lIndiv;
-    private ListaSimple<Recurso> lRec;
-    private int fila;
-    private int columna;
+    public ListaSimple<Individuo> lIndiv;
+    public ListaSimple<Recurso> lRec;
+    private double fila;
+    private double columna;
 
-    public Casilla() {
+
+    public Casilla(double i, double j) {
         ListaSimple<Individuo> lIndiv= new ListaSimple<>();
         ListaSimple<Recurso> lRec= new ListaSimple<>();
         this.lIndiv=lIndiv;
         this.lRec=lRec;
-
+        this.fila = i;
+        this.columna = j;
     }
 
 
@@ -49,6 +51,12 @@ public class Casilla<TipodeDato>{
 
     public void delRec(Recurso rec){
         int pos=lRec.getPosicion(rec);
+        lRec.del(pos);
+
+    }
+    public void delInd(Individuo ind){
+        int pos=lIndiv.getPosicion(ind);
+        lIndiv.del(pos);
 
     }
     public void addIndiv(Individuo indiv) throws Mas3Indiv {
@@ -84,11 +92,11 @@ public class Casilla<TipodeDato>{
 
     }
 
-    public int getFila() {
+    public double getFila() {
         return fila;
     }
 
-    public int getColumna() {
+    public double getColumna() {
         return columna;
     }
 }

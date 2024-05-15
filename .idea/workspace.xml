@@ -4,15 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ae59f5ab-3a2c-4635-b2d5-df0317d0df49" name="Changes" comment="uml">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_05_2024_22_21__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_05_2024_22_21__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_05_2024_17_07__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_05_2024_17_07__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_05_2024_20_37__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_05_2024_20_37__Changes_.xml" afterDir="false" />
+    <list default="true" id="ae59f5ab-3a2c-4635-b2d5-df0317d0df49" name="Changes" comment="test">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/TabApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/TableroControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Tablero.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Bienvenida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Bienvenida.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/Tablero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/TurnosPropRecursosControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/TurnosPropRecursosControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/DatosCompartidos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/DatosCompartidos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/Casilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/Casilla.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/DimyTurnosControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/DimyTurnosControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/PantallaInicioControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/PantallaInicioControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/parametrosIndiv.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/parametrosIndiv.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/juegovida/App/Tab/GrafoRecursos/ListaAdyacenciaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/juegovida/App/Tab/GrafoRecursos/ListaAdyacenciaTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,9 +23,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -72,44 +73,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Bienvenida.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "true",
-    "JUnit.AristasGrafoTest.executor": "Coverage",
-    "JUnit.ColaEventosIndividuoTest.desencolar.executor": "Coverage",
-    "JUnit.ColaEventosIndividuoTest.executor": "Coverage",
-    "JUnit.ColaEventosIndividuoTest.getElemento.executor": "Coverage",
-    "JUnit.ElementoColaTest.executor": "Coverage",
-    "JUnit.GrafoTest.existeVertice.executor": "Coverage",
-    "JUnit.GrafoTest.grafoVacio.executor": "Coverage",
-    "JUnit.ListaAdyacenciaTest.executor": "Coverage",
-    "JUnit.ListaAdyacenciaTest.getArista.executor": "Run",
-    "JUnit.ListaAdyacenciaTest.nuevaAdyacencia.executor": "Coverage",
-    "JUnit.NodoGrafoTest.executor": "Coverage",
-    "JUnit.com.example.juegovida.App.Tab.ColaInd in JuegoVida.executor": "Coverage",
-    "Repository.Attach.Annotations": "true",
-    "Repository.Attach.JavaDocs": "true",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/PC/IdeaProjects/JuegoVidaFin/src/main/resources",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.3862069",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Bienvenida.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
+    &quot;JUnit.AristasGrafoTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ColaEventosIndividuoTest.desencolar.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ColaEventosIndividuoTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ColaEventosIndividuoTest.getElemento.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ElementoColaTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.GrafoTest.existeVertice.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.GrafoTest.grafoVacio.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ListaAdyacenciaTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ListaAdyacenciaTest.getArista.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ListaAdyacenciaTest.nuevaAdyacencia.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.NodoGrafoTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.com.example.juegovida.App.Tab.ColaInd in JuegoVida.executor&quot;: &quot;Coverage&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/PC/IdeaProjects/JuegoVidaFin/src/main/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.3862069&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\PC\IdeaProjects\JuegoVidaFin\src\main\resources" />
@@ -137,13 +138,26 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Bienvenida">
+  <component name="RunManager" selected="Application.TabApp">
     <configuration name="Bienvenida" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.juegovida.App.Bienvenida" />
       <module name="JuegoVida" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.juegovida.App.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TabApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.juegovida.App.Tab.TabApp" />
+      <module name="JuegoVida" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.juegovida.App.Tab.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -162,22 +176,6 @@
       <option name="PACKAGE_NAME" value="com.example.juegovida.App.Tab.GrafoRecursos" />
       <option name="MAIN_CLASS_NAME" value="com.example.juegovida.App.Tab.GrafoRecursos.AristasGrafoTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AristasGrafoTest.getPeso" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JuegoVida" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.juegovida.App.Tab.GrafoRecursos.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.juegovida.App.Tab.GrafoRecursos" />
-      <option name="MAIN_CLASS_NAME" value="com.example.juegovida.App.Tab.GrafoRecursos.AristasGrafoTest" />
-      <option name="METHOD_NAME" value="getPeso" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -215,11 +213,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TabApp" />
         <item itemvalue="Application.Bienvenida" />
         <item itemvalue="JUnit.ListaAdyacenciaTest.getArista" />
         <item itemvalue="JUnit.ListaAdyacenciaTest" />
         <item itemvalue="JUnit.AristasGrafoTest" />
-        <item itemvalue="JUnit.AristasGrafoTest.getPeso" />
       </list>
     </recent_temporary>
   </component>

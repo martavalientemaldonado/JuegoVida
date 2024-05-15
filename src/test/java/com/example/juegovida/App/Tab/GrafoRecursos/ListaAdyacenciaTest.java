@@ -94,7 +94,6 @@ class ListaAdyacenciaTest {
             assertTrue(l1.listaVacia(), "No se ha obtenido el dato esperado.");
         }else throw new ElRepetidoError("Ya existe esa arista.");
     }
-
     @Test
     void getArista() throws ElRepetidoError{
         ListaAdyacencia<String> l1 = new ListaAdyacencia<String>();
@@ -113,4 +112,6 @@ class ListaAdyacenciaTest {
             throw new ElRepetidoError("Ya existe esa arista.");
         }
     }
+
+
 }
