@@ -1,60 +1,75 @@
 package com.example.juegovida.App.Tab;
 
 import com.example.juegovida.App.Bienvenida;
+import com.example.juegovida.App.DimensionesyTurnosVida;
 import com.example.juegovida.App.ParamRecursos;
 import com.example.juegovida.App.Tab.Tablero;
 import com.example.juegovida.App.Tab.Casilla;
 import com.example.juegovida.Clases.Individuo;
+import com.example.juegovida.Clases.Recursos.Recurso;
+import com.example.juegovida.Controllers.TableroControl;
 import javafx.application.Application;
+import javafx.event.Event;
+import javafx.event.EventHandler;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.ToolBar;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.Region;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
 import javafx.stage.Stage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 
-public class TabApp extends Application {
+public class TabApp{
     private static final Logger log = LogManager.getLogger(TabApp.class);
     private Region placeholder;
 
-    private Stage stage;
-
-    public static void main(String[] args) {
-        launch(args); //LLama a start
-
-    }
-
-    protected Casilla casilla;
 
 
-    @Override
-    public void start(Stage primaryStage) throws Exception {
+
+    public DimensionesyTurnosVida dim;
+
+    public Parent Tablero(Tablero t) throws Exception {
         log.info("Inicio del método de arranque de la aplicación para mostrar un grid de forma programática");
         GridPane mainGrid = new GridPane();
-        for (int i = 0; i < 15; i++) {
-            for (int j = 0; j < 15; j++) {
-                //Label placeholder = new Label("Celda "  + "," + j);
-                Button btnNewObject = new Button("Celda " +i + "," + j);
+
+
+        for (int i = 0; i < t.getFila(); i++) {
+            for (int j = 0; j < t.getColumna(); j++) {
+                // Label placeholder = new Label("Celda "  + "," + j);
+                Casilla c= new Casilla<>(i,j);
+                Button btnNewObject = new Button("Individuos "+c.lIndiv.getNumElementos()+" Recursos "+c.lRec.getNumElementos());
                 VBox placeholder = new VBox(btnNewObject);
-                btnNewObject.setOnAction(e -> new ParamRecursos());
+                TableroControl tab = new TableroControl();
+                EventHandler click = new EventHandler() { //Boton conectar
+                    @Override
+                    public void handle(Event event) {
+                        try {
+                            tab.click();
+                        } catch (IOException e) {
+                            throw new RuntimeException(e);
+                        }
+                    }
+                };
                 btnNewObject.setMinSize(80, 80); // Tamaño mínimo para visualización
                 placeholder.setMinSize(80, 80); // Tamaño mínimo para visualización
                 placeholder.setStyle("-fx-border-color: black; -fx-text-alignment: center;");
 
-                mainGrid.add(placeholder,i,j);
+                mainGrid.add(placeholder, i, j);
             }
 
         }
-        ScrollPane s = new ScrollPane(mainGrid);
-        Scene sn= new Scene(s, 800,800);
-        primaryStage.setScene(sn);
-        primaryStage.show();
+        //ScrollPane s = new ScrollPane(mainGrid);
+       ScrollPane s = new ScrollPane(mainGrid);
+
+
+        return s;
+
     }
 }

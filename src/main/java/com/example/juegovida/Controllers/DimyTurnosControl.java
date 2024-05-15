@@ -1,11 +1,12 @@
 package com.example.juegovida.Controllers;
 
 import java.io.File;
-import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import com.example.juegovida.App.Tab.Casilla;
+import com.example.juegovida.App.Tab.TabApp;
 import com.example.juegovida.DatosCompartidos;
 import com.example.juegovida.Utilities.Paths;
 import javafx.event.ActionEvent;
@@ -42,8 +43,13 @@ public class DimyTurnosControl{
     private Stage scene;
 
     @FXML
-    void clickAceptar(ActionEvent event) throws IOException {
-        //d.commitDimyVida();
+    void clickAceptar(ActionEvent event) throws Exception {
+        d.commitDimyVida();
+        System.out.println(d.ProbAparicionAguaProperty());
+        Stage stage = new Stage();
+        Scene scene = new Scene(new TabApp().Tablero(d.getMatriz()),1200,700); //vCarga escena
+        stage.setScene(scene);
+        stage.show();
 
 
 

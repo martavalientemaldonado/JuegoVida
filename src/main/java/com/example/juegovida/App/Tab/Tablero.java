@@ -17,6 +17,12 @@ public class Tablero {
 
     public Tablero(int fila,int columna) {
         this.tab = new Casilla[fila][columna];
+        for (int i = 0; i < fila; i++) {
+            for (int j = 0; j < columna; j++) {
+                Casilla a = new Casilla(i,j);
+                this.tab[i][j] =a;
+            }
+        }
     }
 
     public double getFila() {

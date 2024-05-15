@@ -65,7 +65,9 @@ public class TurnosPropRecursosControl{
         Scene scene = new Scene(fxmlLoader.load(),700,500); //vCarga escena
         stage.setScene(scene);
         DimyTurnosControl p= fxmlLoader.getController();
-        p.loadUserDataDimyNumTurn(new DatosCompartidos(t,in,re));
+        d.setIndividuo(in);
+        d.setMatriz(t);
+        p.loadUserDataDimyNumTurn(d);
         p.setStage(stage);
         stage.show();
 

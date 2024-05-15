@@ -8,6 +8,14 @@ public class ListaSimple<T> {
         //this.list = T[Max];
     }
 
+    public T[] getList() {
+        return list;
+    }
+
+    public void setList(T[] list) {
+        this.list = list;
+    }
+
     public boolean IsVacia() {
         if (getNumElementos() == 0) {
             System.out.println("Lista vacia");
@@ -55,9 +63,16 @@ public class ListaSimple<T> {
 
     public int getNumElementos() {
         int contador = 0;
-        while (list[contador] != null)  {
-            if (contador<Max-1){contador++;}
-            else {return contador+1;}
+        if(list!=null) {
+
+
+            while (list[contador] != null) {
+                if (contador < Max - 1) {
+                    contador++;
+                } else {
+                    return contador + 1;
+                }
+            }
         }
         return contador;
     }

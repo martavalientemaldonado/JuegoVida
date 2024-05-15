@@ -74,7 +74,7 @@ public class ParamRecursosControl {
         Scene scene = new Scene(fxmlLoader.load(),700,500); //vCarga escena
         stage.setScene(scene);
         TurnosPropRecursosControl p= fxmlLoader.getController();
-        p.loadUserDataTurnosPropRe(new DatosCompartidos(a,c,b,t,m,po));
+        p.loadUserDataTurnosPropRe(d);
         p.setStage(stage);
         stage.show();
 
@@ -110,7 +110,7 @@ public class ParamRecursosControl {
         ProbabilidadBiblioteca.valueProperty().bindBidirectional(d.ProbAparicionBibliotecaProperty());
         ProbabilidadComida.valueProperty().bindBidirectional(d.ProbAparicionComidaProperty());
     }
-    public void loadUserDataPramRE(DatosCompartidos parametrosData) {
+    public void loadUserDataPramRE(DatosCompartidos parametrosData ) {
         this.d = parametrosData;
         this.updateGUIwithModelPramRE();
     }

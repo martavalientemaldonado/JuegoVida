@@ -21,20 +21,9 @@ public class DimensionesyTurnosVida extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader();
-        File fichero = new File(Paths.DIMTURNOSVIDA);//Carga scene en stage
 
-        URL url;
-        try {
-            url = fichero.toURL();
-        } catch (MalformedURLException ex) {
-            throw new RuntimeException(ex);
-        }
-        fxmlLoader.setLocation(url); // Para encontrar donde esta
-        Scene scene = new Scene(fxmlLoader.load(),700,500); //vCarga escena
-        stage.setScene(scene);
-        BienvenidaControl p= fxmlLoader.getController(); // Le pasas tu escena
-        p.setStage(stage);
-        stage.show();
+    }
+
+    private void setStage(Stage stage) {
     }
 }

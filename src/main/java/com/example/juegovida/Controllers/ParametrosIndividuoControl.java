@@ -92,7 +92,14 @@ public class ParametrosIndividuoControl {
         Scene scene = new Scene(fxmlLoader.load(),700,500); //vCarga escena
         stage.setScene(scene);
         ParamRecursosControl p= fxmlLoader.getController();
-        p.loadUserDataPramRE(new DatosCompartidos(a,c,b,t,m,po,r));
+        d.setMontaña(m);
+        d.setTesoro(t);
+        d.setPozo(po);
+        d.setRecurso(r);
+        d.setBiblioteca(b);
+        d.setAgua(a);
+        d.setComida(c);
+        p.loadUserDataPramRE(d);
         p.setStage(stage);
         stage.show();
 

@@ -9,5 +9,6 @@ public class Paths {
     public static final String PARAMRECURSOS = "src/main/resources/paramindiv.fxml";
     public static final String DIMTURNOSVIDA = "src/main/resources/DimyTurnosVida.fxml";
     public static final String TURNOSPROBREC = "src/main/resources/TurnosPropRe.fxml";
+    public static final String TABLERO= "src/main/resources/Tablero.fxml";
 
 }
