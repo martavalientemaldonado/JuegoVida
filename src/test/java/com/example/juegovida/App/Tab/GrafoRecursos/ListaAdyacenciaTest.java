@@ -95,6 +95,22 @@ class ListaAdyacenciaTest {
         }else throw new ElRepetidoError("Ya existe esa arista.");
     }
 
-
-
+    @Test
+    void getArista() throws ElRepetidoError{
+        ListaAdyacencia<String> l1 = new ListaAdyacencia<String>();
+        NodoGrafo<String> nodo1 = new NodoGrafo<String>("Hola");
+        NodoGrafo<String> nodo2 = new NodoGrafo<String>("Adios");
+        NodoGrafo<String> nodo3 = new NodoGrafo<String>("la");
+        NodoGrafo<String> nodo4 = new NodoGrafo<String>("lala");
+        if (!l1.adyacente(nodo2) && !l1.adyacente(nodo4)) {
+            l1.nuevaAdyacencia(nodo1, nodo2, 2);
+            l1.nuevaAdyacencia(nodo1, nodo3, 3);
+            l1.nuevaAdyacencia(nodo1, nodo4, 4);
+            assertEquals(l1.ultimo, l1.getArista(nodo2));
+            assertNull(l1.getArista(null));
+            assertEquals(l1.primero.siguiente, l1.getArista(nodo3));
+        }else{
+            throw new ElRepetidoError("Ya existe esa arista.");
+        }
+    }
 }
