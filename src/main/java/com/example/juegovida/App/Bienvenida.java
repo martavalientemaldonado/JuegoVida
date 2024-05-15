@@ -11,7 +11,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.net.URL;
 
-import static com.example.juegovida.App.Tab.Tablero.setTab;
+import static com.example.juegovida.App.Tab.Tablero.*;
 
 public class Bienvenida extends Application {
     private static final Logger log = LogManager.getLogger(Bienvenida.class);

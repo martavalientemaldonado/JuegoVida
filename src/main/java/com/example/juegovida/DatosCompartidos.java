@@ -136,15 +136,15 @@ public class DatosCompartidos {
 
     /// DIMENSIONES Y TURNOS DE VIDA DE RECURSOS Y INDIVIDUOS
     public void commitDimyVida(){
-        Matriz.setNunColumnas(NumColumnas.get());
-        Matriz.setNunFilas(NumFilas.get());
+        Matriz.setColumna(NumColumnas.get());
+        Matriz.setFila(NumFilas.get());
         Individuo.setTurnosVidaInd(TrunosVidaIndiv.get());
         Recurso.setTurnosVidaRecursos(TurnosVidaRecursos.get());
     }
 
     public void rollbackDimyVida(){
-        NumColumnas.set(Matriz.getNunColumnas());
-        NumFilas.set(Matriz.getNunFilas());
+        NumColumnas.set(Matriz.getColumna());
+        NumFilas.set(Matriz.getFila());
         TrunosVidaIndiv.set(Individuo.getTurnosVidaInd());
         TurnosVidaRecursos.set(Recurso.getTurnosVidaRecursos());
     }
@@ -222,8 +222,8 @@ public class DatosCompartidos {
     }
     public void setMatriz(Tablero matriz){
         this.Matriz = matriz;
-        NumColumnas.set(Matriz.getNunColumnas());
-        NumFilas.set(Matriz.getNunFilas());
+        NumColumnas.set(Matriz.getColumna());
+        NumFilas.set(Matriz.getFila());
     }
     public DatosCompartidos(Agua a, Comida c, Biblioteca b, Tesoro t, Montaña m, Pozo p){
         setAgua(a);

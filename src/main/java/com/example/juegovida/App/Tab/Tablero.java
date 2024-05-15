@@ -10,8 +10,8 @@ import javafx.scene.layout.Pane;
 import java.io.FileNotFoundException;
 
 public class Tablero {
-    private int fila;
-    private int columna;
+    private double fila;
+    private double columna;
     private  Casilla tab[][];
 
 
@@ -19,11 +19,11 @@ public class Tablero {
         this.tab = new Casilla[fila][columna];
     }
 
-    public int getFila() {
+    public double getFila() {
         return fila;
     }
 
-    public int getColumna() {
+    public double getColumna() {
         return columna;
     }
 
@@ -31,11 +31,11 @@ public class Tablero {
         return tab;
     }
 
-    public void setFila(int fila) {
+    public void setFila(double fila) {
         this.fila = fila;
     }
 
-    public void setColumna(int columna) {
+    public void setColumna(double columna) {
         this.columna = columna;
     }
 

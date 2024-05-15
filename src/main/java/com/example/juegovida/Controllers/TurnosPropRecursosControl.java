@@ -46,7 +46,7 @@ public class TurnosPropRecursosControl{
 
     private DatosCompartidos d;
     private Stage scene;
-    private Tablero t  = new Tablero();
+    private Tablero t  = new Tablero(0,0);
     private Individuo in = new Individuo();
     private Recurso re = new Recurso();
     @FXML
