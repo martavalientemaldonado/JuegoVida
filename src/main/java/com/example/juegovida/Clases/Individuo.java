@@ -6,6 +6,7 @@ public class Individuo {
     private Integer NumIdentificacion;
     private Integer Generacion;
     private double TurnosVidaInd;
+    boolean EnMovimiento;
     double ProbClonacion;
     double ProbReproduccion;
     double ProbMuerte = 1-ProbReproduccion;
