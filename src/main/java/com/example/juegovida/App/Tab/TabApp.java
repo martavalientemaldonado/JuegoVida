@@ -4,6 +4,7 @@ import com.example.juegovida.App.Bienvenida;
 import com.example.juegovida.App.DimensionesyTurnosVida;
 import com.example.juegovida.Controllers.TableroControl;
 import javafx.application.Application;
+import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
@@ -28,7 +29,6 @@ public class TabApp{
 
 
 
-    public DimensionesyTurnosVida dim;
 
     public Parent Tablero(Tablero t) throws Exception {
         log.info("Inicio del método de arranque de la aplicación para mostrar un grid de forma programática");
@@ -40,13 +40,14 @@ public class TabApp{
                 // Label placeholder = new Label("Celda "  + "," + j);
                 Casilla c= new Casilla(i,j);
                 Button btnNewObject = new Button("Individuos "+c.lIndiv.getNumElementos()+" Recursos "+c.lRec.getNumElementos());
+
                 VBox placeholder = new VBox(btnNewObject);
                 TableroControl tab = new TableroControl();
-
-                EventHandler click = new EventHandler() {
+                EventHandler<ActionEvent> click = new EventHandler() {
                     @Override
                     public void handle(Event event) {
                         try {
+
                             tab.click();
 
                         } catch (IOException e) {
@@ -54,9 +55,12 @@ public class TabApp{
                         }
                     }
                 };
+                btnNewObject.setOnAction(click);
                 btnNewObject.setMinSize(80, 80); // Tamaño mínimo para visualización
                 placeholder.setMinSize(80, 80); // Tamaño mínimo para visualización
                 placeholder.setStyle("-fx-border-color: black; -fx-text-alignment: center;");
+
+
 
                 mainGrid.add(placeholder, i, j);
 
