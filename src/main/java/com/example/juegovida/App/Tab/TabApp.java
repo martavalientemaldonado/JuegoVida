@@ -2,11 +2,6 @@ package com.example.juegovida.App.Tab;
 
 import com.example.juegovida.App.Bienvenida;
 import com.example.juegovida.App.DimensionesyTurnosVida;
-import com.example.juegovida.App.ParamRecursos;
-import com.example.juegovida.App.Tab.Tablero;
-import com.example.juegovida.App.Tab.Casilla;
-import com.example.juegovida.Clases.Individuo;
-import com.example.juegovida.Clases.Recursos.Recurso;
 import com.example.juegovida.Controllers.TableroControl;
 import javafx.application.Application;
 import javafx.event.Event;
@@ -43,15 +38,17 @@ public class TabApp{
         for (int i = 0; i < t.getFila(); i++) {
             for (int j = 0; j < t.getColumna(); j++) {
                 // Label placeholder = new Label("Celda "  + "," + j);
-                Casilla c= new Casilla<>(i,j);
+                Casilla c= new Casilla(i,j);
                 Button btnNewObject = new Button("Individuos "+c.lIndiv.getNumElementos()+" Recursos "+c.lRec.getNumElementos());
                 VBox placeholder = new VBox(btnNewObject);
                 TableroControl tab = new TableroControl();
-                EventHandler click = new EventHandler() { //Boton conectar
+
+                EventHandler click = new EventHandler() {
                     @Override
                     public void handle(Event event) {
                         try {
                             tab.click();
+
                         } catch (IOException e) {
                             throw new RuntimeException(e);
                         }
@@ -62,6 +59,7 @@ public class TabApp{
                 placeholder.setStyle("-fx-border-color: black; -fx-text-alignment: center;");
 
                 mainGrid.add(placeholder, i, j);
+
             }
 
         }
@@ -72,4 +70,5 @@ public class TabApp{
         return s;
 
     }
+
 }

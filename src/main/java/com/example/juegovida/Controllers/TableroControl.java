@@ -30,7 +30,7 @@ public class TableroControl {
             for (int j = 0; j < casilla.getColumna(); j++) {
                 Stage stage = new Stage();
                 FXMLLoader fxmlLoader = new FXMLLoader();
-                File fichero = new File(Paths.PARAMINDIV);
+                File fichero = new File(Paths.TABPARAMETROSTABLERO);
                 URL url = null;
                 try {
                     url = fichero.toURL();
@@ -40,8 +40,7 @@ public class TableroControl {
                 fxmlLoader.setLocation(url); // Para encontrar donde esta
                 Scene scene = new Scene(fxmlLoader.load(), 700, 500); //vCarga escena
                 stage.setScene(scene);
-                ParametrosIndividuoControl p = fxmlLoader.getController();
-                p.loadUserDataParamInd(new DatosCompartidos(this.in));
+                TabParamTableroControl p = fxmlLoader.getController();
                 p.setStage(stage);
                 stage.show();
             }
