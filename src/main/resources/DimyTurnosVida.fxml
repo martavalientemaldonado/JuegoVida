@@ -60,13 +60,13 @@
             <Image url="@Imagenes/fondotransparenteverde-bosque.jpg" />
          </image>
       </ImageView>
-      <Slider id="NumColumnas" fx:id="NumColumnas" layoutX="269.0" layoutY="176.0" majorTickUnit="1.0" max="30.0" minorTickCount="0" orientation="VERTICAL" prefHeight="209.0" prefWidth="14.0" showTickLabels="true" />
+      <Slider id="NumColumnas" fx:id="NumColumnas" layoutX="269.0" layoutY="176.0" majorTickUnit="1.0" max="20.0" minorTickCount="0" orientation="VERTICAL" prefHeight="209.0" prefWidth="14.0" showTickLabels="true" />
       <Label layoutX="368.0" layoutY="108.0" prefHeight="31.0" prefWidth="36.0" text="Filas" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Book Antiqua" size="13.0" />
          </font>
       </Label>
-      <Slider id="NumFilas" fx:id="NumFilas" layoutX="379.0" layoutY="180.0" majorTickUnit="1.0" max="30.0" minorTickCount="0" orientation="VERTICAL" prefHeight="209.0" prefWidth="14.0" showTickLabels="true" />
+      <Slider id="NumFilas" fx:id="NumFilas" layoutX="379.0" layoutY="180.0" majorTickUnit="1.0" max="20.0" minorTickCount="0" orientation="VERTICAL" prefHeight="209.0" prefWidth="14.0" showTickLabels="true" />
       <Label layoutX="467.0" layoutY="104.0" prefHeight="39.0" prefWidth="68.0" text="Vida de los &#10;Individuos" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Book Antiqua" size="13.0" />
