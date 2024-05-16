@@ -163,7 +163,47 @@ public class DatosCompartidos {
         return TurnosVidaRecursos;
     }
 
+    public void commitTabParamCasilla(){
+        Comida.setProbAparicion(ProbAparicionAgua.get());
+        Montaña.setProbAparicion(ProbAparicionMontaña.get());
+        Agua.setProbAparicion(ProbAparicionAgua.get());
+        Tesoro.setProbAparicion(ProbAparicionTesoro.get());
+        Biblioteca.setProbAparicion(ProbAparicionBiblioteca.get());
+        Pozo.setProbAparicion(ProbAparicionPozo.get());
+        Recurso.setProbabilidadNuevoRE(ProbNuevoRecurso.get());
+        Comida.setTurnosProporciona(TurnosPropCom.get());
+        Montaña.setTurnosProporciona(TurnosPropMont.get());
+        Agua.setTurnosProporciona(TurnosPropAgua.get());
+        Tesoro.setProbReproduccionPropo(ProbReproPropTesoro.get());
+        Biblioteca.setProbClonacionProp(ProbClonacPropBibli.get());
+        Individuo.setProbClonacion(ProbClonacionIndiv.get());
+        Individuo.setProbReproduccion(ProbReproduccionIndiv.get());
+        Matriz.setColumna(NumColumnas.get());
+        Matriz.setFila(NumFilas.get());
+        Individuo.setTurnosVidaInd(TrunosVidaIndiv.get());
+        Recurso.setTurnosVidaRecursos(TurnosVidaRecursos.get());
+    }
 
+    public void rollbackTabParamCasilla(){
+        ProbAparicionComida.set(Comida.getProbAparicion());
+        ProbAparicionMontaña.set(Montaña.getProbAparicion());
+        ProbAparicionAgua.set(Agua.getProbAparicion());
+        ProbAparicionTesoro.set(Tesoro.getProbAparicion());
+        ProbAparicionBiblioteca.set(Biblioteca.getProbAparicion());
+        ProbAparicionPozo.set(Pozo.getProbAparicion());
+        ProbNuevoRecurso.set(Recurso.getProbabilidadNuevoRE());
+        TurnosPropCom.set(Comida.getTurnosProporciona());
+        TurnosPropMont.set(Montaña.getTurnosProporciona());
+        TurnosPropAgua.set(Agua.getTurnosProporciona());
+        ProbReproPropTesoro.set(Tesoro.getProbReproduccionPropo());
+        ProbClonacPropBibli.set(Biblioteca.getProbClonacionProp());
+        ProbClonacionIndiv.set(Individuo.getProbClonacion());
+        ProbReproduccionIndiv.set(Individuo.getProbReproduccion());
+        NumColumnas.set(Matriz.getColumna());
+        NumFilas.set(Matriz.getFila());
+        TrunosVidaIndiv.set(Individuo.getTurnosVidaInd());
+        TurnosVidaRecursos.set(Recurso.getTurnosVidaRecursos());
+    }
     public Agua getAgua(){
         return Agua;
     }
@@ -245,6 +285,17 @@ public class DatosCompartidos {
     public DatosCompartidos(Individuo i){setIndividuo(i);}
     public DatosCompartidos(Tablero m, Individuo i, Recurso r){
         setMatriz(m);
+        setIndividuo(i);
+        setRecurso(r);
+    }
+    public DatosCompartidos(Agua a, Comida c, Biblioteca b, Tesoro t, Montaña m, Pozo p, Tablero tab, Individuo i, Recurso r){
+        setAgua(a);
+        setTesoro(t);
+        setBiblioteca(b);
+        setComida(c);
+        setMontaña(m);
+        setPozo(p);
+        setMatriz(tab);
         setIndividuo(i);
         setRecurso(r);
     }

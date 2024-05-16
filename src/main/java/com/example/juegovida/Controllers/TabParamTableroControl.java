@@ -1,5 +1,8 @@
 package com.example.juegovida.Controllers;
 
+import java.io.File;
+import java.io.IOException;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -7,8 +10,11 @@ import com.example.juegovida.App.Tab.Tablero;
 import com.example.juegovida.Clases.Individuo;
 import com.example.juegovida.Clases.Recursos.*;
 import com.example.juegovida.DatosCompartidos;
+import com.example.juegovida.Utilities.Paths;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
@@ -148,8 +154,25 @@ public class TabParamTableroControl {
     private Recurso re = new Recurso();
 
     @FXML
-    void clickAceptar(ActionEvent event) {
-
+    void clickAceptar(ActionEvent event) throws IOException {
+        d.commitTabParamCasilla();
+        this.updateGUIwithModelTabTablero();
+        Stage stage = new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        File fichero = new File(Paths.TABLERO);
+        URL url;
+        try {
+            url = fichero.toURL();
+        } catch (MalformedURLException ex) {
+            throw new RuntimeException(ex);
+        }
+        fxmlLoader.setLocation(url); // Para encontrar donde esta
+        Scene scene = new Scene(fxmlLoader.load(),700,500); //vCarga escena
+        stage.setScene(scene);
+        DimyTurnosControl p= fxmlLoader.getController();
+        p.loadUserDataDimyNumTurn(d);
+        p.setStage(stage);
+        stage.show();
     }
 
     @FXML
@@ -194,7 +217,7 @@ public class TabParamTableroControl {
         assert Aceptar != null : "fx:id=\"Aceptar\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
 
     }
-    protected void updateGUIwithModelPramRE() {
+    protected void updateGUIwithModelTabTablero() {
         SProbNuevoRE.valueProperty().bindBidirectional(d.ProbNuevoRecursoProperty());
         SProbAparAgua.valueProperty().bindBidirectional(d.ProbAparicionAguaProperty());
         SProbAparAgua.valueProperty().bindBidirectional(d.ProbAparicionMontañaProperty());
@@ -214,9 +237,9 @@ public class TabParamTableroControl {
         STurnosVidaInd.valueProperty().bindBidirectional(d.TrunosVidaIndivProperty());
         STurnosVidaRe.valueProperty().bindBidirectional(d.TurnosVidaRecursosProperty());
     }
-    public void loadUserDataPramRE(DatosCompartidos parametrosData) {
+    public void loadUserDataTabTablero(DatosCompartidos parametrosData) {
         this.d = parametrosData;
-        this.updateGUIwithModelPramRE();
+        this.updateGUIwithModelTabTablero();
     }
 
     public void setStage(Stage s){

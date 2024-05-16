@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ae59f5ab-3a2c-4635-b2d5-df0317d0df49" name="Changes" comment="tablerocontrol">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/Buttons.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Imagenes/cod_font.ttf" afterDir="false" />
+    <list default="true" id="ae59f5ab-3a2c-4635-b2d5-df0317d0df49" name="Changes" comment="Tab y ventanaCasilla">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_15_05_2024_13_12__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_15_05_2024_13_12__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/TabApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/TabApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/TableroControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/TableroControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/tabAppControl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/ParamCasilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/ParamCasilla.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/TabParamTableroControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/TabParamTableroControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/DatosCompartidos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/DatosCompartidos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/TabDeTablero.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/TabDeTablero.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +73,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Bienvenida.executor": "Run",
-    "Application.ParamCasilla.executor": "Run",
+    "Application.ParamCasilla.executor": "Debug",
     "Application.TabApp.executor": "Run",
     "Downloaded.Files.Path.Enabled": "true",
     "JUnit.AristasGrafoTest.executor": "Coverage",
@@ -98,7 +98,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/UAH/JuegoVida/src/main/resources/Imagenes",
+    "last_opened_file_path": "C:/Users/PC/IdeaProjects/JuegoVida/src/main/resources/Imagenes",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -112,11 +112,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\UAH\JuegoVida\src\main\resources\Imagenes" />
       <recent name="C:\Users\PC\IdeaProjects\JuegoVida\src\main\resources\Imagenes" />
       <recent name="C:\Users\PC\IdeaProjects\JuegoVidaFin\src\main\resources" />
       <recent name="C:\Users\PC\IdeaProjects\JuegoVidaFin\src\main\resources\Imagenes" />
       <recent name="C:\Users\PC\IdeaProjects\JuegoVida\src\main\resources" />
+      <recent name="C:\Users\PC\IdeaProjects\JuegoVida\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\PC\IdeaProjects\JuegoVida\src\main\resources" />
@@ -138,7 +138,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Bienvenida">
+  <component name="RunManager" selected="Application.ParamCasilla">
     <configuration name="Bienvenida" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.juegovida.App.Bienvenida" />
       <module name="JuegoVida" />
@@ -211,8 +211,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Bienvenida" />
         <item itemvalue="Application.ParamCasilla" />
+        <item itemvalue="Application.Bienvenida" />
         <item itemvalue="Application.TabApp" />
         <item itemvalue="JUnit.ListaAdyacenciaTest.getArista" />
         <item itemvalue="JUnit.ListaAdyacenciaTest" />
@@ -512,15 +512,7 @@
       <option name="project" value="LOCAL" />
       <updated>1715770231071</updated>
     </task>
-    <task id="LOCAL-00034" summary="tablerocontrol">
-      <option name="closed" value="true" />
-      <created>1715863670979</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1715863670979</updated>
-    </task>
-    <option name="localTasksCounter" value="35" />
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -582,8 +574,8 @@
     <MESSAGE value="Cola" />
     <MESSAGE value="uml" />
     <MESSAGE value="ParamCasilla" />
-    <MESSAGE value="tablerocontrol" />
-    <option name="LAST_COMMIT_MESSAGE" value="tablerocontrol" />
+    <MESSAGE value="Tab y ventanaCasilla" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tab y ventanaCasilla" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

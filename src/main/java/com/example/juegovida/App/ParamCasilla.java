@@ -1,6 +1,7 @@
 package com.example.juegovida.App;
 
 import com.example.juegovida.Controllers.BienvenidaControl;
+import com.example.juegovida.Controllers.TableroControl;
 import com.example.juegovida.Utilities.Paths;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -12,7 +13,6 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class ParamCasilla extends Application {
-    private Stage stage;
 
     public static void main(String[] args) {
         launch(args); //LLama a start
@@ -20,8 +20,9 @@ public class ParamCasilla extends Application {
     }
     @Override
     public void start(Stage primaryStage) throws Exception {
+        Stage stage = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader();
-        File fichero = new File(Paths.PARAMCASILLA);//Carga scene en stage
+        File fichero = new File(Paths.TABLERO);//Carga scene en stage
         URL url;
         try {
             url = fichero.toURL();
@@ -31,7 +32,7 @@ public class ParamCasilla extends Application {
         fxmlLoader.setLocation(url); // Para encontrar donde esta
         Scene scene = new Scene(fxmlLoader.load(),700,500); //Carga escena
         stage.setScene(scene);
-        BienvenidaControl p= fxmlLoader.getController(); // Le pasas tu escena
+        TableroControl p= fxmlLoader.getController(); // Le pasas tu escena
         p.setStage(stage);
         stage.show();
     }
