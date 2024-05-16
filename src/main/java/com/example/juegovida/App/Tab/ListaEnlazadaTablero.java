@@ -30,9 +30,11 @@ public class ListaEnlazadaTablero<TipodeDato>{
 
     }
 
-    public void add(TipodeDato s) {
-        ElementoLETablero<TipodeDato> nuevoPrimero = new ElementoLETablero<TipodeDato>(this.primero, s);
-        add(nuevoPrimero);
+    public void add(TipodeDato s) throws NullPointerException{
+        if (s != null) {
+            ElementoLETablero<TipodeDato> nuevoPrimero = new ElementoLETablero<TipodeDato>(this.primero, s);
+            add(nuevoPrimero);
+        }else throw new NullPointerException("Es nulo");
     }
 
     public void insert(TipodeDato s, int posicion) {

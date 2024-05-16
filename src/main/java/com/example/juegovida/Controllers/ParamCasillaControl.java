@@ -8,6 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 
 public class ParamCasillaControl{
     @FXML
@@ -33,7 +34,7 @@ public class ParamCasillaControl{
 
     @FXML
     void clickAceptar(ActionEvent event) {
-
+        //Tanto NuevoInd como NuevoRe
     }
 
     @FXML
@@ -55,4 +56,6 @@ public class ParamCasillaControl{
         NuevoRe.setText(Re);
     }
 
+    public void setStage(Stage stage) {
+    }
 }

@@ -12,17 +12,20 @@ import java.io.FileNotFoundException;
 public class Tablero {
     private double fila;
     private double columna;
-    private ListaEnlazadaTablero<ListaEnlazadaTablero<Casilla>> Matiz;
+    private ListaEnlazadaTablero<ListaEnlazadaTablero<Casilla>> matiz;
     private  Casilla tab[][];
 
 
     public Tablero(int fila,int columna) {
         this.tab = new Casilla[fila][columna];
         for (int i = 0; i < fila; i++) {
+            ListaEnlazadaTablero<Casilla> l = new ListaEnlazadaTablero<>();
             for (int j = 0; j < columna; j++) {
                 Casilla a = new Casilla(i,j);
+                l.add(a);
                 this.tab[i][j] =a;
             }
+            matiz.add(l);
         }
     }
 

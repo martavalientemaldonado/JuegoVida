@@ -1,5 +1,6 @@
 package com.example.juegovida.Controllers;
 
+import com.example.juegovida.App.ParamCasilla;
 import com.example.juegovida.App.Tab.Casilla;
 import com.example.juegovida.App.Tab.Tablero;
 import com.example.juegovida.Clases.Individuo;
@@ -31,7 +32,7 @@ public class TableroControl {
     public void click() throws IOException {
         Stage stage = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader();
-        File fichero = new File(Paths.TABPARAMETROSTABLERO);
+        File fichero = new File(Paths.PARAMCASILLA);
         URL url = null;
         try {
             url = fichero.toURL();
@@ -42,7 +43,7 @@ public class TableroControl {
         Scene scene; //vCarga escena
         scene = new Scene(fxmlLoader.load(),700,500);
         stage.setScene(scene);
-        TabParamTableroControl p= fxmlLoader.getController();
+        ParamCasillaControl p= fxmlLoader.getController();
         p.setStage(stage);
         stage.show();
     }

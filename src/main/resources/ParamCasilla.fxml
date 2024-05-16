@@ -73,7 +73,13 @@
          </font>
       </Label>
       <ChoiceBox fx:id="NuevoRecurso" layoutX="414.0" layoutY="204.0" prefWidth="150.0" />
-      <Label fx:id="NuevoIndiv" layoutX="192.0" layoutY="327.0" textFill="WHITE" />
-      <Label fx:id="NuevoRe" layoutX="475.0" layoutY="327.0" textFill="WHITE" />
+      <Label fx:id="NuevoIndiv" layoutX="192.0" layoutY="327.0" textFill="WHITE">
+         <font>
+            <Font name="Book Antiqua" size="14.0" />
+         </font></Label>
+      <Label fx:id="NuevoRe" layoutX="475.0" layoutY="327.0" textFill="WHITE">
+         <font>
+            <Font name="Book Antiqua" size="14.0" />
+         </font></Label>
     </children>
 </AnchorPane>

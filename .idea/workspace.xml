@@ -6,10 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="ae59f5ab-3a2c-4635-b2d5-df0317d0df49" name="Changes" comment="TabParamTablero">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/ParamCasilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/ParamCasilla.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/TabParamTablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/TabParamTablero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Introduccion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Clases/Individuo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Clases/Individuo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/ParamCasillaControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/ParamCasillaControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/TableroControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/TableroControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/ParamCasilla.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ParamCasilla.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/TabDeTablero.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/TabDeTablero.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +59,7 @@
     <setting file="file://$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/BienvenidaControl.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -72,7 +73,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Bienvenida.executor": "Run",
-    "Application.ParamCasilla.executor": "Coverage",
+    "Application.ParamCasilla.executor": "Run",
     "Application.TabApp.executor": "Run",
     "Application.TabParamTablero.executor": "Run",
     "Downloaded.Files.Path.Enabled": "true",
@@ -138,7 +139,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ParamCasilla">
+  <component name="RunManager" selected="Application.Bienvenida">
     <configuration name="Bienvenida" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.juegovida.App.Bienvenida" />
       <module name="JuegoVida" />
@@ -209,9 +210,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Bienvenida" />
         <item itemvalue="Application.ParamCasilla" />
         <item itemvalue="Application.TabParamTablero" />
-        <item itemvalue="Application.Bienvenida" />
         <item itemvalue="Application.TabApp" />
         <item itemvalue="JUnit.ListaAdyacenciaTest.getArista" />
       </list>
@@ -534,7 +535,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715879808085</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="TabParamTablero">
+      <option name="closed" value="true" />
+      <created>1715881209289</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1715881209289</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -661,6 +670,9 @@
     </SUITE>
     <SUITE FILE_PATH="coverage/JuegoVida$ColaEventosIndividuoTest_getElemento.ic" NAME="ColaEventosIndividuoTest.getElemento Coverage Results" MODIFIED="1715705765298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.juegovida.App.Tab.ColaInd.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/JuegoVida$ParamCasilla.ic" NAME="ParamCasilla Coverage Results" MODIFIED="1715881194570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.juegovida.App.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/JuegoVida$ListaAdyacenciaTest_nuevaAdyacencia.ic" NAME="ListaAdyacenciaTest.nuevaAdyacencia Coverage Results" MODIFIED="1715709235547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.juegovida.App.Tab.GrafoRecursos.*</FILTER>

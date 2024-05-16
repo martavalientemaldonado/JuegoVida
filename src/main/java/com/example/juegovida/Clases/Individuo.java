@@ -1,8 +1,6 @@
 package com.example.juegovida.Clases;
 
 public class Individuo {
-
-
     private Integer NumIdentificacion;
     private Integer Generacion;
     private double TurnosVidaInd;
