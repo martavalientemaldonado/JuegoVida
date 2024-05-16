@@ -20,5 +20,19 @@ public class ParamCasilla extends Application {
     }
     @Override
     public void start(Stage primaryStage) throws Exception {
+        FXMLLoader fxmlLoader = new FXMLLoader(Bienvenida.class.getResource("ParamCasilla.fxml"));
+        File fichero = new File(Paths.PARAMCASILLA);//Carga scene en stage
+
+        URL url;
+        try {
+            url = fichero.toURL();
+        } catch (MalformedURLException ex) {
+            throw new RuntimeException(ex);
+        }
+        fxmlLoader.setLocation(url); // Para encontrar donde esta
+        Scene scene = new Scene(fxmlLoader.load(), 620, 440);
+        primaryStage.setTitle("Hello!");
+        primaryStage.setScene(scene);
+        primaryStage.show();
     }
 }

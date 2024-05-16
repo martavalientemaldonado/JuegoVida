@@ -22,7 +22,7 @@
         </ImageView>
       <ImageView fitHeight="321.0" fitWidth="160.0" layoutX="532.0" layoutY="72.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../Downloads/ImagenesTrabajo/3verde-bosque.jpg" />
+            <Image url="@Imagenes/3verde-bosque.jpg" />
          </image>
       </ImageView>
         <ImageView fitHeight="66.0" fitWidth="452.0" layoutX="36.0" layoutY="93.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">

@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ae59f5ab-3a2c-4635-b2d5-df0317d0df49" name="Changes" comment="Tab y ventanaCasilla">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_15_05_2024_13_12__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_15_05_2024_13_12__Changes_.xml" afterDir="false" />
+    <list default="true" id="ae59f5ab-3a2c-4635-b2d5-df0317d0df49" name="Changes" comment="TabParamTablero">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main - Acceso directo.lnk" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/ParamCasilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/ParamCasilla.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/TabParamTablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/TabParamTablero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/TabParamTableroControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/TabParamTableroControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ParamCasilla.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ParamCasilla.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/TabDeTablero.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/TabDeTablero.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,9 +72,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Bienvenida.executor": "Run",
-    "Application.ParamCasilla.executor": "Debug",
+    "Application.ParamCasilla.executor": "Coverage",
     "Application.TabApp.executor": "Run",
-    "Application.TabParamTablero.executor": "Coverage",
+    "Application.TabParamTablero.executor": "Run",
     "Downloaded.Files.Path.Enabled": "true",
     "JUnit.AristasGrafoTest.executor": "Coverage",
     "JUnit.ColaEventosIndividuoTest.desencolar.executor": "Coverage",
@@ -140,7 +138,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TabParamTablero">
+  <component name="RunManager" selected="Application.ParamCasilla">
     <configuration name="Bienvenida" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.juegovida.App.Bienvenida" />
       <module name="JuegoVida" />
@@ -211,8 +209,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TabParamTablero" />
         <item itemvalue="Application.ParamCasilla" />
+        <item itemvalue="Application.TabParamTablero" />
         <item itemvalue="Application.Bienvenida" />
         <item itemvalue="Application.TabApp" />
         <item itemvalue="JUnit.ListaAdyacenciaTest.getArista" />
@@ -528,7 +526,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715875648423</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="TabParamTablero">
+      <option name="closed" value="true" />
+      <created>1715879808084</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1715879808085</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -591,15 +597,16 @@
     <MESSAGE value="uml" />
     <MESSAGE value="ParamCasilla" />
     <MESSAGE value="Tab y ventanaCasilla" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tab y ventanaCasilla" />
+    <MESSAGE value="TabParamTablero" />
+    <option name="LAST_COMMIT_MESSAGE" value="TabParamTablero" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/juegovida/App/TabParamTablero.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="11" />
+          <line>32</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -646,7 +653,7 @@
     <SUITE FILE_PATH="coverage/JuegoVida$AristasGrafoTest_getPeso.ic" NAME="AristasGrafoTest.getPeso Coverage Results" MODIFIED="1715712184048" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.juegovida.App.Tab.GrafoRecursos.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/JuegoVida$TabParamTablero.ic" NAME="TabParamTablero Coverage Results" MODIFIED="1715879355470" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/JuegoVida$TabParamTablero.ic" NAME="TabParamTablero Coverage Results" MODIFIED="1715879456096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.juegovida.App.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/JuegoVida$AristasGrafoTest_getSiguiente.ic" NAME="AristasGrafoTest.getSiguiente Coverage Results" MODIFIED="1715712120898" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

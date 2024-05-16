@@ -20,20 +20,19 @@ public class TabParamTablero extends Application {
     }
     @Override
     public void start(Stage primaryStage) throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(TabParamTablero.class.getResource("TabDeTablero.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Bienvenida.class.getResource("TabDeTablero.fxml"));
         File fichero = new File(Paths.TABPARAMETROSTABLERO);//Carga scene en stage
+
         URL url;
         try {
             url = fichero.toURL();
         } catch (MalformedURLException ex) {
             throw new RuntimeException(ex);
         }
-        fxmlLoader.setLocation(url);
-        Parent root = fxmlLoader.load();
-        Scene scene = new Scene(root,700,500); //vCarga escena
-        stage.setScene(scene);
-        BienvenidaControl p= fxmlLoader.getController(); // Le pasas tu escena
-        p.setStage(stage);
-        stage.show();
+        fxmlLoader.setLocation(url); // Para encontrar donde esta
+        Scene scene = new Scene(fxmlLoader.load(), 620, 440);
+        primaryStage.setTitle("Hello!");
+        primaryStage.setScene(scene);
+        primaryStage.show();
     }
 }
