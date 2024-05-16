@@ -20,20 +20,5 @@ public class ParamCasilla extends Application {
     }
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Stage stage = new Stage();
-        FXMLLoader fxmlLoader = new FXMLLoader();
-        File fichero = new File(Paths.TABLERO);//Carga scene en stage
-        URL url;
-        try {
-            url = fichero.toURL();
-        } catch (MalformedURLException ex) {
-            throw new RuntimeException(ex);
-        }
-        fxmlLoader.setLocation(url); // Para encontrar donde esta
-        Scene scene = new Scene(fxmlLoader.load(),700,500); //Carga escena
-        stage.setScene(scene);
-        TableroControl p= fxmlLoader.getController(); // Le pasas tu escena
-        p.setStage(stage);
-        stage.show();
     }
 }

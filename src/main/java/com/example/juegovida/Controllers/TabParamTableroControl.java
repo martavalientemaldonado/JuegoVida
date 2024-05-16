@@ -11,9 +11,12 @@ import com.example.juegovida.Clases.Individuo;
 import com.example.juegovida.Clases.Recursos.*;
 import com.example.juegovida.DatosCompartidos;
 import com.example.juegovida.Utilities.Paths;
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -32,16 +35,7 @@ public class TabParamTableroControl {
     private Slider SProbReproducción;
 
     @FXML
-    private Label ProbabReproduccion;
-
-    @FXML
     private Slider SProbClonación;
-
-    @FXML
-    private Label ProbMuerte;
-
-    @FXML
-    private Label ProbNuevoRE;
 
     @FXML
     private Slider SProbNuevoRE;
@@ -50,34 +44,16 @@ public class TabParamTableroControl {
     private Slider SProbAparTesoro;
 
     @FXML
-    private Label ProbAparTesoro;
-
-    @FXML
-    private Label ProbAparPozo;
-
-    @FXML
     private Slider SProbAparPozo;
 
     @FXML
     private Slider SProbAparAgua;
 
     @FXML
-    private Label ProbAparAgua;
-
-    @FXML
     private Slider SProbAparMontaña;
 
     @FXML
-    private Label ProbAparMontaña;
-
-    @FXML
     private Slider SProbAparComida;
-
-    @FXML
-    private Label ProbAparComida;
-
-    @FXML
-    private Label ProbAparBiblioteca;
 
     @FXML
     private Slider SProbAparBiblioteca;
@@ -98,21 +74,6 @@ public class TabParamTableroControl {
     private Slider SPorcetajeClonaBiblio;
 
     @FXML
-    private Label TurnosPropAgua;
-
-    @FXML
-    private Label TurnosPropComida;
-
-    @FXML
-    private Label TurnosRestaMontaña;
-
-    @FXML
-    private Label PorcetajeReproTesoro;
-
-    @FXML
-    private Label PorcetajeClonaBiblio;
-
-    @FXML
     private Slider SNumColumnas;
 
     @FXML
@@ -125,22 +86,32 @@ public class TabParamTableroControl {
     private Slider STurnosVidaRe;
 
     @FXML
-    private Label PorcetajeClonaBiblio1;
-
-    @FXML
-    private Label NumColumnas;
-
-    @FXML
-    private Label NumFilas;
-
-    @FXML
-    private Label TurnosVidaInd;
-
-    @FXML
-    private Label TurnosVidaRe;
-
-    @FXML
     private Button Aceptar;
+
+    @FXML
+    private Button Restablecer;
+    @FXML
+    private Button Cerrar;
+
+    protected IntegerProperty ProbReproducción = new SimpleIntegerProperty(0);
+    protected IntegerProperty ProbClonación = new SimpleIntegerProperty(0);
+    protected IntegerProperty ProbNuevoRE = new SimpleIntegerProperty(0);
+    protected IntegerProperty ProbAparTesoro = new SimpleIntegerProperty(0);
+    protected IntegerProperty ProbAparPozo = new SimpleIntegerProperty(0);
+    protected IntegerProperty ProbAparAgua = new SimpleIntegerProperty(0);
+    protected IntegerProperty ProbAparMontaña = new SimpleIntegerProperty(0);
+    protected IntegerProperty ProbAparComida = new SimpleIntegerProperty(0);
+    protected IntegerProperty ProbAparBiblioteca = new SimpleIntegerProperty(0);
+    protected IntegerProperty TurnosPropAgua = new SimpleIntegerProperty(0);
+    protected IntegerProperty TurnosPropComida = new SimpleIntegerProperty(0);
+    protected IntegerProperty TurnosRestaMontaña = new SimpleIntegerProperty(0);
+    protected IntegerProperty PorcetajeReproTesoro = new SimpleIntegerProperty(0);
+    protected IntegerProperty PorcetajeClonaBiblio = new SimpleIntegerProperty(0);
+    protected IntegerProperty NumColumnas = new SimpleIntegerProperty(0);
+    protected IntegerProperty NumFilas = new SimpleIntegerProperty(0);
+    protected IntegerProperty TurnosVidaInd = new SimpleIntegerProperty(0);
+    protected IntegerProperty TurnosVidaRe = new SimpleIntegerProperty(0);
+
     private DatosCompartidos d;
     private Stage scene;
     private Tesoro t = new Tesoro();
@@ -152,69 +123,67 @@ public class TabParamTableroControl {
     private Individuo in = new Individuo();
     private Tablero tab  = new Tablero(0,0);
     private Recurso re = new Recurso();
-
+    @FXML
+    void ClickCerrar(ActionEvent event) {
+        scene.close();
+    }
+    @FXML
+    void clickRestablecer(ActionEvent event) {
+        d.rollbackTabParamCasilla();
+    }
     @FXML
     void clickAceptar(ActionEvent event) throws IOException {
         d.commitTabParamCasilla();
-        this.updateGUIwithModelTabTablero();
-        Stage stage = new Stage();
-        FXMLLoader fxmlLoader = new FXMLLoader();
-        File fichero = new File(Paths.TABLERO);
-        URL url;
-        try {
-            url = fichero.toURL();
-        } catch (MalformedURLException ex) {
-            throw new RuntimeException(ex);
-        }
-        fxmlLoader.setLocation(url); // Para encontrar donde esta
-        Scene scene = new Scene(fxmlLoader.load(),700,500); //vCarga escena
-        stage.setScene(scene);
-        DimyTurnosControl p= fxmlLoader.getController();
-        p.loadUserDataDimyNumTurn(d);
-        p.setStage(stage);
-        stage.show();
+        //Cerrar pantalla
+        Node source = (Node) event.getSource();
+        Stage stage1 = (Stage) source.getScene().getWindow();
+        stage1.close();
     }
 
     @FXML
     void initialize() {
+        if (d != null) {
+            this.updateGUIwithModelTabTablero();
+        }
+        SProbReproducción.valueProperty().bindBidirectional(ProbReproducción);
+        SProbClonación.valueProperty().bindBidirectional(ProbClonación);
+        SProbNuevoRE.valueProperty().bindBidirectional(ProbNuevoRE);
+        SProbAparTesoro.valueProperty().bindBidirectional(ProbAparTesoro);
+        SProbAparPozo.valueProperty().bindBidirectional(ProbAparPozo);
+        SProbAparAgua.valueProperty().bindBidirectional(ProbAparAgua);
+        SProbAparMontaña.valueProperty().bindBidirectional(ProbAparMontaña);
+        SProbAparComida.valueProperty().bindBidirectional(ProbAparComida);
+        SProbAparBiblioteca.valueProperty().bindBidirectional(ProbAparBiblioteca);
+        STurnosPropAgua.valueProperty().bindBidirectional(TurnosPropAgua);
+        STurnosPropComida.valueProperty().bindBidirectional(TurnosPropComida);
+        STurnosRestaMontaña.valueProperty().bindBidirectional(TurnosRestaMontaña);
+        SPorcetajeReproTesoro.valueProperty().bindBidirectional(PorcetajeReproTesoro);
+        SPorcetajeClonaBiblio.valueProperty().bindBidirectional(PorcetajeClonaBiblio);
+        SNumColumnas.valueProperty().bindBidirectional(NumColumnas);
+        SNumFilas.valueProperty().bindBidirectional(NumFilas);
+        STurnosVidaInd.valueProperty().bindBidirectional(TurnosVidaInd);
+        STurnosVidaRe.valueProperty().bindBidirectional(TurnosVidaRe);
         assert SProbReproducción != null : "fx:id=\"SProbReproducción\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
-        assert ProbabReproduccion != null : "fx:id=\"ProbabReproduccion\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
         assert SProbClonación != null : "fx:id=\"SProbClonación\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
-        assert ProbMuerte != null : "fx:id=\"ProbMuerte\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
-        assert ProbNuevoRE != null : "fx:id=\"ProbNuevoRE\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
         assert SProbNuevoRE != null : "fx:id=\"SProbNuevoRE\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
         assert SProbAparTesoro != null : "fx:id=\"SProbAparTesoro\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
-        assert ProbAparTesoro != null : "fx:id=\"ProbAparTesoro\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
-        assert ProbAparPozo != null : "fx:id=\"ProbAparPozo\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
         assert SProbAparPozo != null : "fx:id=\"SProbAparPozo\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
         assert SProbAparAgua != null : "fx:id=\"SProbAparAgua\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
-        assert ProbAparAgua != null : "fx:id=\"ProbAparAgua\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
         assert SProbAparMontaña != null : "fx:id=\"SProbAparMontaña\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
-        assert ProbAparMontaña != null : "fx:id=\"ProbAparMontaña\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
         assert SProbAparComida != null : "fx:id=\"SProbAparComida\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
-        assert ProbAparComida != null : "fx:id=\"ProbAparComida\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
-        assert ProbAparBiblioteca != null : "fx:id=\"ProbAparBiblioteca\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
         assert SProbAparBiblioteca != null : "fx:id=\"SProbAparBiblioteca\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
         assert STurnosPropAgua != null : "fx:id=\"STurnosPropAgua\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
         assert STurnosPropComida != null : "fx:id=\"STurnosPropComida\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
         assert STurnosRestaMontaña != null : "fx:id=\"STurnosRestaMontaña\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
         assert SPorcetajeReproTesoro != null : "fx:id=\"SPorcetajeReproTesoro\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
         assert SPorcetajeClonaBiblio != null : "fx:id=\"SPorcetajeClonaBiblio\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
-        assert TurnosPropAgua != null : "fx:id=\"TurnosPropAgua\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
-        assert TurnosPropComida != null : "fx:id=\"TurnosPropComida\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
-        assert TurnosRestaMontaña != null : "fx:id=\"TurnosRestaMontaña\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
-        assert PorcetajeReproTesoro != null : "fx:id=\"PorcetajeReproTesoro\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
-        assert PorcetajeClonaBiblio != null : "fx:id=\"PorcetajeClonaBiblio\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
         assert SNumColumnas != null : "fx:id=\"SNumColumnas\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
         assert SNumFilas != null : "fx:id=\"SNumFilas\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
         assert STurnosVidaInd != null : "fx:id=\"STurnosVidaInd\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
         assert STurnosVidaRe != null : "fx:id=\"STurnosVidaRe\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
-        assert PorcetajeClonaBiblio1 != null : "fx:id=\"PorcetajeClonaBiblio1\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
-        assert NumColumnas != null : "fx:id=\"NumColumnas\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
-        assert NumFilas != null : "fx:id=\"NumFilas\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
-        assert TurnosVidaInd != null : "fx:id=\"TurnosVidaInd\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
-        assert TurnosVidaRe != null : "fx:id=\"TurnosVidaRe\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
         assert Aceptar != null : "fx:id=\"Aceptar\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
+        assert Restablecer != null : "fx:id=\"Restablecer\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
+        assert Cerrar != null : "fx:id=\"Cerrar\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
 
     }
     protected void updateGUIwithModelTabTablero() {
@@ -245,4 +214,7 @@ public class TabParamTableroControl {
     public void setStage(Stage s){
         this.scene = s;
     }
+
+
+
 }
