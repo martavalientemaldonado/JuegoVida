@@ -1,6 +1,5 @@
 package com.example.juegovida.App.Tab.Grafo;
 
-import com.example.juegovida.App.Tab.GrafoCasillas.ListaEnlazadaCasillas;
 
 public class HashMap<T,E> {
     ElementoHashMap<T,E> primero;
@@ -28,8 +27,7 @@ public class HashMap<T,E> {
                 actual.setSiguiente(nuevo);
             }
         }else {
-            ElementoHashMap<T,E> nuevo = new ElementoHashMap<>(null, indice,dato);
-            this.primero = nuevo;
+            this.primero = new ElementoHashMap<>(null, indice,dato);
         }
     }
     public E get(T indice){
@@ -43,8 +41,8 @@ public class HashMap<T,E> {
             return null;
         }
     }
-    public ListaEnlazada KeySet(){
-        ListaEnlazada listaClaves = new ListaEnlazada();
+    public ListaEnlazada<T> KeySet(){
+        ListaEnlazada<T> listaClaves = new ListaEnlazada<>();
         ElementoHashMap<T,E> bucle = this.primero;
         while(bucle != null){
             listaClaves.add(bucle.getNodobuscamos());
