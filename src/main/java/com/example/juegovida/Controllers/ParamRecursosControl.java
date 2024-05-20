@@ -13,6 +13,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
@@ -25,6 +26,8 @@ public class ParamRecursosControl {
     @FXML
     private URL location;
 
+    @FXML
+    private Label texto;
     @FXML
     private ImageView probnuevorecurso;
 
@@ -60,7 +63,6 @@ public class ParamRecursosControl {
     @FXML
     void clickAceptar(ActionEvent event) throws IOException {
         d.commitProbAparicionRecursos();
-
         Stage stage = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader();
         File fichero = new File(Paths.TURNOSPROBREC);
@@ -71,13 +73,12 @@ public class ParamRecursosControl {
             throw new RuntimeException(ex);
         }
         fxmlLoader.setLocation(url); // Para encontrar donde esta
-        Scene scene = new Scene(fxmlLoader.load(),700,500); //vCarga escena
+        Scene scene = new Scene(fxmlLoader.load(), 700, 500); //vCarga escena
         stage.setScene(scene);
-        TurnosPropRecursosControl p= fxmlLoader.getController();
+        TurnosPropRecursosControl p = fxmlLoader.getController();
         p.loadUserDataTurnosPropRe(d);
         p.setStage(stage);
         stage.show();
-
         //Cerrar pantalla
         Node source = (Node) event.getSource();
         Stage stage1 = (Stage) source.getScene().getWindow();
@@ -91,6 +92,7 @@ public class ParamRecursosControl {
 
     @FXML
     void initialize() {
+        texto.setVisible(false);
         assert probnuevorecurso != null : "fx:id=\"probnuevorecurso\" was not injected: check your FXML file 'paramindiv.fxml'.";
         assert ProbabilidadNuevoRe != null : "fx:id=\"ProbabilidadNuevoRe\" was not injected: check your FXML file 'paramindiv.fxml'.";
         assert ProbabilidadAgua != null : "fx:id=\"ProbabilidadAgua\" was not injected: check your FXML file 'paramindiv.fxml'.";
@@ -99,7 +101,7 @@ public class ParamRecursosControl {
         assert ProbabilidadTesoro != null : "fx:id=\"ProbabilidadTesoro\" was not injected: check your FXML file 'paramindiv.fxml'.";
         assert ProbabilidadBiblioteca != null : "fx:id=\"ProbabilidadBiblioteca\" was not injected: check your FXML file 'paramindiv.fxml'.";
         assert ProbabilidadPozo != null : "fx:id=\"ProbabilidadPozo\" was not injected: check your FXML file 'paramindiv.fxml'.";
-
+        assert texto != null : "fx:id=\"texto\" was not injected: check your FXML file 'paramindiv.fxml'.";
     }
     protected void updateGUIwithModelPramRE() {
         ProbabilidadNuevoRe.valueProperty().bindBidirectional(d.ProbNuevoRecursoProperty());
@@ -110,7 +112,7 @@ public class ParamRecursosControl {
         ProbabilidadBiblioteca.valueProperty().bindBidirectional(d.ProbAparicionBibliotecaProperty());
         ProbabilidadComida.valueProperty().bindBidirectional(d.ProbAparicionComidaProperty());
     }
-    public void loadUserDataPramRE(DatosCompartidos parametrosData ) {
+    public void loadUserDataPramRE(DatosCompartidos parametrosData) {
         this.d = parametrosData;
         this.updateGUIwithModelPramRE();
     }

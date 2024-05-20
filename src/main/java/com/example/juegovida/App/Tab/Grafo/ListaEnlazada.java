@@ -1,4 +1,4 @@
-package com.example.juegovida.App.Tab.GrafoRecursos;
+package com.example.juegovida.App.Tab.Grafo;
 
 public class ListaEnlazada<TipodeDato>{
     private ElementoLE<TipodeDato> primero;
@@ -23,8 +23,7 @@ public class ListaEnlazada<TipodeDato>{
         if (isVacia()) {
             this.primero = el;
         } else {
-            ElementoLE<TipodeDato> nuevoprimero = new ElementoLE<TipodeDato>(this.primero, el.getData());
-            this.primero = nuevoprimero;
+            this.primero = new ElementoLE<>(this.primero, el.getData());
         }
 
     }
@@ -88,5 +87,8 @@ public class ListaEnlazada<TipodeDato>{
             l.add(this.getElemento(i));
         }
         return l;
+    }
+    public void EliminarPrimero(){
+        this.primero = primero.siguiente;
     }
 }

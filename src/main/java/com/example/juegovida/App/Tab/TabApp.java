@@ -1,26 +1,17 @@
 package com.example.juegovida.App.Tab;
 
-import com.example.juegovida.App.Bienvenida;
-import com.example.juegovida.App.DimensionesyTurnosVida;
 import com.example.juegovida.Controllers.TableroControl;
-import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
-import javafx.scene.control.ToolBar;
 import javafx.scene.layout.*;
-import javafx.stage.Stage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
-import java.net.URL;
-import java.util.ArrayList;
 
 public class TabApp{
     private static final Logger log = LogManager.getLogger(TabApp.class);

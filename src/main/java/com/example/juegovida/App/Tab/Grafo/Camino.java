@@ -1,4 +1,4 @@
-package com.example.juegovida.App.Tab.GrafoRecursos;
+package com.example.juegovida.App.Tab.Grafo;
 
 public class Camino <TipodeDato>{
     ListaEnlazada<NodoGrafo<TipodeDato>> lista;
@@ -9,5 +9,8 @@ public class Camino <TipodeDato>{
     }
 
     public Camino() {
+    }
+    public void EliminarPrimero(){
+        lista.EliminarPrimero();
     }
 }

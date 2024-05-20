@@ -12,5 +12,9 @@ module com.example.juegovida {
     opens com.example.juegovida.App.Tab to javafx.fxml;
     exports com.example.juegovida.App.Tab.ColaInd;
     opens com.example.juegovida.App.Tab.ColaInd to javafx.fxml;
+    exports com.example.juegovida;
+    opens com.example.juegovida to javafx.fxml;
+    exports com.example.juegovida.App.Tab.GrafoCasillas;
+    opens com.example.juegovida.App.Tab.GrafoCasillas to javafx.fxml;
 
 }

@@ -1,4 +1,6 @@
-package com.example.juegovida.App.Tab.GrafoRecursos;
+package com.example.juegovida.App.Tab.Grafo;
+
+import com.example.juegovida.App.Tab.GrafoCasillas.ListaEnlazadaCasillas;
 
 public class HashMap<T,E> {
     ElementoHashMap<T,E> primero;
@@ -13,14 +15,14 @@ public class HashMap<T,E> {
         if(!this.isVacia()){
             ElementoHashMap<T,E> actual = this.primero;
             while (actual.getSiguiente() != null){
-                if(actual.getIndice() == indice){
-                    actual.setDato(dato);
+                if(actual.getNodobuscamos() == indice){
+                    actual.setCamino(dato);
                     return;
                 }
                 actual = actual.getSiguiente();
             }
-            if(actual.getIndice() == indice){
-                actual.setDato(dato);
+            if(actual.getNodobuscamos() == indice){
+                actual.setCamino(dato);
             }else{
                 ElementoHashMap<T,E> nuevo= new ElementoHashMap<>(null, indice,dato);
                 actual.setSiguiente(nuevo);
@@ -32,11 +34,11 @@ public class HashMap<T,E> {
     }
     public E get(T indice){
         ElementoHashMap<T,E> bucle = this.primero;
-        while(bucle.getSiguiente() != null && bucle.getIndice() != indice){
+        while(bucle.getSiguiente() != null && bucle.getNodobuscamos() != indice){
             bucle = bucle.siguiente;
         }
-        if (bucle.getIndice() == indice){
-            return bucle.getDato();
+        if (bucle.getNodobuscamos() == indice){
+            return bucle.getCamino();
         }else{
             return null;
         }
@@ -45,7 +47,7 @@ public class HashMap<T,E> {
         ListaEnlazada listaClaves = new ListaEnlazada();
         ElementoHashMap<T,E> bucle = this.primero;
         while(bucle != null){
-            listaClaves.add(bucle.getIndice());
+            listaClaves.add(bucle.getNodobuscamos());
             bucle = bucle.getSiguiente();
         }
         return listaClaves;

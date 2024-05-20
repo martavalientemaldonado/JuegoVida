@@ -1,4 +1,4 @@
-package com.example.juegovida.App.Tab.GrafoRecursos;
+package com.example.juegovida.App.Tab.Grafo;
 
 import org.junit.jupiter.api.Test;
 

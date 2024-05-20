@@ -1,6 +1,5 @@
-package com.example.juegovida.App.Tab.GrafoRecursos;
+package com.example.juegovida.App.Tab.Grafo;
 
-import com.example.juegovida.Errores.ElNoEncontradoError;
 import com.example.juegovida.Errores.ElRepetidoError;
 public class ListaAdyacencia<TipodelDato> {
     AristasGrafo<TipodelDato> primero;

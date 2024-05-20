@@ -4,7 +4,6 @@ import com.example.juegovida.App.Tab.Tablero;
 import com.example.juegovida.Clases.Individuo;
 import com.example.juegovida.Clases.Recursos.*;
 import javafx.beans.property.*;
-import javafx.scene.control.Tab;
 
 public class DatosCompartidos {
     protected Agua Agua;

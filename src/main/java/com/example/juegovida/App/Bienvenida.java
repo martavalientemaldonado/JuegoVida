@@ -1,6 +1,5 @@
 package com.example.juegovida.App;
 
-import com.example.juegovida.Utilities.Paths;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,8 +9,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.net.URL;
-
-import static com.example.juegovida.App.Tab.Tablero.*;
 
 public class Bienvenida extends Application {
     private static final Logger log = LogManager.getLogger(Bienvenida.class);

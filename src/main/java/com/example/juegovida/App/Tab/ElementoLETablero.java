@@ -1,7 +1,5 @@
 package com.example.juegovida.App.Tab;
 
-import com.example.juegovida.App.Tab.GrafoRecursos.ElementoLE;
-
 public class ElementoLETablero<TipoDelDato> {
     protected ElementoLETablero<TipoDelDato> siguiente;
     private TipoDelDato data;

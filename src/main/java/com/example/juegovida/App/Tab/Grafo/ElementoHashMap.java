@@ -1,27 +1,27 @@
-package com.example.juegovida.App.Tab.GrafoRecursos;
+package com.example.juegovida.App.Tab.Grafo;
 
 public class ElementoHashMap<T,E> {
-    T indice;
-    E dato;
+    T nodobuscamos;
+    E camino;
     ElementoHashMap<T,E> siguiente;
 
     public ElementoHashMap() {
-        this.indice = null;
-        this.dato = null;
+        this.nodobuscamos = null;
+        this.camino = null;
         this.siguiente = null;
     }
     public ElementoHashMap(ElementoHashMap<T, E> siguiente, T ind, E dato) {
         this.siguiente = siguiente;
-        this.dato = dato;
-        this.indice = ind;
+        this.camino = dato;
+        this.nodobuscamos = ind;
     }
 
-    public E getDato() {
-        return dato;
+    public E getCamino() {
+        return camino;
     }
 
-    public void setDato(E dato) {
-        this.dato = dato;
+    public void setCamino(E camino) {
+        this.camino = camino;
     }
 
     public ElementoHashMap<T, E> getSiguiente() {
@@ -32,11 +32,11 @@ public class ElementoHashMap<T,E> {
         this.siguiente = siguiente;
     }
 
-    public T getIndice() {
-        return indice;
+    public T getNodobuscamos() {
+        return nodobuscamos;
     }
 
-    public void setIndice(T indice) {
-        this.indice = indice;
+    public void setNodobuscamos(T nodobuscamos) {
+        this.nodobuscamos = nodobuscamos;
     }
 }

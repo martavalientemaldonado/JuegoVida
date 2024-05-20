@@ -7,7 +7,7 @@ public class ElementoLS <TipoDelDato> {
         return data;
     }
 
-    public ElementoLS(Object data) {
+    public ElementoLS(TipoDelDato data) {
         this.data = (TipoDelDato) data;
     }
 

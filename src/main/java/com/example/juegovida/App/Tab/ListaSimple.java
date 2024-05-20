@@ -1,19 +1,11 @@
 package com.example.juegovida.App.Tab;
 
 public class ListaSimple<T> {
-    protected T[] list;
+    protected ElementoLS<T>[] list;
     protected Integer Max = 3;
 
     public ListaSimple() {
-        //this.list = T[Max];
-    }
-
-    public T[] getList() {
-        return list;
-    }
-
-    public void setList(T[] list) {
-        this.list = list;
+        this.list = new ElementoLS[Max];
     }
 
     public boolean IsVacia() {
@@ -23,7 +15,6 @@ public class ListaSimple<T> {
         }
         return false;
     }
-
 
     public void vaciar() {
         int contador = 0;
@@ -37,7 +28,7 @@ public class ListaSimple<T> {
         }
     }
 
-    protected int add(T el) {
+    private int add(ElementoLS<T> el) {
         if (getNumElementos() < Max) {
             list[getNumElementos()] = el;
         } else {
@@ -47,6 +38,11 @@ public class ListaSimple<T> {
     }
 
 
+    public void add(T o) {
+        if (getNumElementos() < Max) {
+            add(new ElementoLS<T>(o));
+        }
+    }
 
     public int del(int position) {
         if (list[position] != null) {
@@ -60,28 +56,25 @@ public class ListaSimple<T> {
         }
         return getNumElementos();
     }
+    public boolean isVacia(){
+        if(list[0]==null) return true;
+        else return false;
+    }
 
     public int getNumElementos() {
         int contador = 0;
-        if(list!=null) {
-
-
-            while (list[contador] != null) {
-                if (contador < Max - 1) {
-                    contador++;
-                } else {
-                    return contador + 1;
-                }
-            }
+        while (list[contador] != null)  {
+            if (contador<Max-1){contador++;}
+            else {return contador+1;}
         }
         return contador;
     }
 
-    public int getPosicion(T el) {
+    public int getPosicion(ElementoLS<T> el) {
         int contador = 0;
         int posicion=-1;
         while (contador < getNumElementos()) {
-            if (list[contador] == el) {
+            if (list[contador].getData() == el.getData()) {
                 posicion=contador;
                 break;
             }else{
@@ -92,15 +85,15 @@ public class ListaSimple<T> {
         return posicion;
     }
 
-    public T getPrimero() {
+    public ElementoLS<T> getPrimero() {
         return list[0];
     }
 
-    public T getUltimo() {
+    public ElementoLS<T> getUltimo() {
         return list[getNumElementos()-1];
     }
 
-    private T getSiguiente(T el) {
+    private ElementoLS<T> getSiguiente(ElementoLS<T> el) {
         int posicion = getPosicion(el);
         if (posicion < Max) {
             return list[posicion + 1];
@@ -109,7 +102,7 @@ public class ListaSimple<T> {
         }
     }
 
-    public T getElemento(int posicion) {
+    public ElementoLS<T> getElemento(int posicion) {
         if (posicion <= getNumElementos()) {
             return list[posicion];
         } else {

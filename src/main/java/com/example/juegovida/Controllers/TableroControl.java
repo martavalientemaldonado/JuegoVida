@@ -1,14 +1,11 @@
 package com.example.juegovida.Controllers;
 
-import com.example.juegovida.App.ParamCasilla;
 import com.example.juegovida.App.Tab.Casilla;
 import com.example.juegovida.App.Tab.Tablero;
 import com.example.juegovida.Clases.Individuo;
-import com.example.juegovida.DatosCompartidos;
 import com.example.juegovida.Utilities.Paths;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;

@@ -1,4 +1,4 @@
-package com.example.juegovida.App.Tab.GrafoRecursos;
+package com.example.juegovida.App.Tab.Grafo;
 
 import com.example.juegovida.Clases.Individuo;
 import com.example.juegovida.Errores.ElRepetidoError;

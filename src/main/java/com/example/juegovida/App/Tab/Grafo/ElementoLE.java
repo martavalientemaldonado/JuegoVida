@@ -1,4 +1,4 @@
-package com.example.juegovida.App.Tab.GrafoRecursos;
+package com.example.juegovida.App.Tab.Grafo;
 
 public class ElementoLE<TipoDelDato> { // Para introducir valor de cualquier tipo.
     protected ElementoLE<TipoDelDato> siguiente;

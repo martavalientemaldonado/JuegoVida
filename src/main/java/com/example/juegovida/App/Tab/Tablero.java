@@ -1,9 +1,13 @@
 package com.example.juegovida.App.Tab;
 
+import com.example.juegovida.App.Tab.Casilla;
+import com.example.juegovida.App.Tab.GrafoCasillas.GrafoTablero;
+import com.example.juegovida.App.Tab.ListaEnlazadaTablero;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
+import javafx.scene.control.Tab;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
@@ -13,6 +17,7 @@ public class Tablero {
     private double fila;
     private double columna;
     private ListaEnlazadaTablero<ListaEnlazadaTablero<Casilla>> matiz;
+    protected GrafoTablero<Casilla> grafo;
     private  Casilla tab[][];
 
 
@@ -27,6 +32,7 @@ public class Tablero {
             }
             matiz.add(l);
         }
+
     }
 
     public double getFila() {

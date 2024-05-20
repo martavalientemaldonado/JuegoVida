@@ -1,4 +1,4 @@
-package com.example.juegovida.App.Tab.GrafoRecursos;
+package com.example.juegovida.App.Tab.Grafo;
 
 public class AristasGrafo<TipodelDato> {
     NodoGrafo<TipodelDato> destino;
