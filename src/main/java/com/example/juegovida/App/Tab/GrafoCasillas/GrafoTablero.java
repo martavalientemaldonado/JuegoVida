@@ -10,6 +10,9 @@ public class GrafoTablero<TipodeDato> {
         this.listaVertices = ListaVertices;
         this.listaAristas = listaAristas;
     }
+    public boolean grafoVacio(){
+        return listaAristas.isVacia() && listaVertices.isVacia();
+    }
     public void addNodo (NodoGrafoCasillas<TipodeDato> nodo) throws ElRepetidoError {
         if(listaVertices.isVacia()){
             listaVertices.add(nodo);

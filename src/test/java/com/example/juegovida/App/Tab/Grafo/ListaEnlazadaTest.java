@@ -73,13 +73,13 @@ class ListaEnlazadaTest {
 
     @Test
     void getPosicion() {
-        ListaEnlazada le= new ListaEnlazada();
+        ListaEnlazada<String> le= new ListaEnlazada<>();
         le.add("HOLA");
         le.add("8");
-        le.add(3);
-        ElementoLE e3=new ElementoLE(null, "HOLA");
-        ElementoLE e2=new ElementoLE(e3, 8);
-        ElementoLE e1=new ElementoLE(e2, 3);
+        le.add("2");
+        ElementoLE<String> e3=new ElementoLE<>(null, "HOLA");
+        ElementoLE<String> e2=new ElementoLE<>(e3, "8");
+        ElementoLE<String> e1=new ElementoLE<>(e2, "2");
         assertEquals(2, le.getPosicion(e1));
         assertEquals(0, le.getPosicion(e3));
     }

@@ -19,7 +19,7 @@ public class Bienvenida extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         URL fxmlUrl = getClass().getResource("/bienvenida.fxml");
-
+        stage.setResizable(false);
 
         FXMLLoader loader = new FXMLLoader(fxmlUrl);
         Parent root = loader.load();

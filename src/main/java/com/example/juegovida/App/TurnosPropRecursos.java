@@ -19,6 +19,7 @@ public class TurnosPropRecursos extends Application {
     }
     @Override
     public void start(Stage primaryStage) throws Exception {
+        primaryStage.setResizable(false);
         FXMLLoader fxmlLoader = new FXMLLoader();
         File fichero = new File(Paths.TURNOSPROBREC);//Carga scene en stage
 

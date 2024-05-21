@@ -13,6 +13,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class ParamCasilla extends Application {
+    private Stage stage;
 
     public static void main(String[] args) {
         launch(args); //LLama a start
@@ -20,9 +21,10 @@ public class ParamCasilla extends Application {
     }
     @Override
     public void start(Stage primaryStage) throws Exception {
+        primaryStage.setResizable(false);
         FXMLLoader fxmlLoader = new FXMLLoader(Bienvenida.class.getResource("ParamCasilla.fxml"));
         File fichero = new File(Paths.PARAMCASILLA);//Carga scene en stage
-
+        primaryStage.setResizable(false);
         URL url;
         try {
             url = fichero.toURL();

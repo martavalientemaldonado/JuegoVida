@@ -21,7 +21,7 @@ public class DimensionesyTurnosVida extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-
+        stage.setResizable(false);
     }
 
     private void setStage(Stage stage) {

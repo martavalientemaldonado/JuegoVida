@@ -30,7 +30,7 @@ public class ListaEnlazadaCasillas<TipodeDato> {
     }
 
     public void add(TipodeDato s) {
-        ElementoLECasillas<TipodeDato> nuevoPrimero = new ElementoLECasillas<TipodeDato>(this.primero, s);
+        ElementoLECasillas<TipodeDato> nuevoPrimero = new ElementoLECasillas<>(s);
         add(nuevoPrimero);
     }
     public void del(int posicion){
@@ -90,8 +90,9 @@ public class ListaEnlazadaCasillas<TipodeDato> {
     }
     public ListaEnlazadaCasillas<TipodeDato> reverse(ListaEnlazadaCasillas<TipodeDato> lis){
         ListaEnlazadaCasillas<TipodeDato> l = new ListaEnlazadaCasillas<>();
-        for(int i = 0; lis.getElemento(i)!= null; i++){
-            l.add(this.getElemento(i));
+        for(int i = lis.getNumeroElementos()-1; lis.getElemento(i)!= null && i >= 0; i--){
+            ElementoLECasillas<TipodeDato> e = new ElementoLECasillas<>(this.getElemento(i).getData());
+            l.add(e);
         }
         return l;
     }

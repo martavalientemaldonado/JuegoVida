@@ -16,6 +16,7 @@ import java.net.URL;
 
 public class ParametrosIndividuo extends Application {
 
+
     public static void main(String[] args) {
         launch(args); //LLama a start
 
@@ -23,6 +24,7 @@ public class ParametrosIndividuo extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
+        stage.setResizable(false);
         FXMLLoader fxmlLoader = new FXMLLoader();
         File fichero = new File(Paths.BIENVENIDA);//Carga scene en stage
         URL url = null;
@@ -39,7 +41,6 @@ public class ParametrosIndividuo extends Application {
         stage.show();
 
     }
-
     }
 
 

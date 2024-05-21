@@ -20,6 +20,8 @@ public class TabParamTablero extends Application {
     }
     @Override
     public void start(Stage primaryStage) throws Exception {
+        stage.setResizable(false);
+
         FXMLLoader fxmlLoader = new FXMLLoader(Bienvenida.class.getResource("TabDeTablero.fxml"));
         File fichero = new File(Paths.TABPARAMETROSTABLERO);//Carga scene en stage
 

@@ -7,7 +7,7 @@ public class AristasGrafoCasillas<TipodeDato> {
     public NodoGrafoCasillas<TipodeDato> destino;
     public Double peso;
 
-    public AristasGrafoCasillas(Casilla relacion, NodoGrafoCasillas<TipodeDato> origen, NodoGrafoCasillas<TipodeDato> destino, Double peso){
+    public AristasGrafoCasillas(NodoGrafoCasillas<TipodeDato> origen, NodoGrafoCasillas<TipodeDato> destino, Double peso){
         this.origen = origen;
         this.destino = destino;
         this.peso = peso;

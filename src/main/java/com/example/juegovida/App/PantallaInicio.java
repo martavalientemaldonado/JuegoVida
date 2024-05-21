@@ -24,7 +24,7 @@ public class PantallaInicio extends Application {
     }
     private Individuo in = new Individuo();
     public void start(Stage stage) throws Exception {
-
+        stage.setResizable(false);
         FXMLLoader fxmlLoader = new FXMLLoader();
         File fichero = new File(Paths.PANTALLAINICIO);//Carga scene en stage
         URL url = null;

@@ -20,6 +20,7 @@ public class ParamRecursos extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+        stage.setResizable(false);
         FXMLLoader fxmlLoader = new FXMLLoader();
         File fichero = new File(Paths.PARAMRECURSOS);//Carga scene en stage
 

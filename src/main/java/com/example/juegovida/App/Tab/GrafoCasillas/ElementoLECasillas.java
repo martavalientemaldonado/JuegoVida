@@ -13,16 +13,20 @@ public class ElementoLECasillas<TipoDelDato> {
         this.data = data;
     }
 
+    public ElementoLECasillas(TipoDelDato data) {
+        this.data = data;
+    }
+
     public void setSiguiente(ElementoLECasillas<TipoDelDato> siguiente) {
         this.siguiente = siguiente;
     }
 
 
-    protected ElementoLECasillas<TipoDelDato> getSiguiente() {
+    public ElementoLECasillas<TipoDelDato> getSiguiente() {
         return siguiente;
     }
 
-    protected void insertarmeEn(ElementoLECasillas<TipoDelDato> el) {
+    public void insertarmeEn(ElementoLECasillas<TipoDelDato> el) {
         this.siguiente = el.siguiente;
         el.siguiente = this;
     }
