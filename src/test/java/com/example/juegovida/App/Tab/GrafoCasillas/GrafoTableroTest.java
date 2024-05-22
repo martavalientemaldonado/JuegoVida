@@ -175,7 +175,9 @@ class GrafoTableroTest {
             g.addAristas(a5);
             g.addAristas(a6);
             ListaEnlazadaCasillas<NodoGrafoCasillas<Casilla>> Di = g.getCaminoVertices(r,r4);
-            NodoGrafoCasillas<Casilla> n = new NodoGrafoCasillas<>(rc);
+            Casilla rc5 = new Casilla(1, 4);
+            NodoGrafoCasillas<Casilla> r5 = new NodoGrafoCasillas<>(rc3);
+            //ListaEnlazadaCasillas<NodoGrafoCasillas<Casilla>> Di2 = g.getCaminoVertices(r,r5);
         }catch (ElRepetidoError ex){ex.printStackTrace();}
     }
 

@@ -93,12 +93,15 @@ class ListaEnlazadaCasillasTest {
         Casilla c = new Casilla(1,1);
         Casilla c2 = new Casilla(1,2);
         Casilla c3 = new Casilla(1,3);
+        Casilla c4 = new Casilla(1,4);
+        assertNull(in.getPosicion(c));
         in.add(c);
         in.add(c2);
         in.add(c3);
         assertEquals(2, in.getPosicion(c3));
         assertEquals(1, in.getPosicion(c2));
         assertEquals(0, in.getPosicion(c));
+        assertNull(in.getPosicion(c4));
     }
 
     @Test

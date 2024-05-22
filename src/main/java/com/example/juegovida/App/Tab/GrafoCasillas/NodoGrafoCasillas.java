@@ -13,6 +13,11 @@ public class NodoGrafoCasillas<Tipo> {
         this.entrada = new ListaEnlazadaCasillas<>();
         this.salida = new ListaEnlazadaCasillas<>();
     }
+    public NodoGrafoCasillas(Tipo dato, ListaEnlazadaCasillas<AristasGrafoCasillas<Tipo>> l, ListaEnlazadaCasillas<AristasGrafoCasillas<Tipo>> l2){
+        this.dato = dato;
+        this.entrada = l;
+        this.salida = l2;
+    }
     public Tipo getDato(){
         return dato;
     }

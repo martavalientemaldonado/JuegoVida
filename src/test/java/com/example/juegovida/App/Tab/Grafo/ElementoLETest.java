@@ -43,7 +43,7 @@ class ElementoLETest {
         ElementoLE<Integer> el3= new ElementoLE<>(4);
         ElementoLE<Integer> el2= new ElementoLE<>(el,3);
         assertEquals(el, el2.getSiguiente());
-        el.setSiguiente(el3);
+        el2.setSiguiente(el3);
         assertEquals(el3, el2.getSiguiente());
     }
 }

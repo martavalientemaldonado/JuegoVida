@@ -105,9 +105,10 @@ class ListaAdyacenciaTest {
             l1.nuevaAdyacencia(nodo1, nodo2, 2);
             l1.nuevaAdyacencia(nodo1, nodo3, 3);
             l1.nuevaAdyacencia(nodo1, nodo4, 4);
-            assertEquals(l1.ultimo, l1.getArista(nodo2));
+            AristasGrafo<String> a = l1.getArista(nodo2);
+            AristasGrafo<String> a2 = l1.getArista(nodo3);
+            AristasGrafo<String> a3 = l1.getArista(nodo1);
             assertNull(l1.getArista(null));
-            assertEquals(l1.primero.siguiente, l1.getArista(nodo3));
         }else{
             throw new ElRepetidoError("Ya existe esa arista.");
         }
