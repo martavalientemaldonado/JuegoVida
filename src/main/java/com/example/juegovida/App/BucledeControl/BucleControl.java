@@ -1,17 +1,23 @@
 package com.example.juegovida.App.BucledeControl;
 
-import com.example.juegovida.App.Tab.Casilla;
+import com.example.juegovida.App.Tab.*;
 import com.example.juegovida.App.Tab.ColaInd.ColaEventosIndividuo;
 import com.example.juegovida.App.Tab.ColaInd.ElementoCola;
-import com.example.juegovida.App.Tab.Tablero;
+import com.example.juegovida.App.Tab.GrafoCasillas.*;
 import com.example.juegovida.Clases.Individuo;
 import com.example.juegovida.Clases.Recursos.*;
+import com.example.juegovida.Errores.ElNoEncontradoError;
 import com.example.juegovida.Errores.Mas3Indiv;
 import com.example.juegovida.Errores.Mas3Recs;
+
+import java.util.HashMap;
+import java.util.Objects;
 
 public class BucleControl {
     //private ListaSimple<Individuo> lIndiv;
     private Casilla tab[][];
+    private GrafoTablero<Casilla> grafo;
+    private ListaEnlazadaCasillas<ListaEnlazadaCasillas<Casilla>> lista;
 
     private Casilla c;
     private ColaEventosIndividuo<String> colaEventosIndividuo;
@@ -27,7 +33,7 @@ public class BucleControl {
             for (int j = 0; j < t.getFila(); j++) {
                 if (tab[j][i].getlRec().getNumElementos() < 3) {
                     Recurso recurso = new Recurso();
-                    if (Math.random()*100> recurso.getProbabilidadNuevoRE()) {
+                    if (Math.random()*100 > recurso.getProbabilidadNuevoRE()) {
                         Agua agua = new Agua();
                         Comida comida = new Comida();
                         Biblioteca biblioteca = new Biblioteca();
@@ -60,7 +66,7 @@ public class BucleControl {
         for (int i=0; i<t.getFila();i++){
             for (int j=0; j< t.getFila(); j++){
                 for (int k=0; k<=tab[j][i].getlRec().getNumElementos()-1;){
-                    if (tab[j][i].getlRec().getElemento(k).getData().getTurnosVidaRecursos()==0){
+                    if(tab[j][i].getlRec().getElemento(k).getData().getTurnosVidaRecursos()==0){
                         Recurso relim= tab[j][i].getlRec().getElemento(k).getData();
                         tab[j][i].delRec(relim);
                         k++;
@@ -245,9 +251,149 @@ public class BucleControl {
 
 
                     }
+            }
+        }
+    }
+    private void moverIndividuoBasico(Individuo in, Tablero t) throws Mas3Indiv {
+        int numero = (int) (Math.random() * 4) + 1;
+        if (numero == 1) {//mueve hacia abajo
+            Casilla c;
+            for (int i=0; i<t.getFila();i++){
+                ListaEnlazadaCasillas<Casilla> columna = lista.getElemento(i).getData();
+                for (int j=0; j< t.getColumna(); j++){
+                    ListaSimple<Individuo> lind = tab[j][i].getlIndiv();
+                    for (int k=0; k!=3; k++){
+                        if(Objects.equals(lind.getElemento(k).getData().getNumIdentificacion(), in.getNumIdentificacion())){
+                            c = tab[j][i];
+                            c.getlIndiv().del(k);
+                            tab[j+1][i].addIndiv(in);
+                        }
+                    }
+                }
+            }
+
+        }if (numero == 2) {//mueve hacia arriba
+            Casilla c;
+            for (int i=0; i<t.getFila();i++){
+                ListaEnlazadaCasillas<Casilla> columna = lista.getElemento(i).getData();
+                for (int j=0; j< t.getColumna(); j++){
+                    ListaSimple<Individuo> lind = tab[j][i].getlIndiv();
+                    for (int k=0; k!=3; k++){
+                        if(Objects.equals(lind.getElemento(k).getData().getNumIdentificacion(), in.getNumIdentificacion())){
+                            c = tab[j][i];
+                            c.getlIndiv().del(k);
+                            tab[j-1][i].addIndiv(in);
+                        }
+                    }
+                }
+            }
+
+        }if (numero == 3) {//mueve hacia derecha
+            Casilla c;
+            for (int i=0; i<t.getFila();i++){
+                ListaEnlazadaCasillas<Casilla> columna = lista.getElemento(i).getData();
+                for (int j=0; j< t.getColumna(); j++){
+                    ListaSimple<Individuo> lind = tab[j][i].getlIndiv();
+                    for (int k=0; k!=3; k++){
+                        if(Objects.equals(lind.getElemento(k).getData().getNumIdentificacion(), in.getNumIdentificacion())){
+                            c = tab[j][i];
+                            c.getlIndiv().del(k);
+                            tab[j][i+1].addIndiv(in);
+                        }
+                    }
+                }
+            }
+
+        }if (numero == 4) {//mueve hacia izquierda
+            Casilla c;
+            for (int i=0; i<t.getFila();i++){
+                ListaEnlazadaCasillas<Casilla> columna = lista.getElemento(i).getData();
+                for (int j=0; j< t.getColumna(); j++){
+                    ListaSimple<Individuo> lind = tab[j][i].getlIndiv();
+                    for (int k=0; k!=3; k++){
+                        if(Objects.equals(lind.getElemento(k).getData().getNumIdentificacion(), in.getNumIdentificacion())){
+                            c = tab[j][i];
+                            c.getlIndiv().del(k);
+                            tab[j][i-1].addIndiv(in);
+                        }
+                    }
                 }
             }
         }
     }
+
+    public void CrearCaminoAvanzado(Individuo in) throws ElNoEncontradoError {
+        ElementoLECasillas<NodoGrafoCasillas<Casilla>> i = grafo.listaVertices.getPrimero();
+        while(i.getSiguiente()!= null){
+            ListaSimple<Individuo> lind = i.getData().getDato().getlIndiv();
+            for(int k=0; k!=3; k++){
+                if(Objects.equals(lind.getElemento(k).getData().getNumIdentificacion(), in.getNumIdentificacion())){
+                    break;
+                }
+            }
+            i = i.getSiguiente();
+        }
+        HashMapC<NodoGrafoCasillas<Casilla>, CaminoC<Casilla>> Di = null;
+        if(i == grafo.listaVertices.getUltimo()){
+            ListaSimple<Individuo> lind = i.getData().getDato().getlIndiv();
+            for(int k=0; k!=3; k++){
+                if(Objects.equals(lind.getElemento(k).getData().getNumIdentificacion(), in.getNumIdentificacion())){
+                    Di = grafo.getDijkstra(i.getData());
+                }else{
+                    throw new ElNoEncontradoError("No se ha encontrado el individuo");
+                }
+            }
+        }else{
+            Di = grafo.getDijkstra(i.getData());
+        }
+        if(Di!= null) {
+            ElementoHashMapC<NodoGrafoCasillas<Casilla>, CaminoC<Casilla>> e = Di.getPrimero();
+            ElementoHashMapC<NodoGrafoCasillas<Casilla>, CaminoC<Casilla>> aUsar = null;
+            double d = -300000000;
+            while (e.getSiguiente() != null) {
+                if(e.getCamino().getPeso()>d){
+                    d = e.getCamino().getPeso();
+                    aUsar = e;
+                } else if (e.getCamino().getPeso()==d) {
+                    if(e.getCamino().getCamino().getNumeroElementos()< aUsar.getCamino().getCamino().getNumeroElementos()){
+                        d = e.getCamino().getPeso();
+                        aUsar = e;
+                    }
+                }
+                e = e.getSiguiente();
+            }
+            ListaEnlazadaCasillas<NodoGrafoCasillas<Casilla>> Camino= grafo.getCaminoVertices(i.getData(),aUsar.getNodobuscamos());
+            in.setEnMovimiento(true);
+            in.setCaminoMovimiento(Camino);
+        }
+    }
+    public void moverIndividuoAvanzado(Individuo in) throws Mas3Indiv {
+        if(!in.isEnMovimiento()){
+            CrearCaminoAvanzado(in);
+        }
+        Casilla c;
+        for (int i=0; i<lista.getNumeroElementos();i++){
+            for (int j=0; j< lista.getPrimero().getData().getNumeroElementos(); j++){
+                ListaSimple<Individuo> lind = tab[j][i].getlIndiv();
+                for (int k=0; k!=3; k++){
+                    if(Objects.equals(lind.getElemento(k).getData().getNumIdentificacion(), in.getNumIdentificacion())){
+                        if(in.getCaminoMovimiento().getNumeroElementos() == 1){
+                            in.setEnMovimiento(false);
+                            c = tab[j][i];
+                            c.getlIndiv().del(k);
+                            in.getCaminoMovimiento().getPrimero().getData().getDato().addIndiv(in);
+                            in.getCaminoMovimiento().EliminarPrimero();
+                        }else if(in.getCaminoMovimiento().getNumeroElementos() >= 1){
+                            c = tab[j][i];
+                            c.getlIndiv().del(k);
+                            in.getCaminoMovimiento().getPrimero().getData().getDato().addIndiv(in);
+                            in.getCaminoMovimiento().EliminarPrimero();
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 

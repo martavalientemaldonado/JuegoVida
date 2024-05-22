@@ -4,8 +4,8 @@ import com.example.juegovida.Errores.ElNoEncontradoError;
 import com.example.juegovida.Errores.ElRepetidoError;
 
 public class GrafoTablero<TipodeDato> {
-    private ListaEnlazadaCasillas<NodoGrafoCasillas<TipodeDato>> listaVertices;
-    private ListaEnlazadaCasillas<AristasGrafoCasillas<TipodeDato>> listaAristas;
+    public ListaEnlazadaCasillas<NodoGrafoCasillas<TipodeDato>> listaVertices;
+    ListaEnlazadaCasillas<AristasGrafoCasillas<TipodeDato>> listaAristas;
     public GrafoTablero(ListaEnlazadaCasillas<NodoGrafoCasillas<TipodeDato>> ListaVertices, ListaEnlazadaCasillas<AristasGrafoCasillas<TipodeDato>> listaAristas){
         this.listaVertices = ListaVertices;
         this.listaAristas = listaAristas;

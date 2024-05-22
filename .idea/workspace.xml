@@ -4,22 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ae59f5ab-3a2c-4635-b2d5-df0317d0df49" name="Changes" comment="arreglo">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/juegovida/App/Tab/GrafoCasillas/AristasGrafoCasillasTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/juegovida/App/Tab/GrafoCasillas/CaminoCTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/juegovida/App/Tab/GrafoCasillas/NodoGrafoCasillasTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_05_2024_19_42__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_05_2024_19_42__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_05_2024_20_16__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_05_2024_20_16__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_05_2024_13_54__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_05_2024_13_54__Changes_.xml" afterDir="false" />
+    <list default="true" id="ae59f5ab-3a2c-4635-b2d5-df0317d0df49" name="Changes" comment="test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/Grafo/ListaAdyacencia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/Grafo/ListaAdyacencia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/GrafoCasillas/CaminoC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/GrafoCasillas/CaminoC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/GrafoCasillas/NodoGrafoCasillas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/GrafoCasillas/NodoGrafoCasillas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/juegovida/App/Tab/ColaInd/ColaEventosIndividuoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/juegovida/App/Tab/ColaInd/ColaEventosIndividuoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/juegovida/App/Tab/Grafo/ElementoLETest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/juegovida/App/Tab/Grafo/ElementoLETest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/juegovida/App/Tab/Grafo/ListaAdyacenciaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/juegovida/App/Tab/Grafo/ListaAdyacenciaTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/juegovida/App/Tab/GrafoCasillas/GrafoTableroTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/juegovida/App/Tab/GrafoCasillas/GrafoTableroTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/juegovida/App/Tab/GrafoCasillas/ListaEnlazadaCasillasTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/juegovida/App/Tab/GrafoCasillas/ListaEnlazadaCasillasTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/BucledeControl/BucleControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/BucledeControl/BucleControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/GrafoCasillas/GrafoTablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/GrafoCasillas/GrafoTablero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Clases/Individuo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Clases/Individuo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -643,7 +632,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716381874525</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="test">
+      <option name="closed" value="true" />
+      <created>1716394543858</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1716394543859</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -709,7 +706,8 @@
     <MESSAGE value="Grafo" />
     <MESSAGE value="TabParamTablero" />
     <MESSAGE value="arreglo" />
-    <option name="LAST_COMMIT_MESSAGE" value="arreglo" />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
@@ -746,7 +744,7 @@
     <SUITE FILE_PATH="coverage/JuegoVida$NodoGrafoCasillasTest.ic" NAME="NodoGrafoCasillasTest Coverage Results" MODIFIED="1716391339950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.juegovida.App.Tab.GrafoCasillas.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/JuegoVida$All_in_JuegoVida.ic" NAME="All in JuegoVida Coverage Results" MODIFIED="1716394241837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/JuegoVida$All_in_JuegoVida.ic" NAME="All in JuegoVida Coverage Results" MODIFIED="1716394464993" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/JuegoVida$CaminoCTest.ic" NAME="CaminoCTest Coverage Results" MODIFIED="1716393435796" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.juegovida.App.Tab.GrafoCasillas.*</FILTER>
     </SUITE>
