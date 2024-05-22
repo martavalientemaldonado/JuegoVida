@@ -7,14 +7,14 @@ public class Individuo {
     private Integer Generacion;
     private double TurnosVidaInd;
     boolean EnMovimiento;
-    ColaEventosIndividuo cola;
+    ColaEventosIndividuo<String> cola;
     double ProbClonacion;
     double ProbReproduccion;
-    double ProbMuerte = 1-ProbReproduccion;
+    double ProbMuerte = 1 - ProbReproduccion;
     //0 Basico, 1 Normal, 2 Avanzado
     protected int Tipo;
-    public Individuo(){
 
+    public Individuo() {
     }
 
     public Individuo(double TurnosVida, double Probclonacion, double ProbRe) {
@@ -22,11 +22,13 @@ public class Individuo {
         ProbClonacion = Probclonacion;
         ProbReproduccion = ProbRe;
     }
-    public Individuo(Integer NumIdentificacion, Integer Generacion){
+
+    public Individuo(Integer NumIdentificacion, Integer Generacion) {
         this.NumIdentificacion = NumIdentificacion;
         this.Generacion = Generacion;
     }
-    public ColaEventosIndividuo getCola(){
+
+    public ColaEventosIndividuo<String> getCola() {
         return this.cola;
     }
 
@@ -49,9 +51,11 @@ public class Individuo {
     public void setTurnosVidaInd(double turnosVidaInd) {
         TurnosVidaInd = turnosVidaInd;
     }
+
     public double getTurnosVidaInd() {
         return TurnosVidaInd;
     }
+
     public double getProbClonacion() {
         return ProbClonacion;
     }
@@ -71,9 +75,11 @@ public class Individuo {
     public double getProbMuerte() {
         return ProbMuerte;
     }
+
     public void setProbMuerte(double probMuerte) {
         ProbMuerte = probMuerte;
     }
+
     public int getTipo() {
         return Tipo;
     }
@@ -82,33 +88,33 @@ public class Individuo {
         Tipo = tipo;
     }
 
-
-
-    public void Reproduccion(){
-
-    }
-    public void Clonacion(){
-
-    }
-    public void Muerte(){
-
-    }
-    //Basico
-    public void rutaAleatoriaTBasico(){
+    public void Reproduccion() {
 
     }
 
-    //Avanzado
+    public void Clonacion() {
+
+    }
+
+    public void Muerte() {
+
+    }
+
+    public void rutaAleatoriaTBasico() {
+        int numero = (int) (Math.random() * 4) + 1;
+        if (numero == 1) {}
+
+    }
     // public ParamRecursosRecurso seleccionarRrecursoTAvanzado(){
     // }
     // private Recurso recursoCercanoTAvanzado(){}
-    public void rutarecursoTAvanzado(){
+    public void rutarecursoTAvanzado() {
 
     }
-
     //Normal
-    public void recursoaleatorioTNormal(){
+    public void recursoaleatorioTNormal() {
 
     }
-    private void rutalinearectaTNormal(){}
+    private void rutalinearectaTNormal() {
+    }
 }

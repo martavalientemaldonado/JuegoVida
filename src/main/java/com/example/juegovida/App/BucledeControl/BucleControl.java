@@ -14,9 +14,14 @@ public class BucleControl {
     private Casilla tab[][];
 
     private Casilla c;
-    private ColaEventosIndividuo colaEventosIndividuo;
+    private ColaEventosIndividuo<String> colaEventosIndividuo;
     public double fila;
     public double columna;
+
+    public BucleControl(Casilla[][] tab) {
+        this.tab = tab;
+    }
+
     public void nuevoRecurso(Tablero t)throws Mas3Recs {
         for (int i = 0; i < t.getFila(); i++) {
             for (int j = 0; j < t.getFila(); j++) {
@@ -55,8 +60,8 @@ public class BucleControl {
         for (int i=0; i<t.getFila();i++){
             for (int j=0; j< t.getFila(); j++){
                 for (int k=0; k<=tab[j][i].getlRec().getNumElementos()-1;){
-                    if (tab[j][i].getlRec().getElemento(k).getTurnosVidaRecursos()==0){
-                        Recurso relim= tab[j][i].getlRec().getElemento(k);
+                    if (tab[j][i].getlRec().getElemento(k).getData().getTurnosVidaRecursos()==0){
+                        Recurso relim= tab[j][i].getlRec().getElemento(k).getData();
                         tab[j][i].delRec(relim);
                         k++;
                     }
@@ -72,8 +77,8 @@ public class BucleControl {
         for (int i=0; i<t.getFila();i++){
             for (int j=0; j< t.getFila(); j++){
                 for (int k=0; k<=tab[j][i].getlIndiv().getNumElementos()-1;){
-                    if (tab[j][i].getlIndiv().getElemento(k).getTurnosVidaInd()==0){
-                        Individuo relim= tab[j][i].getlIndiv().getElemento(k);
+                    if (tab[j][i].getlIndiv().getElemento(k).getData().getTurnosVidaInd()==0){
+                        Individuo relim= tab[j][i].getlIndiv().getElemento(k).getData();
                         tab[j][i].delInd(relim);
                         k++;
                     }
@@ -89,10 +94,10 @@ public class BucleControl {
         for (int i=0; i<t.getFila();i++){
             for (int j=0; j< t.getFila(); j++){
                 for (int k=0; k<=tab[j][i].getlIndiv().getNumElementos()-1;){
-                    if (tab[j][i].getlIndiv().getElemento(k).getTurnosVidaInd()==0){
-                        Individuo ieliminar= tab[j][i].getlIndiv().getElemento(k);
+                    if (tab[j][i].getlIndiv().getElemento(k).getData().getTurnosVidaInd()==0){
+                        Individuo ieliminar= tab[j][i].getlIndiv().getElemento(k).getData();
                         tab[j][i].delInd(ieliminar);
-                        tab[j][i].getlIndiv().getElemento(k).getCola().push( new ElementoCola<String>("Ha muerto"));
+                        tab[j][i].getlIndiv().getElemento(k).getData().getCola().push(new ElementoCola<>("Ha muerto"));
                             k++;
                     }
                     else{
@@ -108,24 +113,23 @@ public class BucleControl {
     public void clonado(Tablero t)throws Mas3Indiv{
         for (int i = 0; i < t.getFila(); i++) {
             for (int j = 0; j < t.getFila(); j++) {
-                Individuo i1 = tab[j][i].getlIndiv().getElemento(0);
-                Individuo i2 = tab[j][i].getlIndiv().getElemento(1);
-                Individuo i3 = tab[j][i].getlIndiv().getElemento(2);
+                Individuo i1 = tab[j][i].getlIndiv().getElemento(0).getData();
+                Individuo i2 = tab[j][i].getlIndiv().getElemento(1).getData();
+                Individuo i3 = tab[j][i].getlIndiv().getElemento(2).getData();
                 double r = Math.random() * 100;
                 if (i1.getProbClonacion() > i2.getProbClonacion() && i1.getTurnosVidaInd() < i3.getTurnosVidaInd()) {
                     if (r < i1.getProbClonacion()) {
-                        Individuo hijo = i1;
-                        tab[j][i].addIndiv(hijo);
+                        tab[j][i].addIndiv(i1);
                         if (tab[j][i].lIndiv.getNumElementos() > 3) {
                             eliminarInd(t);
-                            if (tab[j][i].lIndiv.getElemento(2) == hijo) {
-                                i1.getCola().push(new ElementoCola<String>("Padre clonación"));
-                                i1.getCola().push(new ElementoCola<String>("Hijo" + hijo));
+                            if (tab[j][i].lIndiv.getElemento(2).getData() == i1) {
+                                i1.getCola().push(new ElementoCola<>("Padre clonación"));
+                                i1.getCola().push(new ElementoCola<>("Hijo" + i1));
 
                             }
                         } else {
-                            i1.getCola().push(new ElementoCola<String>("Padre clonación"));
-                            i1.getCola().push(new ElementoCola<String>("Hijo" + hijo));
+                            i1.getCola().push(new ElementoCola<>("Padre clonación"));
+                            i1.getCola().push(new ElementoCola<>("Hijo" + i1));
 
                         }
                     }
@@ -133,36 +137,34 @@ public class BucleControl {
 
                 } else if (i2.getProbClonacion() > i1.getProbClonacion() && i2.getTurnosVidaInd() < i3.getTurnosVidaInd()) {
                     if (r < i2.getProbClonacion()) {
-                        Individuo hijo = i2;
-                        tab[j][i].addIndiv(hijo);
+                        tab[j][i].addIndiv(i2);
                         if (tab[j][i].lIndiv.getNumElementos() > 3) {
                             eliminarInd(t);
-                            if (tab[j][i].lIndiv.getElemento(2) == hijo) {
+                            if (tab[j][i].lIndiv.getElemento(2).getData() == i2) {
                                 i2.getCola().push(new ElementoCola<String>("Padre clonación"));
-                                i2.getCola().push(new ElementoCola<String>("Hijo" + hijo));
+                                i2.getCola().push(new ElementoCola<String>("Hijo" + i2));
 
                             }
                         } else {
                             i2.getCola().push(new ElementoCola<String>("Padre clonación"));
-                            i2.getCola().push(new ElementoCola<String>("Hijo" + hijo));
+                            i2.getCola().push(new ElementoCola<String>("Hijo" + i2));
 
                         }
                     }
 
                 } else {
                     if (r < i3.getProbClonacion()) {
-                        Individuo hijo = i3;
-                        tab[j][i].addIndiv(hijo);
+                        tab[j][i].addIndiv(i3);
                         if (tab[j][i].lIndiv.getNumElementos() > 3) {
                             eliminarInd(t);
-                            if (tab[j][i].lIndiv.getElemento(2) == hijo) {
+                            if (tab[j][i].lIndiv.getElemento(2).getData() == i3) {
                                 i3.getCola().push(new ElementoCola<String>("Padre clonación"));
-                                i3.getCola().push(new ElementoCola<String>("Hijo" + hijo));
+                                i3.getCola().push(new ElementoCola<String>("Hijo" + i3));
 
                             }
                         } else {
                             i3.getCola().push(new ElementoCola<String>("Padre clonación"));
-                            i3.getCola().push(new ElementoCola<String>("Hijo" + hijo));
+                            i3.getCola().push(new ElementoCola<String>("Hijo" + i3));
 
                         }
                     }
@@ -174,25 +176,23 @@ public class BucleControl {
     public void repro(Tablero t){
         for (int i=0;i<columna;i++){
             for (int j=0; j<fila;j++){
-                    Individuo i1=tab[j][i].getlIndiv().getElemento(0);
-                    Individuo i2=tab[j][i].getlIndiv().getElemento(1);
-                    Individuo i3=tab[j][i].getlIndiv().getElemento(2);
+                    Individuo i1=tab[j][i].getlIndiv().getElemento(0).getData();
+                    Individuo i2=tab[j][i].getlIndiv().getElemento(1).getData();
+                    Individuo i3=tab[j][i].getlIndiv().getElemento(2).getData();
                     double r = Math.random() * 100;
                     if(tab[j][i].lIndiv.getNumElementos()==2){
                         if(r < i1.getProbReproduccion() && r<i2.getProbReproduccion()){
-                            i1.getCola().push(new ElementoCola("reproducción"));
+                            i1.getCola().push(new ElementoCola<>("reproducción"));
                             i1.getCola().push(new ElementoCola<>("Pareja"+i2));
-                            i2.getCola().push(new ElementoCola("reproducción"));
+                            i2.getCola().push(new ElementoCola<>("reproducción"));
                             i2.getCola().push(new ElementoCola<>("Pareja"+i1));
                             if(i1.getProbReproduccion()> i2.getProbReproduccion()) {
-                                Individuo hijo = i1;
-                                i1.getCola().push(new ElementoCola("hijo"+hijo));
-                                i2.getCola().push(new ElementoCola("hijo"+hijo));
+                                i1.getCola().push(new ElementoCola<>("hijo"+ i1));
+                                i2.getCola().push(new ElementoCola<>("hijo"+ i1));
                             }
                             else{
-                                Individuo hijo=i2;
-                                i1.getCola().push(new ElementoCola("hijo"+hijo));
-                                i2.getCola().push(new ElementoCola("hijo"+hijo));
+                                i1.getCola().push(new ElementoCola<>("hijo"+ i2));
+                                i2.getCola().push(new ElementoCola<>("hijo"+ i2));
                             }
 
                         }
@@ -200,51 +200,45 @@ public class BucleControl {
                     else if (tab[j][i].lIndiv.getNumElementos()==3){
                         if (r < i1.getProbReproduccion() && r<i2.getProbReproduccion() && r<i3.getProbReproduccion()){
                             if(i1.getProbReproduccion()< i2.getProbReproduccion()&& i1.getProbReproduccion()< i3.getProbReproduccion()){
-                                i2.getCola().push(new ElementoCola("reproducción"));
+                                i2.getCola().push(new ElementoCola<>("reproducción"));
                                 i2.getCola().push(new ElementoCola<>("Pareja"+i3));
-                                i3.getCola().push(new ElementoCola("reproducción"));
+                                i3.getCola().push(new ElementoCola<>("reproducción"));
                                 i3.getCola().push(new ElementoCola<>("Pareja"+i2));
                                 if(i2.getProbReproduccion()> i3.getProbReproduccion()) {
-                                    Individuo hijo = i2;
-                                    i2.getCola().push(new ElementoCola("hijo"+hijo));
-                                    i3.getCola().push(new ElementoCola("hijo"+hijo));
+                                    i2.getCola().push(new ElementoCola<>("hijo"+ i2));
+                                    i3.getCola().push(new ElementoCola<>("hijo"+ i2));
                                 }
                                 else{
-                                    Individuo hijo=i3;
-                                    i2.getCola().push(new ElementoCola("hijo"+hijo));
-                                    i3.getCola().push(new ElementoCola("hijo"+hijo));
+                                    i2.getCola().push(new ElementoCola<>("hijo"+ i3));
+                                    i3.getCola().push(new ElementoCola<>("hijo"+ i3));
                                 }
                             }
                             else if(i2.getProbReproduccion()< i1.getProbReproduccion()&& i2.getProbReproduccion()< i3.getProbReproduccion()){
-                                i1.getCola().push(new ElementoCola("reproducción"));
+                                i1.getCola().push(new ElementoCola<>("reproducción"));
                                 i1.getCola().push(new ElementoCola<>("Pareja"+i3));
-                                i3.getCola().push(new ElementoCola("reproducción"));
+                                i3.getCola().push(new ElementoCola<>("reproducción"));
                                 i3.getCola().push(new ElementoCola<>("Pareja"+i1));
                                 if(i3.getProbReproduccion()> i1.getProbReproduccion()) {
-                                    Individuo hijo = i3;
-                                    i3.getCola().push(new ElementoCola("hijo"+hijo));
-                                    i1.getCola().push(new ElementoCola("hijo"+hijo));
+                                    i3.getCola().push(new ElementoCola<>("hijo"+ i3));
+                                    i1.getCola().push(new ElementoCola<>("hijo"+ i3));
                                 }
                                 else{
-                                    Individuo hijo=i1;
-                                    i1.getCola().push(new ElementoCola("hijo"+hijo));
-                                    i3.getCola().push(new ElementoCola("hijo"+hijo));
+                                    i1.getCola().push(new ElementoCola<>("hijo"+ i1));
+                                    i3.getCola().push(new ElementoCola<>("hijo"+ i1));
                                 }
                             }
                             else if(i3.getProbReproduccion()< i1.getProbReproduccion()&& i3.getProbReproduccion()< i2.getProbReproduccion()){
-                                i1.getCola().push(new ElementoCola("reproducción"));
+                                i1.getCola().push(new ElementoCola<>("reproducción"));
                                 i1.getCola().push(new ElementoCola<>("Pareja"+i2));
-                                i2.getCola().push(new ElementoCola("reproducción"));
+                                i2.getCola().push(new ElementoCola<>("reproducción"));
                                 i2.getCola().push(new ElementoCola<>("Pareja"+i1));
                                 if(i2.getProbReproduccion()> i1.getProbReproduccion()) {
-                                    Individuo hijo = i2;
-                                    i2.getCola().push(new ElementoCola("hijo"+hijo));
-                                    i1.getCola().push(new ElementoCola("hijo"+hijo));
+                                    i2.getCola().push(new ElementoCola<>("hijo"+ i2));
+                                    i1.getCola().push(new ElementoCola<>("hijo"+ i2));
                                 }
                                 else{
-                                    Individuo hijo=i1;
-                                    i1.getCola().push(new ElementoCola("hijo"+hijo));
-                                    i2.getCola().push(new ElementoCola("hijo"+hijo));
+                                    i1.getCola().push(new ElementoCola<>("hijo"+ i1));
+                                    i2.getCola().push(new ElementoCola<>("hijo"+ i1));
                                 }
                             }
                         }
