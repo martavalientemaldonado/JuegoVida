@@ -8,8 +8,10 @@ public class CaminoC<TipodeDato> {
         this.peso = peso;
     }
 
-    public CaminoC() {
+    public double getPeso() {
+        return peso;
     }
+
     public ListaEnlazadaCasillas<NodoGrafoCasillas<TipodeDato>> getCamino(){return camino;}
     public void EliminarPrimero(){
         camino.EliminarPrimero();
