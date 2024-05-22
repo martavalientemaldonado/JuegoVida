@@ -4,27 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ae59f5ab-3a2c-4635-b2d5-df0317d0df49" name="Changes" comment="Grafo">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/juegovida/App/Tab/GrafoCasillas/ElementoLECasillasTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/juegovida/App/Tab/GrafoCasillas/GrafoTableroTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/juegovida/App/Tab/GrafoCasillas/ListaEnlazadaCasillasTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Bienvenida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Bienvenida.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/DimensionesyTurnosVida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/DimensionesyTurnosVida.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/PantallaInicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/PantallaInicio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/ParamCasilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/ParamCasilla.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/ParamRecursos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/ParamRecursos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/ParametrosIndividuo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/ParametrosIndividuo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/GrafoCasillas/AristasGrafoCasillas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/GrafoCasillas/AristasGrafoCasillas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/GrafoCasillas/Cola.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/GrafoCasillas/ElementoLDE.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/GrafoCasillas/ElementoLECasillas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/GrafoCasillas/ElementoLECasillas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/GrafoCasillas/GrafoTablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/GrafoCasillas/GrafoTablero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/GrafoCasillas/ListaEnlazadaCasillas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/GrafoCasillas/ListaEnlazadaCasillas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/TabParamTablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/TabParamTablero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/TurnosPropRecursos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/TurnosPropRecursos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/juegovida/App/Tab/Grafo/ListaEnlazadaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/juegovida/App/Tab/Grafo/ListaEnlazadaTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="ae59f5ab-3a2c-4635-b2d5-df0317d0df49" name="Changes" comment="TabParamTablero" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -83,69 +63,69 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Bienvenida.executor": "Run",
-    "Application.ParamCasilla.executor": "Run",
-    "Application.TabApp.executor": "Run",
-    "Application.TabParamTablero.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "true",
-    "JUnit.AristasGrafoTest.executor": "Coverage",
-    "JUnit.ColaEventosIndividuoTest.desencolar.executor": "Coverage",
-    "JUnit.ColaEventosIndividuoTest.executor": "Coverage",
-    "JUnit.ColaEventosIndividuoTest.getElemento.executor": "Coverage",
-    "JUnit.ElementoColaTest.executor": "Coverage",
-    "JUnit.ElementoLECasillasTest.executor": "Coverage",
-    "JUnit.ElementoLECasillasTest.insertarmeEn.executor": "Coverage",
-    "JUnit.ElementoLECasillasTest.setSiguiente.executor": "Debug",
-    "JUnit.GrafoCasillasTest.executor": "Debug",
-    "JUnit.GrafoCasillasTest.getDijkstra.executor": "Debug",
-    "JUnit.GrafoTableroTest.dijkstra_init.executor": "Debug",
-    "JUnit.GrafoTableroTest.executor": "Coverage",
-    "JUnit.GrafoTableroTest.getCaminoVertices.executor": "Debug",
-    "JUnit.GrafoTableroTest.grafoVacio.executor": "Coverage",
-    "JUnit.GrafoTest.existeVertice.executor": "Coverage",
-    "JUnit.GrafoTest.grafoVacio.executor": "Coverage",
-    "JUnit.ListaAdyacenciaTest.executor": "Coverage",
-    "JUnit.ListaAdyacenciaTest.getArista.executor": "Run",
-    "JUnit.ListaAdyacenciaTest.nuevaAdyacencia.executor": "Coverage",
-    "JUnit.ListaEnlazadaCasillasTest.add.executor": "Coverage",
-    "JUnit.ListaEnlazadaCasillasTest.del.executor": "Coverage",
-    "JUnit.ListaEnlazadaCasillasTest.executor": "Coverage",
-    "JUnit.ListaEnlazadaCasillasTest.getElemento.executor": "Coverage",
-    "JUnit.ListaEnlazadaCasillasTest.getNumeroElementos.executor": "Coverage",
-    "JUnit.ListaEnlazadaCasillasTest.getPosicion.executor": "Coverage",
-    "JUnit.ListaEnlazadaCasillasTest.getPrimero.executor": "Coverage",
-    "JUnit.ListaEnlazadaCasillasTest.getUltimo.executor": "Coverage",
-    "JUnit.ListaEnlazadaCasillasTest.insert.executor": "Coverage",
-    "JUnit.ListaEnlazadaCasillasTest.isVacia.executor": "Coverage",
-    "JUnit.ListaEnlazadaCasillasTest.reverse.executor": "Debug",
-    "JUnit.ListaEnlazadaCasillasTest.testAdd.executor": "Coverage",
-    "JUnit.ListaEnlazadaCasillasTest.vaciar.executor": "Coverage",
-    "JUnit.NodoGrafoTest.executor": "Coverage",
-    "JUnit.com.example.juegovida.App.Tab.ColaInd in JuegoVida.executor": "Coverage",
-    "Repository.Attach.Annotations": "true",
-    "Repository.Attach.JavaDocs": "true",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/PC/IdeaProjects/JuegoVida/src/main/resources/Imagenes",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.3862069",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Bienvenida.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ParamCasilla.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TabApp.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TabParamTablero.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
+    &quot;JUnit.AristasGrafoTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ColaEventosIndividuoTest.desencolar.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ColaEventosIndividuoTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ColaEventosIndividuoTest.getElemento.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ElementoColaTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ElementoLECasillasTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ElementoLECasillasTest.insertarmeEn.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ElementoLECasillasTest.setSiguiente.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.GrafoCasillasTest.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.GrafoCasillasTest.getDijkstra.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.GrafoTableroTest.dijkstra_init.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.GrafoTableroTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.GrafoTableroTest.getCaminoVertices.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.GrafoTableroTest.grafoVacio.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.GrafoTest.existeVertice.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.GrafoTest.grafoVacio.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ListaAdyacenciaTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ListaAdyacenciaTest.getArista.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ListaAdyacenciaTest.nuevaAdyacencia.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ListaEnlazadaCasillasTest.add.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ListaEnlazadaCasillasTest.del.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ListaEnlazadaCasillasTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ListaEnlazadaCasillasTest.getElemento.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ListaEnlazadaCasillasTest.getNumeroElementos.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ListaEnlazadaCasillasTest.getPosicion.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ListaEnlazadaCasillasTest.getPrimero.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ListaEnlazadaCasillasTest.getUltimo.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ListaEnlazadaCasillasTest.insert.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ListaEnlazadaCasillasTest.isVacia.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ListaEnlazadaCasillasTest.reverse.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.ListaEnlazadaCasillasTest.testAdd.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ListaEnlazadaCasillasTest.vaciar.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.NodoGrafoTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.com.example.juegovida.App.Tab.ColaInd in JuegoVida.executor&quot;: &quot;Coverage&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/PC/IdeaProjects/JuegoVida/src/main/resources/Imagenes&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.3862069&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\PC\IdeaProjects\JuegoVida\src\main\resources\Imagenes" />
@@ -629,7 +609,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716230643496</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="TabParamTablero">
+      <option name="closed" value="true" />
+      <created>1716380065225</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1716380065225</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -692,9 +680,9 @@
     <MESSAGE value="uml" />
     <MESSAGE value="ParamCasilla" />
     <MESSAGE value="Tab y ventanaCasilla" />
-    <MESSAGE value="TabParamTablero" />
     <MESSAGE value="Grafo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Grafo" />
+    <MESSAGE value="TabParamTablero" />
+    <option name="LAST_COMMIT_MESSAGE" value="TabParamTablero" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -713,35 +701,35 @@
     </pin-to-top-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/JuegoVida$GrafoTableroTest_dijkstra_init.ic" NAME="GrafoTableroTest.dijkstra_init Coverage Results" MODIFIED="1716308994148" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/JuegoVida$ListaEnlazadaCasillasTest_isVacia.ic" NAME="ListaEnlazadaCasillasTest.isVacia Coverage Results" MODIFIED="1716303410859" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.juegovida.App.Tab.GrafoCasillas.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/JuegoVida$AristasGrafoTest_getSiguiente.ic" NAME="AristasGrafoTest.getSiguiente Coverage Results" MODIFIED="1715712120898" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.juegovida.App.Tab.GrafoRecursos.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/JuegoVida$ListaEnlazadaCasillasTest.ic" NAME="ListaEnlazadaCasillasTest Coverage Results" MODIFIED="1716305861272" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.juegovida.App.Tab.GrafoCasillas.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/JuegoVida$ColaEventosIndividuoTest.ic" NAME="ColaEventosIndividuoTest Coverage Results" MODIFIED="1715705811737" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/JuegoVida$com_example_juegovida_App_Tab_ColaInd_in_JuegoVida.ic" NAME="com.example.juegovida.App.Tab.ColaInd in JuegoVida Coverage Results" MODIFIED="1715705922737" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.juegovida.App.Tab.ColaInd.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/JuegoVida$GrafoCasillasTest.ic" NAME="GrafoCasillasTest Coverage Results" MODIFIED="1715961312462" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.example.juegovida.App.Tab.Grafo.*</FILTER>
+    <SUITE FILE_PATH="coverage/JuegoVida$ListaEnlazadaCasillasTest_add.ic" NAME="ListaEnlazadaCasillasTest.add Coverage Results" MODIFIED="1716303596346" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.juegovida.App.Tab.GrafoCasillas.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/JuegoVida$GrafoTableroTest_getCaminoVertices.ic" NAME="GrafoTableroTest.getCaminoVertices Coverage Results" MODIFIED="1716309797490" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.juegovida.App.Tab.GrafoCasillas.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/JuegoVida$ElementoColaTest.ic" NAME="ElementoColaTest Coverage Results" MODIFIED="1715705800421" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.juegovida.App.Tab.ColaInd.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/JuegoVida$GrafoTest_grafoVacio.ic" NAME="GrafoTest.grafoVacio Coverage Results" MODIFIED="1715709515492" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/JuegoVida$AristasGrafoTest_getInicio.ic" NAME="AristasGrafoTest.getInicio Coverage Results" MODIFIED="1715712129618" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.juegovida.App.Tab.GrafoRecursos.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/JuegoVida$GrafoTableroTest.ic" NAME="GrafoTableroTest Coverage Results" MODIFIED="1716307911483" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/JuegoVida$ListaEnlazadaCasillasTest_insert.ic" NAME="ListaEnlazadaCasillasTest.insert Coverage Results" MODIFIED="1716303695770" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.juegovida.App.Tab.GrafoCasillas.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/JuegoVida$AristasGrafoTest.ic" NAME="AristasGrafoTest Coverage Results" MODIFIED="1715707676541" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/JuegoVida$NodoGrafoTest.ic" NAME="NodoGrafoTest Coverage Results" MODIFIED="1715709379230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.juegovida.App.Tab.GrafoRecursos.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/JuegoVida$ListaAdyacenciaTest.ic" NAME="ListaAdyacenciaTest Coverage Results" MODIFIED="1715709255196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.example.juegovida.App.Tab.GrafoRecursos.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/JuegoVida$ListaEnlazadaCasillasTest_getNumeroElementos.ic" NAME="ListaEnlazadaCasillasTest.getNumeroElementos Coverage Results" MODIFIED="1716305853463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.example.juegovida.App.Tab.GrafoCasillas.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/JuegoVida$ListaEnlazadaCasillasTest_getElemento.ic" NAME="ListaEnlazadaCasillasTest.getElemento Coverage Results" MODIFIED="1716303783905" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.juegovida.App.Tab.GrafoCasillas.*</FILTER>
@@ -749,83 +737,83 @@
     <SUITE FILE_PATH="coverage/JuegoVida$AristasGrafoTest_getPeso.ic" NAME="AristasGrafoTest.getPeso Coverage Results" MODIFIED="1715712184048" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.juegovida.App.Tab.GrafoRecursos.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/JuegoVida$TabParamTablero.ic" NAME="TabParamTablero Coverage Results" MODIFIED="1715879456096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.example.juegovida.App.*</FILTER>
+    <SUITE FILE_PATH="coverage/JuegoVida$ListaAdyacenciaTest.ic" NAME="ListaAdyacenciaTest Coverage Results" MODIFIED="1715709255196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.juegovida.App.Tab.GrafoRecursos.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/JuegoVida$ColaEventosIndividuoTest_getElemento.ic" NAME="ColaEventosIndividuoTest.getElemento Coverage Results" MODIFIED="1715705765298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.example.juegovida.App.Tab.ColaInd.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/JuegoVida$ListaEnlazadaCasillasTest_vaciar.ic" NAME="ListaEnlazadaCasillasTest.vaciar Coverage Results" MODIFIED="1716303489473" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/JuegoVida$GrafoTableroTest.ic" NAME="GrafoTableroTest Coverage Results" MODIFIED="1716307911483" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.juegovida.App.Tab.GrafoCasillas.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/JuegoVida$ListaEnlazadaCasillasTest_getPosicion.ic" NAME="ListaEnlazadaCasillasTest.getPosicion Coverage Results" MODIFIED="1716305759840" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.example.juegovida.App.Tab.GrafoCasillas.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/JuegoVida$ListaEnlazadaCasillasTest_getUltimo.ic" NAME="ListaEnlazadaCasillasTest.getUltimo Coverage Results" MODIFIED="1716303913085" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.example.juegovida.App.Tab.GrafoCasillas.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/JuegoVida$GrafoCasillasTest_getDijkstra.ic" NAME="GrafoCasillasTest.getDijkstra Coverage Results" MODIFIED="1715961680729" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.example.juegovida.App.Tab.Grafo.*</FILTER>
+    <SUITE FILE_PATH="coverage/JuegoVida$GrafoTest_grafoVacio.ic" NAME="GrafoTest.grafoVacio Coverage Results" MODIFIED="1715709515492" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.juegovida.App.Tab.GrafoRecursos.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/JuegoVida$ListaEnlazadaCasillasTest_getPrimero.ic" NAME="ListaEnlazadaCasillasTest.getPrimero Coverage Results" MODIFIED="1716303920485" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.juegovida.App.Tab.GrafoCasillas.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/JuegoVida$AristasGrafoTest_getInicio.ic" NAME="AristasGrafoTest.getInicio Coverage Results" MODIFIED="1715712129618" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.example.juegovida.App.Tab.GrafoRecursos.*</FILTER>
+    <SUITE FILE_PATH="coverage/JuegoVida$GrafoCasillasTest.ic" NAME="GrafoCasillasTest Coverage Results" MODIFIED="1715961312462" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.juegovida.App.Tab.Grafo.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/JuegoVida$NodoGrafoTest.ic" NAME="NodoGrafoTest Coverage Results" MODIFIED="1715709379230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.example.juegovida.App.Tab.GrafoRecursos.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/JuegoVida$ListaEnlazadaCasillasTest_del.ic" NAME="ListaEnlazadaCasillasTest.del Coverage Results" MODIFIED="1716303656704" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.example.juegovida.App.Tab.GrafoCasillas.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/JuegoVida$ElementoLECasillasTest.ic" NAME="ElementoLECasillasTest Coverage Results" MODIFIED="1716306362993" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.example.juegovida.App.Tab.GrafoCasillas.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/JuegoVida$ListaEnlazadaCasillasTest_add.ic" NAME="ListaEnlazadaCasillasTest.add Coverage Results" MODIFIED="1716303596346" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.example.juegovida.App.Tab.GrafoCasillas.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/JuegoVida$ElementoLECasillasTest_insertarmeEn.ic" NAME="ElementoLECasillasTest.insertarmeEn Coverage Results" MODIFIED="1716306851185" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.example.juegovida.App.Tab.GrafoCasillas.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/JuegoVida$GrafoTableroTest_grafoVacio.ic" NAME="GrafoTableroTest.grafoVacio Coverage Results" MODIFIED="1716307902911" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.example.juegovida.App.Tab.GrafoCasillas.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/JuegoVida$com_example_juegovida_App_Tab_ColaInd_in_JuegoVida.ic" NAME="com.example.juegovida.App.Tab.ColaInd in JuegoVida Coverage Results" MODIFIED="1715705922737" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/JuegoVida$ColaEventosIndividuoTest_desencolar.ic" NAME="ColaEventosIndividuoTest.desencolar Coverage Results" MODIFIED="1715705906195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.juegovida.App.Tab.ColaInd.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/JuegoVida$ListaAdyacenciaTest_nuevaAdyacencia.ic" NAME="ListaAdyacenciaTest.nuevaAdyacencia Coverage Results" MODIFIED="1715709235547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.juegovida.App.Tab.GrafoRecursos.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/JuegoVida$ParamCasilla.ic" NAME="ParamCasilla Coverage Results" MODIFIED="1715881194570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.juegovida.App.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/JuegoVida$GrafoTest_existeVertice.ic" NAME="GrafoTest.existeVertice Coverage Results" MODIFIED="1715712074092" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.juegovida.App.Tab.GrafoRecursos.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/JuegoVida$ListaEnlazadaCasillasTest_testAdd.ic" NAME="ListaEnlazadaCasillasTest.testAdd Coverage Results" MODIFIED="1716303649042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/JuegoVida$ElementoLECasillasTest_insertarmeEn.ic" NAME="ElementoLECasillasTest.insertarmeEn Coverage Results" MODIFIED="1716306851185" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.juegovida.App.Tab.GrafoCasillas.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/JuegoVida$GrafoTableroTest_dijkstra_init.ic" NAME="GrafoTableroTest.dijkstra_init Coverage Results" MODIFIED="1716308994148" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.juegovida.App.Tab.GrafoCasillas.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/JuegoVida$AristasGrafoTest.ic" NAME="AristasGrafoTest Coverage Results" MODIFIED="1715707676541" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.juegovida.App.Tab.GrafoRecursos.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/JuegoVida$GrafoCasillasTest_getDijkstra.ic" NAME="GrafoCasillasTest.getDijkstra Coverage Results" MODIFIED="1715961680729" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.juegovida.App.Tab.Grafo.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/JuegoVida$ListaEnlazadaCasillasTest_getPosicion.ic" NAME="ListaEnlazadaCasillasTest.getPosicion Coverage Results" MODIFIED="1716305759840" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.juegovida.App.Tab.GrafoCasillas.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/JuegoVida$ListaEnlazadaCasillasTest_del.ic" NAME="ListaEnlazadaCasillasTest.del Coverage Results" MODIFIED="1716303656704" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.juegovida.App.Tab.GrafoCasillas.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/JuegoVida$ListaAdyacenciaTest_getArista.ic" NAME="ListaAdyacenciaTest.getArista Coverage Results" MODIFIED="1715709099550" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.juegovida.App.Tab.GrafoRecursos.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/JuegoVida$ColaEventosIndividuoTest_desencolar.ic" NAME="ColaEventosIndividuoTest.desencolar Coverage Results" MODIFIED="1715705906195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/JuegoVida$ListaEnlazadaCasillasTest_getNumeroElementos.ic" NAME="ListaEnlazadaCasillasTest.getNumeroElementos Coverage Results" MODIFIED="1716305853463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.juegovida.App.Tab.GrafoCasillas.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/JuegoVida$ListaEnlazadaCasillasTest_testAdd.ic" NAME="ListaEnlazadaCasillasTest.testAdd Coverage Results" MODIFIED="1716303649042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.juegovida.App.Tab.GrafoCasillas.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/JuegoVida$ColaEventosIndividuoTest.ic" NAME="ColaEventosIndividuoTest Coverage Results" MODIFIED="1715705811737" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.juegovida.App.Tab.ColaInd.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/JuegoVida$ListaEnlazadaCasillasTest_isVacia.ic" NAME="ListaEnlazadaCasillasTest.isVacia Coverage Results" MODIFIED="1716303410859" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/JuegoVida$ListaEnlazadaCasillasTest_vaciar.ic" NAME="ListaEnlazadaCasillasTest.vaciar Coverage Results" MODIFIED="1716303489473" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.juegovida.App.Tab.GrafoCasillas.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/JuegoVida$ElementoLECasillasTest.ic" NAME="ElementoLECasillasTest Coverage Results" MODIFIED="1716306362993" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.juegovida.App.Tab.GrafoCasillas.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/JuegoVida$ColaEventosIndividuoTest_getElemento.ic" NAME="ColaEventosIndividuoTest.getElemento Coverage Results" MODIFIED="1715705765298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.juegovida.App.Tab.ColaInd.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/JuegoVida$ListaEnlazadaCasillasTest_getUltimo.ic" NAME="ListaEnlazadaCasillasTest.getUltimo Coverage Results" MODIFIED="1716303913085" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.juegovida.App.Tab.GrafoCasillas.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/JuegoVida$ListaEnlazadaCasillasTest_reverse.ic" NAME="ListaEnlazadaCasillasTest.reverse Coverage Results" MODIFIED="1716304402550" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.juegovida.App.Tab.GrafoCasillas.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/JuegoVida$GrafoTableroTest_getCaminoVertices.ic" NAME="GrafoTableroTest.getCaminoVertices Coverage Results" MODIFIED="1716309797490" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.example.juegovida.App.Tab.GrafoCasillas.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/JuegoVida$ParamCasilla.ic" NAME="ParamCasilla Coverage Results" MODIFIED="1715881194570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/JuegoVida$TabParamTablero.ic" NAME="TabParamTablero Coverage Results" MODIFIED="1715879456096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.juegovida.App.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/JuegoVida$AristasGrafoTest_getSiguiente.ic" NAME="AristasGrafoTest.getSiguiente Coverage Results" MODIFIED="1715712120898" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.example.juegovida.App.Tab.GrafoRecursos.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/JuegoVida$ListaEnlazadaCasillasTest_insert.ic" NAME="ListaEnlazadaCasillasTest.insert Coverage Results" MODIFIED="1716303695770" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/JuegoVida$GrafoTableroTest_grafoVacio.ic" NAME="GrafoTableroTest.grafoVacio Coverage Results" MODIFIED="1716307902911" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.juegovida.App.Tab.GrafoCasillas.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/JuegoVida$ListaAdyacenciaTest_nuevaAdyacencia.ic" NAME="ListaAdyacenciaTest.nuevaAdyacencia Coverage Results" MODIFIED="1715709235547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.example.juegovida.App.Tab.GrafoRecursos.*</FILTER>
     </SUITE>
   </component>
 </project>
