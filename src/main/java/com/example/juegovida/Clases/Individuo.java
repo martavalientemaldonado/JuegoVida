@@ -3,9 +3,9 @@ package com.example.juegovida.Clases;
 import com.example.juegovida.App.Tab.ColaInd.ColaEventosIndividuo;
 
 public class Individuo {
-    private Integer NumIdentificacion;
-    private Integer Generacion;
-    private double TurnosVidaInd;
+    public Integer NumIdentificacion;
+    public Integer Generacion;
+    public double TurnosVidaInd;
     boolean EnMovimiento;
     ColaEventosIndividuo<String> cola;
     double ProbClonacion;

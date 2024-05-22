@@ -5,6 +5,7 @@ import com.example.juegovida.App.Tab.ColaInd.ColaEventosIndividuo;
 import com.example.juegovida.App.Tab.ColaInd.ElementoCola;
 import com.example.juegovida.App.Tab.Tablero;
 import com.example.juegovida.Clases.Individuo;
+import com.example.juegovida.Clases.Recursos.Recurso;
 import com.example.juegovida.Clases.Recursos.*;
 import com.example.juegovida.Errores.Mas3Indiv;
 import com.example.juegovida.Errores.Mas3Recs;
@@ -23,18 +24,18 @@ public class BucleControl {
     }
 
     public void nuevoRecurso(Tablero t)throws Mas3Recs {
-        for (int i = 0; i < t.getFila(); i++) {
+        for (int i = 0; i < t.getColumna(); i++) {
             for (int j = 0; j < t.getFila(); j++) {
                 if (tab[j][i].getlRec().getNumElementos() < 3) {
                     Recurso recurso = new Recurso();
-                    if (Math.random()*100> recurso.getProbabilidadNuevoRE()) {
+                    double r=Math.random()*100;
+                    if (r> recurso.getProbabilidadNuevoRE()) {
                         Agua agua = new Agua();
                         Comida comida = new Comida();
                         Biblioteca biblioteca = new Biblioteca();
                         Tesoro tesoro = new Tesoro();
                         Montaña montaña = new Montaña();
                         Pozo pozo = new Pozo();
-                        double r=Math.random()*100;
                         if (r < agua.getProbAparicion()){
                                 tab[j][i].addRec(agua);
                         } else if (r < comida.getProbAparicion() + agua.getProbAparicion()) {
@@ -57,7 +58,7 @@ public class BucleControl {
         }
     }
     public void eliminarRec(Tablero t){
-        for (int i=0; i<t.getFila();i++){
+        for (int i=0; i<t.getColumna();i++){
             for (int j=0; j< t.getFila(); j++){
                 for (int k=0; k<=tab[j][i].getlRec().getNumElementos()-1;){
                     if (tab[j][i].getlRec().getElemento(k).getData().getTurnosVidaRecursos()==0){
@@ -74,7 +75,7 @@ public class BucleControl {
         }
     }
     public void eliminarIndTiempo(Tablero t){
-        for (int i=0; i<t.getFila();i++){
+        for (int i=0; i<t.getColumna();i++){
             for (int j=0; j< t.getFila(); j++){
                 for (int k=0; k<=tab[j][i].getlIndiv().getNumElementos()-1;){
                     if (tab[j][i].getlIndiv().getElemento(k).getData().getTurnosVidaInd()==0){
@@ -91,7 +92,7 @@ public class BucleControl {
         }
     }
     public void eliminarInd(Tablero t){
-        for (int i=0; i<t.getFila();i++){
+        for (int i=0; i<t.getColumna();i++){
             for (int j=0; j< t.getFila(); j++){
                 for (int k=0; k<=tab[j][i].getlIndiv().getNumElementos()-1;){
                     if (tab[j][i].getlIndiv().getElemento(k).getData().getTurnosVidaInd()==0){
@@ -111,7 +112,7 @@ public class BucleControl {
 
 
     public void clonado(Tablero t)throws Mas3Indiv{
-        for (int i = 0; i < t.getFila(); i++) {
+        for (int i = 0; i < t.getColumna(); i++) {
             for (int j = 0; j < t.getFila(); j++) {
                 Individuo i1 = tab[j][i].getlIndiv().getElemento(0).getData();
                 Individuo i2 = tab[j][i].getlIndiv().getElemento(1).getData();
@@ -174,8 +175,8 @@ public class BucleControl {
 
     }
     public void repro(Tablero t){
-        for (int i=0;i<columna;i++){
-            for (int j=0; j<fila;j++){
+        for (int i=0;i<t.getColumna();i++){
+            for (int j=0; j< t.fila;j++){
                     Individuo i1=tab[j][i].getlIndiv().getElemento(0).getData();
                     Individuo i2=tab[j][i].getlIndiv().getElemento(1).getData();
                     Individuo i3=tab[j][i].getlIndiv().getElemento(2).getData();

@@ -16,7 +16,7 @@ import java.io.FileNotFoundException;
 public class Tablero {
     public double fila;
     public double columna;
-    private ListaEnlazadaTablero<ListaEnlazadaTablero<Casilla>> matiz;
+    public ListaEnlazadaTablero<ListaEnlazadaTablero<Casilla>> matiz;
     protected GrafoTablero<Casilla> grafo;
     public   Casilla tab[][];
 

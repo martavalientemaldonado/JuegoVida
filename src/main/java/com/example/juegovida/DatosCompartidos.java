@@ -15,24 +15,24 @@ public class DatosCompartidos {
     protected Individuo Individuo;
     protected Tablero Matriz;
     protected Recurso Recurso;
-    private DoubleProperty TurnosPropCom = new SimpleDoubleProperty();
-    private DoubleProperty TurnosPropMont = new SimpleDoubleProperty();
-    private DoubleProperty TurnosPropAgua = new SimpleDoubleProperty();
-    private DoubleProperty ProbReproPropTesoro = new SimpleDoubleProperty();
-    private DoubleProperty ProbClonacPropBibli = new SimpleDoubleProperty();
-    private DoubleProperty ProbAparicionAgua = new SimpleDoubleProperty();
-    private DoubleProperty ProbAparicionComida = new SimpleDoubleProperty();
-    private DoubleProperty ProbAparicionMontaña = new SimpleDoubleProperty();
-    private DoubleProperty ProbAparicionTesoro = new SimpleDoubleProperty();
-    private DoubleProperty ProbAparicionBiblioteca = new SimpleDoubleProperty();
-    private DoubleProperty ProbAparicionPozo = new SimpleDoubleProperty();
-    private DoubleProperty ProbNuevoRecurso = new SimpleDoubleProperty();
-    private DoubleProperty ProbReproduccionIndiv = new SimpleDoubleProperty();
-    private DoubleProperty ProbClonacionIndiv = new SimpleDoubleProperty();
-    private DoubleProperty NumColumnas = new SimpleDoubleProperty();
-    private DoubleProperty NumFilas = new SimpleDoubleProperty();
-    private DoubleProperty TrunosVidaIndiv = new SimpleDoubleProperty();
-    private DoubleProperty TurnosVidaRecursos = new SimpleDoubleProperty();
+    public DoubleProperty TurnosPropCom = new SimpleDoubleProperty();
+    public DoubleProperty TurnosPropMont = new SimpleDoubleProperty();
+    public DoubleProperty TurnosPropAgua = new SimpleDoubleProperty();
+    public DoubleProperty ProbReproPropTesoro = new SimpleDoubleProperty();
+    public DoubleProperty ProbClonacPropBibli = new SimpleDoubleProperty();
+    public DoubleProperty ProbAparicionAgua = new SimpleDoubleProperty();
+    public DoubleProperty ProbAparicionComida = new SimpleDoubleProperty();
+    public DoubleProperty ProbAparicionMontaña = new SimpleDoubleProperty();
+    public DoubleProperty ProbAparicionTesoro = new SimpleDoubleProperty();
+    public DoubleProperty ProbAparicionBiblioteca = new SimpleDoubleProperty();
+    public DoubleProperty ProbAparicionPozo = new SimpleDoubleProperty();
+    public DoubleProperty ProbNuevoRecurso = new SimpleDoubleProperty();
+    public DoubleProperty ProbReproduccionIndiv = new SimpleDoubleProperty();
+    public DoubleProperty ProbClonacionIndiv = new SimpleDoubleProperty();
+    public DoubleProperty NumColumnas = new SimpleDoubleProperty();
+    public DoubleProperty NumFilas = new SimpleDoubleProperty();
+    public DoubleProperty TrunosVidaIndiv = new SimpleDoubleProperty();
+    public DoubleProperty TurnosVidaRecursos = new SimpleDoubleProperty();
 
     ///QUE PROPORCIONAN LOS RECURSOS
     public void commitProporcionaRecursos(){

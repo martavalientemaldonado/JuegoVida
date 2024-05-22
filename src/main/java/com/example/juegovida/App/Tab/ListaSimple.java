@@ -28,7 +28,7 @@ public class ListaSimple<T> {
         }
     }
 
-    private int add(ElementoLS<T> el) {
+    public int add(ElementoLS<T> el) {
         if (getNumElementos() < Max) {
             list[getNumElementos()] = el;
         } else {
@@ -93,7 +93,7 @@ public class ListaSimple<T> {
         return list[getNumElementos()-1];
     }
 
-    private ElementoLS<T> getSiguiente(ElementoLS<T> el) {
+    public ElementoLS<T> getSiguiente(ElementoLS<T> el) {
         int posicion = getPosicion(el);
         if (posicion < Max) {
             return list[posicion + 1];
