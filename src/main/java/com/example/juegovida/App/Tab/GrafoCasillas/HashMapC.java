@@ -6,6 +6,10 @@ import com.example.juegovida.App.Tab.Grafo.ListaEnlazada;
 public class HashMapC<T,E> {
     ElementoHashMapC<T,E> primero;
 
+    public ElementoHashMapC<T, E> getPrimero() {
+        return primero;
+    }
+
     public HashMapC() {
         this.primero = null;
     }

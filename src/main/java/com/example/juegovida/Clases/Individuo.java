@@ -1,6 +1,10 @@
 package com.example.juegovida.Clases;
 
+import com.example.juegovida.App.Tab.Casilla;
 import com.example.juegovida.App.Tab.ColaInd.ColaEventosIndividuo;
+import com.example.juegovida.App.Tab.GrafoCasillas.ListaEnlazadaCasillas;
+import com.example.juegovida.App.Tab.GrafoCasillas.NodoGrafoCasillas;
+import com.example.juegovida.App.Tab.ListaEnlazadaTablero;
 
 public class Individuo {
     public Integer NumIdentificacion;
@@ -13,6 +17,7 @@ public class Individuo {
     double ProbMuerte = 1 - ProbReproduccion;
     //0 Basico, 1 Normal, 2 Avanzado
     protected int Tipo;
+    ListaEnlazadaCasillas<NodoGrafoCasillas<Casilla>> caminoMovimiento;
 
     public Individuo() {
     }
@@ -26,6 +31,22 @@ public class Individuo {
     public Individuo(Integer NumIdentificacion, Integer Generacion) {
         this.NumIdentificacion = NumIdentificacion;
         this.Generacion = Generacion;
+    }
+
+    public boolean isEnMovimiento() {
+        return EnMovimiento;
+    }
+
+    public void setEnMovimiento(boolean enMovimiento) {
+        EnMovimiento = enMovimiento;
+    }
+
+    public ListaEnlazadaCasillas<NodoGrafoCasillas<Casilla>> getCaminoMovimiento() {
+        return caminoMovimiento;
+    }
+
+    public void setCaminoMovimiento(ListaEnlazadaCasillas<NodoGrafoCasillas<Casilla>> caminoMovimiento) {
+        this.caminoMovimiento = caminoMovimiento;
     }
 
     public ColaEventosIndividuo<String> getCola() {
@@ -86,18 +107,6 @@ public class Individuo {
 
     public void setTipo(int tipo) {
         Tipo = tipo;
-    }
-
-    public void Reproduccion() {
-
-    }
-
-    public void Clonacion() {
-
-    }
-
-    public void Muerte() {
-
     }
 
     public void rutaAleatoriaTBasico() {
