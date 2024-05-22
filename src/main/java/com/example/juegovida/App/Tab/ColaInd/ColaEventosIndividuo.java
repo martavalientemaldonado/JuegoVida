@@ -1,10 +1,10 @@
 package com.example.juegovida.App.Tab.ColaInd;
 
 public class ColaEventosIndividuo<T> {
-    private ElementoCola<T> cabeza;
-    private ElementoCola<T> cola;
-    private int longitud;
-    private ElementoCola<T> siguiente;
+    public ElementoCola<T> cabeza;
+    public ElementoCola<T> cola;
+    public int longitud;
+    public ElementoCola<T> siguiente;
     public ColaEventosIndividuo(){
         cabeza=cola=null;
         longitud=0;
@@ -12,7 +12,7 @@ public class ColaEventosIndividuo<T> {
     public boolean esVacia(){
         return (cabeza==null);
     }
-    public ElementoCola<T> encolar(ElementoCola<T> ob){
+    public ElementoCola<T> push(ElementoCola<T> ob){
         if (longitud==0){
             cola=cabeza=ob; //Para que en el setSiguiente no de null
             longitud = longitud+1;
@@ -24,7 +24,7 @@ public class ColaEventosIndividuo<T> {
         }
         return cola;
     }
-    public ElementoCola<T> desencolar(){
+    public ElementoCola<T> pop(){
         ElementoCola<T> auxiliar;
         auxiliar =cabeza;
         if (esVacia())

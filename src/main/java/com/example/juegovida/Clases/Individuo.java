@@ -1,10 +1,13 @@
 package com.example.juegovida.Clases;
 
+import com.example.juegovida.App.Tab.ColaInd.ColaEventosIndividuo;
+
 public class Individuo {
     private Integer NumIdentificacion;
     private Integer Generacion;
     private double TurnosVidaInd;
     boolean EnMovimiento;
+    ColaEventosIndividuo cola;
     double ProbClonacion;
     double ProbReproduccion;
     double ProbMuerte = 1-ProbReproduccion;
@@ -22,6 +25,9 @@ public class Individuo {
     public Individuo(Integer NumIdentificacion, Integer Generacion){
         this.NumIdentificacion = NumIdentificacion;
         this.Generacion = Generacion;
+    }
+    public ColaEventosIndividuo getCola(){
+        return this.cola;
     }
 
     public Integer getNumIdentificacion() {

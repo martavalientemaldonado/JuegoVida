@@ -4,6 +4,7 @@ import com.example.juegovida.Controllers.TableroControl;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
@@ -16,9 +17,7 @@ import java.io.IOException;
 public class TabApp{
     private static final Logger log = LogManager.getLogger(TabApp.class);
     private Region placeholder;
-
-
-
+    private Node layout;
 
 
     public Parent Tablero(Tablero t) throws Exception {
@@ -26,12 +25,12 @@ public class TabApp{
         GridPane mainGrid = new GridPane();
 
 
+
         for (int i = 0; i < t.getFila(); i++) {
             for (int j = 0; j < t.getColumna(); j++) {
                 // Label placeholder = new Label("Celda "  + "," + j);
                 Casilla c= new Casilla(i,j);
                 Button btnNewObject = new Button("Individuos "+c.lIndiv.getNumElementos()+" Recursos "+c.lRec.getNumElementos());
-
                 VBox placeholder = new VBox(btnNewObject);
                 TableroControl tab = new TableroControl();
                 EventHandler<ActionEvent> click = new EventHandler() {
@@ -49,7 +48,9 @@ public class TabApp{
                 btnNewObject.setOnAction(click);
                 btnNewObject.setMinSize(80, 80); // Tamaño mínimo para visualización
                 placeholder.setMinSize(80, 80); // Tamaño mínimo para visualización
+
                 placeholder.setStyle("-fx-border-color: black; -fx-text-alignment: center;");
+
 
 
 
@@ -58,8 +59,7 @@ public class TabApp{
             }
 
         }
-        //ScrollPane s = new ScrollPane(mainGrid);
-       ScrollPane s = new ScrollPane(mainGrid);
+        ScrollPane s = new ScrollPane(mainGrid);
 
 
         return s;

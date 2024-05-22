@@ -14,11 +14,11 @@ import javafx.scene.layout.Pane;
 import java.io.FileNotFoundException;
 
 public class Tablero {
-    private double fila;
-    private double columna;
+    public double fila;
+    public double columna;
     private ListaEnlazadaTablero<ListaEnlazadaTablero<Casilla>> matiz;
     protected GrafoTablero<Casilla> grafo;
-    private  Casilla tab[][];
+    public   Casilla tab[][];
 
 
     public Tablero(int fila,int columna) {

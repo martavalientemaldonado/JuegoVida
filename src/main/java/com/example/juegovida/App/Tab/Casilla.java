@@ -7,8 +7,8 @@ import com.example.juegovida.Errores.Mas3Indiv;
 public class Casilla{
     public ListaSimple<Individuo> lIndiv;
     public ListaSimple<Recurso> lRec;
-    private double fila;
-    private double columna;
+    public double fila;
+    public double columna;
 
 
     public Casilla(double i, double j) {
@@ -100,5 +100,13 @@ public class Casilla{
 
     public double getColumna() {
         return columna;
+    }
+
+    public void setFila(double fila) {
+        this.fila = fila;
+    }
+
+    public void setColumna(double columna) {
+        this.columna = columna;
     }
 }
