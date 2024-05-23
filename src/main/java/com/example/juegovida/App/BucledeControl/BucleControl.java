@@ -14,7 +14,7 @@ import java.util.HashMap;
 import java.util.Objects;
 
 public class BucleControl {
-    //private ListaSimple<Individuo> lIndiv;
+    ListaEnlazadaCasillas<Individuo> listaIndividuos;
     private Casilla tab[][];
     private GrafoTablero<Casilla> grafo;
     private ListaEnlazadaCasillas<ListaEnlazadaCasillas<Casilla>> lista;
@@ -395,5 +395,3 @@ public class BucleControl {
         }
     }
 }
-
-
