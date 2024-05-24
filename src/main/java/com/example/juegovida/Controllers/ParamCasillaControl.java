@@ -18,7 +18,6 @@ import javafx.stage.Stage;
 public class ParamCasillaControl{
     @FXML
     private ResourceBundle resources;
-    Object log;
     @FXML
     private URL location;
     @FXML
@@ -36,8 +35,9 @@ public class ParamCasillaControl{
 
     @FXML
     private ChoiceBox<String> NuevoRecurso;
-    private BucleControl b;
+    private static BucleControl b;
     private Stage scene;
+
 
     @FXML
     void clickAceptar(ActionEvent event) throws Mas3Indiv {
@@ -101,6 +101,7 @@ public class ParamCasillaControl{
         if(casilla.getlIndiv().getNumElementos()<3){
             Individuo nuevo = new Individuo(b.getNumeroIdIndUlt(), 2);
             casilla.addIndiv(nuevo);
+            b.getListaIndividuos().add(nuevo);
         }
     }
     @FXML
@@ -108,6 +109,7 @@ public class ParamCasillaControl{
         if(casilla.getlIndiv().getNumElementos()<3){
             Individuo nuevo = new Individuo(b.getNumeroIdIndUlt(), 1);
             casilla.addIndiv(nuevo);
+            b.getListaIndividuos().add(nuevo);
         }
     }
     @FXML
@@ -115,6 +117,7 @@ public class ParamCasillaControl{
         if(casilla.getlIndiv().getNumElementos()<3){
             Individuo nuevo = new Individuo(b.getNumeroIdIndUlt(), 0);
             casilla.addIndiv(nuevo);
+            b.getListaIndividuos().add(nuevo);
         }
     }
     @FXML

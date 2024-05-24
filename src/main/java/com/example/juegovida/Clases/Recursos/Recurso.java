@@ -2,7 +2,7 @@ package com.example.juegovida.Clases.Recursos;
 
 public class Recurso {
     public static double ProbabilidadNuevoRE;
-    public static double TurnosVidaRecursos;
+    public double TurnosVidaRecursos;
 
     public Recurso() {
     }
@@ -19,11 +19,11 @@ public class Recurso {
         ProbabilidadNuevoRE = probabilidadNuevoRE;
     }
 
-    public static double getTurnosVidaRecursos() {
+    public double getTurnosVidaRecursos() {
         return TurnosVidaRecursos;
     }
 
-    public static void setTurnosVidaRecursos(double turnosVidaRecursos) {
+    public void setTurnosVidaRecursos(double turnosVidaRecursos) {
         TurnosVidaRecursos = turnosVidaRecursos;
     }
 }

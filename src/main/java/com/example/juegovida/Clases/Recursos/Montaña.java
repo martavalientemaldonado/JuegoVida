@@ -15,7 +15,7 @@ public class Montaña extends Recurso{
         return ProbAparicion;
     }
 
-    public double getTurnosProporciona() {
+    public static double getTurnosProporciona() {
         return TurnosProporciona;
     }
 

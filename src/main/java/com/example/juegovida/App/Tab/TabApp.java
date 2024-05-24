@@ -111,15 +111,8 @@ public class TabApp{
                 placeholder.setMinSize(80, 80); // Tamaño mínimo para visualización
 
                 placeholder.setStyle("-fx-border-color: green; -fx-text-alignment: center;");
-
-
-
-
                 mainGrid.add(placeholder, i, j);
-
             }
-
-
         }
 /***
         FlowPane f = new FlowPane();

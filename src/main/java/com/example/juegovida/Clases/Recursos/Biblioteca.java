@@ -14,7 +14,7 @@ public class Biblioteca extends Recurso{
     public double getProbAparicion() {
         return ProbAparicion;
     }
-    public double getProbClonacionProp() {
+    public static double getProbClonacionProp() {
         return ProbClonacionProp;
     }
 

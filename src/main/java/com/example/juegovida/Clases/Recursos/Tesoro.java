@@ -15,7 +15,7 @@ public class Tesoro extends Recurso {
         return ProbAparicion;
     }
 
-    public double getProbReproduccionPropo() {
+    public static double getProbReproduccionPropo() {
         return ProbReproduccionPropo;
     }
 

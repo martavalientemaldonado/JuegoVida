@@ -13,7 +13,7 @@ public class Agua extends Recurso{
     public double getProbAparicion() {
         return ProbAparicion;
     }
-    public double getTurnosProporciona() {
+    public static double getTurnosProporciona() {
         return TurnosProporciona;
     }
 
