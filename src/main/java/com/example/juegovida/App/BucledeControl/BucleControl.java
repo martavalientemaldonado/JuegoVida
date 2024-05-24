@@ -1,7 +1,6 @@
 package com.example.juegovida.App.BucledeControl;
 
 import com.example.juegovida.App.Tab.*;
-import com.example.juegovida.App.Tab.ColaInd.ColaEventosIndividuo;
 import com.example.juegovida.App.Tab.ColaInd.ElementoCola;
 import com.example.juegovida.App.Tab.GrafoCasillas.*;
 import com.example.juegovida.Clases.Individuo;
@@ -10,17 +9,15 @@ import com.example.juegovida.Errores.ElNoEncontradoError;
 import com.example.juegovida.Errores.Mas3Indiv;
 import com.example.juegovida.Errores.Mas3Recs;
 
-import java.util.HashMap;
 import java.util.Objects;
 
 public class BucleControl {
     ListaEnlazadaCasillas<Individuo> listaIndividuos;
+    int NumeroIdIndUlt;
     private Casilla tab[][];
     private GrafoTablero<Casilla> grafo;
     private ListaEnlazadaCasillas<ListaEnlazadaCasillas<Casilla>> lista;
-
     private Casilla c;
-    private ColaEventosIndividuo<String> colaEventosIndividuo;
     public double fila;
     public double columna;
 
@@ -123,9 +120,12 @@ public class BucleControl {
                 Individuo i2 = tab[j][i].getlIndiv().getElemento(1).getData();
                 Individuo i3 = tab[j][i].getlIndiv().getElemento(2).getData();
                 double r = Math.random() * 100;
-                if (i1.getProbClonacion() > i2.getProbClonacion() && i1.getTurnosVidaInd() < i3.getTurnosVidaInd()) {
+                if (i1.getProbClonacion() > i2.getProbClonacion() && i1.getTurnosVidaInd() > i3.getTurnosVidaInd()) {
                     if (r < i1.getProbClonacion()) {
-                        tab[j][i].addIndiv(i1);
+                        NumeroIdIndUlt = NumeroIdIndUlt+1;
+                        Individuo in2 = new Individuo(i1.getTurnosVidaInd(), i1.getProbClonacion(),i1.getProbReproduccion(),NumeroIdIndUlt,i1.getTipo());
+                        tab[j][i].addIndiv(in2);
+                        listaIndividuos.add(in2);
                         if (tab[j][i].lIndiv.getNumElementos() > 3) {
                             eliminarInd(t);
                             if (tab[j][i].lIndiv.getElemento(2).getData() == i1) {
@@ -143,7 +143,10 @@ public class BucleControl {
 
                 } else if (i2.getProbClonacion() > i1.getProbClonacion() && i2.getTurnosVidaInd() < i3.getTurnosVidaInd()) {
                     if (r < i2.getProbClonacion()) {
-                        tab[j][i].addIndiv(i2);
+                        NumeroIdIndUlt = NumeroIdIndUlt+1;
+                        Individuo in2 = new Individuo(i2.getTurnosVidaInd(), i2.getProbClonacion(),i2.getProbReproduccion(),NumeroIdIndUlt, i2.getTipo());
+                        tab[j][i].addIndiv(in2);
+                        listaIndividuos.add(in2);
                         if (tab[j][i].lIndiv.getNumElementos() > 3) {
                             eliminarInd(t);
                             if (tab[j][i].lIndiv.getElemento(2).getData() == i2) {
@@ -160,7 +163,10 @@ public class BucleControl {
 
                 } else {
                     if (r < i3.getProbClonacion()) {
-                        tab[j][i].addIndiv(i3);
+                        NumeroIdIndUlt = NumeroIdIndUlt+1;
+                        Individuo in2 = new Individuo(i3.getTurnosVidaInd(), i3.getProbClonacion(),i3.getProbReproduccion(),NumeroIdIndUlt,i3.getTipo());
+                        tab[j][i].addIndiv(in2);
+                        listaIndividuos.add(in2);
                         if (tab[j][i].lIndiv.getNumElementos() > 3) {
                             eliminarInd(t);
                             if (tab[j][i].lIndiv.getElemento(2).getData() == i3) {
@@ -177,9 +183,8 @@ public class BucleControl {
                 }
             }
         }
-
     }
-    public void repro(Tablero t){
+    public void repro() throws Mas3Indiv {
         for (int i=0;i<columna;i++){
             for (int j=0; j<fila;j++){
                     Individuo i1=tab[j][i].getlIndiv().getElemento(0).getData();
@@ -195,10 +200,18 @@ public class BucleControl {
                             if(i1.getProbReproduccion()> i2.getProbReproduccion()) {
                                 i1.getCola().push(new ElementoCola<>("hijo"+ i1));
                                 i2.getCola().push(new ElementoCola<>("hijo"+ i1));
+                                NumeroIdIndUlt = NumeroIdIndUlt+1;
+                                Individuo in2 = new Individuo(i1.getTurnosVidaInd(), i1.getProbClonacion(),i1.getProbReproduccion(),NumeroIdIndUlt, i1.getTipo());
+                                tab[j][i].addIndiv(in2);
+                                listaIndividuos.add(in2);
                             }
                             else{
                                 i1.getCola().push(new ElementoCola<>("hijo"+ i2));
                                 i2.getCola().push(new ElementoCola<>("hijo"+ i2));
+                                NumeroIdIndUlt = NumeroIdIndUlt+1;
+                                Individuo in2 = new Individuo(i2.getTurnosVidaInd(), i2.getProbClonacion(),i2.getProbReproduccion(),NumeroIdIndUlt, i2.getTipo());
+                                tab[j][i].addIndiv(in2);
+                                listaIndividuos.add(in2);
                             }
 
                         }
@@ -213,10 +226,18 @@ public class BucleControl {
                                 if(i2.getProbReproduccion()> i3.getProbReproduccion()) {
                                     i2.getCola().push(new ElementoCola<>("hijo"+ i2));
                                     i3.getCola().push(new ElementoCola<>("hijo"+ i2));
+                                    NumeroIdIndUlt = NumeroIdIndUlt+1;
+                                    Individuo in2 = new Individuo(i2.getTurnosVidaInd(), i2.getProbClonacion(),i2.getProbReproduccion(),NumeroIdIndUlt, i2.getTipo());
+                                    tab[j][i].addIndiv(in2);
+                                    listaIndividuos.add(in2);
                                 }
                                 else{
                                     i2.getCola().push(new ElementoCola<>("hijo"+ i3));
                                     i3.getCola().push(new ElementoCola<>("hijo"+ i3));
+                                    NumeroIdIndUlt = NumeroIdIndUlt+1;
+                                    Individuo in2 = new Individuo(i3.getTurnosVidaInd(), i3.getProbClonacion(),i3.getProbReproduccion(),NumeroIdIndUlt, i2.getTipo());
+                                    tab[j][i].addIndiv(in2);
+                                    listaIndividuos.add(in2);
                                 }
                             }
                             else if(i2.getProbReproduccion()< i1.getProbReproduccion()&& i2.getProbReproduccion()< i3.getProbReproduccion()){
@@ -226,11 +247,19 @@ public class BucleControl {
                                 i3.getCola().push(new ElementoCola<>("Pareja"+i1));
                                 if(i3.getProbReproduccion()> i1.getProbReproduccion()) {
                                     i3.getCola().push(new ElementoCola<>("hijo"+ i3));
-                                    i1.getCola().push(new ElementoCola<>("hijo"+ i3));
+                                    i1.getCola().push(new ElementoCola<>("hijo"+ i3));NumeroIdIndUlt = NumeroIdIndUlt+1;
+                                    Individuo in2 = new Individuo(i3.getTurnosVidaInd(), i3.getProbClonacion(),i3.getProbReproduccion(),NumeroIdIndUlt, i3.getTipo());
+                                    tab[j][i].addIndiv(in2);
+                                    listaIndividuos.add(in2);
+
                                 }
                                 else{
                                     i1.getCola().push(new ElementoCola<>("hijo"+ i1));
                                     i3.getCola().push(new ElementoCola<>("hijo"+ i1));
+                                    NumeroIdIndUlt = NumeroIdIndUlt+1;
+                                    Individuo in2 = new Individuo(i1.getTurnosVidaInd(), i1.getProbClonacion(),i1.getProbReproduccion(),NumeroIdIndUlt, i1.getTipo());
+                                    tab[j][i].addIndiv(in2);
+                                    listaIndividuos.add(in2);
                                 }
                             }
                             else if(i3.getProbReproduccion()< i1.getProbReproduccion()&& i3.getProbReproduccion()< i2.getProbReproduccion()){
@@ -241,10 +270,18 @@ public class BucleControl {
                                 if(i2.getProbReproduccion()> i1.getProbReproduccion()) {
                                     i2.getCola().push(new ElementoCola<>("hijo"+ i2));
                                     i1.getCola().push(new ElementoCola<>("hijo"+ i2));
+                                    NumeroIdIndUlt = NumeroIdIndUlt+1;
+                                    Individuo in2 = new Individuo(i2.getTurnosVidaInd(), i2.getProbClonacion(),i2.getProbReproduccion(),NumeroIdIndUlt, i2.getTipo());
+                                    tab[j][i].addIndiv(in2);
+                                    listaIndividuos.add(in2);
                                 }
                                 else{
                                     i1.getCola().push(new ElementoCola<>("hijo"+ i1));
                                     i2.getCola().push(new ElementoCola<>("hijo"+ i1));
+                                    NumeroIdIndUlt = NumeroIdIndUlt+1;
+                                    Individuo in2 = new Individuo(i1.getTurnosVidaInd(), i1.getProbClonacion(),i1.getProbReproduccion(),NumeroIdIndUlt, i1.getTipo());
+                                    tab[j][i].addIndiv(in2);
+                                    listaIndividuos.add(in2);
                                 }
                             }
                         }
@@ -254,13 +291,13 @@ public class BucleControl {
             }
         }
     }
-    private void moverIndividuoBasico(Individuo in, Tablero t) throws Mas3Indiv {
+    private void moverIndividuoBasico(Individuo in) throws Mas3Indiv {
         int numero = (int) (Math.random() * 4) + 1;
         if (numero == 1) {//mueve hacia abajo
             Casilla c;
-            for (int i=0; i<t.getFila();i++){
+            for (int i=0; i<lista.getPrimero().getData().getNumeroElementos();i++){
                 ListaEnlazadaCasillas<Casilla> columna = lista.getElemento(i).getData();
-                for (int j=0; j< t.getColumna(); j++){
+                for (int j=0; j< lista.getNumeroElementos(); j++){
                     ListaSimple<Individuo> lind = tab[j][i].getlIndiv();
                     for (int k=0; k!=3; k++){
                         if(Objects.equals(lind.getElemento(k).getData().getNumIdentificacion(), in.getNumIdentificacion())){
@@ -274,9 +311,9 @@ public class BucleControl {
 
         }if (numero == 2) {//mueve hacia arriba
             Casilla c;
-            for (int i=0; i<t.getFila();i++){
+            for (int i=0; i<lista.getPrimero().getData().getNumeroElementos();i++){
                 ListaEnlazadaCasillas<Casilla> columna = lista.getElemento(i).getData();
-                for (int j=0; j< t.getColumna(); j++){
+                for (int j=0; j< lista.getNumeroElementos(); j++){
                     ListaSimple<Individuo> lind = tab[j][i].getlIndiv();
                     for (int k=0; k!=3; k++){
                         if(Objects.equals(lind.getElemento(k).getData().getNumIdentificacion(), in.getNumIdentificacion())){
@@ -290,9 +327,9 @@ public class BucleControl {
 
         }if (numero == 3) {//mueve hacia derecha
             Casilla c;
-            for (int i=0; i<t.getFila();i++){
+            for (int i=0; i<lista.getPrimero().getData().getNumeroElementos();i++){
                 ListaEnlazadaCasillas<Casilla> columna = lista.getElemento(i).getData();
-                for (int j=0; j< t.getColumna(); j++){
+                for (int j=0; j< lista.getNumeroElementos(); j++){
                     ListaSimple<Individuo> lind = tab[j][i].getlIndiv();
                     for (int k=0; k!=3; k++){
                         if(Objects.equals(lind.getElemento(k).getData().getNumIdentificacion(), in.getNumIdentificacion())){
@@ -306,9 +343,9 @@ public class BucleControl {
 
         }if (numero == 4) {//mueve hacia izquierda
             Casilla c;
-            for (int i=0; i<t.getFila();i++){
+            for (int i=0; i<lista.getPrimero().getData().getNumeroElementos();i++){
                 ListaEnlazadaCasillas<Casilla> columna = lista.getElemento(i).getData();
-                for (int j=0; j< t.getColumna(); j++){
+                for (int j=0; j< lista.getNumeroElementos(); j++){
                     ListaSimple<Individuo> lind = tab[j][i].getlIndiv();
                     for (int k=0; k!=3; k++){
                         if(Objects.equals(lind.getElemento(k).getData().getNumIdentificacion(), in.getNumIdentificacion())){
@@ -322,7 +359,7 @@ public class BucleControl {
         }
     }
 
-    public void CrearCaminoAvanzado(Individuo in) throws ElNoEncontradoError {
+    private void CrearCaminoAvanzado(Individuo in) throws ElNoEncontradoError {
         ElementoLECasillas<NodoGrafoCasillas<Casilla>> i = grafo.listaVertices.getPrimero();
         while(i.getSiguiente()!= null){
             ListaSimple<Individuo> lind = i.getData().getDato().getlIndiv();
@@ -355,6 +392,7 @@ public class BucleControl {
                     d = e.getCamino().getPeso();
                     aUsar = e;
                 } else if (e.getCamino().getPeso()==d) {
+                    assert aUsar != null;
                     if(e.getCamino().getCamino().getNumeroElementos()< aUsar.getCamino().getCamino().getNumeroElementos()){
                         d = e.getCamino().getPeso();
                         aUsar = e;
@@ -367,7 +405,7 @@ public class BucleControl {
             in.setCaminoMovimiento(Camino);
         }
     }
-    public void moverIndividuoAvanzado(Individuo in) throws Mas3Indiv {
+    private void moverIndividuoAvanzado(Individuo in) throws Mas3Indiv {
         if(!in.isEnMovimiento()){
             CrearCaminoAvanzado(in);
         }
@@ -392,6 +430,31 @@ public class BucleControl {
                     }
                 }
             }
+        }
+    }
+    private ListaEnlazadaCasillas<Individuo> getListaIndividuosVivos(){
+        ListaEnlazadaCasillas<Individuo> l = new ListaEnlazadaCasillas<>();
+        for (int i=0; i<lista.getNumeroElementos();i++){
+            for (int j=0; j< lista.getPrimero().getData().getNumeroElementos(); j++){
+                ListaSimple<Individuo> lind = tab[j][i].getlIndiv();
+                for (int k=0; k!=3; k++){
+                    l.add(lind.getElemento(k).getData());
+                }
+            }
+        }
+        return l;
+    }
+    private void moverNormal(Individuo in){
+
+    }
+    public void moverIndividuo(Individuo in) throws Mas3Indiv {
+        ListaEnlazadaCasillas<Individuo> l = getListaIndividuosVivos();
+        ElementoLECasillas<Individuo> el = l.getPrimero();
+        while (el.getSiguiente()!= null){
+            if(el.getData().getTipo() == 0) moverIndividuoBasico(el.getData());
+            if (el.getData().getTipo() == 1);
+            if(el.getData().getTipo() == 2)moverIndividuoAvanzado(el.getData());
+            el = el.getSiguiente();
         }
     }
 }

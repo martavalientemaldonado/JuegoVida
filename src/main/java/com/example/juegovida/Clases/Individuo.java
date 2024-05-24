@@ -7,6 +7,7 @@ import com.example.juegovida.App.Tab.GrafoCasillas.NodoGrafoCasillas;
 import com.example.juegovida.App.Tab.ListaEnlazadaTablero;
 
 public class Individuo {
+    int vida;
     private Integer NumIdentificacion;
     private Integer Generacion;
     private double TurnosVidaInd;
@@ -22,15 +23,16 @@ public class Individuo {
     public Individuo() {
     }
 
-    public Individuo(double TurnosVida, double Probclonacion, double ProbRe) {
+    public Individuo(double TurnosVida, double Probclonacion, double ProbRe, Integer NumIdentificacion, int tipo) {
         TurnosVidaInd = TurnosVida;
         ProbClonacion = Probclonacion;
         ProbReproduccion = ProbRe;
+        this.NumIdentificacion = NumIdentificacion;
+        Tipo = tipo;
     }
 
-    public Individuo(Integer NumIdentificacion, Integer Generacion) {
+    public Individuo(Integer NumIdentificacion) {
         this.NumIdentificacion = NumIdentificacion;
-        this.Generacion = Generacion;
     }
 
     public boolean isEnMovimiento() {
