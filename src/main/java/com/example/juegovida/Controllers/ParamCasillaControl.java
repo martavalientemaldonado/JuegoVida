@@ -9,9 +9,7 @@ import com.example.juegovida.Clases.Individuo;
 import com.example.juegovida.Clases.Recursos.*;
 import com.example.juegovida.Errores.Mas3Indiv;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
@@ -78,7 +76,7 @@ public class ParamCasillaControl{
     }
 
     @FXML
-    void initialize(URL url, ResourceBundle resourceBundle) throws Mas3Indiv {
+    void initialize() {
         NuevoInd.getItems().addAll("Básico", "Normal", "Avanzado");
         NuevoInd.setOnAction(this::getIndividuo);
         NuevoRecurso.getItems().addAll("Pozo", "Agua", "Tesoro", "Biblioteca", "Montaña", "Comida");
