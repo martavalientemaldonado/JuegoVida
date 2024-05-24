@@ -470,6 +470,18 @@ public class BucleControl {
         }
         return l;
     }
+    private ListaEnlazadaCasillas<Recurso> getListaRecursosVivos(){
+        ListaEnlazadaCasillas<Recurso> l = new ListaEnlazadaCasillas<>();
+        for (int i=0; i<lista.getNumeroElementos();i++){
+            for (int j=0; j< lista.getPrimero().getData().getNumeroElementos(); j++){
+                ListaSimple<Recurso> lind = tab[j][i].getlRec();
+                for (int k=0; k!=3; k++){
+                    l.add(lind.getElemento(k).getData());
+                }
+            }
+        }
+        return l;
+    }
     private void moverIndividuoNormal(Individuo in) throws Mas3Indiv {
         if(!in.isEnMovimiento()){
             in.setEnMovimiento(true);
