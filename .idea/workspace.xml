@@ -5,12 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ae59f5ab-3a2c-4635-b2d5-df0317d0df49" name="Changes" comment="movimiento individuo basico y avanzado">
+    <list default="true" id="ae59f5ab-3a2c-4635-b2d5-df0317d0df49" name="Changes" comment="test">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_05_2024_14_19__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_05_2024_14_19__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/BucledeControl/BucleControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/BucledeControl/BucleControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/CasillaRec.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/TabApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/TabApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Clases/Individuo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Clases/Individuo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/ParamCasillaControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/ParamCasillaControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/TableroControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/TableroControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/DimyTurnosVida.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DimyTurnosVida.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/CasillaRec.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/TabApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/TabApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/TableroControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/TableroControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/DimyTurnosVida.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DimyTurnosVida.fxml" afterDir="false" />
     </list>
