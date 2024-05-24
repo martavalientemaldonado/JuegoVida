@@ -1,6 +1,9 @@
 package com.example.juegovida.App.Tab;
 
+import com.example.juegovida.App.BucledeControl.BucleControl;
 import com.example.juegovida.Controllers.TableroControl;
+import com.example.juegovida.Errores.Mas3Indiv;
+import com.example.juegovida.Errores.Mas3Recs;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
@@ -23,6 +26,12 @@ public class TabApp{
     private Region placeholder;
     private Node layout;
     public boolean botoncasillas;
+
+    private BucleControl bucle;
+
+    public void loadData(BucleControl bucle){
+        this.bucle = bucle;
+    }
 
 
     public Parent Tablero(Tablero t) throws Exception {
@@ -58,9 +67,13 @@ public class TabApp{
             public void handle(ActionEvent actionEvent) {
                 try {
                     tab.clickstart();
-
+                    bucle.bucleEntero();
                 }
                 catch (IOException e) {
+                    throw new RuntimeException(e);
+                } catch (Mas3Indiv e) {
+                    throw new RuntimeException(e);
+                } catch (Mas3Recs e) {
                     throw new RuntimeException(e);
                 }
             }

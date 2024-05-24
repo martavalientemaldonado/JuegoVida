@@ -38,6 +38,7 @@ public class BucleControl {
     void initialize(URL url, ResourceBundle resourceBundle) throws Mas3Indiv {
 
     }
+
     public void nuevoRecurso()throws Mas3Recs {
         for (int i = 0; i < lista.getPrimero().getData().getNumeroElementos(); i++) {
             for (int j = 0; j < lista.getNumeroElementos(); j++) {
@@ -124,7 +125,7 @@ public class BucleControl {
                 }
             }
         }
-    public void clonado(Tablero t)throws Mas3Indiv{
+    public void clonado()throws Mas3Indiv{
         for (int i = 0; i < lista.getPrimero().getData().getNumeroElementos(); i++) {
             for (int j = 0; j < lista.getNumeroElementos(); j++) {
                 Individuo i1 = tab[j][i].getlIndiv().getElemento(0).getData();
@@ -503,5 +504,13 @@ public class BucleControl {
                 }
             }
         }
+    }
+    public void bucleEntero() throws Mas3Recs, Mas3Indiv {
+        nuevoRecurso();
+        eliminarRec();
+        eliminarInd();
+        clonado();
+        repro();
+        moverIndividuos();
     }
 }

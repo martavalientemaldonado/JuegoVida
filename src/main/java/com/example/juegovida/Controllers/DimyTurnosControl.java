@@ -5,6 +5,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import com.example.juegovida.App.BucledeControl.BucleControl;
 import com.example.juegovida.App.Tab.Casilla;
 import com.example.juegovida.App.Tab.TabApp;
 import com.example.juegovida.DatosCompartidos;
@@ -47,7 +48,10 @@ public class DimyTurnosControl{
         d.commitDimyVida();
         System.out.println(d.ProbAparicionAguaProperty());
         Stage stage = new Stage();
-        Scene scene = new Scene(new TabApp().Tablero(d.getMatriz()),1200,700); //vCarga escena
+        TabApp t = new TabApp();
+        BucleControl bucle = new BucleControl(d.getMatriz().tab);
+        t.loadData(bucle);
+        Scene scene = new Scene(t.Tablero(d.getMatriz()),1200,700); //vCarga escena
         stage.setScene(scene);
         stage.show();
 
