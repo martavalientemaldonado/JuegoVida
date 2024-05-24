@@ -31,6 +31,10 @@ public class BucleControl {
     public BucleControl() {
     }
 
+    public ListaEnlazadaCasillas<Individuo> getListaIndividuos() {
+        return listaIndividuos;
+    }
+
     public Integer getNumeroIdIndUlt(){
         return getNumeroIdIndUlt();
     }
