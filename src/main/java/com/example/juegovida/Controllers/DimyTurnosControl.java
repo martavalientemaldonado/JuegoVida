@@ -50,7 +50,7 @@ public class DimyTurnosControl{
         Stage stage = new Stage();
         TabApp t = new TabApp();
         BucleControl bucle = new BucleControl(d.getMatriz().tab);
-        t.loadData(bucle);
+        t.loadData(bucle,d.getMatriz(), d);
         Scene scene = new Scene(t.Tablero(d.getMatriz()),1200,700); //vCarga escena
         stage.setScene(scene);
         stage.show();

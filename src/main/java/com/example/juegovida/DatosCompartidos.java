@@ -1,5 +1,6 @@
 package com.example.juegovida;
 
+import com.example.juegovida.App.Tab.Casilla;
 import com.example.juegovida.App.Tab.Tablero;
 import com.example.juegovida.Clases.Individuo;
 import com.example.juegovida.Clases.Recursos.*;
@@ -221,7 +222,9 @@ public class DatosCompartidos {
     public Montaña getMontaña(){return Montaña;}
     public Individuo getIndividuo(){return Individuo;}
     public Recurso getRecurso(){return Recurso;}
-    public Tablero getMatriz(){return Matriz; }
+    public Tablero getMatriz(){
+        return Matriz;
+    }
     public void setAgua(Agua agua){
         this.Agua = agua;
         ProbAparicionAgua.set(Agua.getProbAparicion());
