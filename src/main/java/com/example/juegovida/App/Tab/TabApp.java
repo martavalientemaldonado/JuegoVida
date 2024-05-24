@@ -2,6 +2,7 @@ package com.example.juegovida.App.Tab;
 
 import com.example.juegovida.App.BucledeControl.BucleControl;
 import com.example.juegovida.Controllers.TableroControl;
+import com.example.juegovida.DatosCompartidos;
 import com.example.juegovida.Errores.Mas3Indiv;
 import com.example.juegovida.Errores.Mas3Recs;
 import javafx.event.ActionEvent;
@@ -14,6 +15,7 @@ import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.SplitPane;
+import javafx.scene.control.Tab;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import org.apache.logging.log4j.LogManager;
@@ -29,15 +31,16 @@ public class TabApp{
 
     private BucleControl bucle;
 
-    public void loadData(BucleControl bucle){
-        this.bucle = bucle;
-    }
+    private Tablero ta;
+    private DatosCompartidos d;
+
 
 
     public Parent Tablero(Tablero t) throws Exception {
         log.info("Inicio del método de arranque de la aplicación para mostrar un grid de forma programática");
         GridPane mainGrid = new GridPane();
         botoncasillas=false;
+        Button ajustes= new Button("AJUSTES");
         Button start = new Button("PLAY");
         VBox st = new VBox(start);
         st.setStyle("-fx-border-color: yellow; -fx-text-alignment: center;");
@@ -53,6 +56,7 @@ public class TabApp{
         start.setMinSize(90, 40);
         stop.setMinSize(90, 40);
         pause.setMinSize(90, 40);
+        ajustes.setMinSize(90,40);
         //start.setTranslateX(300);
         st.setTranslateX(300);
         //stop.setTranslateX(450);
@@ -62,23 +66,8 @@ public class TabApp{
 
 
         TableroControl tab = new TableroControl();
-        EventHandler<ActionEvent> clickstart= new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                try {
-                    tab.clickstart();
-                    bucle.bucleEntero();
-                }
-                catch (IOException e) {
-                    throw new RuntimeException(e);
-                } catch (Mas3Indiv e) {
-                    throw new RuntimeException(e);
-                } catch (Mas3Recs e) {
-                    throw new RuntimeException(e);
-                }
-            }
-        };
-        start.setOnAction(clickstart);
+
+
         EventHandler<ActionEvent> clickstop= new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
@@ -94,12 +83,13 @@ public class TabApp{
             }
         };
         pause.setOnAction(clickps);
-
+        Tablero tablero = new Tablero((int)t.getFila(),(int)t.getColumna());
 
         for (int i = 0; i < t.getFila(); i++) {
             for (int j = 0; j < t.getColumna(); j++) {
                 // Label placeholder = new Label("Celda "  + "," + j);
                 Casilla c= new Casilla(i,j);
+                tablero.tab[i][j]= c;
                 Button btnNewObject = new Button("Individuos "+c.lIndiv.getNumElementos()+" Recursos "+c.lRec.getNumElementos());
                 VBox placeholder = new VBox(btnNewObject);
                 EventHandler<ActionEvent> click = new EventHandler() {
@@ -133,7 +123,40 @@ public class TabApp{
         f.setTranslateY(100);
         f.setTranslateX(60);
  */
-        HBox hbox = new HBox(start,pause,stop);
+        EventHandler<ActionEvent> clickstart= new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                try {
+                    tab.clickstart();
+                    bucle.bucleEntero(tablero);
+                }
+                catch (IOException e) {
+                    throw new RuntimeException(e);
+                } catch (Mas3Indiv e) {
+                    throw new RuntimeException(e);
+                } catch (Mas3Recs e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        };
+        start.setOnAction(clickstart);
+        EventHandler<ActionEvent> clickajustes= new EventHandler<ActionEvent>() {
+            private DatosCompartidos d;
+
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                try {
+                    tab.loadUserDataTabTablero(this.d);
+                    tab.clickajustes();
+
+                }
+                catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        };
+        ajustes.setOnAction(clickajustes);
+        HBox hbox = new HBox(start,pause,stop,ajustes);
         hbox.setAlignment(Pos.CENTER);
         //f.getChildren().addAll(hbox);
         ScrollPane s = new ScrollPane(hbox);

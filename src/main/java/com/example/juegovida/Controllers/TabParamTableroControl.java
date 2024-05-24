@@ -164,7 +164,7 @@ public class TabParamTableroControl {
     protected IntegerProperty ITurnosVidaInd = new SimpleIntegerProperty(0);
     protected IntegerProperty ITurnosVidaRe = new SimpleIntegerProperty(0);
 
-    private DatosCompartidos d;
+    public DatosCompartidos d;
     private Stage scene;
     private Tesoro t = new Tesoro();
     private Pozo po = new Pozo();
@@ -185,6 +185,7 @@ public class TabParamTableroControl {
     }
     @FXML
     void clickAceptar(ActionEvent event) throws IOException {
+
         d.commitTabParamCasilla();
         //Cerrar pantalla
         Node source = (Node) event.getSource();
