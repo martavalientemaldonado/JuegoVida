@@ -4,11 +4,13 @@ import com.example.juegovida.Controllers.TableroControl;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
+import javafx.geometry.Orientation;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.control.SplitPane;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import org.apache.logging.log4j.LogManager;
@@ -20,11 +22,66 @@ public class TabApp{
     private static final Logger log = LogManager.getLogger(TabApp.class);
     private Region placeholder;
     private Node layout;
+    public boolean botoncasillas;
 
 
     public Parent Tablero(Tablero t) throws Exception {
         log.info("Inicio del método de arranque de la aplicación para mostrar un grid de forma programática");
         GridPane mainGrid = new GridPane();
+        botoncasillas=false;
+        Button start = new Button("PLAY");
+        VBox st = new VBox(start);
+        st.setStyle("-fx-border-color: yellow; -fx-text-alignment: center;");
+        st.setMinSize(90, 40);
+        Button pause = new Button("PAUSE");
+        VBox ps = new VBox(pause);
+        ps.setStyle("-fx-border-color: blue; -fx-text-alignment: center;");
+        ps.setMinSize(90, 40);
+        Button stop = new Button("STOP");
+        VBox sto = new VBox(stop);
+        sto.setStyle("-fx-border-color: red; -fx-text-alignment: center;");
+        sto.setMinSize(90, 40);
+        start.setMinSize(90, 40);
+        stop.setMinSize(90, 40);
+        pause.setMinSize(90, 40);
+        //start.setTranslateX(300);
+        st.setTranslateX(300);
+        //stop.setTranslateX(450);
+        sto.setTranslateX(450);
+        //pause.setTranslateX(600);
+        ps.setTranslateX(600);
+
+
+        TableroControl tab = new TableroControl();
+        EventHandler<ActionEvent> clickstart= new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                try {
+                    tab.clickstart();
+
+                }
+                catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        };
+        start.setOnAction(clickstart);
+        EventHandler<ActionEvent> clickstop= new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+
+            }
+        };
+        stop.setOnAction(clickstop);
+        EventHandler<ActionEvent> clickps= new EventHandler<>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                botoncasillas=true;
+                System.out.println(botoncasillas);
+            }
+        };
+        pause.setOnAction(clickps);
+
 
 
 
@@ -34,13 +91,15 @@ public class TabApp{
                 Casilla c= new Casilla(i,j);
                 Button btnNewObject = new Button("Individuos "+c.lIndiv.getNumElementos()+" Recursos "+c.lRec.getNumElementos());
                 VBox placeholder = new VBox(btnNewObject);
-                TableroControl tab = new TableroControl();
                 EventHandler<ActionEvent> click = new EventHandler() {
                     @Override
                     public void handle(Event event) {
                         try {
+                            System.out.println(botoncasillas);
 
-                            tab.click();
+                            if(botoncasillas==true) {
+                                tab.click();
+                            }
 
                         } catch (IOException e) {
                             throw new RuntimeException(e);
@@ -62,83 +121,24 @@ public class TabApp{
 
 
         }
-
+/***
         FlowPane f = new FlowPane();
-        f.getChildren().add(mainGrid);
+        //f.getChildren().add(mainGrid);
         f.setBackground(Background.fill(Color.GREEN));
         f.setAlignment(Pos.CENTER);
         f.setTranslateY(100);
         f.setTranslateX(60);
-        Button start = new Button("PLAY");
-        VBox st = new VBox(start);
-        st.setStyle("-fx-border-color: yellow; -fx-text-alignment: center;");
-        st.setMinSize(90, 40);
-        Button pause = new Button("PAUSE");
-        VBox ps = new VBox(pause);
-        ps.setStyle("-fx-border-color: blue; -fx-text-alignment: center;");
-        ps.setMinSize(90, 40);
-        Button stop = new Button("STOP");
-        VBox sto = new VBox(stop);
-        sto.setStyle("-fx-border-color: red; -fx-text-alignment: center;");
-        sto.setMinSize(90, 40);
-        start.setMinSize(90, 40);
-        stop.setMinSize(90, 40);
-        pause.setMinSize(90, 40);
-        start.setTranslateX(300);
-        st.setTranslateX(300);
-        stop.setTranslateX(450);
-        sto.setTranslateX(450);
-        pause.setTranslateX(600);
-        ps.setTranslateX(600);
-        Pane p = new Pane();
-        TableroControl tab = new TableroControl();
-        EventHandler<ActionEvent> clickstart= new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                try {
-                    tab.clickstart();
+ */
+        HBox hbox = new HBox(start,pause,stop);
+        hbox.setAlignment(Pos.CENTER);
+        //f.getChildren().addAll(hbox);
+        ScrollPane s = new ScrollPane(hbox);
+        ScrollPane s2 = new ScrollPane(mainGrid);
+        SplitPane split = new SplitPane(s,s2);
+        split.setOrientation(Orientation.VERTICAL);
+        split.setDividerPositions(0.1);
 
-                }
-                catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
-            }
-        };
-        start.setOnAction(clickstart);
-        EventHandler<ActionEvent> clickstop= new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                try {
-                    tab.clickstop();
-
-                }
-                catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
-            }
-        };
-        stop.setOnAction(clickstop);
-        EventHandler<ActionEvent> clickps= new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                try {
-                    tab.clickps();
-
-                }
-                catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
-            }
-        };
-        pause.setOnAction(clickps);
-        p.getChildren().addAll(f,stop,start,pause,st,ps,sto);
-        ScrollPane s = new ScrollPane(p);
-
-
-
-
-
-        return s;
+        return split;
 
     }
 
