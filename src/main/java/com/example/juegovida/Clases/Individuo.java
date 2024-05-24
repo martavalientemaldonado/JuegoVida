@@ -33,7 +33,7 @@ public class Individuo {
         this.NumIdentificacion = NumIdentificacion;
     }
 
-    public Individuo(Integer NumIdentificacion) {
+    public Individuo(Integer NumIdentificacion, int tipo) {
         this.NumIdentificacion = NumIdentificacion;
     }
 

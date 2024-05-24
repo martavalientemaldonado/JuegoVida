@@ -4,11 +4,13 @@ import com.example.juegovida.Controllers.TableroControl;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
+import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -49,7 +51,7 @@ public class TabApp{
                 btnNewObject.setMinSize(80, 80); // Tamaño mínimo para visualización
                 placeholder.setMinSize(80, 80); // Tamaño mínimo para visualización
 
-                placeholder.setStyle("-fx-border-color: black; -fx-text-alignment: center;");
+                placeholder.setStyle("-fx-border-color: green; -fx-text-alignment: center;");
 
 
 
@@ -58,8 +60,82 @@ public class TabApp{
 
             }
 
+
         }
-        ScrollPane s = new ScrollPane(mainGrid);
+
+        FlowPane f = new FlowPane();
+        f.getChildren().add(mainGrid);
+        f.setBackground(Background.fill(Color.GREEN));
+        f.setAlignment(Pos.CENTER);
+        f.setTranslateY(100);
+        f.setTranslateX(60);
+        Button start = new Button("PLAY");
+        VBox st = new VBox(start);
+        st.setStyle("-fx-border-color: yellow; -fx-text-alignment: center;");
+        st.setMinSize(90, 40);
+        Button pause = new Button("PAUSE");
+        VBox ps = new VBox(pause);
+        ps.setStyle("-fx-border-color: blue; -fx-text-alignment: center;");
+        ps.setMinSize(90, 40);
+        Button stop = new Button("STOP");
+        VBox sto = new VBox(stop);
+        sto.setStyle("-fx-border-color: red; -fx-text-alignment: center;");
+        sto.setMinSize(90, 40);
+        start.setMinSize(90, 40);
+        stop.setMinSize(90, 40);
+        pause.setMinSize(90, 40);
+        start.setTranslateX(300);
+        st.setTranslateX(300);
+        stop.setTranslateX(450);
+        sto.setTranslateX(450);
+        pause.setTranslateX(600);
+        ps.setTranslateX(600);
+        Pane p = new Pane();
+        TableroControl tab = new TableroControl();
+        EventHandler<ActionEvent> clickstart= new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                try {
+                    tab.clickstart();
+
+                }
+                catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        };
+        start.setOnAction(clickstart);
+        EventHandler<ActionEvent> clickstop= new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                try {
+                    tab.clickstop();
+
+                }
+                catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        };
+        stop.setOnAction(clickstop);
+        EventHandler<ActionEvent> clickps= new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                try {
+                    tab.clickps();
+
+                }
+                catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        };
+        pause.setOnAction(clickps);
+        p.getChildren().addAll(f,stop,start,pause,st,ps,sto);
+        ScrollPane s = new ScrollPane(p);
+
+
+
 
 
         return s;

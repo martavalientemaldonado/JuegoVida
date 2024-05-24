@@ -8,12 +8,15 @@ import com.example.juegovida.Clases.Recursos.*;
 import com.example.juegovida.Errores.ElNoEncontradoError;
 import com.example.juegovida.Errores.Mas3Indiv;
 import com.example.juegovida.Errores.Mas3Recs;
+import javafx.fxml.FXML;
 
+import java.net.URL;
 import java.util.Objects;
+import java.util.ResourceBundle;
 
 public class BucleControl {
     ListaEnlazadaCasillas<Individuo> listaIndividuos;
-    int NumeroIdIndUlt;
+    Integer NumeroIdIndUlt;
     private Casilla tab[][];
     private GrafoTablero<Casilla> grafo;
     private ListaEnlazadaCasillas<ListaEnlazadaCasillas<Casilla>> lista;
@@ -24,10 +27,20 @@ public class BucleControl {
     public BucleControl(Casilla[][] tab) {
         this.tab = tab;
     }
+    public Integer getNumeroIdIndUlt(){
+        return getNumeroIdIndUlt();
+    }
+    public void setNumeroIdIndUlt(Integer i){
+        this.NumeroIdIndUlt = i;
+    }
 
-    public void nuevoRecurso(Tablero t)throws Mas3Recs {
-        for (int i = 0; i < t.getFila(); i++) {
-            for (int j = 0; j < t.getFila(); j++) {
+    @FXML
+    void initialize(URL url, ResourceBundle resourceBundle) throws Mas3Indiv {
+
+    }
+    public void nuevoRecurso()throws Mas3Recs {
+        for (int i = 0; i < lista.getPrimero().getData().getNumeroElementos(); i++) {
+            for (int j = 0; j < lista.getNumeroElementos(); j++) {
                 if (tab[j][i].getlRec().getNumElementos() < 3) {
                     Recurso recurso = new Recurso();
                     if (Math.random()*100 > recurso.getProbabilidadNuevoRE()) {
@@ -59,9 +72,9 @@ public class BucleControl {
             }
         }
     }
-    public void eliminarRec(Tablero t){
-        for (int i=0; i<t.getFila();i++){
-            for (int j=0; j< t.getFila(); j++){
+    public void eliminarRec(){
+        for (int i=0; i<lista.getPrimero().getData().getNumeroElementos();i++){
+            for (int j=0; j< lista.getNumeroElementos(); j++){
                 for (int k=0; k<=tab[j][i].getlRec().getNumElementos()-1;){
                     if(tab[j][i].getlRec().getElemento(k).getData().getTurnosVidaRecursos()==0){
                         Recurso relim= tab[j][i].getlRec().getElemento(k).getData();
@@ -76,9 +89,9 @@ public class BucleControl {
             }
         }
     }
-    public void eliminarIndTiempo(Tablero t){
-        for (int i=0; i<t.getFila();i++){
-            for (int j=0; j< t.getFila(); j++){
+    public void eliminarIndTiempo(){
+        for (int i=0; i<lista.getPrimero().getData().getNumeroElementos();i++){
+            for (int j=0; j< lista.getNumeroElementos(); j++){
                 for (int k=0; k<=tab[j][i].getlIndiv().getNumElementos()-1;){
                     if (tab[j][i].getlIndiv().getElemento(k).getData().getTurnosVidaInd()==0){
                         Individuo relim= tab[j][i].getlIndiv().getElemento(k).getData();
@@ -93,9 +106,9 @@ public class BucleControl {
             }
         }
     }
-    public void eliminarInd(Tablero t){
-        for (int i=0; i<t.getFila();i++){
-            for (int j=0; j< t.getFila(); j++){
+    public void eliminarInd(){
+        for (int i=0; i<lista.getPrimero().getData().getNumeroElementos();i++){
+            for (int j=0; j< lista.getNumeroElementos(); j++){
                 for (int k=0; k<=tab[j][i].getlIndiv().getNumElementos()-1;){
                     if (tab[j][i].getlIndiv().getElemento(k).getData().getTurnosVidaInd()==0){
                         Individuo ieliminar= tab[j][i].getlIndiv().getElemento(k).getData();
@@ -111,11 +124,9 @@ public class BucleControl {
                 }
             }
         }
-
-
     public void clonado(Tablero t)throws Mas3Indiv{
-        for (int i = 0; i < t.getFila(); i++) {
-            for (int j = 0; j < t.getFila(); j++) {
+        for (int i = 0; i < lista.getPrimero().getData().getNumeroElementos(); i++) {
+            for (int j = 0; j < lista.getNumeroElementos(); j++) {
                 Individuo i1 = tab[j][i].getlIndiv().getElemento(0).getData();
                 Individuo i2 = tab[j][i].getlIndiv().getElemento(1).getData();
                 Individuo i3 = tab[j][i].getlIndiv().getElemento(2).getData();
@@ -127,7 +138,7 @@ public class BucleControl {
                         tab[j][i].addIndiv(in2);
                         listaIndividuos.add(in2);
                         if (tab[j][i].lIndiv.getNumElementos() > 3) {
-                            eliminarInd(t);
+                            eliminarInd();
                             if (tab[j][i].lIndiv.getElemento(2).getData() == i1) {
                                 i1.getCola().push(new ElementoCola<>("Padre clonación"));
                                 i1.getCola().push(new ElementoCola<>("Hijo" + i1));
@@ -148,7 +159,7 @@ public class BucleControl {
                         tab[j][i].addIndiv(in2);
                         listaIndividuos.add(in2);
                         if (tab[j][i].lIndiv.getNumElementos() > 3) {
-                            eliminarInd(t);
+                            eliminarInd();
                             if (tab[j][i].lIndiv.getElemento(2).getData() == i2) {
                                 i2.getCola().push(new ElementoCola<String>("Padre clonación"));
                                 i2.getCola().push(new ElementoCola<String>("Hijo" + i2));
@@ -168,7 +179,7 @@ public class BucleControl {
                         tab[j][i].addIndiv(in2);
                         listaIndividuos.add(in2);
                         if (tab[j][i].lIndiv.getNumElementos() > 3) {
-                            eliminarInd(t);
+                            eliminarInd();
                             if (tab[j][i].lIndiv.getElemento(2).getData() == i3) {
                                 i3.getCola().push(new ElementoCola<String>("Padre clonación"));
                                 i3.getCola().push(new ElementoCola<String>("Hijo" + i3));
@@ -185,8 +196,8 @@ public class BucleControl {
         }
     }
     public void repro() throws Mas3Indiv {
-        for (int i=0;i<columna;i++){
-            for (int j=0; j<fila;j++){
+        for (int i=0;i<lista.getPrimero().getData().getNumeroElementos();i++){
+            for (int j=0; j<lista.getNumeroElementos();j++){
                     Individuo i1=tab[j][i].getlIndiv().getElemento(0).getData();
                     Individuo i2=tab[j][i].getlIndiv().getElemento(1).getData();
                     Individuo i3=tab[j][i].getlIndiv().getElemento(2).getData();
@@ -289,6 +300,16 @@ public class BucleControl {
 
                     }
             }
+        }
+    }
+    public void moverIndividuos() throws Mas3Indiv {
+        ListaEnlazadaCasillas<Individuo> l = getListaIndividuosVivos();
+        ElementoLECasillas<Individuo> el = l.getPrimero();
+        while (el.getSiguiente()!= null){
+            if(el.getData().getTipo() == 0) moverIndividuoBasico(el.getData());
+            if (el.getData().getTipo() == 1) moverIndividuoNormal(el.getData());
+            if(el.getData().getTipo() == 2)moverIndividuoAvanzado(el.getData());
+            el = el.getSiguiente();
         }
     }
     private void moverIndividuoBasico(Individuo in) throws Mas3Indiv {
@@ -408,10 +429,11 @@ public class BucleControl {
     private void moverIndividuoAvanzado(Individuo in) throws Mas3Indiv {
         if(!in.isEnMovimiento()){
             CrearCaminoAvanzado(in);
+            in.setEnMovimiento(true);
         }
         Casilla c;
-        for (int i=0; i<lista.getNumeroElementos();i++){
-            for (int j=0; j< lista.getPrimero().getData().getNumeroElementos(); j++){
+        for (int i=0; i<lista.getPrimero().getData().getNumeroElementos();i++){
+            for (int j=0; j< lista.getNumeroElementos(); j++){
                 ListaSimple<Individuo> lind = tab[j][i].getlIndiv();
                 for (int k=0; k!=3; k++){
                     if(Objects.equals(lind.getElemento(k).getData().getNumIdentificacion(), in.getNumIdentificacion())){
@@ -444,17 +466,42 @@ public class BucleControl {
         }
         return l;
     }
-    private void moverNormal(Individuo in){
-
-    }
-    public void moverIndividuo(Individuo in) throws Mas3Indiv {
-        ListaEnlazadaCasillas<Individuo> l = getListaIndividuosVivos();
-        ElementoLECasillas<Individuo> el = l.getPrimero();
-        while (el.getSiguiente()!= null){
-            if(el.getData().getTipo() == 0) moverIndividuoBasico(el.getData());
-            if (el.getData().getTipo() == 1);
-            if(el.getData().getTipo() == 2)moverIndividuoAvanzado(el.getData());
-            el = el.getSiguiente();
+    private void moverIndividuoNormal(Individuo in) throws Mas3Indiv {
+        if(!in.isEnMovimiento()){
+            in.setEnMovimiento(true);
+            CrearCaminoAvanzado(in);
+        }
+        Casilla c;
+        for (int i=0; i< lista.getPrimero().getData().getNumeroElementos();i++){
+            for (int j=0; j< lista.getNumeroElementos(); j++){
+                ListaSimple<Individuo> lind = tab[j][i].getlIndiv();
+                for (int k=0; k!=3; k++){
+                    if(Objects.equals(lind.getElemento(k).getData().getNumIdentificacion(), in.getNumIdentificacion())){
+                        Casilla casilla = in.getCaminoMovimiento().getUltimo().getData().getDato();
+                        if(i-casilla.fila==0 && j-casilla.columna==0){
+                            in.setEnMovimiento(false);
+                        }else{
+                            if(i-casilla.fila>0){
+                                c = tab[j][i];
+                                c.getlIndiv().del(k);
+                                tab[j][i-1].addIndiv(in);
+                            }else if(i-casilla.fila<0){
+                                c = tab[j][i];
+                                c.getlIndiv().del(k);
+                                tab[j][i+1].addIndiv(in);
+                            }else if(i-casilla.fila==0 && j- casilla.columna>0){
+                                c = tab[j][i];
+                                c.getlIndiv().del(k);
+                                tab[j-1][i].addIndiv(in);
+                            }else if(i-casilla.fila==0 && j- casilla.columna<0){
+                                c = tab[j][i];
+                                c.getlIndiv().del(k);
+                                tab[j-1][i].addIndiv(in);
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

@@ -2,7 +2,14 @@ package com.example.juegovida.Controllers;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import com.example.juegovida.App.BucledeControl.BucleControl;
+import com.example.juegovida.App.Tab.Casilla;
+import com.example.juegovida.Clases.Individuo;
+import com.example.juegovida.Clases.Recursos.*;
+import com.example.juegovida.Errores.Mas3Indiv;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
@@ -13,11 +20,12 @@ import javafx.stage.Stage;
 public class ParamCasillaControl{
     @FXML
     private ResourceBundle resources;
-
+    Object log;
     @FXML
     private URL location;
     @FXML
     private Label NuevoRe;
+    private Casilla casilla;
 
     @FXML
     private Label NuevoIndiv;
@@ -30,15 +38,47 @@ public class ParamCasillaControl{
 
     @FXML
     private ChoiceBox<String> NuevoRecurso;
-    private String[] ind = {"Normal", "Común", "Avanzado"};
+    private BucleControl b;
+    private Stage scene;
 
     @FXML
-    void clickAceptar(ActionEvent event) {
+    void clickAceptar(ActionEvent event) throws Mas3Indiv {
         //Tanto NuevoInd como NuevoRe
+        if("Básico" == NuevoInd.getValue()){
+            b.setNumeroIdIndUlt(b.getNumeroIdIndUlt()+1);
+            AñadirIndividuoBasico();
+        }
+        if("Normal" == NuevoInd.getValue()){
+            b.setNumeroIdIndUlt(b.getNumeroIdIndUlt()+1);
+            AñadirIndividuoNormal();
+        }
+        if("Avanzado" == NuevoInd.getValue()){
+            b.setNumeroIdIndUlt(b.getNumeroIdIndUlt()+1);
+            AñadirIndividuoAvanzado();
+        }
+        if("Pozo" == NuevoRecurso.getValue()){
+            AñadirRecursoPozo();
+        }
+        if("Agua" == NuevoRecurso.getValue()){
+            AñadirRecursoAgua();
+        }
+        if("Tesoro" == NuevoRecurso.getValue()){
+            AñadirRecursoTesoro();
+        }
+        if("Biblioteca" == NuevoRecurso.getValue()){
+            AñadirRecursoBiblioteca();
+        }
+        if("Montaña" == NuevoRecurso.getValue()){
+            AñadirRecursoMontaña();
+        }
+        if("Comida" == NuevoRecurso.getValue()){
+            AñadirRecursoComida();
+        }
+        scene.close();
     }
 
     @FXML
-    void initialize() {
+    void initialize(URL url, ResourceBundle resourceBundle) throws Mas3Indiv {
         NuevoInd.getItems().addAll("Básico", "Normal", "Avanzado");
         NuevoInd.setOnAction(this::getIndividuo);
         NuevoRecurso.getItems().addAll("Pozo", "Agua", "Tesoro", "Biblioteca", "Montaña", "Comida");
@@ -57,5 +97,68 @@ public class ParamCasillaControl{
     }
 
     public void setStage(Stage stage) {
+    }
+    @FXML
+    protected void AñadirIndividuoAvanzado() throws Mas3Indiv {
+        if(casilla.getlIndiv().getNumElementos()<3){
+            Individuo nuevo = new Individuo(b.getNumeroIdIndUlt(), 2);
+            casilla.addIndiv(nuevo);
+        }
+    }
+    @FXML
+    protected void AñadirIndividuoNormal() throws Mas3Indiv {
+        if(casilla.getlIndiv().getNumElementos()<3){
+            Individuo nuevo = new Individuo(b.getNumeroIdIndUlt(), 1);
+            casilla.addIndiv(nuevo);
+        }
+    }
+    @FXML
+    protected void AñadirIndividuoBasico() throws Mas3Indiv {
+        if(casilla.getlIndiv().getNumElementos()<3){
+            Individuo nuevo = new Individuo(b.getNumeroIdIndUlt(), 0);
+            casilla.addIndiv(nuevo);
+        }
+    }
+    @FXML
+    protected void AñadirRecursoPozo(){
+        if(casilla.getlRec().getNumElementos()<3){
+            Pozo nuevo = new Pozo();
+            casilla.addRec(nuevo);
+        }
+    }
+    @FXML
+    protected void AñadirRecursoAgua() {
+        if(casilla.getlRec().getNumElementos()<3){
+            Agua nuevo = new Agua();
+            casilla.addRec(nuevo);
+        }
+    }
+    @FXML
+    protected void AñadirRecursoTesoro(){
+        if(casilla.getlRec().getNumElementos()<3){
+            Tesoro nuevo = new Tesoro();
+            casilla.addRec(nuevo);
+        }
+    }
+    @FXML
+    protected void AñadirRecursoBiblioteca(){
+        if(casilla.getlRec().getNumElementos()<3){
+            Biblioteca nuevo = new Biblioteca();
+            casilla.addRec(nuevo);
+        }
+    }
+    @FXML
+    protected void AñadirRecursoMontaña() {
+        if(casilla.getlRec().getNumElementos()<3){
+            Montaña nuevo = new Montaña();
+            casilla.addRec(nuevo);
+        }
+    }
+    @FXML
+    protected void AñadirRecursoComida(){
+        if(casilla.getlRec().getNumElementos()<3){
+            Comida nuevo = new Comida();
+            casilla.addRec(nuevo);
+        }
     }
 }
