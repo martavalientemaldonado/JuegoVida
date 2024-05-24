@@ -8,7 +8,11 @@ import com.example.juegovida.Clases.Recursos.*;
 import com.example.juegovida.Errores.ElNoEncontradoError;
 import com.example.juegovida.Errores.Mas3Indiv;
 import com.example.juegovida.Errores.Mas3Recs;
+import javafx.fxml.FXML;
+
+import java.net.URL;
 import java.util.Objects;
+import java.util.ResourceBundle;
 
 public class BucleControl {
     ListaEnlazadaCasillas<Individuo> listaIndividuos;
@@ -16,6 +20,10 @@ public class BucleControl {
     private Casilla tab[][];
     private GrafoTablero<Casilla> grafo;
     private ListaEnlazadaCasillas<ListaEnlazadaCasillas<Casilla>> lista;
+    private Casilla c;
+    public double fila;
+    public double columna;
+
     public BucleControl(Casilla[][] tab) {
         this.tab = tab;
     }
@@ -30,8 +38,9 @@ public class BucleControl {
         this.NumeroIdIndUlt = i;
     }
 
-    public ListaEnlazadaCasillas<Individuo> getListaIndividuos() {
-        return listaIndividuos;
+    @FXML
+    void initialize(URL url, ResourceBundle resourceBundle) throws Mas3Indiv {
+
     }
     public void nuevoRecurso()throws Mas3Recs {
         for (int i = 0; i < lista.getPrimero().getData().getNumeroElementos(); i++) {
@@ -74,6 +83,23 @@ public class BucleControl {
                     if(tab[j][i].getlRec().getElemento(k).getData().getTurnosVidaRecursos()==0){
                         Recurso relim= tab[j][i].getlRec().getElemento(k).getData();
                         tab[j][i].delRec(relim);
+                        k++;
+                    }
+                    else{
+                        k++;
+                    }
+
+                }
+            }
+        }
+    }
+    public void eliminarIndTiempo(){
+        for (int i=0; i<lista.getPrimero().getData().getNumeroElementos();i++){
+            for (int j=0; j< lista.getNumeroElementos(); j++){
+                for (int k=0; k<=tab[j][i].getlIndiv().getNumElementos()-1;){
+                    if (tab[j][i].getlIndiv().getElemento(k).getData().getTurnosVidaInd()==0){
+                        Individuo relim= tab[j][i].getlIndiv().getElemento(k).getData();
+                        tab[j][i].delInd(relim);
                         k++;
                     }
                     else{
@@ -298,7 +324,7 @@ public class BucleControl {
                 ListaEnlazadaCasillas<Casilla> columna = lista.getElemento(i).getData();
                 for (int j=0; j< lista.getNumeroElementos(); j++){
                     ListaSimple<Individuo> lind = tab[j][i].getlIndiv();
-                    for (int k=0; k!=3&& lind.getElemento(k)!= null; k++){
+                    for (int k=0; k!=3; k++){
                         if(Objects.equals(lind.getElemento(k).getData().getNumIdentificacion(), in.getNumIdentificacion())){
                             c = tab[j][i];
                             c.getlIndiv().del(k);
@@ -314,7 +340,7 @@ public class BucleControl {
                 ListaEnlazadaCasillas<Casilla> columna = lista.getElemento(i).getData();
                 for (int j=0; j< lista.getNumeroElementos(); j++){
                     ListaSimple<Individuo> lind = tab[j][i].getlIndiv();
-                    for (int k=0; k!=3&& lind.getElemento(k)!= null; k++){
+                    for (int k=0; k!=3; k++){
                         if(Objects.equals(lind.getElemento(k).getData().getNumIdentificacion(), in.getNumIdentificacion())){
                             c = tab[j][i];
                             c.getlIndiv().del(k);
@@ -330,7 +356,7 @@ public class BucleControl {
                 ListaEnlazadaCasillas<Casilla> columna = lista.getElemento(i).getData();
                 for (int j=0; j< lista.getNumeroElementos(); j++){
                     ListaSimple<Individuo> lind = tab[j][i].getlIndiv();
-                    for (int k=0; k!=3&& lind.getElemento(k)!= null; k++){
+                    for (int k=0; k!=3; k++){
                         if(Objects.equals(lind.getElemento(k).getData().getNumIdentificacion(), in.getNumIdentificacion())){
                             c = tab[j][i];
                             c.getlIndiv().del(k);
@@ -346,7 +372,7 @@ public class BucleControl {
                 ListaEnlazadaCasillas<Casilla> columna = lista.getElemento(i).getData();
                 for (int j=0; j< lista.getNumeroElementos(); j++){
                     ListaSimple<Individuo> lind = tab[j][i].getlIndiv();
-                    for (int k=0; k!=3  && lind.getElemento(k)!= null; k++){
+                    for (int k=0; k!=3; k++){
                         if(Objects.equals(lind.getElemento(k).getData().getNumIdentificacion(), in.getNumIdentificacion())){
                             c = tab[j][i];
                             c.getlIndiv().del(k);
@@ -362,7 +388,7 @@ public class BucleControl {
         ElementoLECasillas<NodoGrafoCasillas<Casilla>> i = grafo.listaVertices.getPrimero();
         while(i.getSiguiente()!= null){
             ListaSimple<Individuo> lind = i.getData().getDato().getlIndiv();
-            for(int k=0; k!=3 && lind.getElemento(k)!= null; k++){
+            for(int k=0; k!=3; k++){
                 if(Objects.equals(lind.getElemento(k).getData().getNumIdentificacion(), in.getNumIdentificacion())){
                     break;
                 }
@@ -413,7 +439,7 @@ public class BucleControl {
         for (int i=0; i<lista.getPrimero().getData().getNumeroElementos();i++){
             for (int j=0; j< lista.getNumeroElementos(); j++){
                 ListaSimple<Individuo> lind = tab[j][i].getlIndiv();
-                for (int k=0; k!=3 && lind.getElemento(k)!= null; k++){
+                for (int k=0; k!=3; k++){
                     if(Objects.equals(lind.getElemento(k).getData().getNumIdentificacion(), in.getNumIdentificacion())){
                         if(in.getCaminoMovimiento().getNumeroElementos() == 1){
                             in.setEnMovimiento(false);
@@ -437,19 +463,7 @@ public class BucleControl {
         for (int i=0; i<lista.getNumeroElementos();i++){
             for (int j=0; j< lista.getPrimero().getData().getNumeroElementos(); j++){
                 ListaSimple<Individuo> lind = tab[j][i].getlIndiv();
-                for (int k=0; k!=3&& lind.getElemento(k)!=null; k++){
-                    l.add(lind.getElemento(k).getData());
-                }
-            }
-        }
-        return l;
-    }
-    private ListaEnlazadaCasillas<Recurso> getListaRecursosVivos(){
-        ListaEnlazadaCasillas<Recurso> l = new ListaEnlazadaCasillas<>();
-        for (int i=0; i<lista.getNumeroElementos();i++){
-            for (int j=0; j< lista.getPrimero().getData().getNumeroElementos(); j++){
-                ListaSimple<Recurso> lind = tab[j][i].getlRec();
-                for (int k=0; k!=3 && lind.getElemento(k) !=null; k++){
+                for (int k=0; k!=3; k++){
                     l.add(lind.getElemento(k).getData());
                 }
             }
@@ -465,7 +479,7 @@ public class BucleControl {
         for (int i=0; i< lista.getPrimero().getData().getNumeroElementos();i++){
             for (int j=0; j< lista.getNumeroElementos(); j++){
                 ListaSimple<Individuo> lind = tab[j][i].getlIndiv();
-                for (int k=0; k!=3 && lind.getElemento(k)!= null; k++){
+                for (int k=0; k!=3; k++){
                     if(Objects.equals(lind.getElemento(k).getData().getNumIdentificacion(), in.getNumIdentificacion())){
                         Casilla casilla = in.getCaminoMovimiento().getUltimo().getData().getDato();
                         if(i-casilla.fila==0 && j-casilla.columna==0){

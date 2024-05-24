@@ -10,13 +10,14 @@
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/FinalPreguntasControl.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/FinalPreguntas.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_05_2024_18_03__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_05_2024_18_03__Changes_.xml" afterDir="false" />
+    <list default="true" id="ae59f5ab-3a2c-4635-b2d5-df0317d0df49" name="Changes" comment="botones tablero">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/BucledeControl/BucleControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/BucledeControl/BucleControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/TabApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/TabApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Clases/Recursos/Recurso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Clases/Recursos/Recurso.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/ParamCasillaControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/ParamCasillaControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/TableroControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/TableroControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/DimyTurnosVida.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DimyTurnosVida.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/DimyTurnosControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/DimyTurnosControl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,9 +27,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -83,7 +84,7 @@
     &quot;Application.TabApp.executor&quot;: &quot;Run&quot;,
     &quot;Application.TabParamTablero.executor&quot;: &quot;Run&quot;,
     &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
-    &quot;JUnit.All in JuegoVida.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in JuegoVida.executor&quot;: &quot;Coverage&quot;,
     &quot;JUnit.AristasGrafoCasillasTest.executor&quot;: &quot;Coverage&quot;,
     &quot;JUnit.AristasGrafoTest.executor&quot;: &quot;Coverage&quot;,
     &quot;JUnit.CaminoCTest.eliminarPrimero.executor&quot;: &quot;Coverage&quot;,
@@ -181,7 +182,20 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ParamCasilla">
+  <component name="RunManager" selected="Application.Bienvenida">
+    <configuration name="Bienvenida" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.juegovida.App.Bienvenida" />
+      <module name="JuegoVida" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.juegovida.App.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ParamCasilla" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.juegovida.App.ParamCasilla" />
       <module name="JuegoVida" />
@@ -199,21 +213,6 @@
       <module name="JuegoVida" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ElementoLETest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JuegoVida" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.juegovida.App.Tab.Grafo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.juegovida.App.Tab.Grafo" />
-      <option name="MAIN_CLASS_NAME" value="com.example.juegovida.App.Tab.Grafo.ElementoLETest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -255,7 +254,6 @@
         <item itemvalue="JUnit.All in JuegoVida" />
         <item itemvalue="JUnit.ListaAdyacenciaTest.getArista" />
         <item itemvalue="JUnit.com.example.juegovida.App.Tab in JuegoVida" />
-        <item itemvalue="JUnit.ElementoLETest" />
       </list>
     </recent_temporary>
   </component>
@@ -296,7 +294,6 @@
       <workItem from="1716297058562" duration="9668000" />
       <workItem from="1716504585937" duration="130000" />
       <workItem from="1716548526514" duration="1507000" />
-      <workItem from="1716567657420" duration="4808000" />
     </task>
     <task id="LOCAL-00001" summary="B">
       <option name="closed" value="true" />
@@ -737,6 +734,8 @@
     <MESSAGE value="botones tablero" />
     <MESSAGE value="cambios" />
     <option name="LAST_COMMIT_MESSAGE" value="cambios" />
+    <MESSAGE value="botones tablero" />
+    <option name="LAST_COMMIT_MESSAGE" value="botones tablero" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
@@ -822,7 +821,7 @@
     <SUITE FILE_PATH="coverage/JuegoVida$GrafoTableroTest_dijkstra_init.ic" NAME="GrafoTableroTest.dijkstra_init Coverage Results" MODIFIED="1716308994148" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.juegovida.App.Tab.GrafoCasillas.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/JuegoVida$AristasGrafoTest_getInicio.ic" NAME="AristasGrafoTest.getInicio Coverage Results" MODIFIED="1715712129618" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/JuegoVida$AristasGrafoTest.ic" NAME="AristasGrafoTest Coverage Results" MODIFIED="1715707676541" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.example.juegovida.App.Tab.GrafoRecursos.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/JuegoVida$GrafoCasillasTest_getDijkstra.ic" NAME="GrafoCasillasTest.getDijkstra Coverage Results" MODIFIED="1715961680729" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
