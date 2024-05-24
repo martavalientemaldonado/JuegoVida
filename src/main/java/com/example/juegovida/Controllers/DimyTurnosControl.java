@@ -50,12 +50,12 @@ public class DimyTurnosControl{
         Stage stage = new Stage();
         TabApp t = new TabApp();
         BucleControl bucle = new BucleControl(d.getMatriz().tab);
-        t.loadData(bucle,d.getMatriz(), d);
         Scene scene = new Scene(t.Tablero(d.getMatriz()),1200,700); //vCarga escena
-        stage.setScene(scene);
-        stage.show();
         FXMLLoader fxmlLoader = new FXMLLoader();
-        stage.setScene(scene);
+        TableroControl p = fxmlLoader.getController();
+        p.loadUserDataTabTablero(d);
+        p.setStage(stage);
+        stage.show();
 
         //Cerrar pantalla
         Node source = (Node) event.getSource();

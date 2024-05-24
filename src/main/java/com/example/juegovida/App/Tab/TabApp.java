@@ -127,7 +127,7 @@ public class TabApp{
             public void handle(ActionEvent actionEvent) {
                 try {
                     tab.clickstart();
-                    bucle.bucleEntero(tablero);
+                    bucle.bucleEntero();
                 }
                 catch (IOException e) {
                     throw new RuntimeException(e);
