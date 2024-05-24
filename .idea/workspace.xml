@@ -4,8 +4,6 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ae59f5ab-3a2c-4635-b2d5-df0317d0df49" name="Changes" comment="cambios">
-    <list default="true" id="ae59f5ab-3a2c-4635-b2d5-df0317d0df49" name="Changes" comment="test">
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/FinalPreguntas.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/FinalPreguntasControl.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/FinalPreguntas.fxml" afterDir="false" />

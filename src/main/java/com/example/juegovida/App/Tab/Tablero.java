@@ -1,30 +1,27 @@
 package com.example.juegovida.App.Tab;
 
-import com.example.juegovida.App.Tab.Casilla;
 import com.example.juegovida.App.Tab.GrafoCasillas.GrafoTablero;
-import com.example.juegovida.App.Tab.ListaEnlazadaTablero;
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
-import javafx.scene.Parent;
-import javafx.scene.control.Label;
-import javafx.scene.control.Tab;
-import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.Pane;
-import java.io.FileNotFoundException;
+import com.example.juegovida.App.Tab.GrafoCasillas.ListaEnlazadaCasillas;
 
 public class Tablero {
     public static double fila;
     public static double columna;
-    public static ListaEnlazadaTablero<ListaEnlazadaTablero<Casilla>> matiz;
+    public static ListaEnlazadaCasillas<ListaEnlazadaCasillas<Casilla>> matiz;
     protected static GrafoTablero<Casilla> grafo;
     public Casilla tab[][];
 
+    public static ListaEnlazadaCasillas<ListaEnlazadaCasillas<Casilla>> getMatiz() {
+        return matiz;
+    }
 
-    public Tablero(int fila,int columna) {
+    public static GrafoTablero<Casilla> getGrafo() {
+        return grafo;
+    }
+
+    public Tablero(int fila, int columna) {
         this.tab = new Casilla[fila][columna];
         for (int i = 0; i < fila; i++) {
-            ListaEnlazadaTablero<Casilla> l = new ListaEnlazadaTablero<>();
+            ListaEnlazadaCasillas<Casilla> l = new ListaEnlazadaCasillas<>();
             for (int j = 0; j < columna; j++) {
                 Casilla a = new Casilla(i,j);
                 l.add(a);

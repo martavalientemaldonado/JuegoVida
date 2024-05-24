@@ -19,7 +19,6 @@ import java.net.URL;
 public class TableroControl {
     @FXML
     private Label welcomeText;
-    @FXML
     private GridPane TabApp;
     protected Casilla casilla;
     private Individuo in;
@@ -99,7 +98,7 @@ public class TableroControl {
         stage.show();
     }
 
-
+    @FXML
 
 
 

@@ -18,11 +18,6 @@ public class BucleControl {
     ListaEnlazadaCasillas<Individuo> listaIndividuos;
     Integer NumeroIdIndUlt;
     private Casilla tab[][];
-    private GrafoTablero<Casilla> grafo;
-    private ListaEnlazadaCasillas<ListaEnlazadaCasillas<Casilla>> lista;
-    private Casilla c;
-    public double fila;
-    public double columna;
 
     public BucleControl(Casilla[][] tab) {
         this.tab = tab;
@@ -47,8 +42,8 @@ public class BucleControl {
 
     }
     public void nuevoRecurso()throws Mas3Recs {
-        for (int i = 0; i < lista.getPrimero().getData().getNumeroElementos(); i++) {
-            for (int j = 0; j < lista.getNumeroElementos(); j++) {
+        for (int i = 0; i < Tablero.getMatiz().getPrimero().getData().getNumeroElementos(); i++) {
+            for (int j = 0; j < Tablero.getMatiz().getNumeroElementos(); j++) {
                 if (tab[j][i].getlRec().getNumElementos() < 3) {
                     Recurso recurso = new Recurso();
                     if (Math.random()*100 > recurso.getProbabilidadNuevoRE()) {
@@ -81,8 +76,8 @@ public class BucleControl {
         }
     }
     public void eliminarRec(){
-        for (int i=0; i<lista.getPrimero().getData().getNumeroElementos();i++){
-            for (int j=0; j< lista.getNumeroElementos(); j++){
+        for (int i=0; i<Tablero.getMatiz().getPrimero().getData().getNumeroElementos();i++){
+            for (int j=0; j< Tablero.getMatiz().getNumeroElementos(); j++){
                 for (int k=0; k<=tab[j][i].getlRec().getNumElementos()-1;){
                     if(tab[j][i].getlRec().getElemento(k).getData().getTurnosVidaRecursos()==0){
                         Recurso relim= tab[j][i].getlRec().getElemento(k).getData();
@@ -98,8 +93,8 @@ public class BucleControl {
         }
     }
     public void eliminarIndTiempo(){
-        for (int i=0; i<lista.getPrimero().getData().getNumeroElementos();i++){
-            for (int j=0; j< lista.getNumeroElementos(); j++){
+        for (int i=0; i<Tablero.getMatiz().getPrimero().getData().getNumeroElementos();i++){
+            for (int j=0; j< Tablero.getMatiz().getNumeroElementos(); j++){
                 for (int k=0; k<=tab[j][i].getlIndiv().getNumElementos()-1;){
                     if (tab[j][i].getlIndiv().getElemento(k).getData().getTurnosVidaInd()==0){
                         Individuo relim= tab[j][i].getlIndiv().getElemento(k).getData();
@@ -115,8 +110,8 @@ public class BucleControl {
         }
     }
     public void eliminarInd(){
-        for (int i=0; i<lista.getPrimero().getData().getNumeroElementos();i++){
-            for (int j=0; j< lista.getNumeroElementos(); j++){
+        for (int i=0; i<Tablero.getMatiz().getPrimero().getData().getNumeroElementos();i++){
+            for (int j=0; j< Tablero.getMatiz().getNumeroElementos(); j++){
                 for (int k=0; k<=tab[j][i].getlIndiv().getNumElementos()-1;){
                     if (tab[j][i].getlIndiv().getElemento(k).getData().getTurnosVidaInd()==0){
                         Individuo ieliminar= tab[j][i].getlIndiv().getElemento(k).getData();
@@ -133,8 +128,8 @@ public class BucleControl {
             }
         }
     public void clonado() throws Mas3Indiv{
-        for (int i = 0; i < lista.getPrimero().getData().getNumeroElementos(); i++) {
-            for (int j = 0; j < lista.getNumeroElementos(); j++) {
+        for (int i = 0; i < Tablero.getMatiz().getPrimero().getData().getNumeroElementos(); i++) {
+            for (int j = 0; j < Tablero.getMatiz().getNumeroElementos(); j++) {
                 Individuo i1 = tab[j][i].getlIndiv().getElemento(0).getData();
                 Individuo i2 = tab[j][i].getlIndiv().getElemento(1).getData();
                 Individuo i3 = tab[j][i].getlIndiv().getElemento(2).getData();
@@ -204,8 +199,8 @@ public class BucleControl {
         }
     }
     public void repro() throws Mas3Indiv {
-        for (int i=0;i<lista.getPrimero().getData().getNumeroElementos();i++){
-            for (int j=0; j<lista.getNumeroElementos();j++){
+        for (int i=0;i<Tablero.getMatiz().getPrimero().getData().getNumeroElementos();i++){
+            for (int j=0; j<Tablero.getMatiz().getNumeroElementos();j++){
                     Individuo i1=tab[j][i].getlIndiv().getElemento(0).getData();
                     Individuo i2=tab[j][i].getlIndiv().getElemento(1).getData();
                     Individuo i3=tab[j][i].getlIndiv().getElemento(2).getData();
@@ -324,9 +319,9 @@ public class BucleControl {
         int numero = (int) (Math.random() * 4) + 1;
         if (numero == 1) {//mueve hacia abajo
             Casilla c;
-            for (int i=0; i<lista.getPrimero().getData().getNumeroElementos();i++){
-                ListaEnlazadaCasillas<Casilla> columna = lista.getElemento(i).getData();
-                for (int j=0; j< lista.getNumeroElementos(); j++){
+            for (int i=0; i<Tablero.getMatiz().getPrimero().getData().getNumeroElementos();i++){
+                ListaEnlazadaCasillas<Casilla> columna = Tablero.getMatiz().getElemento(i).getData();
+                for (int j=0; j< Tablero.getMatiz().getNumeroElementos(); j++){
                     ListaSimple<Individuo> lind = tab[j][i].getlIndiv();
                     for (int k=0; k!=3; k++){
                         if(Objects.equals(lind.getElemento(k).getData().getNumIdentificacion(), in.getNumIdentificacion())){
@@ -340,9 +335,9 @@ public class BucleControl {
 
         }if (numero == 2) {//mueve hacia arriba
             Casilla c;
-            for (int i=0; i<lista.getPrimero().getData().getNumeroElementos();i++){
-                ListaEnlazadaCasillas<Casilla> columna = lista.getElemento(i).getData();
-                for (int j=0; j< lista.getNumeroElementos(); j++){
+            for (int i=0; i<Tablero.getMatiz().getPrimero().getData().getNumeroElementos();i++){
+                ListaEnlazadaCasillas<Casilla> columna = Tablero.getMatiz().getElemento(i).getData();
+                for (int j=0; j< Tablero.getMatiz().getNumeroElementos(); j++){
                     ListaSimple<Individuo> lind = tab[j][i].getlIndiv();
                     for (int k=0; k!=3; k++){
                         if(Objects.equals(lind.getElemento(k).getData().getNumIdentificacion(), in.getNumIdentificacion())){
@@ -356,9 +351,9 @@ public class BucleControl {
 
         }if (numero == 3) {//mueve hacia derecha
             Casilla c;
-            for (int i=0; i<lista.getPrimero().getData().getNumeroElementos();i++){
-                ListaEnlazadaCasillas<Casilla> columna = lista.getElemento(i).getData();
-                for (int j=0; j< lista.getNumeroElementos(); j++){
+            for (int i=0; i<Tablero.getMatiz().getPrimero().getData().getNumeroElementos();i++){
+                ListaEnlazadaCasillas<Casilla> columna = Tablero.getMatiz().getElemento(i).getData();
+                for (int j=0; j< Tablero.getMatiz().getNumeroElementos(); j++){
                     ListaSimple<Individuo> lind = tab[j][i].getlIndiv();
                     for (int k=0; k!=3; k++){
                         if(Objects.equals(lind.getElemento(k).getData().getNumIdentificacion(), in.getNumIdentificacion())){
@@ -372,9 +367,9 @@ public class BucleControl {
 
         }if (numero == 4) {//mueve hacia izquierda
             Casilla c;
-            for (int i=0; i<lista.getPrimero().getData().getNumeroElementos();i++){
-                ListaEnlazadaCasillas<Casilla> columna = lista.getElemento(i).getData();
-                for (int j=0; j< lista.getNumeroElementos(); j++){
+            for (int i=0; i<Tablero.getMatiz().getPrimero().getData().getNumeroElementos();i++){
+                ListaEnlazadaCasillas<Casilla> columna = Tablero.getMatiz().getElemento(i).getData();
+                for (int j=0; j< Tablero.getMatiz().getNumeroElementos(); j++){
                     ListaSimple<Individuo> lind = tab[j][i].getlIndiv();
                     for (int k=0; k!=3; k++){
                         if(Objects.equals(lind.getElemento(k).getData().getNumIdentificacion(), in.getNumIdentificacion())){
@@ -389,7 +384,7 @@ public class BucleControl {
     }
 
     private void CrearCaminoAvanzado(Individuo in) throws ElNoEncontradoError {
-        ElementoLECasillas<NodoGrafoCasillas<Casilla>> i = grafo.listaVertices.getPrimero();
+        ElementoLECasillas<NodoGrafoCasillas<Casilla>> i = Tablero.getGrafo().listaVertices.getPrimero();
         while(i.getSiguiente()!= null){
             ListaSimple<Individuo> lind = i.getData().getDato().getlIndiv();
             for(int k=0; k!=3; k++){
@@ -400,17 +395,17 @@ public class BucleControl {
             i = i.getSiguiente();
         }
         HashMapC<NodoGrafoCasillas<Casilla>, CaminoC<Casilla>> Di = null;
-        if(i == grafo.listaVertices.getUltimo()){
+        if(i == Tablero.getGrafo().listaVertices.getUltimo()){
             ListaSimple<Individuo> lind = i.getData().getDato().getlIndiv();
             for(int k=0; k!=3; k++){
                 if(Objects.equals(lind.getElemento(k).getData().getNumIdentificacion(), in.getNumIdentificacion())){
-                    Di = grafo.getDijkstra(i.getData());
+                    Di = Tablero.getGrafo().getDijkstra(i.getData());
                 }else{
                     throw new ElNoEncontradoError("No se ha encontrado el individuo");
                 }
             }
         }else{
-            Di = grafo.getDijkstra(i.getData());
+            Di = Tablero.getGrafo().getDijkstra(i.getData());
         }
         if(Di!= null) {
             ElementoHashMapC<NodoGrafoCasillas<Casilla>, CaminoC<Casilla>> e = Di.getPrimero();
@@ -429,7 +424,7 @@ public class BucleControl {
                 }
                 e = e.getSiguiente();
             }
-            ListaEnlazadaCasillas<NodoGrafoCasillas<Casilla>> Camino= grafo.getCaminoVertices(i.getData(),aUsar.getNodobuscamos());
+            ListaEnlazadaCasillas<NodoGrafoCasillas<Casilla>> Camino= Tablero.getGrafo().getCaminoVertices(i.getData(),aUsar.getNodobuscamos());
             in.setEnMovimiento(true);
             in.setCaminoMovimiento(Camino);
         }
@@ -440,8 +435,8 @@ public class BucleControl {
             in.setEnMovimiento(true);
         }
         Casilla c;
-        for (int i=0; i<lista.getPrimero().getData().getNumeroElementos();i++){
-            for (int j=0; j< lista.getNumeroElementos(); j++){
+        for (int i=0; i<Tablero.getMatiz().getPrimero().getData().getNumeroElementos();i++){
+            for (int j=0; j< Tablero.getMatiz().getNumeroElementos(); j++){
                 ListaSimple<Individuo> lind = tab[j][i].getlIndiv();
                 for (int k=0; k!=3; k++){
                     if(Objects.equals(lind.getElemento(k).getData().getNumIdentificacion(), in.getNumIdentificacion())){
@@ -464,8 +459,8 @@ public class BucleControl {
     }
     private ListaEnlazadaCasillas<Individuo> getListaIndividuosVivos(){
         ListaEnlazadaCasillas<Individuo> l = new ListaEnlazadaCasillas<>();
-        for (int i=0; i<lista.getNumeroElementos();i++){
-            for (int j=0; j< lista.getPrimero().getData().getNumeroElementos(); j++){
+        for (int i=0; i<Tablero.getMatiz().getNumeroElementos();i++){
+            for (int j=0; j< Tablero.getMatiz().getPrimero().getData().getNumeroElementos(); j++){
                 ListaSimple<Individuo> lind = tab[j][i].getlIndiv();
                 for (int k=0; k!=3; k++){
                     l.add(lind.getElemento(k).getData());
@@ -476,8 +471,8 @@ public class BucleControl {
     }
     private ListaEnlazadaCasillas<Recurso> getListaRecursosVivos(){
         ListaEnlazadaCasillas<Recurso> l = new ListaEnlazadaCasillas<>();
-        for (int i=0; i<lista.getNumeroElementos();i++){
-            for (int j=0; j< lista.getPrimero().getData().getNumeroElementos(); j++){
+        for (int i=0; i<Tablero.getMatiz().getNumeroElementos();i++){
+            for (int j=0; j< Tablero.getMatiz().getPrimero().getData().getNumeroElementos(); j++){
                 ListaSimple<Recurso> lind = tab[j][i].getlRec();
                 for (int k=0; k!=3; k++){
                     l.add(lind.getElemento(k).getData());
@@ -492,8 +487,8 @@ public class BucleControl {
             CrearCaminoAvanzado(in);
         }
         Casilla c;
-        for (int i=0; i< lista.getPrimero().getData().getNumeroElementos();i++){
-            for (int j=0; j< lista.getNumeroElementos(); j++){
+        for (int i=0; i< Tablero.getMatiz().getPrimero().getData().getNumeroElementos();i++){
+            for (int j=0; j< Tablero.getMatiz().getNumeroElementos(); j++){
                 ListaSimple<Individuo> lind = tab[j][i].getlIndiv();
                 for (int k=0; k!=3; k++){
                     if(Objects.equals(lind.getElemento(k).getData().getNumIdentificacion(), in.getNumIdentificacion())){
@@ -525,8 +520,8 @@ public class BucleControl {
         }
     }
     private void evaluarCasillas(){
-        for (int i=0; i<lista.getNumeroElementos();i++){
-            for (int j=0; j< lista.getPrimero().getData().getNumeroElementos(); j++){
+        for (int i=0; i<Tablero.getMatiz().getNumeroElementos();i++){
+            for (int j=0; j< Tablero.getMatiz().getPrimero().getData().getNumeroElementos(); j++){
                 ListaSimple<Individuo> lind = tab[j][i].getlIndiv();
                 ListaSimple<Recurso> lrec = tab[j][i].getlRec();
                 for (int k=0; k!=3 && lrec.getElemento(k)!= null; k++){
@@ -559,25 +554,29 @@ public class BucleControl {
             }
         }
     }
-    public void main(String[] args) throws Mas3Indiv, Mas3Recs {
+    public void bucleEntero()throws Mas3Indiv, Mas3Recs{
         ListaEnlazadaCasillas<Individuo> l = getListaIndividuosVivos();
         ElementoLECasillas<Individuo> i = l.getPrimero();
-        while(i.getSiguiente() != null){
-            i.getData().setTurnosVidaInd(i.getData().getTurnosVidaInd()-1);
-            i = i.getSiguiente();
+        while(l.getNumeroElementos() >1){
+            while(i.getSiguiente() != null){
+                i.getData().setTurnosVidaInd(i.getData().getTurnosVidaInd()-1);
+                i = i.getSiguiente();
+            }
+            eliminarInd();
+            ListaEnlazadaCasillas<Recurso> l2 = getListaRecursosVivos();
+            ElementoLECasillas<Recurso> i2 = l2.getPrimero();
+            while(i2.getSiguiente() != null){
+                i2.getData().setTurnosVidaRecursos(i2.getData().getTurnosVidaRecursos()-1);
+                i2 = i2.getSiguiente();
+            }
+            eliminarRec();
+            moverIndividuos();
+            evaluarCasillas();
+            repro();
+            clonado();
+            nuevoRecurso();
         }
-        eliminarInd();
-        ListaEnlazadaCasillas<Recurso> l2 = getListaRecursosVivos();
-        ElementoLECasillas<Recurso> i2 = l2.getPrimero();
-        while(i2.getSiguiente() != null){
-            i2.getData().setTurnosVidaRecursos(i2.getData().getTurnosVidaRecursos()-1);
-            i2 = i2.getSiguiente();
-        }
-        eliminarRec();
-        moverIndividuos();
-        evaluarCasillas();
-        repro();
-        clonado();
-        nuevoRecurso();
+    }
+    public void main(String[] args) throws Mas3Indiv, Mas3Recs {
     }
 }

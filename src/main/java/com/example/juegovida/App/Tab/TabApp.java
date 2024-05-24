@@ -96,8 +96,6 @@ public class TabApp{
         pause.setOnAction(clickps);
 
 
-
-
         for (int i = 0; i < t.getFila(); i++) {
             for (int j = 0; j < t.getColumna(); j++) {
                 // Label placeholder = new Label("Celda "  + "," + j);
@@ -109,7 +107,6 @@ public class TabApp{
                     public void handle(Event event) {
                         try {
                             System.out.println(botoncasillas);
-
                             if(botoncasillas==true) {
                                 tab.click();
                             }
@@ -119,6 +116,7 @@ public class TabApp{
                         }
                     }
                 };
+                Casilla celda = new Casilla(j,i);
                 btnNewObject.setOnAction(click);
                 btnNewObject.setMinSize(80, 80); // Tamaño mínimo para visualización
                 placeholder.setMinSize(80, 80); // Tamaño mínimo para visualización

@@ -4,7 +4,6 @@ import com.example.juegovida.App.Tab.Casilla;
 import com.example.juegovida.App.Tab.ColaInd.ColaEventosIndividuo;
 import com.example.juegovida.App.Tab.GrafoCasillas.ListaEnlazadaCasillas;
 import com.example.juegovida.App.Tab.GrafoCasillas.NodoGrafoCasillas;
-import com.example.juegovida.App.Tab.ListaEnlazadaTablero;
 
 public class Individuo {
     int vida;
