@@ -15,8 +15,8 @@ import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class BucleControl {
-    ListaEnlazadaCasillas<Individuo> listaIndividuos;
-    Integer NumeroIdIndUlt;
+    static ListaEnlazadaCasillas<Individuo> listaIndividuos;
+    static Integer NumeroIdIndUlt =-1;
     private Casilla tab[][];
 
     public BucleControl(Casilla[][] tab) {
@@ -26,15 +26,15 @@ public class BucleControl {
     public BucleControl() {
     }
 
-    public ListaEnlazadaCasillas<Individuo> getListaIndividuos() {
+    public static ListaEnlazadaCasillas<Individuo> getListaIndividuos() {
         return listaIndividuos;
     }
 
-    public Integer getNumeroIdIndUlt(){
-        return getNumeroIdIndUlt();
+    public static Integer getNumeroIdIndUlt(){
+        return NumeroIdIndUlt;
     }
-    public void setNumeroIdIndUlt(Integer i){
-        this.NumeroIdIndUlt = i;
+    public static void setNumeroIdIndUlt(Integer i){
+        NumeroIdIndUlt = i;
     }
 
     @FXML

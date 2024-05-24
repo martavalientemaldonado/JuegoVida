@@ -184,7 +184,7 @@ public class TabParamTableroControl {
         d.rollbackTabParamCasilla();
     }
     @FXML
-    void clickAceptar(ActionEvent event) throws IOException {
+    void clickAceptar(ActionEvent event){
         d.commitTabParamCasilla();
         //Cerrar pantalla
         Node source = (Node) event.getSource();

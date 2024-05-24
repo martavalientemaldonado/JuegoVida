@@ -108,7 +108,7 @@ public class TabApp{
                         try {
                             System.out.println(botoncasillas);
                             if(botoncasillas==true) {
-                                tab.click();
+                                tab.click(c);
                             }
 
                         } catch (IOException e) {
@@ -116,7 +116,6 @@ public class TabApp{
                         }
                     }
                 };
-                Casilla celda = new Casilla(j,i);
                 btnNewObject.setOnAction(click);
                 btnNewObject.setMinSize(80, 80); // Tamaño mínimo para visualización
                 placeholder.setMinSize(80, 80); // Tamaño mínimo para visualización

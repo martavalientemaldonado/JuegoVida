@@ -54,8 +54,8 @@ public class DimyTurnosControl{
         Scene scene = new Scene(t.Tablero(d.getMatriz()),1200,700); //vCarga escena
         stage.setScene(scene);
         stage.show();
-
-
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        stage.setScene(scene);
 
         //Cerrar pantalla
         Node source = (Node) event.getSource();
