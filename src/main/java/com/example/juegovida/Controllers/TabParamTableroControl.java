@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import com.example.juegovida.App.BucledeControl.BucleControl;
 import com.example.juegovida.App.Tab.Tablero;
 import com.example.juegovida.Clases.Individuo;
 import com.example.juegovida.Clases.Recursos.*;
@@ -111,6 +112,12 @@ public class TabParamTableroControl {
     private Label TurnosRestaMontaña;
 
     @FXML
+    private Slider SNumColumnas;
+
+    @FXML
+    private Slider SNumFilas;
+
+    @FXML
     private Slider STurnosVidaInd;
 
     @FXML
@@ -147,6 +154,8 @@ public class TabParamTableroControl {
     protected IntegerProperty ITurnosRestaMontaña = new SimpleIntegerProperty(0);
     protected IntegerProperty IPorcetajeReproTesoro = new SimpleIntegerProperty(0);
     protected IntegerProperty IPorcetajeClonaBiblio = new SimpleIntegerProperty(0);
+    protected IntegerProperty INumColumnas = new SimpleIntegerProperty(0);
+    protected IntegerProperty INumFilas = new SimpleIntegerProperty(0);
     protected IntegerProperty ITurnosVidaInd = new SimpleIntegerProperty(0);
     protected IntegerProperty ITurnosVidaRe = new SimpleIntegerProperty(0);
 
@@ -211,6 +220,7 @@ public class TabParamTableroControl {
         PorcetajeReproTesoro.textProperty().bind(IPorcetajeReproTesoro.asString());
         SPorcetajeClonaBiblio.valueProperty().bindBidirectional(IPorcetajeClonaBiblio);
         PorcetajeClonaBiblio.textProperty().bind(IPorcetajeClonaBiblio.asString());
+
         STurnosVidaInd.valueProperty().bindBidirectional(ITurnosVidaInd);
         TurnosVidaInd.textProperty().bind(ITurnosVidaInd.asString());
         STurnosVidaRe.valueProperty().bindBidirectional(ITurnosVidaRe);
@@ -243,6 +253,8 @@ public class TabParamTableroControl {
         assert TurnosPropComida != null : "fx:id=\"TurnosPropComida\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
         assert PorcetajeClonaBiblio != null : "fx:id=\"PorcetajeClonaBiblio\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
         assert TurnosRestaMontaña != null : "fx:id=\"TurnosRestaMontaña\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
+        assert SNumColumnas != null : "fx:id=\"SNumColumnas\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
+        assert SNumFilas != null : "fx:id=\"SNumFilas\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
         assert STurnosVidaInd != null : "fx:id=\"STurnosVidaInd\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
         assert STurnosVidaRe != null : "fx:id=\"STurnosVidaRe\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
         assert TurnosVidaRe != null : "fx:id=\"TurnosVidaRe\" was not injected: check your FXML file 'TabDeTablero.fxml'.";

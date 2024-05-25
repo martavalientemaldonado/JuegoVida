@@ -6,7 +6,7 @@
 
 <AnchorPane prefHeight="430.0" prefWidth="586.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.juegovida.Controllers.ParametrosIndividuoControl">
    <children>
-      <ImageView fx:id="fondo" fitHeight="484.0" fitWidth="774.0" layoutX="-3.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="fondo" fitHeight="600.0" fitWidth="800.0" layoutX="-3.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Imagenes/Captura.PNG" />
          </image>

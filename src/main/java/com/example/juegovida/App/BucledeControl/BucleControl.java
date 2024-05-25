@@ -6,6 +6,7 @@ import com.example.juegovida.App.Tab.GrafoCasillas.*;
 import com.example.juegovida.Clases.Individuo;
 import com.example.juegovida.Clases.Recursos.*;
 import com.example.juegovida.DatosCompartidos;
+import com.example.juegovida.DatosCompartidos.*;
 import com.example.juegovida.Errores.ElNoEncontradoError;
 import com.example.juegovida.Errores.ElRepetidoError;
 import com.example.juegovida.Errores.Mas3Indiv;
@@ -18,15 +19,27 @@ import java.util.ResourceBundle;
 
 public class BucleControl {
     static ArbolBinarioInd listaIndividuos;
-    static Integer NumeroIdIndUlt =-1;
+
+
+    static Integer NumeroIdIndUlt = -1;
     public Casilla tab[][];
     Tablero Tablero;
+
     public BucleControl(Casilla[][] tab, DatosCompartidos t) {
         this.tab = tab;
-        this.Tablero=t.getMatriz();
+        this.Tablero = t.getMatriz();
     }
-    public void setTablero(Tablero t){
-        this.Tablero=t;
+
+    public  void setListaIndividuos(ArbolBinarioInd listaIndividuos) {
+        BucleControl.listaIndividuos = listaIndividuos;
+    }
+
+    public void loaddata(DatosCompartidos t) {
+        this.Tablero = t.getMatriz();
+    }
+
+    public void setTablero(Tablero t) {
+        this.Tablero = t;
     }
 
 
@@ -34,10 +47,11 @@ public class BucleControl {
         return listaIndividuos;
     }
 
-    public static Integer getNumeroIdIndUlt(){
+    public static Integer getNumeroIdIndUlt() {
         return NumeroIdIndUlt;
     }
-    public static void setNumeroIdIndUlt(Integer i){
+
+    public static void setNumeroIdIndUlt(Integer i) {
         NumeroIdIndUlt = i;
     }
 
@@ -45,92 +59,83 @@ public class BucleControl {
     void initialize(URL url, ResourceBundle resourceBundle) throws Mas3Indiv {
 
     }
-    public void nuevoRecurso()throws Mas3Recs {
+
+    public void nuevoRecurso() throws Mas3Recs {
         for (int i = 0; i < Tablero.getFila(); i++) {
             for (int j = 0; j < Tablero.getColumna(); j++) {
                 if (tab[j][i].getlRec().getNumElementos() < 3) {
                     Recurso recurso = new Recurso();
-                    if (Math.random()*100 > recurso.getProbabilidadNuevoRE()) {
+                    if (Math.random() * 100 > recurso.getProbabilidadNuevoRE()) {
                         Agua agua = new Agua();
                         Comida comida = new Comida();
                         Biblioteca biblioteca = new Biblioteca();
                         Tesoro tesoro = new Tesoro();
                         Montaña montaña = new Montaña();
                         Pozo pozo = new Pozo();
-                        double r=Math.random()*100;
-                        if (r < agua.getProbAparicion()){
-                                tab[j][i].addRec(agua);
+                        double r = Math.random() * 100;
+                        if (r < agua.getProbAparicion()) {
+                            tab[j][i].addRec(agua);
                         } else if (r < comida.getProbAparicion() + agua.getProbAparicion()) {
-                                tab[j][i].addRec(comida);
+                            tab[j][i].addRec(comida);
                         } else if (r < biblioteca.getProbAparicion() + comida.getProbAparicion() + agua.getProbAparicion()) {
-                                tab[j][i].addRec(biblioteca);
+                            tab[j][i].addRec(biblioteca);
 
                         } else if (r < biblioteca.getProbAparicion() + comida.getProbAparicion() + agua.getProbAparicion() + tesoro.getProbAparicion()) {
-                                tab[j][i].addRec(tesoro);
+                            tab[j][i].addRec(tesoro);
 
-                        } else if (r < biblioteca.getProbAparicion() + comida.getProbAparicion() + agua.getProbAparicion() + tesoro.getProbAparicion()+montaña.getProbAparicion()){
-                                tab[j][i].addRec(montaña);
-                        } else if(r< pozo.getProbAparicion()){
-                                tab[j][i].addRec(pozo);
+                        } else if (r < biblioteca.getProbAparicion() + comida.getProbAparicion() + agua.getProbAparicion() + tesoro.getProbAparicion() + montaña.getProbAparicion()) {
+                            tab[j][i].addRec(montaña);
+                        } else if (r < pozo.getProbAparicion()) {
+                            tab[j][i].addRec(pozo);
 
                         }
                     }
                 }
             }
         }
+
+
     }
-    public void eliminarRec(){
-        for (int i=0; i<Tablero.getFila();i++){
-            for (int j=0; j< Tablero.getColumna(); j++){
-                for (int k=0; k<=tab[j][i].getlRec().getNumElementos()-1;){
-                    if(tab[j][i].getlRec().getElemento(k).getData().getTurnosVidaRecursos()==0){
-                        Recurso relim= tab[j][i].getlRec().getElemento(k).getData();
+
+    public void eliminarRec() {
+        for (int i = 0; i < Tablero.getFila(); i++) {
+            for (int j = 0; j < Tablero.getColumna(); j++) {
+                for (int k = 0; k <= tab[j][i].getlRec().getNumElementos() - 1; ) {
+                    if (tab[j][i].getlRec().getElemento(k).getData().getTurnosVidaRecursos() == 0) {
+                        Recurso relim = tab[j][i].getlRec().getElemento(k).getData();
                         tab[j][i].delRec(relim);
                         k++;
-                    }
-                    else{
+                    } else {
                         k++;
                     }
 
                 }
             }
         }
+        setTablero(Tablero);
     }
-    public void eliminarIndTiempo(){
-        for (int i=0; i<Tablero.getFila();i++){
-            for (int j=0; j< Tablero.getColumna(); j++){
-                for (int k=0; k<=tab[j][i].getlIndiv().getNumElementos()-1;){
-                    if (tab[j][i].getlIndiv().getElemento(k).getData().getTurnosVidaInd()==0){
-                        Individuo relim= tab[j][i].getlIndiv().getElemento(k).getData();
-                        tab[j][i].delInd(relim);
-                        k++;
-                    }
-                    else{
-                        k++;
-                    }
 
-                }
-            }
-        }
-    }
-    public void eliminarInd(){
-        for (int i=0; i<Tablero.getFila();i++){
-            for (int j=0; j< Tablero.getColumna(); j++){
-                for (int k=0; k<=tab[j][i].getlIndiv().getNumElementos()-1;){
-                    if (tab[j][i].getlIndiv().getElemento(k).getData().getTurnosVidaInd()==0){
-                        Individuo ieliminar= tab[j][i].getlIndiv().getElemento(k).getData();
+    public void eliminarInd() {
+        for (int i = 0; i < Tablero.getFila(); i++) {
+            for (int j = 0; j < Tablero.getColumna(); j++) {
+                for (int k = 0; k <= tab[j][i].getlIndiv().getNumElementos() - 1; ) {
+                    if (tab[j][i].getlIndiv().getElemento(k).getData().getTurnosVidaInd() == 0) {
+                        Individuo ieliminar = tab[j][i].getlIndiv().getElemento(k).getData();
                         tab[j][i].delInd(ieliminar);
                         tab[j][i].getlIndiv().getElemento(k).getData().getCola().push(new ElementoCola<>("Ha muerto"));
-                            k++;
-                    }
-                    else{
+                        k++;
+                    } else {
                         k++;
                     }
 
-                    }
                 }
             }
         }
+    }
+
+
+
+
     public void clonado() throws Mas3Indiv, ElRepetidoError {
         for (int i = 0; i < Tablero.getFila(); i++) {
             for (int j = 0; j < Tablero.getColumna(); j++) {
@@ -149,6 +154,7 @@ public class BucleControl {
                             if (tab[j][i].lIndiv.getElemento(2).getData() == i1) {
                                 i1.getCola().push(new ElementoCola<>("Padre clonación"));
                                 i1.getCola().push(new ElementoCola<>("Hijo" + i1));
+
 
                             }
                         } else {
@@ -201,6 +207,7 @@ public class BucleControl {
                 }
             }
         }
+        setTablero(Tablero);
     }
     public void repro() throws Mas3Indiv, ElRepetidoError {
         for (int i=0;i<Tablero.getFila();i++){
@@ -308,6 +315,7 @@ public class BucleControl {
                     }
             }
         }
+        setTablero(Tablero);
     }
     public void moverIndividuos() throws Mas3Indiv {
         ListaEnlazadaCasillas<Individuo> l = getListaIndividuosVivos();
@@ -463,8 +471,8 @@ public class BucleControl {
 
     private ListaEnlazadaCasillas<Individuo> getListaIndividuosVivos(){
         ListaEnlazadaCasillas<Individuo> l = new ListaEnlazadaCasillas<>();
-        for (int i=1; i<this.Tablero.getFila();i++){
-            for (int j=1; j< this.Tablero.getColumna(); j++){
+        for (int i=0; i<this.Tablero.getFila();i++){
+            for (int j=0; j< this.Tablero.getColumna(); j++){
                 ListaSimple<Individuo> lind = Tablero.getCasilla(i,j).getlIndiv();
                 for (int k=0; k<lind.getNumElementos(); k++){
                     l.add(lind.getElemento(k).getData());

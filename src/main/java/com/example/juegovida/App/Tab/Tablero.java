@@ -43,7 +43,6 @@ public class Tablero extends gson {
                 l.add(a);
                 this.tab[i][j] =a;
             }
-            //matiz.add(l);
         }
 
     }

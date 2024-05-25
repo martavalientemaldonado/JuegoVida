@@ -43,7 +43,9 @@ public class ParamCasillaControl implements Initializable {
     private ComboBox<String> NuevoRecurso;
     private  BucleControl b;
     private Stage scene;
-    private DatosCompartidos d;
+    DatosCompartidos d;
+
+
 
 
     @FXML
@@ -79,10 +81,7 @@ public class ParamCasillaControl implements Initializable {
         if("Comida".equals(NuevoRecurso.getValue())){
             AñadirRecursoComida();
         }
-        //Cerrar pantalla
-        Node source = (Node) event.getSource();
-        Stage stage1 = (Stage) source.getScene().getWindow();
-        stage1.close();
+
     }
 
     @FXML
@@ -111,6 +110,7 @@ public class ParamCasillaControl implements Initializable {
         if(casilla.getlIndiv().getNumElementos()<3){
             Individuo nuevo = new Individuo(b.getNumeroIdIndUlt(), 2);
             casilla.addIndiv(nuevo);
+            b.getListaIndividuos().añadir(nuevo);
         }
     }
     @FXML
@@ -118,6 +118,7 @@ public class ParamCasillaControl implements Initializable {
         if(casilla.getlIndiv().getNumElementos()<3){
             Individuo nuevo = new Individuo(b.getNumeroIdIndUlt(), 1);
             casilla.addIndiv(nuevo);
+            b.getListaIndividuos().añadir(nuevo);
         }
     }
     @FXML
@@ -125,6 +126,7 @@ public class ParamCasillaControl implements Initializable {
         if(casilla.getlIndiv().getNumElementos()<3){
             Individuo nuevo = new Individuo(b.getNumeroIdIndUlt(), 0);
             casilla.addIndiv(nuevo);
+            b.getListaIndividuos().añadir(nuevo);
         }
     }
     @FXML
@@ -169,12 +171,16 @@ public class ParamCasillaControl implements Initializable {
             casilla.addRec(nuevo);
         }
     }
-    public void loadUserDataTabTablero(DatosCompartidos parametrosData) {
+    public void loadUserDataTabTablero(DatosCompartidos parametrosData, BucleControl b, Casilla cass) {
+        this.casilla=cass;
+        this.b=b;
         this.d = parametrosData;
+        this.updateGUIwithModelTabTablero();
     }
-    public void loadUserDataCasilla(Casilla c) {
-        this.casilla = c;
+
+    private void updateGUIwithModelTabTablero() {
     }
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

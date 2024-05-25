@@ -31,14 +31,24 @@ public class TabApp{
     private Node layout;
     public boolean botoncasillas;
 
-    private BucleControl bucle;
+    private BucleControl b;
 
     private Tablero ta;
     private DatosCompartidos d;
 
+    public void loaddata(DatosCompartidos d){
+        this.d=d;
+
+
+    }
+
+
+
+
 
 
     public Parent Tablero(Tablero t) throws Exception {
+        this.b= new BucleControl(5,2);
         log.info("Inicio del método de arranque de la aplicación para mostrar un grid de forma programática");
         GridPane mainGrid = new GridPane();
         botoncasillas=false;
@@ -81,7 +91,6 @@ public class TabApp{
             @Override
             public void handle(ActionEvent actionEvent) {
                 botoncasillas=true;
-                System.out.println(botoncasillas);
             }
         };
         pause.setOnAction(clickps);
@@ -98,8 +107,10 @@ public class TabApp{
                     @Override
                     public void handle(Event event) {
                         try {
-                            System.out.println(botoncasillas);
-                            if(botoncasillas==true) {
+                            if(botoncasillas) {
+                                tab.setP(true);
+                                tab.loadUserDataTabNuevo(d,b);
+                                b.setTablero(tablero);
                                 tab.click(c);
                             }
 
@@ -119,6 +130,7 @@ public class TabApp{
         }
 
 
+
 /***
         FlowPane f = new FlowPane();
         //f.getChildren().add(mainGrid);
@@ -127,33 +139,33 @@ public class TabApp{
         f.setTranslateY(100);
         f.setTranslateX(60);
  */
+BucleControl bucle=this.b;
         EventHandler<ActionEvent> clickstart= new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
                 try {
-                    tab.clickstart();
-                    BucleControl.bucleEntero();
-                }
-                catch (IOException e) {
+
+                    tab.loadUserDataTabNuevo(d,bucle);
+                    b.setTablero(tablero);
+                    b.bucleEntero();
+
+                } catch (ElRepetidoError e) {
                     throw new RuntimeException(e);
                 } catch (Mas3Indiv e) {
                     throw new RuntimeException(e);
                 } catch (Mas3Recs e) {
                     throw new RuntimeException(e);
-                } catch (ElRepetidoError e) {
-                    throw new RuntimeException(e);
                 }
             }
         };
         start.setOnAction(clickstart);
-        DatosCompartidos d= this.d;
+
         EventHandler<ActionEvent> clickajustes= new EventHandler<ActionEvent>() {
-            private DatosCompartidos d;
 
             @Override
             public void handle(ActionEvent actionEvent) {
                 try {
-                    tab.loadUserDataTabTablero(d,bucle);
+
                     tab.clickajustes();//repite era que este d saltaba que era nulo claro por qu mira
                 }
                 catch (IOException e) {
@@ -175,9 +187,5 @@ public class TabApp{
 
     }
 
-    public void loadData(BucleControl bucle, Tablero matriz, DatosCompartidos d){
-        this.bucle=bucle;
-        this.ta=matriz;
-        this.d=d;
-    }
+
 }

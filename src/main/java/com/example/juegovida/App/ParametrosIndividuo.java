@@ -26,7 +26,7 @@ public class ParametrosIndividuo extends Application {
     public void start(Stage stage) throws Exception {
         stage.setResizable(false);
         FXMLLoader fxmlLoader = new FXMLLoader();
-        File fichero = new File(Paths.BIENVENIDA);//Carga scene en stage
+        File fichero = new File(Paths.PARAMINDIV);//Carga scene en stage
         URL url = null;
         try {
             url = fichero.toURL();

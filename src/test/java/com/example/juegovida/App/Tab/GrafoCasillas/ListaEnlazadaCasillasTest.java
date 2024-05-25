@@ -1,9 +1,6 @@
 package com.example.juegovida.App.Tab.GrafoCasillas;
 
 import com.example.juegovida.App.Tab.Casilla;
-import com.example.juegovida.App.Tab.Grafo.ElementoLE;
-import com.example.juegovida.App.Tab.Grafo.ListaEnlazada;
-import com.example.juegovida.App.Tab.ListaEnlazadaTablero;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
