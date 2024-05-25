@@ -74,7 +74,7 @@ public class GrafoTablero<TipodeDato> {
         this.dijkstra_calcula(distancias,colaPendientes, nodosAnteriores);
         return this.dijkstra_procesaResultados(distancias, nodosAnteriores);
     }
-    protected void dijkstra_init(NodoGrafoCasillas<TipodeDato> origen, HashMapC<NodoGrafoCasillas<TipodeDato>, Double> distancias, ListaEnlazadaCasillas<NodoGrafoCasillas<TipodeDato>> colaPendientes, HashMapC<NodoGrafoCasillas<TipodeDato>, NodoGrafoCasillas<TipodeDato>> nodosAnteriores) {
+    protected void dijkstra_init(NodoGrafoCasillas<TipodeDato> origen, HashMapC<NodoGrafoCasillas<TipodeDato>, Double> distancias, ListaEnlazadaCasillas<NodoGrafoCasillas<TipodeDato>> colaPendientes, HashMapC<NodoGrafoCasillas<TipodeDato>, NodoGrafoCasillas<TipodeDato>> verticesAnteriores) {
         for (int i = 0; listaVertices.getElemento(i) != null; i ++ ){
             distancias.put(listaVertices.getElemento(i).getData(), Double.MAX_VALUE);
         }

@@ -5,7 +5,6 @@ import com.example.juegovida.App.Tab.GrafoCasillas.ListaEnlazadaCasillas;
 import com.example.juegovida.App.gson;
 
 public class Tablero extends gson {
-
     public static double fila;
     public static double columna;
     public static ListaEnlazadaCasillas<ListaEnlazadaCasillas<Casilla>> matiz;

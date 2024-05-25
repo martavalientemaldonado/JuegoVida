@@ -7,21 +7,106 @@ Montaña --|> Recurso:extends
 Tesoro --|> Recurso:extends
 Biblioteca --|> Recurso:extends
 Pozo --|> Recurso:extends
-Individuo --|> Entorno
-Recurso --|> Entorno
+ColaEventosIndividuo --|> Individuo
+ElementoCola --|>ColaEventosIndividuo
+ElementoCola --|>ElementoCola
+Casilla --|>Tablero
+ListaSimple --|>Casilla
+ElementoLS --|>ListaSimple
+ElementoLECasillas--|>ListaEnlazadaCasillas
+ElementoLECasillas--|>ElementoLECasillas
+ListaEnlazadaCasillas--|>Tablero
+GrafoTablero--|>Tablero
+ListaEnlazadaCasillas--|>GrafoTablero
+AristasGrafoCasillas--|>GrafoTablero
+NodoGrafoCasillas--|>GrafoTablero
+NodoGrafoCasillas--|>AristasGrafoCasillas
+ListaEnlazadaCasillas--|>NodoGrafoCasillas
+ListaEnlazadaCasillas --|>CaminoC
+CaminoC --- GrafoTablero
+HashMapC --- GrafoTablero
+ElementoHashMapC ---|> HashMapC
+ElementoHashMapC ---|> ElementoHashMapC
+ArbolBinarioInd --|> BucleControl
+Casilla --|> BucleControl
+Tablero --|> BucleControl
+NodoInd --|>ArbolBinarioInd
+NodoInd --|> NodoInd
+ListaEnlazadaInd --- ArbolBinarioInd
+ElementoLEIndividuo --|>ListaEnlazadaInd
+ElementoLEIndividuo --|>ElementoLEIndividuo
+Individuo --|> Casilla
+Recurso --|> Casilla
+
+class ElementoCola<T>{
+data:T
+anterior: ElementoCola<T>
+siguiente:ElementoCola<T>
+ElementoCola(data:T)
+ElementoCola(data:T, anterior:ElementoCola<T>, siguiente:ElementoCola<T>)
+getSiguiente():ElementoCola<T>
+getAnterior():ElementoCola<T>
+setSiguiente(el:ElementoCola<T>)
+setAnterior(el:ElementoCola<T>)
+getData():T
+setData(data:T)
+}
+class HashMapC<T,E>{
+primero:ElementoHashMapC<T,E>
+getPrimero():ElementoHashMapC<T,E>
+HashMapC()
+isVacia()
+put(indice:T,dato:E)
+get(indice:T):E
+KeySet():ListaEnlazadaCasillas<T>
+}
+
+class ElementoHashMapC<T,E>{
+nodobuscamos:T
+camino:E
+siguiente:ElementoHashMapC<T,E>
+ElementoHashMapC()
+ElementoHashMapC(siguiente:ElementoHashMapC<T,E>, ind:T,dato:E)
+getCamino():E
+setCamino(camino:E)
+setSiguiente(siguiente:ElementoHashMapC<T,E>)
+getSiguiente():ElementoHashMapC<T,E>
+getNodobuscamos():T
+setNodobuscamos(nodobuscamos:T)
+}
+
+class ColaEventosIndividuo<T>{
+cabeza: ElementoCola<T>
+cola: ElementoCola<T>
+longitud: int
+ColaEventosIndividuo()
+esVacia(): boolean
+push(el:ElementoCola<T>):ElementoCola<T>
+pop():ElementoCola<T>
+getCabeza():ElementoCola<T>
+getCola():ElementoCola<T>
+getElemento(posicion:int):ElementoCola<T>
+}
 
 class Individuo{
 -NumIdentificacion:Integer
 -Generacion:Integer
 -TurnosVidaInd: static double
 EnMonimiento: boolean
+cola:ColaEventosIndividuo<Sting>
 ProbClonacion:double
 ProbMuerte:double
 ProbReproduccion:double
 Tipo:int
+caminoMovimiento:ListaEnlazadaCasillas<NodoGrafoCasillas<Casillas>>
 Individuo()
 Individuo(TurnosVidaInd:double, ProbClonacion:double, ProbReproduccion:double)
 Individuo(NumIdentificacion:Integer, Generacion:Integer)
+getCaminoMovimiento():ListaEnlazadaCasillas<NodoGrafoCasillas<Casillas>>
+setMovimiento(enMovimiento:boolean)
+isEnMovimiento():boolean
+setCaminoMovimiento(ListaEnlazadaCasillas<NodoGrafoCasillas<Casillas>>)
+getCola():ColaEventosIndividuo<Sting>
 getNumIdentificacion():Integer
 getGeneracion():Integer
 getTurnosVidaInd(): static double
@@ -34,38 +119,254 @@ getProbMuerte():double
 setProbMuerte(probMuerte:double)
 getTipo():int
 setTipo(tipo:int)
-Reproduccion()
-Clonación()
-Muerte()
-rutaAleatoriaTBasico()
-seleccionarRrecursoTAvanzado():Recurso
-recursoCercanoTAvanzado():Recurso
-rutarecursoTAvanzado()
-recursoaleatorioTNormal()
-rutalinearectaTNormal()
 }
 
+class Casilla{
+lIndiv:ListaSimple<Individuo>
+lRec:ListaSimple<Recurso>
+fila:double
+columna: double
+Casilla(i:double,j:double)
+Casilla(lIndiv:ListaSimple<Individuo>,lRec:ListaSimple<Recurso>)
+getlIndiv():ListaSimple<Individuo>
+getlRec():ListaSimple<Recurso>
+setlIndiv(lIndiv:ListaSimple<Individuo>)
+setlRec(lRec:ListaSimple<Recurso>)
+delRec(rec:Recurso)
+delInd(ind:Individuo)
+addIndiv(indiv:Individuo)
+addRec(rec:Recurso)
+getFila(fila:double)
+getColumna(columna: double)
+setFila(fila:double)
+setColumna(columna: double)
+}
 
-interface TableroDeJuego {
-Filas
-Columnas
-Casillas
-()
+class ElementoLS<T>{
+data:T
+getData():T
+ElementoLS(data:T)
 }
-class Entorno{
-numrrecursos
-probnuevorecurrso
-TurnosVidaRecursos
-TurnosVidaIndividuo
-ProbReproduccionInd
-ProbClonacionInd
-ProbMuerteInd
-getNumrrecursos():Integer
-setNumrrecursos()
-nuevorrecurso()
-getprobnuevorecurrso():Integer
-setprobnuevorecurrso()
+class ListaSimple<T>{
+list:ElementoLS<T>
+Max:Integer
+ListaSimple()
+IsVacia():boolean
+vaciar()
+add(el:ElementoLS<T>)
+add(o:T)
+del(posicion:int):int
+getNumElementos():int
+getPosicion(el:ElementoLS<T>)
+getPrimero():ElementoLS<T>
+getUltimo():ElementoLS<T>
+getSiguiente(el:ElementoLS<T>):ElementoLS<T>
+getElemento(posicion:int):ElementoLS<T>
 }
+
+class AristasGrafoCasillas<T>{
+origen:NodoGrafoCasillas<T>
+destino:NodoGrafoCasillas<T>
+peso:double
+AristasGrafoCasillas()
+getOrigen():NodoGrafoCasillas<T>
+getDestino():NodoGrafoCasillas<T>
+setOrigen(origen:NodoGrafoCasillas<T>)
+setDestino(destino:NodoGrafoCasillas<T>)
+getPeso():Double
+setPeso(peso:Double)
+}
+class NodoGrafoCasillas<T>{
+data:T
+entrada:ListaEnlazadaCasillas<AristasGrafoCasillas<T>>
+salida:ListaEnlazadaCasillas<AristasGrafoCasillas<T>>
+NodoGrafoCasillas(dato:T)
+NodoGrafoCasillas(dato:T, entrada:ListaEnlazadaCasillas<AristasGrafoCasillas<T>>,salida:ListaEnlazadaCasillas<AristasGrafoCasillas<T>>)
+getDato():T
+getEntrada():ListaEnlazadaCasillas<AristasGrafoCasillas<T>>
+getSalida():ListaEnlazadaCasillas<AristasGrafoCasillas<T>>
+}
+
+class CaminoC<T>{
+camina:ListaEnlazadaCasillas<NodoGrafoCasillas<Casillas>>
+peso:double
+CaminoC(camino:ListaEnlazadaCasillas<NodoGrafoCasillas<Casillas>>, peso:Double)
+getPeso():double
+getCamino():ListaEnlazadaCasillas<NodoGrafoCasillas<Casillas>>
+EliminarPrimero()
+}
+
+class GrafoTablero<T>{
++listaVertices:ListaEnlazadaCasillas<NodoGrafoCasillas<T>>
+listaAristas:ListaEnlazadaCasillas<AristasGrafoCasillas<T>>
+GrafoTablero(listaVertices:ListaEnlazadaCasillas<NodoGrafoCasillas<T>>, listaAristas:ListaEnlazadaCasillas<AristasGrafoCasillas<T>>)
+grafoVacio():boolean
+addNodo(nodo:NodoGrafoCasillas<T>)
+addAristas(aristas:AristasGrafoCasillas<T>)
+borrarArista((aristas:AristasGrafoCasillas<T>)
+borrarNodo(nodo:NodoGrafoCasillas<T>)
+getDijkstra(origen:NodoGrafoCasillas<T>):HashMapC<NodoGrafoCasillas<TipodeDato>, CaminoC<TipodeDato>>
+dijkstra_init(origen:NodoGrafoCasillas<T>, distancias:HashMapC<NodoGrafoCasillas<TipodeDato>, Double>, colaPendientes:ListaEnlazadaCasillas<NodoGrafoCasillas<TipodeDato>>, verticesAnteriores:HashMapC<NodoGrafoCasillas<TipodeDato>, NodoGrafoCasillas<TipodeDato>>))
+dijkstra_calcula(distancias:HashMapC<NodoGrafoCasillas<TipodeDato>, Double>, colaPendientes:ListaEnlazadaCasillas<NodoGrafoCasillas<TipodeDato>>, verticesAnteriores:HashMapC<NodoGrafoCasillas<TipodeDato>, NodoGrafoCasillas<TipodeDato>>))
+dijkstra_procesaResultados(distancias:HashMapC<NodoGrafoCasillas<TipodeDato>, Double>, verticesAnteriores:HashMapC<NodoGrafoCasillas<TipodeDato>, NodoGrafoCasillas<TipodeDato>>))
+getCaminoVertices(salida:NodoGrafoCasillas<TipodeDato>, llegada:NodoGrafoCasillas<TipodeDato>)
+}
+class Tablero {
+fila:static double
+columna:static double
+matriz:ListaEnlazadaCasillas<ListaEnlazadaCasillas<Casillas>>
+grafo:GrafoTablero<Casilla>
+tab[][]:Casilla
+getMatriz():ListaEnlazadaCasillas<ListaEnlazadaCasillas<Casilla>>
+getGrafo():GrafoTablero<Casilla>
+guardar(t:Tablero)
+cargar():Tablero
+Tablero()
+Tablero(fila:int,columna:int)
+getCasilla(fila:int,columna:int):Casilla
+setMatriz(matriz:ListaEnlazadaCasillas<ListaEnlazadaCasillas<Casilla>>)
+setGrafo(g:GrafoTablero)
+getFila():double
+getColumna():double
+getTab():Casilla[][]
+setFila(fila:double)
+setColumna(columna: double)
+setTab(tab:Casilla[][])
+}
+class ElementoLECasillas<T>{
+siguiente:ElementoLECasillas<T>
+data:T
+ElementoLECasillas()
+ElementoLECasillas(el:ElementoLECasillas<T>,data:T)
+ElementoLECasillas(data:T)
+setSiguiente(siguiente:ElementoLECasillas<T>)
+getSiguiente():ElementoLECasillas<T>
+insertameEn(el:ElementoLECasillas<T>)
+getData():T
+setData(data:T)
+}
+
+class ListaEnlazadaCasillas<T>{
+primero: ElementoLECasillas<T>
+ListaEnlazadaCasillas()
+isVacia()
+Vaciar()
+add(el:ElementoLECasillas<T>)
+add(el:T)
+del(posicion:int)
+getNumElementos():int
+getPosicion(el:T):Integer
+getPrimero():ElementoLECasillas<T>
+getUltimo()ElementoLECasillas<T>
+getElemento(posicion:int):ElementoLECasillas<T>
+reverse(ListaEnlazadaCasillas<T>)):ListaEnlazadaCasillas<T>
+EliminarPrimero()
+insert(el:T,posicion:int)
+}
+class BucleControl{
+listaIndividuos:ArbolBinarioInd
+NumIdentificacion:Integer
+tab[][] Casillas
+Tablero: Tablero
+BucleControl(tab:Casilla[][],t:DatosCompartidos)
+BucleControl(fila:int,columna: int)
+setListaIndviduos(listaIndivaduos:ArbolBinarioInd)
+loaddata(t:DatosCompartidos)
+setTablero(t:Tablero)
+static getListaIndividuos():ArbolBinarioInd
+static getNumeroIdIndUlt(i:Integer)
+nuevoRecurso()
+eliminarRec()
+eliminarInd()
+clonado()
+repro()
+moverIndividuos()
+moverIndividuoBasico(in:Individuo)
+CrearCaminoAvanzado(in:Individuo)
+moverIndividuoAvanzado(in:Individuo)
+getListaIndividuosVivos():ListaEnlazadaCasillas<Individuo>
+getListaRecursosVivos():ListaEnlazadaCasillas<Recurso>
+moverIndividuoNormal(in:Individuo)
+evaluarCasillas()
+bucleEntero()
+}
+class NodoInd{
+dato:Individuo
+izdo:NodoInd
+dcho:NodoInd
+NodoInd(valor:Individuo)
+NodoInd(ramaIzdo:NodoInd,dato:Individuo,ramaDcho:NodoInd)
+NodoInd()
+copia(n:NodoInd)
+getDato():Individuo
+getIzdo():NodoInd
+getDcho():NodoInd
+setDato(n:Individuo)
+setIzdo(izdo:NodoInd)
+setDcho(dcho:NodoInd)
+getGradoNodo():int
+añadirNodo(el:NodoInd)
+borrado(valor:Individuo,n:NodoInd)
+cambiar(n:NodoInd)
+NodoPadreIzq(nodoactual:NodoInd):NodoInd
+}
+
+class ArbolBinarioInd{
+raiz:NodoInd
+ArbolBinarioInd()
+ArbolBinarioInd(raiz:NodoInd)
+getRaiz():NodoInd
+esVacio():boolean
+getGrado():int
+getGradoRe(n:NodoInd, r:int)
+getAltura(n:NodoInd, numero:int)
+getAltura():int
+getLisDatosNivelRe(raiz:NodoInd,nivel:int, list:ListaEnlazadaInd)
+getCaminoRe(n:Individuo,raiz:NodoInd,l:ListaEnlazadaInd)
+getCamino(n:Individuo)
+preordenRe(r:NodoInd, l:ListaEnlazadaInd)
+preorden():ListaEnlazadaInd
+inordenRe(r:NodoInd, l:ListaEnlazadaInd)
+inorden():ListaEnlazadaInd
+postordenRe(r:NodoInd, l:ListaEnlazadaInd)
+postorden():ListaEnlazadaInd
+subarbolizq():ArbolBinarioInd
+subarboldecho():ArbolBinarioInd
+añadir(o:Individuo)
+eliminar(valor:Individuo)
+borrado(valor:Individuo, n:NodoInd)
+}
+
+class ListaEnlazadaInd{
+primero:ElementoLEIndividuo
+ListaEnlazadaInd()
+isVacia():boolean
+Vaciar()
+add(el:ElementoLEIndividuo)
+add(s:Individuo)
+insert(s:Individuo, posicion:int)
+del(posicion:int)
+getNumElementos():int
+getPosicion(el:ElementoLEIndividuo):int
+getPrimero():ElementoLEIndividuo
+getUltimo():ElementoLEIndividuo
+getElemento(pos:int)
+imprimir()
+reverse(lis:ListaEnlazadaInd):ListaEnlazadaInd
+
+}
+
+class ElementoLEIndividuo{
+siguiente:ElementoLEIndividuo
+data:Individuo
+ElementoLEIndividuo(data:Individuo)
+ElementoLEIndividuo(siguiente:ElementoLEIndividuo)
+getSiguiente():ElementoLEIndividuo
+insertameEn(el:ElementoLEIndividuo)
+getData():Individuo
+setData(data:Individuo)
+}
+
 class Recurso{
 ProbabilidadNuevoRE:static double
 TurnosVidaRecursos:static double

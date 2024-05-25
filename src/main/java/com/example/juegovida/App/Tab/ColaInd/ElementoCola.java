@@ -26,7 +26,7 @@ public class ElementoCola<T> {
         return anterior;
     }
 
-    public Object getData() {
+    public T getData() {
         return data;
     }
 

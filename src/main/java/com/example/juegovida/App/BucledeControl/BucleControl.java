@@ -19,8 +19,6 @@ import java.util.ResourceBundle;
 
 public class BucleControl {
     static ArbolBinarioInd listaIndividuos;
-
-
     static Integer NumeroIdIndUlt = -1;
     public Casilla tab[][];
     Tablero Tablero;
@@ -29,7 +27,8 @@ public class BucleControl {
         this.tab = tab;
         this.Tablero = t.getMatriz();
     }
-
+    public BucleControl(int fila, int columna) {
+    }
     public  void setListaIndividuos(ArbolBinarioInd listaIndividuos) {
         BucleControl.listaIndividuos = listaIndividuos;
     }
@@ -567,7 +566,7 @@ public class BucleControl {
             }
         }
     }
-    public static void bucleEntero() throws Mas3Indiv, Mas3Recs, ElRepetidoError {
+    public void bucleEntero() throws Mas3Indiv, Mas3Recs, ElRepetidoError {
         ListaEnlazadaCasillas<Individuo> l = getListaIndividuosVivos();
         ElementoLECasillas<Individuo> i = l.getPrimero();
         while(l.getNumeroElementos() >1){

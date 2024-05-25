@@ -14,7 +14,7 @@ public class Individuo {
     ColaEventosIndividuo<String> cola;
     double ProbClonacion;
     double ProbReproduccion;
-    double ProbMuerte = 1 - ProbReproduccion;
+    double ProbMuerte = 100 - ProbReproduccion;
     //0 Basico, 1 Normal, 2 Avanzado
     protected int Tipo;
     ListaEnlazadaCasillas<NodoGrafoCasillas<Casilla>> caminoMovimiento;
@@ -112,21 +112,4 @@ public class Individuo {
         Tipo = tipo;
     }
 
-    public void rutaAleatoriaTBasico() {
-        int numero = (int) (Math.random() * 4) + 1;
-        if (numero == 1) {}
-
-    }
-    // public ParamRecursosRecurso seleccionarRrecursoTAvanzado(){
-    // }
-    // private Recurso recursoCercanoTAvanzado(){}
-    public void rutarecursoTAvanzado() {
-
-    }
-    //Normal
-    public void recursoaleatorioTNormal() {
-
-    }
-    private void rutalinearectaTNormal() {
-    }
 }

@@ -4,7 +4,6 @@ public class ColaEventosIndividuo<T> {
     public ElementoCola<T> cabeza;
     public ElementoCola<T> cola;
     public int longitud;
-    public ElementoCola<T> siguiente;
     public ColaEventosIndividuo(){
         cabeza=cola=null;
         longitud=0;
