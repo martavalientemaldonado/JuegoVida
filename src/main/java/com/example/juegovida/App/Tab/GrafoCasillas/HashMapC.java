@@ -1,7 +1,5 @@
 package com.example.juegovida.App.Tab.GrafoCasillas;
 
-import com.example.juegovida.App.Tab.Grafo.ElementoHashMap;
-import com.example.juegovida.App.Tab.Grafo.ListaEnlazada;
 
 public class HashMapC<T,E> {
     ElementoHashMapC<T,E> primero;

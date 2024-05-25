@@ -11,6 +11,7 @@ import com.example.juegovida.DatosCompartidos;
 import com.example.juegovida.Errores.Mas3Indiv;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
@@ -72,7 +73,10 @@ public class ParamCasillaControl{
         if("Comida" == NuevoRecurso.getValue()){
             AñadirRecursoComida();
         }
-        scene.close();
+        //Cerrar pantalla
+        Node source = (Node) event.getSource();
+        Stage stage1 = (Stage) source.getScene().getWindow();
+        stage1.close();
     }
 
     @FXML

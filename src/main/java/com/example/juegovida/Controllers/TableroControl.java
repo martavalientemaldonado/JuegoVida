@@ -9,6 +9,7 @@ import com.example.juegovida.App.Tab.TabApp;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
@@ -91,12 +92,16 @@ public class TableroControl {
             throw new RuntimeException(ex);
         }
         fxmlLoader.setLocation(url); // Para encontrar donde esta
-        Scene scene; //vCarga escena
-        scene = new Scene(fxmlLoader.load(),700,500);
+        Parent root = fxmlLoader.load(); // Cargar el FXML
+        TabParamTableroControl p = fxmlLoader.getController();
+
+        if (p == null) {
+            throw new RuntimeException("El controlador es nulo. Asegúrate de que el FXML está correctamente configurado y tiene el controlador asociado.");
+        }
+
+        p.loadUserDataTabTablero(d); // Configurar el controlador
+        Scene scene = new Scene(root, 700, 500); // Crear la escena con el contenido del FXML cargado
         stage.setScene(scene);
-        TabParamTableroControl p= fxmlLoader.getController();
-        p.loadUserDataTabTablero(this.d);
-        p.setStage(stage);
         stage.show();
     }
 

@@ -1,7 +1,5 @@
 package com.example.juegovida.App.Tab.GrafoCasillas;
 
-import com.example.juegovida.App.Tab.Grafo.ElementoLE;
-
 public class ElementoLECasillas<TipoDelDato> {
     protected ElementoLECasillas<TipoDelDato> siguiente;
     private TipoDelDato data;

@@ -121,12 +121,4 @@ public class GrafoTablero<TipodeDato> {
         }
         else throw new ElNoEncontradoError("Error, algunno de los datos no están en el grafo");
     }
-    public ListaEnlazadaCasillas<TipodeDato> getCamino(NodoGrafoCasillas<TipodeDato> salida, NodoGrafoCasillas<TipodeDato> llegada) throws ElNoEncontradoError{
-        ListaEnlazadaCasillas<TipodeDato> camino = new ListaEnlazadaCasillas<>();
-        ListaEnlazadaCasillas<NodoGrafoCasillas<TipodeDato>> caminoNodos = getCaminoVertices(salida,llegada);
-        for (int i = 0; i<caminoNodos.getNumeroElementos() ;i++){
-            camino.add(caminoNodos.getElemento(i).getData().getDato());
-        }
-        return camino;
-    }
 }

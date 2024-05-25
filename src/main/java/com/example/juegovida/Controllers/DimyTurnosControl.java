@@ -8,12 +8,14 @@ import java.util.ResourceBundle;
 import com.example.juegovida.App.BucledeControl.BucleControl;
 import com.example.juegovida.App.Tab.Casilla;
 import com.example.juegovida.App.Tab.TabApp;
+import com.example.juegovida.App.Tab.Tablero;
 import com.example.juegovida.DatosCompartidos;
 import com.example.juegovida.Utilities.Paths;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Slider;
 import javafx.scene.image.ImageView;
@@ -47,17 +49,14 @@ public class DimyTurnosControl{
     void clickAceptar(ActionEvent event) throws Exception {
         d.commitDimyVida();
         System.out.println(d.ProbAparicionAguaProperty());
+
+        // Crear y mostrar la primera ventana
         Stage stage = new Stage();
         TabApp t = new TabApp();
-        BucleControl bucle = new BucleControl(d.getMatriz().tab);
-        Scene scene = new Scene(t.Tablero(d.getMatriz()),1200,700); //vCarga escena
-        FXMLLoader fxmlLoader = new FXMLLoader();
-        TableroControl p = fxmlLoader.getController();
-        p.loadUserDataTabTablero(d);
-        p.setStage(stage);
+        Scene scene = new Scene(t.Tablero(d.getMatriz()), 1200, 700); //vCarga escena
+        stage.setScene(scene);
         stage.show();
-
-        //Cerrar pantalla
+        // Cerrar la pantalla anterior
         Node source = (Node) event.getSource();
         Stage stage1 = (Stage) source.getScene().getWindow();
         stage1.close();

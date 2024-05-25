@@ -1,6 +1,5 @@
 package com.example.juegovida.App.Tab.GrafoCasillas;
 
-import com.example.juegovida.App.Tab.Casilla;
 
 public class AristasGrafoCasillas<TipodeDato> {
     public NodoGrafoCasillas<TipodeDato> origen;

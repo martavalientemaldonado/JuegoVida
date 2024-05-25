@@ -145,7 +145,6 @@ public class TabApp{
             @Override
             public void handle(ActionEvent actionEvent) {
                 try {
-                    tab.loadUserDataTabTablero(this.d);
                     tab.clickajustes();
 
                 }

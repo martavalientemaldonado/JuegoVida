@@ -7,36 +7,36 @@ import com.example.juegovida.Clases.Recursos.*;
 import javafx.beans.property.*;
 
 public class DatosCompartidos {
-    protected Agua Agua;
-    protected Biblioteca Biblioteca;
-    protected Comida Comida;
-    protected Pozo Pozo;
-    protected Tesoro Tesoro;
-    protected Montaña Montaña;
-    protected Individuo Individuo;
-    protected Tablero Matriz;
-    protected Recurso Recurso;
-    public DoubleProperty TurnosPropCom = new SimpleDoubleProperty();
-    public DoubleProperty TurnosPropMont = new SimpleDoubleProperty();
-    public DoubleProperty TurnosPropAgua = new SimpleDoubleProperty();
-    public DoubleProperty ProbReproPropTesoro = new SimpleDoubleProperty();
-    public DoubleProperty ProbClonacPropBibli = new SimpleDoubleProperty();
-    public DoubleProperty ProbAparicionAgua = new SimpleDoubleProperty();
-    public DoubleProperty ProbAparicionComida = new SimpleDoubleProperty();
-    public DoubleProperty ProbAparicionMontaña = new SimpleDoubleProperty();
-    public DoubleProperty ProbAparicionTesoro = new SimpleDoubleProperty();
-    public DoubleProperty ProbAparicionBiblioteca = new SimpleDoubleProperty();
-    public DoubleProperty ProbAparicionPozo = new SimpleDoubleProperty();
-    public DoubleProperty ProbNuevoRecurso = new SimpleDoubleProperty();
-    public DoubleProperty ProbReproduccionIndiv = new SimpleDoubleProperty();
-    public DoubleProperty ProbClonacionIndiv = new SimpleDoubleProperty();
-    public DoubleProperty NumColumnas = new SimpleDoubleProperty();
-    public DoubleProperty NumFilas = new SimpleDoubleProperty();
-    public DoubleProperty TrunosVidaIndiv = new SimpleDoubleProperty();
-    public DoubleProperty TurnosVidaRecursos = new SimpleDoubleProperty();
+    protected static Agua Agua;
+    protected static Biblioteca Biblioteca;
+    protected static Comida Comida;
+    protected static Pozo Pozo;
+    protected static Tesoro Tesoro;
+    protected static Montaña Montaña;
+    protected static Individuo Individuo;
+    protected static Tablero Matriz;
+    protected static Recurso Recurso;
+    public static DoubleProperty TurnosPropCom = new SimpleDoubleProperty();
+    public static DoubleProperty TurnosPropMont = new SimpleDoubleProperty();
+    public static DoubleProperty TurnosPropAgua = new SimpleDoubleProperty();
+    public static DoubleProperty ProbReproPropTesoro = new SimpleDoubleProperty();
+    public static DoubleProperty ProbClonacPropBibli = new SimpleDoubleProperty();
+    public static DoubleProperty ProbAparicionAgua = new SimpleDoubleProperty();
+    public static DoubleProperty ProbAparicionComida = new SimpleDoubleProperty();
+    public static  DoubleProperty ProbAparicionMontaña = new SimpleDoubleProperty();
+    public static DoubleProperty ProbAparicionTesoro = new SimpleDoubleProperty();
+    public static DoubleProperty ProbAparicionBiblioteca = new SimpleDoubleProperty();
+    public static DoubleProperty ProbAparicionPozo = new SimpleDoubleProperty();
+    public static DoubleProperty ProbNuevoRecurso = new SimpleDoubleProperty();
+    public static DoubleProperty ProbReproduccionIndiv = new SimpleDoubleProperty();
+    public static DoubleProperty ProbClonacionIndiv = new SimpleDoubleProperty();
+    public static DoubleProperty NumColumnas = new SimpleDoubleProperty();
+    public static DoubleProperty NumFilas = new SimpleDoubleProperty();
+    public static DoubleProperty TrunosVidaIndiv = new SimpleDoubleProperty();
+    public static DoubleProperty TurnosVidaRecursos = new SimpleDoubleProperty();
 
     ///QUE PROPORCIONAN LOS RECURSOS
-    public void commitProporcionaRecursos(){
+    public static void commitProporcionaRecursos(){
         Comida.setTurnosProporciona(TurnosPropCom.get());
         Montaña.setTurnosProporciona(TurnosPropMont.get());
         Agua.setTurnosProporciona(TurnosPropAgua.get());
@@ -44,33 +44,33 @@ public class DatosCompartidos {
         Biblioteca.setProbClonacionProp(ProbClonacPropBibli.get());
     }
 
-    public void rollbackProporcionaRecursos(){
+    public static void rollbackProporcionaRecursos(){
         TurnosPropCom.set(Comida.getTurnosProporciona());
         TurnosPropMont.set(Montaña.getTurnosProporciona());
         TurnosPropAgua.set(Agua.getTurnosProporciona());
         ProbReproPropTesoro.set(Tesoro.getProbReproduccionPropo());
         ProbClonacPropBibli.set(Biblioteca.getProbClonacionProp());
     }
-    public Property<Number> TurnosPropComProperty() {
+    public static Property<Number> TurnosPropComProperty() {
         return TurnosPropCom;
     }
-    public Property<Number> TurnosPropMontProperty() {
+    public static Property<Number> TurnosPropMontProperty() {
         return TurnosPropMont;
     }
-    public Property<Number> TurnosPropAguaProperty() {
+    public static Property<Number> TurnosPropAguaProperty() {
         return TurnosPropAgua;
     }
-    public Property<Number> ProbReproPropTesoroProperty() {
+    public static Property<Number> ProbReproPropTesoroProperty() {
         return ProbReproPropTesoro;
     }
-    public Property<Number> ProbClonacPropBibliProperty() {
+    public static Property<Number> ProbClonacPropBibliProperty() {
         return ProbClonacPropBibli;
     }
 
 
 
     ///PROBABILIDAD DE APARICIÓN RECURSOS
-    public void commitProbAparicionRecursos(){
+    public static void commitProbAparicionRecursos(){
         Comida.setProbAparicion(ProbAparicionAgua.get());
         Montaña.setProbAparicion(ProbAparicionMontaña.get());
         Agua.setProbAparicion(ProbAparicionAgua.get());
@@ -80,7 +80,7 @@ public class DatosCompartidos {
         Recurso.setProbabilidadNuevoRE(ProbNuevoRecurso.get());
     }
 
-    public void rollbackProbAparicionRecursos(){
+    public static void rollbackProbAparicionRecursos(){
         ProbAparicionComida.set(Comida.getProbAparicion());
         ProbAparicionMontaña.set(Montaña.getProbAparicion());
         ProbAparicionAgua.set(Agua.getProbAparicion());
@@ -89,81 +89,81 @@ public class DatosCompartidos {
         ProbAparicionPozo.set(Pozo.getProbAparicion());
         ProbNuevoRecurso.set(Recurso.getProbabilidadNuevoRE());
     }
-    public Property<Number> ProbAparicionComidaProperty() {
+    public static Property<Number> ProbAparicionComidaProperty() {
         return ProbAparicionComida;
     }
-    public Property<Number> ProbAparicionMontañaProperty() {
+    public static Property<Number> ProbAparicionMontañaProperty() {
         return ProbAparicionMontaña;
     }
-    public Property<Number> ProbAparicionAguaProperty() {
+    public static Property<Number> ProbAparicionAguaProperty() {
         return ProbAparicionAgua;
     }
-    public Property<Number> ProbAparicionTesoroProperty() {
+    public static Property<Number> ProbAparicionTesoroProperty() {
         return ProbAparicionTesoro;
     }
-    public Property<Number> ProbAparicionBibliotecaProperty() {
+    public static Property<Number> ProbAparicionBibliotecaProperty() {
         return ProbAparicionBiblioteca;
     }
-    public Property<Number> ProbAparicionPozoProperty() {
+    public static Property<Number> ProbAparicionPozoProperty() {
         return ProbAparicionPozo;
     }
-    public Property<Number> ProbNuevoRecursoProperty() {
+    public static Property<Number> ProbNuevoRecursoProperty() {
         return ProbNuevoRecurso;
     }
 
 
     ///PROBABILIDADES DE LOS INDIVIDUOS
 
-    public void commitProbIndividuos(){
+    public static void commitProbIndividuos(){
         Individuo.setProbClonacion(ProbClonacionIndiv.get());
         Individuo.setProbReproduccion(ProbReproduccionIndiv.get());
     }
 
-    public void rollbackProbIndividuos(){
+    public static void rollbackProbIndividuos(){
         ProbClonacionIndiv.set(Individuo.getProbClonacion());
         ProbReproduccionIndiv.set(Individuo.getProbReproduccion());
     }
 
-    public Property<Number> ProbClonacionIndivProperty() {
+    public static Property<Number> ProbClonacionIndivProperty() {
         return ProbClonacionIndiv;
     }
 
-    public Property<Number> ProbReproduccionIndivProperty() {
+    public static Property<Number> ProbReproduccionIndivProperty() {
         return ProbReproduccionIndiv;
     }
 
 
 
     /// DIMENSIONES Y TURNOS DE VIDA DE RECURSOS Y INDIVIDUOS
-    public void commitDimyVida(){
+    public static void commitDimyVida(){
         Matriz.setColumna(NumColumnas.get());
         Matriz.setFila(NumFilas.get());
         Individuo.setTurnosVidaInd(TrunosVidaIndiv.get());
         Recurso.setTurnosVidaRecursos(TurnosVidaRecursos.get());
     }
 
-    public void rollbackDimyVida(){
+    public static void rollbackDimyVida(){
         NumColumnas.set(Matriz.getColumna());
         NumFilas.set(Matriz.getFila());
         TrunosVidaIndiv.set(Individuo.getTurnosVidaInd());
         TurnosVidaRecursos.set(Recurso.getTurnosVidaRecursos());
     }
-    public Property<Number> NumColumnasProperty() {
+    public static Property<Number> NumColumnasProperty() {
         return NumColumnas;
     }
 
-    public Property<Number> NumFilasProperty() {
+    public static Property<Number> NumFilasProperty() {
         return NumFilas;
     }
 
-    public Property<Number> TrunosVidaIndivProperty() {
+    public static Property<Number> TrunosVidaIndivProperty() {
         return TrunosVidaIndiv;
     }
-    public Property<Number> TurnosVidaRecursosProperty() {
+    public static Property<Number> TurnosVidaRecursosProperty() {
         return TurnosVidaRecursos;
     }
 
-    public void commitTabParamCasilla(){
+    public static void commitTabParamCasilla(){
         Comida.setProbAparicion(ProbAparicionAgua.get());
         Montaña.setProbAparicion(ProbAparicionMontaña.get());
         Agua.setProbAparicion(ProbAparicionAgua.get());
@@ -184,7 +184,7 @@ public class DatosCompartidos {
         Recurso.setTurnosVidaRecursos(TurnosVidaRecursos.get());
     }
 
-    public void rollbackTabParamCasilla(){
+    public static void rollbackTabParamCasilla(){
         ProbAparicionComida.set(Comida.getProbAparicion());
         ProbAparicionMontaña.set(Montaña.getProbAparicion());
         ProbAparicionAgua.set(Agua.getProbAparicion());
@@ -204,66 +204,66 @@ public class DatosCompartidos {
         TrunosVidaIndiv.set(Individuo.getTurnosVidaInd());
         TurnosVidaRecursos.set(Recurso.getTurnosVidaRecursos());
     }
-    public Agua getAgua(){
+    public static Agua getAgua(){
         return Agua;
     }
-    public Biblioteca getBiblioteca(){
+    public static Biblioteca getBiblioteca(){
         return Biblioteca;
     }
-    public Comida getComida(){
+    public static Comida getComida(){
         return Comida;
     }
-    public Pozo getPozo(){
+    public static Pozo getPozo(){
         return Pozo;
     }
-    public Tesoro getTesoro(){
+    public static Tesoro getTesoro(){
         return Tesoro;
     }
-    public Montaña getMontaña(){return Montaña;}
-    public Individuo getIndividuo(){return Individuo;}
-    public Recurso getRecurso(){return Recurso;}
-    public Tablero getMatriz(){
+    public static Montaña getMontaña(){return Montaña;}
+    public static Individuo getIndividuo(){return Individuo;}
+    public static Recurso getRecurso(){return Recurso;}
+    public static Tablero getMatriz(){
         return Matriz;
     }
-    public void setAgua(Agua agua){
-        this.Agua = agua;
+    public static void setAgua(Agua agua){
+        Agua = agua;
         ProbAparicionAgua.set(Agua.getProbAparicion());
         TurnosPropAgua.set(Agua.getTurnosProporciona());
     }
-    public void setComida(Comida comida){
-        this.Comida = comida;
+    public static void setComida(Comida comida){
+        Comida = comida;
         TurnosPropCom.set((int) Comida.getTurnosProporciona());
         ProbAparicionComida.set(Comida.getProbAparicion());
     }
-    public void setBiblioteca(Biblioteca biblioteca){
-        this.Biblioteca = biblioteca;
+    public static void setBiblioteca(Biblioteca biblioteca){
+        Biblioteca = biblioteca;
         ProbAparicionBiblioteca.set(Biblioteca.getProbAparicion());
         ProbClonacPropBibli.set(Biblioteca.getProbClonacionProp());
     }
-    public void setPozo(Pozo pozo){
-        this.Pozo = pozo;
+    public static void setPozo(Pozo pozo){
+        Pozo = pozo;
     }
-    public void setTesoro(Tesoro tesoro){
-        this.Tesoro = tesoro;
+    public static void setTesoro(Tesoro tesoro){
+        Tesoro = tesoro;
         ProbReproPropTesoro.set(Tesoro.getProbReproduccionPropo());
         ProbAparicionTesoro.set(Tesoro.getProbAparicion());
     }
-    public void setMontaña(Montaña montaña){
-        this.Montaña= montaña;
+    public static void setMontaña(Montaña montaña){
+        Montaña= montaña;
         TurnosPropMont.set(Montaña.getTurnosProporciona());
         ProbAparicionMontaña.set(Montaña.getProbAparicion());
     }
-    public void setIndividuo(Individuo individuo){
-        this.Individuo = individuo;
+    public static void setIndividuo(Individuo individuo){
+        Individuo = individuo;
         rollbackProbIndividuos(); //Se inicializan los properties.
     }
-    public void setRecurso(Recurso recurso){
-        this.Recurso = recurso;
+    public static void setRecurso(Recurso recurso){
+        Recurso = recurso;
         ProbNuevoRecurso.set(Recurso.getProbabilidadNuevoRE());
         TurnosVidaRecursos.set(Recurso.getTurnosVidaRecursos());
     }
-    public void setMatriz(Tablero matriz){
-        this.Matriz = matriz;
+    public static void setMatriz(Tablero matriz){
+        Matriz = matriz;
         NumColumnas.set(Matriz.getColumna());
         NumFilas.set(Matriz.getFila());
     }

@@ -1,6 +1,5 @@
 package com.example.juegovida.App.Tab.GrafoCasillas;
 
-import com.example.juegovida.App.Tab.Grafo.ElementoHashMap;
 
 public class ElementoHashMapC<T,E> {
     T nodobuscamos;

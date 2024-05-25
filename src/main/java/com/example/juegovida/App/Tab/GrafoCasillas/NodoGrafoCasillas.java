@@ -1,9 +1,5 @@
 package com.example.juegovida.App.Tab.GrafoCasillas;
 
-import com.example.juegovida.App.Tab.Casilla;
-import com.example.juegovida.App.Tab.Grafo.ListaEnlazada;
-import com.example.juegovida.App.Tab.ListaSimple;
-
 public class NodoGrafoCasillas<Tipo> {
     Tipo dato;
     ListaEnlazadaCasillas<AristasGrafoCasillas<Tipo>> entrada;
