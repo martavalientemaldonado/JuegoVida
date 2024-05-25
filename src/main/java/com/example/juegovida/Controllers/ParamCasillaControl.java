@@ -8,17 +8,20 @@ import com.example.juegovida.App.Tab.Casilla;
 import com.example.juegovida.Clases.Individuo;
 import com.example.juegovida.Clases.Recursos.*;
 import com.example.juegovida.DatosCompartidos;
+import com.example.juegovida.DatosCompartidos;
 import com.example.juegovida.Errores.ElRepetidoError;
 import com.example.juegovida.Errores.Mas3Indiv;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
-public class ParamCasillaControl{
+public class ParamCasillaControl implements Initializable {
     @FXML
     private ResourceBundle resources;
     @FXML
@@ -34,50 +37,49 @@ public class ParamCasillaControl{
     private ImageView probnuevorecurso;
 
     @FXML
-    private ChoiceBox<String> NuevoInd;
+    private ComboBox<String> NuevoInd;
 
     @FXML
-    private ChoiceBox<String> NuevoRecurso;
+    private ComboBox<String> NuevoRecurso;
+    private  BucleControl b;
     private Stage scene;
+    private DatosCompartidos d;
 
 
     @FXML
-    void clickAceptar(ActionEvent event) throws Mas3Indiv, ElRepetidoError {
+    void clickAceptar(ActionEvent event) throws Mas3Indiv {
         //Tanto NuevoInd como NuevoRe
-        if("Básico" == NuevoInd.getValue()){
-            BucleControl.setNumeroIdIndUlt(BucleControl.getNumeroIdIndUlt()+1);
+        if("Básico".equals(NuevoInd.getValue())){
+            b.setNumeroIdIndUlt(b.getNumeroIdIndUlt()+1);
             AñadirIndividuoBasico();
         }
-        if("Normal" == NuevoInd.getValue()){
-            BucleControl.setNumeroIdIndUlt(BucleControl.getNumeroIdIndUlt()+1);
+        if("Normal".equals(NuevoInd.getValue())) {
+            b.setNumeroIdIndUlt(b.getNumeroIdIndUlt() + 1);
             AñadirIndividuoNormal();
         }
-        if("Avanzado" == NuevoInd.getValue()){
-            BucleControl.setNumeroIdIndUlt(BucleControl.getNumeroIdIndUlt()+1);
+        if("Avanzado".equals(NuevoInd.getValue())){
+            b.setNumeroIdIndUlt(b.getNumeroIdIndUlt()+1);
             AñadirIndividuoAvanzado();
         }
-        if("Pozo" == NuevoRecurso.getValue()){
+        if("Pozo".equals(NuevoRecurso.getValue())){
             AñadirRecursoPozo();
         }
-        if("Agua" == NuevoRecurso.getValue()){
+        if("Agua".equals(NuevoRecurso.getValue())){
             AñadirRecursoAgua();
         }
-        if("Tesoro" == NuevoRecurso.getValue()){
+        if("Tesoro".equals(NuevoRecurso.getValue())){
             AñadirRecursoTesoro();
         }
-        if("Biblioteca" == NuevoRecurso.getValue()){
+        if("Biblioteca".equals(NuevoRecurso.getValue())){
             AñadirRecursoBiblioteca();
         }
-        if("Montaña" == NuevoRecurso.getValue()){
+        if("Montaña".equals(NuevoRecurso.getValue())){
             AñadirRecursoMontaña();
         }
-        if("Comida" == NuevoRecurso.getValue()){
+        if("Comida".equals(NuevoRecurso.getValue())){
             AñadirRecursoComida();
         }
-        //Cerrar pantalla
-        Node source = (Node) event.getSource();
-        Stage stage1 = (Stage) source.getScene().getWindow();
-        stage1.close();
+        scene.close();
     }
 
     @FXML
@@ -102,27 +104,27 @@ public class ParamCasillaControl{
     public void setStage(Stage stage) {
     }
     @FXML
-    protected void AñadirIndividuoAvanzado() throws Mas3Indiv, ElRepetidoError {
+    protected void AñadirIndividuoAvanzado() throws Mas3Indiv {
         if(casilla.getlIndiv().getNumElementos()<3){
-            Individuo nuevo = new Individuo(BucleControl.getNumeroIdIndUlt(), 2);
+            Individuo nuevo = new Individuo(b.getNumeroIdIndUlt(), 2);
             casilla.addIndiv(nuevo);
-            BucleControl.getListaIndividuos().añadir(nuevo);
+            b.getListaIndividuos().add(nuevo);
         }
     }
     @FXML
-    protected void AñadirIndividuoNormal() throws Mas3Indiv, ElRepetidoError {
+    protected void AñadirIndividuoNormal() throws Mas3Indiv {
         if(casilla.getlIndiv().getNumElementos()<3){
-            Individuo nuevo = new Individuo(BucleControl.getNumeroIdIndUlt(), 1);
+            Individuo nuevo = new Individuo(b.getNumeroIdIndUlt(), 1);
             casilla.addIndiv(nuevo);
-            BucleControl.getListaIndividuos().añadir(nuevo);
+            b.getListaIndividuos().add(nuevo);
         }
     }
     @FXML
-    protected void AñadirIndividuoBasico() throws Mas3Indiv, ElRepetidoError {
+    protected void AñadirIndividuoBasico() throws Mas3Indiv {
         if(casilla.getlIndiv().getNumElementos()<3){
-            Individuo nuevo = new Individuo(BucleControl.getNumeroIdIndUlt(), 0);
+            Individuo nuevo = new Individuo(b.getNumeroIdIndUlt(), 0);
             casilla.addIndiv(nuevo);
-            BucleControl.getListaIndividuos().añadir(nuevo);
+            b.getListaIndividuos().add(nuevo);
         }
     }
     @FXML
@@ -167,7 +169,17 @@ public class ParamCasillaControl{
             casilla.addRec(nuevo);
         }
     }
-    public void loadUserDataCasilla(Casilla c) {
-        this.casilla = c;
+    public void loadUserDataTabTablero(DatosCompartidos parametrosData) {
+        this.d = parametrosData;
+        this.updateGUIwithModelTabTablero();
+    }
+
+    private void updateGUIwithModelTabTablero() {
+    }
+
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
     }
 }

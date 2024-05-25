@@ -8,7 +8,6 @@ import java.util.ResourceBundle;
 import com.example.juegovida.App.BucledeControl.BucleControl;
 import com.example.juegovida.App.Tab.Casilla;
 import com.example.juegovida.App.Tab.TabApp;
-import com.example.juegovida.App.Tab.Tablero;
 import com.example.juegovida.DatosCompartidos;
 import com.example.juegovida.Utilities.Paths;
 import javafx.event.ActionEvent;

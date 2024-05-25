@@ -5,6 +5,7 @@ import com.example.juegovida.App.Tab.ColaInd.ElementoCola;
 import com.example.juegovida.App.Tab.GrafoCasillas.*;
 import com.example.juegovida.Clases.Individuo;
 import com.example.juegovida.Clases.Recursos.*;
+import com.example.juegovida.DatosCompartidos;
 import com.example.juegovida.Errores.ElNoEncontradoError;
 import com.example.juegovida.Errores.ElRepetidoError;
 import com.example.juegovida.Errores.Mas3Indiv;
@@ -18,13 +19,17 @@ import java.util.ResourceBundle;
 public class BucleControl {
     static ArbolBinarioInd listaIndividuos;
     static Integer NumeroIdIndUlt =-1;
-    private Casilla tab[][];
-
-    public BucleControl(Casilla[][] tab) {
+    public Casilla tab[][];
+    Tablero Tablero;
+    public BucleControl(Casilla[][] tab, DatosCompartidos t) {
         this.tab = tab;
+        this.Tablero=t.getMatriz();
+    }
+    public void setTablero(Tablero t){
+        this.Tablero=t;
     }
 
-    public BucleControl() {
+    public BucleControl(int fila, int columna) {
     }
 
     public static ArbolBinarioInd getListaIndividuos() {
@@ -43,8 +48,8 @@ public class BucleControl {
 
     }
     public void nuevoRecurso()throws Mas3Recs {
-        for (int i = 0; i < Tablero.getMatiz().getPrimero().getData().getNumeroElementos(); i++) {
-            for (int j = 0; j < Tablero.getMatiz().getNumeroElementos(); j++) {
+        for (int i = 0; i < Tablero.getFila(); i++) {
+            for (int j = 0; j < Tablero.getColumna(); j++) {
                 if (tab[j][i].getlRec().getNumElementos() < 3) {
                     Recurso recurso = new Recurso();
                     if (Math.random()*100 > recurso.getProbabilidadNuevoRE()) {
@@ -77,8 +82,8 @@ public class BucleControl {
         }
     }
     public void eliminarRec(){
-        for (int i=0; i<Tablero.getMatiz().getPrimero().getData().getNumeroElementos();i++){
-            for (int j=0; j< Tablero.getMatiz().getNumeroElementos(); j++){
+        for (int i=0; i<Tablero.getFila();i++){
+            for (int j=0; j< Tablero.getColumna(); j++){
                 for (int k=0; k<=tab[j][i].getlRec().getNumElementos()-1;){
                     if(tab[j][i].getlRec().getElemento(k).getData().getTurnosVidaRecursos()==0){
                         Recurso relim= tab[j][i].getlRec().getElemento(k).getData();
@@ -94,8 +99,8 @@ public class BucleControl {
         }
     }
     public void eliminarIndTiempo(){
-        for (int i=0; i<Tablero.getMatiz().getPrimero().getData().getNumeroElementos();i++){
-            for (int j=0; j< Tablero.getMatiz().getNumeroElementos(); j++){
+        for (int i=0; i<Tablero.getFila();i++){
+            for (int j=0; j< Tablero.getColumna(); j++){
                 for (int k=0; k<=tab[j][i].getlIndiv().getNumElementos()-1;){
                     if (tab[j][i].getlIndiv().getElemento(k).getData().getTurnosVidaInd()==0){
                         Individuo relim= tab[j][i].getlIndiv().getElemento(k).getData();
@@ -111,8 +116,8 @@ public class BucleControl {
         }
     }
     public void eliminarInd(){
-        for (int i=0; i<Tablero.getMatiz().getPrimero().getData().getNumeroElementos();i++){
-            for (int j=0; j< Tablero.getMatiz().getNumeroElementos(); j++){
+        for (int i=0; i<Tablero.getFila();i++){
+            for (int j=0; j< Tablero.getColumna(); j++){
                 for (int k=0; k<=tab[j][i].getlIndiv().getNumElementos()-1;){
                     if (tab[j][i].getlIndiv().getElemento(k).getData().getTurnosVidaInd()==0){
                         Individuo ieliminar= tab[j][i].getlIndiv().getElemento(k).getData();
@@ -129,8 +134,8 @@ public class BucleControl {
             }
         }
     public void clonado() throws Mas3Indiv, ElRepetidoError {
-        for (int i = 0; i < Tablero.getMatiz().getPrimero().getData().getNumeroElementos(); i++) {
-            for (int j = 0; j < Tablero.getMatiz().getNumeroElementos(); j++) {
+        for (int i = 0; i < Tablero.getFila(); i++) {
+            for (int j = 0; j < Tablero.getColumna(); j++) {
                 Individuo i1 = tab[j][i].getlIndiv().getElemento(0).getData();
                 Individuo i2 = tab[j][i].getlIndiv().getElemento(1).getData();
                 Individuo i3 = tab[j][i].getlIndiv().getElemento(2).getData();
@@ -200,8 +205,8 @@ public class BucleControl {
         }
     }
     public void repro() throws Mas3Indiv, ElRepetidoError {
-        for (int i=0;i<Tablero.getMatiz().getPrimero().getData().getNumeroElementos();i++){
-            for (int j=0; j<Tablero.getMatiz().getNumeroElementos();j++){
+        for (int i=0;i<Tablero.getFila();i++){
+            for (int j=0; j<Tablero.getColumna();j++){
                     Individuo i1=tab[j][i].getlIndiv().getElemento(0).getData();
                     Individuo i2=tab[j][i].getlIndiv().getElemento(1).getData();
                     Individuo i3=tab[j][i].getlIndiv().getElemento(2).getData();
@@ -320,9 +325,9 @@ public class BucleControl {
         int numero = (int) (Math.random() * 4) + 1;
         if (numero == 1) {//mueve hacia abajo
             Casilla c;
-            for (int i=0; i<Tablero.getMatiz().getPrimero().getData().getNumeroElementos();i++){
+            for (int i=0; i<Tablero.getFila();i++){
                 ListaEnlazadaCasillas<Casilla> columna = Tablero.getMatiz().getElemento(i).getData();
-                for (int j=0; j< Tablero.getMatiz().getNumeroElementos(); j++){
+                for (int j=0; j< Tablero.getColumna(); j++){
                     ListaSimple<Individuo> lind = tab[j][i].getlIndiv();
                     for (int k=0; k!=3; k++){
                         if(Objects.equals(lind.getElemento(k).getData().getNumIdentificacion(), in.getNumIdentificacion())){
@@ -336,9 +341,9 @@ public class BucleControl {
 
         }if (numero == 2) {//mueve hacia arriba
             Casilla c;
-            for (int i=0; i<Tablero.getMatiz().getPrimero().getData().getNumeroElementos();i++){
+            for (int i=0; i<Tablero.getFila();i++){
                 ListaEnlazadaCasillas<Casilla> columna = Tablero.getMatiz().getElemento(i).getData();
-                for (int j=0; j< Tablero.getMatiz().getNumeroElementos(); j++){
+                for (int j=0; j< Tablero.getColumna(); j++){
                     ListaSimple<Individuo> lind = tab[j][i].getlIndiv();
                     for (int k=0; k!=3; k++){
                         if(Objects.equals(lind.getElemento(k).getData().getNumIdentificacion(), in.getNumIdentificacion())){
@@ -352,9 +357,9 @@ public class BucleControl {
 
         }if (numero == 3) {//mueve hacia derecha
             Casilla c;
-            for (int i=0; i<Tablero.getMatiz().getPrimero().getData().getNumeroElementos();i++){
+            for (int i=0; i<Tablero.getFila();i++){
                 ListaEnlazadaCasillas<Casilla> columna = Tablero.getMatiz().getElemento(i).getData();
-                for (int j=0; j< Tablero.getMatiz().getNumeroElementos(); j++){
+                for (int j=0; j< Tablero.getColumna(); j++){
                     ListaSimple<Individuo> lind = tab[j][i].getlIndiv();
                     for (int k=0; k!=3; k++){
                         if(Objects.equals(lind.getElemento(k).getData().getNumIdentificacion(), in.getNumIdentificacion())){
@@ -368,9 +373,9 @@ public class BucleControl {
 
         }if (numero == 4) {//mueve hacia izquierda
             Casilla c;
-            for (int i=0; i<Tablero.getMatiz().getPrimero().getData().getNumeroElementos();i++){
+            for (int i=0; i<Tablero.getFila();i++){
                 ListaEnlazadaCasillas<Casilla> columna = Tablero.getMatiz().getElemento(i).getData();
-                for (int j=0; j< Tablero.getMatiz().getNumeroElementos(); j++){
+                for (int j=0; j< Tablero.getColumna(); j++){
                     ListaSimple<Individuo> lind = tab[j][i].getlIndiv();
                     for (int k=0; k!=3; k++){
                         if(Objects.equals(lind.getElemento(k).getData().getNumIdentificacion(), in.getNumIdentificacion())){
@@ -435,8 +440,8 @@ public class BucleControl {
             in.setEnMovimiento(true);
         }
         Casilla c;
-        for (int i=0; i<Tablero.getMatiz().getPrimero().getData().getNumeroElementos();i++){
-            for (int j=0; j< Tablero.getMatiz().getNumeroElementos(); j++){
+        for (int i=0; i<Tablero.getFila();i++){
+            for (int j=0; j< Tablero.getColumna(); j++){
                 ListaSimple<Individuo> lind = tab[j][i].getlIndiv();
                 for (int k=0; k!=3; k++){
                     if(Objects.equals(lind.getElemento(k).getData().getNumIdentificacion(), in.getNumIdentificacion())){
@@ -457,12 +462,13 @@ public class BucleControl {
             }
         }
     }
+
     private ListaEnlazadaCasillas<Individuo> getListaIndividuosVivos(){
         ListaEnlazadaCasillas<Individuo> l = new ListaEnlazadaCasillas<>();
-        for (int i=0; i<Tablero.getMatiz().getNumeroElementos();i++){
-            for (int j=0; j< Tablero.getMatiz().getPrimero().getData().getNumeroElementos(); j++){
-                ListaSimple<Individuo> lind = tab[j][i].getlIndiv();
-                for (int k=0; k!=3; k++){
+        for (int i=1; i<this.Tablero.getFila();i++){
+            for (int j=1; j< this.Tablero.getColumna(); j++){
+                ListaSimple<Individuo> lind = Tablero.getCasilla(i,j).getlIndiv();
+                for (int k=0; k<lind.getNumElementos(); k++){
                     l.add(lind.getElemento(k).getData());
                 }
             }
@@ -471,8 +477,8 @@ public class BucleControl {
     }
     private ListaEnlazadaCasillas<Recurso> getListaRecursosVivos(){
         ListaEnlazadaCasillas<Recurso> l = new ListaEnlazadaCasillas<>();
-        for (int i=0; i<Tablero.getMatiz().getNumeroElementos();i++){
-            for (int j=0; j< Tablero.getMatiz().getPrimero().getData().getNumeroElementos(); j++){
+        for (int i=0; i<Tablero.getFila();i++){
+            for (int j=0; j< Tablero.getColumna(); j++){
                 ListaSimple<Recurso> lind = tab[j][i].getlRec();
                 for (int k=0; k!=3; k++){
                     l.add(lind.getElemento(k).getData());
@@ -487,8 +493,8 @@ public class BucleControl {
             CrearCaminoAvanzado(in);
         }
         Casilla c;
-        for (int i=0; i< Tablero.getMatiz().getPrimero().getData().getNumeroElementos();i++){
-            for (int j=0; j< Tablero.getMatiz().getNumeroElementos(); j++){
+        for (int i=0; i< Tablero.getFila();i++){
+            for (int j=0; j< Tablero.getColumna(); j++){
                 ListaSimple<Individuo> lind = tab[j][i].getlIndiv();
                 for (int k=0; k!=3; k++){
                     if(Objects.equals(lind.getElemento(k).getData().getNumIdentificacion(), in.getNumIdentificacion())){
@@ -521,8 +527,8 @@ public class BucleControl {
         }
     }
     private void evaluarCasillas(){
-        for (int i=0; i<Tablero.getMatiz().getNumeroElementos();i++){
-            for (int j=0; j< Tablero.getMatiz().getPrimero().getData().getNumeroElementos(); j++){
+        for (int i=0; i<Tablero.getFila();i++){
+            for (int j=0; j< Tablero.getColumna(); j++){
                 ListaSimple<Individuo> lind = tab[j][i].getlIndiv();
                 ListaSimple<Recurso> lrec = tab[j][i].getlRec();
                 for (int k=0; k!=3 && lrec.getElemento(k)!= null; k++){
@@ -578,6 +584,5 @@ public class BucleControl {
             nuevoRecurso();
         }
     }
-    public void main(String[] args) throws Mas3Indiv, Mas3Recs {
-    }
+
 }

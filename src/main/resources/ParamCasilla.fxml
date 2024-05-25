@@ -8,6 +8,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.ComboBox?>
+<?import java.lang.String?>
 <AnchorPane prefHeight="383.0" prefWidth="709.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.juegovida.Controllers.ParamCasillaControl">
     <children>
         <ImageView fx:id="probnuevorecurso" fitHeight="417.0" fitWidth="719.0" layoutX="-10.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
@@ -66,13 +69,32 @@
             <Font name="Book Antiqua" size="14.0" />
          </font>
       </Label>
-      <ChoiceBox fx:id="NuevoInd" layoutX="139.0" layoutY="204.0" prefWidth="150.0" />
+      <ComboBox fx:id="NuevoInd" layoutX="139.0" layoutY="204.0" prefWidth="150.0" >
+          <items>
+              <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Avanzado" />
+                  <String fx:value="Normal" />
+                  <String fx:value="Básico" />
+              </FXCollections>
+          </items>
+      </ComboBox>
       <Label layoutX="457.0" layoutY="108.0" text="Añadir&#10;Recurso" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Book Antiqua" size="14.0" />
          </font>
       </Label>
-      <ChoiceBox fx:id="NuevoRecurso" layoutX="414.0" layoutY="204.0" prefWidth="150.0" />
+      <ComboBox fx:id="NuevoRecurso" layoutX="414.0" layoutY="204.0" prefWidth="150.0">
+          <items>
+              <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Agua" />
+                  <String fx:value="Biblioteca" />
+                  <String fx:value="Pozo" />
+                  <String fx:value="Montaña" />
+                  <String fx:value="Tesoro"/>
+                  <String fx:value="Comida" />
+              </FXCollections>
+          </items>
+      </ComboBox>
       <Label fx:id="NuevoIndiv" layoutX="192.0" layoutY="327.0" textFill="WHITE">
          <font>
             <Font name="Book Antiqua" size="14.0" />

@@ -19,8 +19,6 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-import java.util.ResourceBundle;
-
 public class ParametrosIndividuoControl {
     @FXML
     private ImageView fondo;
