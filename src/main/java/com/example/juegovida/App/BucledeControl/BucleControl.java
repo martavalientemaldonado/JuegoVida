@@ -6,6 +6,7 @@ import com.example.juegovida.App.Tab.GrafoCasillas.*;
 import com.example.juegovida.Clases.Individuo;
 import com.example.juegovida.Clases.Recursos.*;
 import com.example.juegovida.Errores.ElNoEncontradoError;
+import com.example.juegovida.Errores.ElRepetidoError;
 import com.example.juegovida.Errores.Mas3Indiv;
 import com.example.juegovida.Errores.Mas3Recs;
 import javafx.fxml.FXML;
@@ -15,7 +16,7 @@ import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class BucleControl {
-    static ListaEnlazadaCasillas<Individuo> listaIndividuos;
+    static ArbolBinarioInd listaIndividuos;
     static Integer NumeroIdIndUlt =-1;
     private Casilla tab[][];
 
@@ -26,7 +27,7 @@ public class BucleControl {
     public BucleControl() {
     }
 
-    public static ListaEnlazadaCasillas<Individuo> getListaIndividuos() {
+    public static ArbolBinarioInd getListaIndividuos() {
         return listaIndividuos;
     }
 
@@ -127,7 +128,7 @@ public class BucleControl {
                 }
             }
         }
-    public void clonado() throws Mas3Indiv{
+    public void clonado() throws Mas3Indiv, ElRepetidoError {
         for (int i = 0; i < Tablero.getMatiz().getPrimero().getData().getNumeroElementos(); i++) {
             for (int j = 0; j < Tablero.getMatiz().getNumeroElementos(); j++) {
                 Individuo i1 = tab[j][i].getlIndiv().getElemento(0).getData();
@@ -139,7 +140,7 @@ public class BucleControl {
                         NumeroIdIndUlt = NumeroIdIndUlt+1;
                         Individuo in2 = new Individuo(i1.getTurnosVidaInd(), i1.getProbClonacion(),i1.getProbReproduccion(),NumeroIdIndUlt,i1.getTipo());
                         tab[j][i].addIndiv(in2);
-                        listaIndividuos.add(in2);
+                        listaIndividuos.añadir(in2);
                         if (tab[j][i].lIndiv.getNumElementos() > 3) {
                             eliminarInd();
                             if (tab[j][i].lIndiv.getElemento(2).getData() == i1) {
@@ -160,7 +161,7 @@ public class BucleControl {
                         NumeroIdIndUlt = NumeroIdIndUlt+1;
                         Individuo in2 = new Individuo(i2.getTurnosVidaInd(), i2.getProbClonacion(),i2.getProbReproduccion(),NumeroIdIndUlt, i2.getTipo());
                         tab[j][i].addIndiv(in2);
-                        listaIndividuos.add(in2);
+                        listaIndividuos.añadir(in2);
                         if (tab[j][i].lIndiv.getNumElementos() > 3) {
                             eliminarInd();
                             if (tab[j][i].lIndiv.getElemento(2).getData() == i2) {
@@ -180,7 +181,7 @@ public class BucleControl {
                         NumeroIdIndUlt = NumeroIdIndUlt+1;
                         Individuo in2 = new Individuo(i3.getTurnosVidaInd(), i3.getProbClonacion(),i3.getProbReproduccion(),NumeroIdIndUlt,i3.getTipo());
                         tab[j][i].addIndiv(in2);
-                        listaIndividuos.add(in2);
+                        listaIndividuos.añadir(in2);
                         if (tab[j][i].lIndiv.getNumElementos() > 3) {
                             eliminarInd();
                             if (tab[j][i].lIndiv.getElemento(2).getData() == i3) {
@@ -198,7 +199,7 @@ public class BucleControl {
             }
         }
     }
-    public void repro() throws Mas3Indiv {
+    public void repro() throws Mas3Indiv, ElRepetidoError {
         for (int i=0;i<Tablero.getMatiz().getPrimero().getData().getNumeroElementos();i++){
             for (int j=0; j<Tablero.getMatiz().getNumeroElementos();j++){
                     Individuo i1=tab[j][i].getlIndiv().getElemento(0).getData();
@@ -217,7 +218,7 @@ public class BucleControl {
                                 NumeroIdIndUlt = NumeroIdIndUlt+1;
                                 Individuo in2 = new Individuo(i1.getTurnosVidaInd(), i1.getProbClonacion(),i1.getProbReproduccion(),NumeroIdIndUlt, i1.getTipo());
                                 tab[j][i].addIndiv(in2);
-                                listaIndividuos.add(in2);
+                                listaIndividuos.añadir(in2);
                             }
                             else{
                                 i1.getCola().push(new ElementoCola<>("hijo"+ i2));
@@ -225,7 +226,7 @@ public class BucleControl {
                                 NumeroIdIndUlt = NumeroIdIndUlt+1;
                                 Individuo in2 = new Individuo(i2.getTurnosVidaInd(), i2.getProbClonacion(),i2.getProbReproduccion(),NumeroIdIndUlt, i2.getTipo());
                                 tab[j][i].addIndiv(in2);
-                                listaIndividuos.add(in2);
+                                listaIndividuos.añadir(in2);
                             }
 
                         }
@@ -243,7 +244,7 @@ public class BucleControl {
                                     NumeroIdIndUlt = NumeroIdIndUlt+1;
                                     Individuo in2 = new Individuo(i2.getTurnosVidaInd(), i2.getProbClonacion(),i2.getProbReproduccion(),NumeroIdIndUlt, i2.getTipo());
                                     tab[j][i].addIndiv(in2);
-                                    listaIndividuos.add(in2);
+                                    listaIndividuos.añadir(in2);
                                 }
                                 else{
                                     i2.getCola().push(new ElementoCola<>("hijo"+ i3));
@@ -251,7 +252,7 @@ public class BucleControl {
                                     NumeroIdIndUlt = NumeroIdIndUlt+1;
                                     Individuo in2 = new Individuo(i3.getTurnosVidaInd(), i3.getProbClonacion(),i3.getProbReproduccion(),NumeroIdIndUlt, i2.getTipo());
                                     tab[j][i].addIndiv(in2);
-                                    listaIndividuos.add(in2);
+                                    listaIndividuos.añadir(in2);
                                 }
                             }
                             else if(i2.getProbReproduccion()< i1.getProbReproduccion()&& i2.getProbReproduccion()< i3.getProbReproduccion()){
@@ -264,7 +265,7 @@ public class BucleControl {
                                     i1.getCola().push(new ElementoCola<>("hijo"+ i3));NumeroIdIndUlt = NumeroIdIndUlt+1;
                                     Individuo in2 = new Individuo(i3.getTurnosVidaInd(), i3.getProbClonacion(),i3.getProbReproduccion(),NumeroIdIndUlt, i3.getTipo());
                                     tab[j][i].addIndiv(in2);
-                                    listaIndividuos.add(in2);
+                                    listaIndividuos.añadir(in2);
 
                                 }
                                 else{
@@ -273,7 +274,7 @@ public class BucleControl {
                                     NumeroIdIndUlt = NumeroIdIndUlt+1;
                                     Individuo in2 = new Individuo(i1.getTurnosVidaInd(), i1.getProbClonacion(),i1.getProbReproduccion(),NumeroIdIndUlt, i1.getTipo());
                                     tab[j][i].addIndiv(in2);
-                                    listaIndividuos.add(in2);
+                                    listaIndividuos.añadir(in2);
                                 }
                             }
                             else if(i3.getProbReproduccion()< i1.getProbReproduccion()&& i3.getProbReproduccion()< i2.getProbReproduccion()){
@@ -287,7 +288,7 @@ public class BucleControl {
                                     NumeroIdIndUlt = NumeroIdIndUlt+1;
                                     Individuo in2 = new Individuo(i2.getTurnosVidaInd(), i2.getProbClonacion(),i2.getProbReproduccion(),NumeroIdIndUlt, i2.getTipo());
                                     tab[j][i].addIndiv(in2);
-                                    listaIndividuos.add(in2);
+                                    listaIndividuos.añadir(in2);
                                 }
                                 else{
                                     i1.getCola().push(new ElementoCola<>("hijo"+ i1));
@@ -295,7 +296,7 @@ public class BucleControl {
                                     NumeroIdIndUlt = NumeroIdIndUlt+1;
                                     Individuo in2 = new Individuo(i1.getTurnosVidaInd(), i1.getProbClonacion(),i1.getProbReproduccion(),NumeroIdIndUlt, i1.getTipo());
                                     tab[j][i].addIndiv(in2);
-                                    listaIndividuos.add(in2);
+                                    listaIndividuos.añadir(in2);
                                 }
                             }
                         }
@@ -412,12 +413,12 @@ public class BucleControl {
             ElementoHashMapC<NodoGrafoCasillas<Casilla>, CaminoC<Casilla>> aUsar = null;
             double d = -300000000;
             while (e.getSiguiente() != null) {
-                if(e.getCamino().getPeso()>d){
+                if(e.getCamino().getPeso()>d && !e.getNodobuscamos().getDato().getlRec().isVacia()){
                     d = e.getCamino().getPeso();
                     aUsar = e;
                 } else if (e.getCamino().getPeso()==d) {
                     assert aUsar != null;
-                    if(e.getCamino().getCamino().getNumeroElementos()< aUsar.getCamino().getCamino().getNumeroElementos()){
+                    if(e.getCamino().getCamino().getNumeroElementos()< aUsar.getCamino().getCamino().getNumeroElementos() && !e.getNodobuscamos().getDato().getlRec().isVacia()){
                         d = e.getCamino().getPeso();
                         aUsar = e;
                     }
@@ -425,7 +426,6 @@ public class BucleControl {
                 e = e.getSiguiente();
             }
             ListaEnlazadaCasillas<NodoGrafoCasillas<Casilla>> Camino= Tablero.getGrafo().getCaminoVertices(i.getData(),aUsar.getNodobuscamos());
-            in.setEnMovimiento(true);
             in.setCaminoMovimiento(Camino);
         }
     }
@@ -495,6 +495,7 @@ public class BucleControl {
                         Casilla casilla = in.getCaminoMovimiento().getUltimo().getData().getDato();
                         if(i-casilla.fila==0 && j-casilla.columna==0){
                             in.setEnMovimiento(false);
+                            in.getCaminoMovimiento().Vaciar();
                         }else{
                             if(i-casilla.fila>0){
                                 c = tab[j][i];
@@ -554,7 +555,7 @@ public class BucleControl {
             }
         }
     }
-    public void bucleEntero()throws Mas3Indiv, Mas3Recs{
+    public void bucleEntero() throws Mas3Indiv, Mas3Recs, ElRepetidoError {
         ListaEnlazadaCasillas<Individuo> l = getListaIndividuosVivos();
         ElementoLECasillas<Individuo> i = l.getPrimero();
         while(l.getNumeroElementos() >1){

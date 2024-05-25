@@ -8,6 +8,7 @@ import com.example.juegovida.App.Tab.Casilla;
 import com.example.juegovida.Clases.Individuo;
 import com.example.juegovida.Clases.Recursos.*;
 import com.example.juegovida.DatosCompartidos;
+import com.example.juegovida.Errores.ElRepetidoError;
 import com.example.juegovida.Errores.Mas3Indiv;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -41,7 +42,7 @@ public class ParamCasillaControl{
 
 
     @FXML
-    void clickAceptar(ActionEvent event) throws Mas3Indiv {
+    void clickAceptar(ActionEvent event) throws Mas3Indiv, ElRepetidoError {
         //Tanto NuevoInd como NuevoRe
         if("Básico" == NuevoInd.getValue()){
             BucleControl.setNumeroIdIndUlt(BucleControl.getNumeroIdIndUlt()+1);
@@ -101,27 +102,27 @@ public class ParamCasillaControl{
     public void setStage(Stage stage) {
     }
     @FXML
-    protected void AñadirIndividuoAvanzado() throws Mas3Indiv {
+    protected void AñadirIndividuoAvanzado() throws Mas3Indiv, ElRepetidoError {
         if(casilla.getlIndiv().getNumElementos()<3){
             Individuo nuevo = new Individuo(BucleControl.getNumeroIdIndUlt(), 2);
             casilla.addIndiv(nuevo);
-            BucleControl.getListaIndividuos().add(nuevo);
+            BucleControl.getListaIndividuos().añadir(nuevo);
         }
     }
     @FXML
-    protected void AñadirIndividuoNormal() throws Mas3Indiv {
+    protected void AñadirIndividuoNormal() throws Mas3Indiv, ElRepetidoError {
         if(casilla.getlIndiv().getNumElementos()<3){
             Individuo nuevo = new Individuo(BucleControl.getNumeroIdIndUlt(), 1);
             casilla.addIndiv(nuevo);
-            BucleControl.getListaIndividuos().add(nuevo);
+            BucleControl.getListaIndividuos().añadir(nuevo);
         }
     }
     @FXML
-    protected void AñadirIndividuoBasico() throws Mas3Indiv {
+    protected void AñadirIndividuoBasico() throws Mas3Indiv, ElRepetidoError {
         if(casilla.getlIndiv().getNumElementos()<3){
             Individuo nuevo = new Individuo(BucleControl.getNumeroIdIndUlt(), 0);
             casilla.addIndiv(nuevo);
-            BucleControl.getListaIndividuos().add(nuevo);
+            BucleControl.getListaIndividuos().añadir(nuevo);
         }
     }
     @FXML
