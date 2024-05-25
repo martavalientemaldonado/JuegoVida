@@ -1,7 +1,6 @@
 package com.example.juegovida.App.Tab;
 
 import com.example.juegovida.App.BucledeControl.BucleControl;
-import com.example.juegovida.Clases.Individuo;
 import com.example.juegovida.Controllers.TableroControl;
 import com.example.juegovida.DatosCompartidos;
 import com.example.juegovida.Errores.ElRepetidoError;
@@ -17,9 +16,10 @@ import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.SplitPane;
-import javafx.scene.control.Tab;
-import javafx.scene.layout.*;
-import javafx.scene.paint.Color;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Region;
+import javafx.scene.layout.VBox;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -100,7 +100,7 @@ public class TabApp{
                         try {
                             System.out.println(botoncasillas);
                             if(botoncasillas==true) {
-                                tab.click();
+                                tab.click(c);
                             }
 
                         } catch (IOException e) {
@@ -117,7 +117,6 @@ public class TabApp{
                 mainGrid.add(placeholder, i, j);
             }
         }
-        this.bucle.setTablero(tablero);
 
 
 /***

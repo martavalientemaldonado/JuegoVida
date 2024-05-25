@@ -47,7 +47,7 @@ public class ParamCasillaControl implements Initializable {
 
 
     @FXML
-    void clickAceptar(ActionEvent event) throws Mas3Indiv {
+    void clickAceptar(ActionEvent event) throws Mas3Indiv, ElRepetidoError {
         //Tanto NuevoInd como NuevoRe
         if("Básico".equals(NuevoInd.getValue())){
             b.setNumeroIdIndUlt(b.getNumeroIdIndUlt()+1);
@@ -104,27 +104,27 @@ public class ParamCasillaControl implements Initializable {
     public void setStage(Stage stage) {
     }
     @FXML
-    protected void AñadirIndividuoAvanzado() throws Mas3Indiv {
+    protected void AñadirIndividuoAvanzado() throws Mas3Indiv, ElRepetidoError {
         if(casilla.getlIndiv().getNumElementos()<3){
             Individuo nuevo = new Individuo(b.getNumeroIdIndUlt(), 2);
             casilla.addIndiv(nuevo);
-            b.getListaIndividuos().add(nuevo);
+            b.getListaIndividuos().añadir(nuevo);
         }
     }
     @FXML
-    protected void AñadirIndividuoNormal() throws Mas3Indiv {
+    protected void AñadirIndividuoNormal() throws Mas3Indiv, ElRepetidoError {
         if(casilla.getlIndiv().getNumElementos()<3){
             Individuo nuevo = new Individuo(b.getNumeroIdIndUlt(), 1);
             casilla.addIndiv(nuevo);
-            b.getListaIndividuos().add(nuevo);
+            b.getListaIndividuos().añadir(nuevo);
         }
     }
     @FXML
-    protected void AñadirIndividuoBasico() throws Mas3Indiv {
+    protected void AñadirIndividuoBasico() throws Mas3Indiv, ElRepetidoError {
         if(casilla.getlIndiv().getNumElementos()<3){
             Individuo nuevo = new Individuo(b.getNumeroIdIndUlt(), 0);
             casilla.addIndiv(nuevo);
-            b.getListaIndividuos().add(nuevo);
+            b.getListaIndividuos().añadir(nuevo);
         }
     }
     @FXML
@@ -171,12 +171,10 @@ public class ParamCasillaControl implements Initializable {
     }
     public void loadUserDataTabTablero(DatosCompartidos parametrosData) {
         this.d = parametrosData;
-        this.updateGUIwithModelTabTablero();
     }
-
-    private void updateGUIwithModelTabTablero() {
+    public void loadUserDataCasilla(Casilla c) {
+        this.casilla = c;
     }
-
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
