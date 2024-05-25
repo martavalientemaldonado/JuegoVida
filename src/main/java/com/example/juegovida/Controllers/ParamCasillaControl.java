@@ -79,7 +79,10 @@ public class ParamCasillaControl implements Initializable {
         if("Comida".equals(NuevoRecurso.getValue())){
             AñadirRecursoComida();
         }
-        scene.close();
+        //Cerrar pantalla
+        Node source = (Node) event.getSource();
+        Stage stage1 = (Stage) source.getScene().getWindow();
+        stage1.close();
     }
 
     @FXML
@@ -108,7 +111,6 @@ public class ParamCasillaControl implements Initializable {
         if(casilla.getlIndiv().getNumElementos()<3){
             Individuo nuevo = new Individuo(b.getNumeroIdIndUlt(), 2);
             casilla.addIndiv(nuevo);
-            b.getListaIndividuos().añadir(nuevo);
         }
     }
     @FXML
@@ -116,7 +118,6 @@ public class ParamCasillaControl implements Initializable {
         if(casilla.getlIndiv().getNumElementos()<3){
             Individuo nuevo = new Individuo(b.getNumeroIdIndUlt(), 1);
             casilla.addIndiv(nuevo);
-            b.getListaIndividuos().añadir(nuevo);
         }
     }
     @FXML
@@ -124,7 +125,6 @@ public class ParamCasillaControl implements Initializable {
         if(casilla.getlIndiv().getNumElementos()<3){
             Individuo nuevo = new Individuo(b.getNumeroIdIndUlt(), 0);
             casilla.addIndiv(nuevo);
-            b.getListaIndividuos().añadir(nuevo);
         }
     }
     @FXML

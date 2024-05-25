@@ -111,12 +111,6 @@ public class TabParamTableroControl {
     private Label TurnosRestaMontaña;
 
     @FXML
-    private Slider SNumColumnas;
-
-    @FXML
-    private Slider SNumFilas;
-
-    @FXML
     private Slider STurnosVidaInd;
 
     @FXML
@@ -127,12 +121,6 @@ public class TabParamTableroControl {
 
     @FXML
     private Label TurnosVidaInd;
-
-    @FXML
-    private Label NumFilas;
-
-    @FXML
-    private Label NumColumnas;
 
     @FXML
     private Button Aceptar;
@@ -159,8 +147,6 @@ public class TabParamTableroControl {
     protected IntegerProperty ITurnosRestaMontaña = new SimpleIntegerProperty(0);
     protected IntegerProperty IPorcetajeReproTesoro = new SimpleIntegerProperty(0);
     protected IntegerProperty IPorcetajeClonaBiblio = new SimpleIntegerProperty(0);
-    protected IntegerProperty INumColumnas = new SimpleIntegerProperty(0);
-    protected IntegerProperty INumFilas = new SimpleIntegerProperty(0);
     protected IntegerProperty ITurnosVidaInd = new SimpleIntegerProperty(0);
     protected IntegerProperty ITurnosVidaRe = new SimpleIntegerProperty(0);
 
@@ -225,10 +211,6 @@ public class TabParamTableroControl {
         PorcetajeReproTesoro.textProperty().bind(IPorcetajeReproTesoro.asString());
         SPorcetajeClonaBiblio.valueProperty().bindBidirectional(IPorcetajeClonaBiblio);
         PorcetajeClonaBiblio.textProperty().bind(IPorcetajeClonaBiblio.asString());
-        SNumColumnas.valueProperty().bindBidirectional(INumColumnas);
-        NumColumnas.textProperty().bind(INumColumnas.asString());
-        SNumFilas.valueProperty().bindBidirectional(INumFilas);
-        NumFilas.textProperty().bind(INumFilas.asString());
         STurnosVidaInd.valueProperty().bindBidirectional(ITurnosVidaInd);
         TurnosVidaInd.textProperty().bind(ITurnosVidaInd.asString());
         STurnosVidaRe.valueProperty().bindBidirectional(ITurnosVidaRe);
@@ -261,14 +243,10 @@ public class TabParamTableroControl {
         assert TurnosPropComida != null : "fx:id=\"TurnosPropComida\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
         assert PorcetajeClonaBiblio != null : "fx:id=\"PorcetajeClonaBiblio\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
         assert TurnosRestaMontaña != null : "fx:id=\"TurnosRestaMontaña\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
-        assert SNumColumnas != null : "fx:id=\"SNumColumnas\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
-        assert SNumFilas != null : "fx:id=\"SNumFilas\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
         assert STurnosVidaInd != null : "fx:id=\"STurnosVidaInd\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
         assert STurnosVidaRe != null : "fx:id=\"STurnosVidaRe\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
         assert TurnosVidaRe != null : "fx:id=\"TurnosVidaRe\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
         assert TurnosVidaInd != null : "fx:id=\"TurnosVidaInd\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
-        assert NumFilas != null : "fx:id=\"NumFilas\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
-        assert NumColumnas != null : "fx:id=\"NumColumnas\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
         assert Aceptar != null : "fx:id=\"Aceptar\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
         assert Restablecer != null : "fx:id=\"Restablecer\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
         assert Cerrar != null : "fx:id=\"Cerrar\" was not injected: check your FXML file 'TabDeTablero.fxml'.";
@@ -289,8 +267,6 @@ public class TabParamTableroControl {
         SPorcetajeClonaBiblio.valueProperty().bindBidirectional(d.ProbClonacPropBibliProperty());
         SPorcetajeReproTesoro.valueProperty().bindBidirectional(d.ProbReproPropTesoroProperty());
         STurnosPropComida.valueProperty().bindBidirectional(d.TurnosPropComProperty());
-        SNumColumnas.valueProperty().bindBidirectional(d.NumColumnasProperty());
-        SNumFilas.valueProperty().bindBidirectional(d.NumFilasProperty());
         STurnosVidaInd.valueProperty().bindBidirectional(d.TrunosVidaIndivProperty());
         STurnosVidaRe.valueProperty().bindBidirectional(d.TurnosVidaRecursosProperty());
     }

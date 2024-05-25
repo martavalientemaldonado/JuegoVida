@@ -156,8 +156,6 @@ public class TabApp{
                 try {
                     tab.loadUserDataTabTablero(d,b);
                     tab.clickajustes();//repite era que este d saltaba que era nulo claro por qu mira
-                    tab.clickajustes();
-
                 }
                 catch (IOException e) {
                     throw new RuntimeException(e);
