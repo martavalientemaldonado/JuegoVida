@@ -19,6 +19,7 @@ public class ParamCasilla extends Application {
         launch(args); //LLama a start
 
     }
+
     @Override
     public void start(Stage primaryStage) throws Exception {
         primaryStage.setResizable(false);

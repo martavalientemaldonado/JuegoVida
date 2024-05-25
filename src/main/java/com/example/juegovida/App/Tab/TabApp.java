@@ -1,6 +1,7 @@
 package com.example.juegovida.App.Tab;
 
 import com.example.juegovida.App.BucledeControl.BucleControl;
+import com.example.juegovida.Clases.Individuo;
 import com.example.juegovida.Controllers.TableroControl;
 import com.example.juegovida.DatosCompartidos;
 import com.example.juegovida.Errores.ElRepetidoError;
@@ -99,7 +100,7 @@ public class TabApp{
                         try {
                             System.out.println(botoncasillas);
                             if(botoncasillas==true) {
-                                tab.click(c);
+                                tab.click();
                             }
 
                         } catch (IOException e) {
@@ -107,6 +108,7 @@ public class TabApp{
                         }
                     }
                 };
+                Casilla celda = new Casilla(j,i);
                 btnNewObject.setOnAction(click);
                 btnNewObject.setMinSize(80, 80); // Tamaño mínimo para visualización
                 placeholder.setMinSize(80, 80); // Tamaño mínimo para visualización
@@ -115,6 +117,9 @@ public class TabApp{
                 mainGrid.add(placeholder, i, j);
             }
         }
+        this.bucle.setTablero(tablero);
+
+
 /***
         FlowPane f = new FlowPane();
         //f.getChildren().add(mainGrid);
@@ -122,13 +127,14 @@ public class TabApp{
         f.setAlignment(Pos.CENTER);
         f.setTranslateY(100);
         f.setTranslateX(60);
- */
+ */     BucleControl b= this.bucle;
         EventHandler<ActionEvent> clickstart= new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
                 try {
                     tab.clickstart();
                     bucle.bucleEntero();
+                    b.bucleEntero();
                 }
                 catch (IOException e) {
                     throw new RuntimeException(e);
@@ -142,12 +148,15 @@ public class TabApp{
             }
         };
         start.setOnAction(clickstart);
+        DatosCompartidos d= this.d;
         EventHandler<ActionEvent> clickajustes= new EventHandler<ActionEvent>() {
             private DatosCompartidos d;
 
             @Override
             public void handle(ActionEvent actionEvent) {
                 try {
+                    tab.loadUserDataTabTablero(d,b);
+                    tab.clickajustes();//repite era que este d saltaba que era nulo claro por qu mira
                     tab.clickajustes();
 
                 }
@@ -170,4 +179,9 @@ public class TabApp{
 
     }
 
+    public void loadData(BucleControl bucle, Tablero matriz, DatosCompartidos d){
+        this.bucle=bucle;
+        this.ta=matriz;
+        this.d=d;
+    }
 }

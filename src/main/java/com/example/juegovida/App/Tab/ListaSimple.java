@@ -28,13 +28,13 @@ public class ListaSimple<T> {
         }
     }
 
-    public int add(ElementoLS<T> el) {
+    public void add(ElementoLS<T> el) {
         if (getNumElementos() < Max) {
             list[getNumElementos()] = el;
-        } else {
-            return -1;
-        }
-        return 0;
+        } //else {
+           // return -1;
+       // }
+      // return 0;
     }
 
 

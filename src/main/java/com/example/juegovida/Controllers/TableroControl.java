@@ -1,5 +1,6 @@
 package com.example.juegovida.Controllers;
 
+import com.example.juegovida.App.BucledeControl.BucleControl;
 import com.example.juegovida.App.Tab.Casilla;
 import com.example.juegovida.App.Tab.Tablero;
 import com.example.juegovida.Clases.Individuo;
@@ -29,6 +30,7 @@ public class TableroControl {
     private Individuo in;
     private Tablero t;
     private DatosCompartidos d;
+    private BucleControl bucle;
 
     @FXML
     public void click(Casilla c) throws IOException {
@@ -54,6 +56,7 @@ public class TableroControl {
 
     }
     public void clickstop() throws IOException {
+        this.t.guardar(this.t);
         Stage stage = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader();
         File fichero = new File(Paths.PARAMCASILLA);
@@ -68,6 +71,7 @@ public class TableroControl {
         scene = new Scene(fxmlLoader.load(),700,500);
         stage.setScene(scene);
         ParamCasillaControl p= fxmlLoader.getController();
+        p.loadUserDataTabTablero(this.d);
         p.setStage(stage);
         stage.show();
     }
@@ -77,7 +81,8 @@ public class TableroControl {
     }
 
 
-    public void loadUserDataTabTablero(DatosCompartidos parametrosData) {
+    public void loadUserDataTabTablero(DatosCompartidos parametrosData, BucleControl b) {
+        this.bucle=b;
         this.d = parametrosData;
     }
 
