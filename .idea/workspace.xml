@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ae59f5ab-3a2c-4635-b2d5-df0317d0df49" name="Changes" comment="botones tablero">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/TabApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/TabApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/ParamCasillaControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/ParamCasillaControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/TabParamTableroControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/Controllers/TabParamTableroControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/ArbolBinarioInd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/juegovida/App/Tab/ArbolBinarioInd.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -288,14 +286,6 @@
       <workItem from="1716548526514" duration="1507000" />
       <workItem from="1716585438589" duration="4979000" />
       <workItem from="1716618755135" duration="13437000" />
-    </task>
-    <task id="LOCAL-00003" summary="PantallaInicio Bienvenida">
-      <option name="closed" value="true" />
-      <created>1714809876349</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1714809876349</updated>
     </task>
     <task id="LOCAL-00004" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
       <option name="closed" value="true" />
@@ -681,7 +671,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716634162135</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="botones tablero">
+      <option name="closed" value="true" />
+      <created>1716635533714</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1716635533714</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

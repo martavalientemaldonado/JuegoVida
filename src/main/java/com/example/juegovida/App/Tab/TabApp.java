@@ -126,14 +126,13 @@ public class TabApp{
         f.setAlignment(Pos.CENTER);
         f.setTranslateY(100);
         f.setTranslateX(60);
- */     BucleControl b= this.bucle;
+ */
         EventHandler<ActionEvent> clickstart= new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
                 try {
                     tab.clickstart();
-                    bucle.bucleEntero();
-                    b.bucleEntero();
+                    BucleControl.bucleEntero();
                 }
                 catch (IOException e) {
                     throw new RuntimeException(e);
@@ -154,7 +153,7 @@ public class TabApp{
             @Override
             public void handle(ActionEvent actionEvent) {
                 try {
-                    tab.loadUserDataTabTablero(d,b);
+                    tab.loadUserDataTabTablero(d,bucle);
                     tab.clickajustes();//repite era que este d saltaba que era nulo claro por qu mira
                 }
                 catch (IOException e) {

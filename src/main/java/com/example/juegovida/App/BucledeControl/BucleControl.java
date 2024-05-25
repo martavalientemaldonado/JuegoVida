@@ -29,8 +29,6 @@ public class BucleControl {
         this.Tablero=t;
     }
 
-    public BucleControl(int fila, int columna) {
-    }
 
     public static ArbolBinarioInd getListaIndividuos() {
         return listaIndividuos;
@@ -561,7 +559,7 @@ public class BucleControl {
             }
         }
     }
-    public void bucleEntero() throws Mas3Indiv, Mas3Recs, ElRepetidoError {
+    public static void bucleEntero() throws Mas3Indiv, Mas3Recs, ElRepetidoError {
         ListaEnlazadaCasillas<Individuo> l = getListaIndividuosVivos();
         ElementoLECasillas<Individuo> i = l.getPrimero();
         while(l.getNumeroElementos() >1){
