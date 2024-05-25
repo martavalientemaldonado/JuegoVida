@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="383.0" prefWidth="709.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.juegovida.Controllers.ParamRecursosControl">
+<AnchorPane prefHeight="300.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.juegovida.Controllers.ParamRecursosControl">
    <children>
-      <ImageView fx:id="probnuevorecurso" fitHeight="417.0" fitWidth="719.0" layoutX="-10.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="probnuevorecurso" fitHeight="700.0" fitWidth="900.0" layoutX="-10.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Imagenes/bosque.jpg" />
          </image>

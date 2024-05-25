@@ -1,15 +1,17 @@
 package com.example.juegovida.Controllers;
 
 import com.example.juegovida.App.BucledeControl.BucleControl;
+import com.example.juegovida.App.Tab.ArbolBinarioInd;
 import com.example.juegovida.App.Tab.Casilla;
 import com.example.juegovida.App.Tab.Tablero;
 import com.example.juegovida.Clases.Individuo;
 import com.example.juegovida.DatosCompartidos;
+import com.example.juegovida.Errores.ElRepetidoError;
+import com.example.juegovida.Errores.Mas3Indiv;
+import com.example.juegovida.Errores.Mas3Recs;
 import com.example.juegovida.Utilities.Paths;
-import com.example.juegovida.App.Tab.TabApp;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -31,49 +33,43 @@ public class TableroControl {
     private Tablero t;
     private DatosCompartidos d;
     private BucleControl bucle;
+    boolean P;
 
-    @FXML
     public void click(Casilla c) throws IOException {
-        Stage stage = new Stage();
-        FXMLLoader fxmlLoader = new FXMLLoader();
-        File fichero = new File(Paths.PARAMCASILLA);
-        URL url;
-        try {
-            url = fichero.toURL();
-        } catch (MalformedURLException ex) {
-            throw new RuntimeException(ex);
+        if(P) {
+            Stage stage = new Stage();
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            File fichero = new File(Paths.PARAMCASILLA);
+            URL url;
+            try {
+                url = fichero.toURL();
+            } catch (MalformedURLException ex) {
+                throw new RuntimeException(ex);
+            }
+            fxmlLoader.setLocation(url); // Para encontrar donde esta
+            Scene scene; //vCarga escena
+            scene = new Scene(fxmlLoader.load(), 700, 500);
+            stage.setScene(scene);
+            ParamCasillaControl p = fxmlLoader.getController();
+            this.bucle.setListaIndividuos(new ArbolBinarioInd());
+            p.loadUserDataTabTablero(d, this.bucle, c);
+            p.setStage(stage);
+            stage.show();
         }
-        fxmlLoader.setLocation(url); // Para encontrar donde esta
-        Scene scene; //vCarga escena
-        scene = new Scene(fxmlLoader.load(),700,500);
-        stage.setScene(scene);
-        ParamCasillaControl p= fxmlLoader.getController();
-        p.loadUserDataCasilla(c);
-        p.setStage(stage);
-        stage.show();
+        else{
+
+        }
+    }
+    public void setP(boolean t){
+        this.P=t;
     }
     public void clickstart() throws IOException {
+
 
     }
     public void clickstop() throws IOException {
         this.t.guardar(this.t);
-        Stage stage = new Stage();
-        FXMLLoader fxmlLoader = new FXMLLoader();
-        File fichero = new File(Paths.PARAMCASILLA);
-        URL url = null;
-        try {
-            url = fichero.toURL();
-        } catch (MalformedURLException ex) {
-            throw new RuntimeException(ex);
-        }
-        fxmlLoader.setLocation(url); // Para encontrar donde esta
-        Scene scene; //vCarga escena
-        scene = new Scene(fxmlLoader.load(),700,500);
-        stage.setScene(scene);
-        ParamCasillaControl p= fxmlLoader.getController();
-        p.loadUserDataTabTablero(this.d);
-        p.setStage(stage);
-        stage.show();
+        this.P=true;
     }
     public void clickps() throws IOException {
 
@@ -81,7 +77,7 @@ public class TableroControl {
     }
 
 
-    public void loadUserDataTabTablero(DatosCompartidos parametrosData, BucleControl b) {
+    public void loadUserDataTabNuevo(DatosCompartidos parametrosData, BucleControl b) {
         this.bucle=b;
         this.d = parametrosData;
     }
@@ -104,7 +100,7 @@ public class TableroControl {
             throw new RuntimeException("El controlador es nulo. Asegúrate de que el FXML está correctamente configurado y tiene el controlador asociado.");
         }
 
-        p.loadUserDataTabTablero(d);
+        p.loadUserDataTabTablero(this.d);
         Scene scene = new Scene(root, 700, 500);
         stage.setScene(scene);
         stage.show();

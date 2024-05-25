@@ -34,7 +34,7 @@ public class PantallaInicio extends Application {
             throw new RuntimeException(ex);
         }
         fxmlLoader.setLocation(url); // Para encontrar donde esta
-        Scene scene = new Scene(fxmlLoader.load(),700,500); //vCarga escena
+        Scene scene = new Scene(fxmlLoader.load(),9500,7000); //vCarga escena
         stage.setScene(scene);
         ParametrosIndividuoControl p= fxmlLoader.getController(); // Le pasas tu escena
         p.loadUserDataParamInd(new DatosCompartidos(this.in));

@@ -146,7 +146,7 @@ public class PantallaInicioControl implements Initializable {
 
     }
 
-    public void loaddata(TabApp t){
+    public void loadata(TabApp t){
         this.tab=t;
     }
 }

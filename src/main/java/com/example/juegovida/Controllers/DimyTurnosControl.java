@@ -20,7 +20,7 @@ import javafx.scene.control.Slider;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
-public class DimyTurnosControl{
+public class DimyTurnosControl {
     @FXML
     private ResourceBundle resources;
 
@@ -52,6 +52,7 @@ public class DimyTurnosControl{
         // Crear y mostrar la primera ventana
         Stage stage = new Stage();
         TabApp t = new TabApp();
+        t.loaddata(d);
         Scene scene = new Scene(t.Tablero(d.getMatriz()), 1200, 700); //vCarga escena
         stage.setScene(scene);
         stage.show();
@@ -75,18 +76,20 @@ public class DimyTurnosControl{
         assert TurnosVidaRecursos != null : "fx:id=\"TurnosVidaRecursos\" was not injected: check your FXML file 'DimyTurnosVida.fxml'.";
 
     }
+
     protected void updateGUIwithModelDimyNumTurn() {
         NumColumnas.valueProperty().bindBidirectional(d.NumColumnasProperty());
         NumFilas.valueProperty().bindBidirectional(d.NumFilasProperty());
         TurnosVidaIndiv.valueProperty().bindBidirectional(d.TrunosVidaIndivProperty());
         TurnosVidaRecursos.valueProperty().bindBidirectional(d.TurnosVidaRecursosProperty());
     }
+
     public void loadUserDataDimyNumTurn(DatosCompartidos parametrosData) {
         this.d = parametrosData;
         this.updateGUIwithModelDimyNumTurn();
     }
 
-    public void setStage(Stage s){
+    public void setStage(Stage s) {
         this.scene = s;
     }
 }

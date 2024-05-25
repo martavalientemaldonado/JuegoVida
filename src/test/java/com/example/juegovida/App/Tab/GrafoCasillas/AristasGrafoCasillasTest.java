@@ -1,8 +1,6 @@
 package com.example.juegovida.App.Tab.GrafoCasillas;
 
 import com.example.juegovida.App.Tab.Casilla;
-import com.example.juegovida.App.Tab.Grafo.AristasGrafo;
-import com.example.juegovida.App.Tab.Grafo.NodoGrafo;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
