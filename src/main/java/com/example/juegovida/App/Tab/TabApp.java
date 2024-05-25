@@ -3,6 +3,7 @@ package com.example.juegovida.App.Tab;
 import com.example.juegovida.App.BucledeControl.BucleControl;
 import com.example.juegovida.Controllers.TableroControl;
 import com.example.juegovida.DatosCompartidos;
+import com.example.juegovida.Errores.ElRepetidoError;
 import com.example.juegovida.Errores.Mas3Indiv;
 import com.example.juegovida.Errores.Mas3Recs;
 import javafx.event.ActionEvent;
@@ -134,6 +135,8 @@ public class TabApp{
                 } catch (Mas3Indiv e) {
                     throw new RuntimeException(e);
                 } catch (Mas3Recs e) {
+                    throw new RuntimeException(e);
+                } catch (ElRepetidoError e) {
                     throw new RuntimeException(e);
                 }
             }

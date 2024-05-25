@@ -85,22 +85,22 @@ public class TableroControl {
         Stage stage = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader();
         File fichero = new File(Paths.TABPARAMETROSTABLERO);
-        URL url = null;
+        URL url ;
         try {
             url = fichero.toURL();
         } catch (MalformedURLException ex) {
             throw new RuntimeException(ex);
         }
-        fxmlLoader.setLocation(url); // Para encontrar donde esta
-        Parent root = fxmlLoader.load(); // Cargar el FXML
+        fxmlLoader.setLocation(url);
+        Parent root = fxmlLoader.load();
         TabParamTableroControl p = fxmlLoader.getController();
 
         if (p == null) {
             throw new RuntimeException("El controlador es nulo. Asegúrate de que el FXML está correctamente configurado y tiene el controlador asociado.");
         }
 
-        p.loadUserDataTabTablero(d); // Configurar el controlador
-        Scene scene = new Scene(root, 700, 500); // Crear la escena con el contenido del FXML cargado
+        p.loadUserDataTabTablero(d);
+        Scene scene = new Scene(root, 700, 500);
         stage.setScene(scene);
         stage.show();
     }
