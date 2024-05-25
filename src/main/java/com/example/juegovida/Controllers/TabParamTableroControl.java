@@ -172,7 +172,10 @@ public class TabParamTableroControl {
     private Recurso re = new Recurso();
     @FXML
     void ClickCerrar(ActionEvent event) {
-        scene.close();
+        //Cerrar pantalla
+        Node source = (Node) event.getSource();
+        Stage stage1 = (Stage) source.getScene().getWindow();
+        stage1.close();;
     }
     @FXML
     void clickRestablecer(ActionEvent event) {

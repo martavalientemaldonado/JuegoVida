@@ -54,15 +54,15 @@ public class NodoInd {
         return grado;
     }
     public void añadirNodo(NodoInd el){
-        Comparable c= (Comparable) this.dato;
-        if (c.compareTo(el.dato)>0){
+        Comparable c= (Comparable) this.dato.getNumIdentificacion();
+        if (c.compareTo(el.dato.getNumIdentificacion())>0){
             if (this.izdo==null){
                 this.izdo=el;
             }else{
                 this.izdo.añadirNodo(el);
             }
         }
-        if (c.compareTo(el.dato)<0){
+        if (c.compareTo(el.dato.getNumIdentificacion())<0){
             if (this.dcho==null){
                 this.dcho=el;
             }else{
@@ -72,8 +72,8 @@ public class NodoInd {
     }
 
     public NodoInd borrado(Individuo valor, NodoInd n) {
-        Comparable c = (Comparable) n.getDato();
-        int result = c.compareTo(valor);
+        Comparable c = (Comparable) n.getDato().getNumIdentificacion();
+        int result = c.compareTo(valor.getNumIdentificacion());
         if (result > 0) {
             NodoInd iz = borrado(valor, n.izdo);
             n.setIzdo(iz);

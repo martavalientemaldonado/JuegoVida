@@ -81,7 +81,10 @@ public class ParamCasillaControl implements Initializable {
         if("Comida".equals(NuevoRecurso.getValue())){
             AñadirRecursoComida();
         }
-
+        //Cerrar pantalla
+        Node source = (Node) event.getSource();
+        Stage stage1 = (Stage) source.getScene().getWindow();
+        stage1.close();
     }
 
     @FXML
